@@ -1,0 +1,42 @@
+---
+
+# Basingstoke Anime Society
+# Website data
+
+slot1:
+  - from: 2019-11-26
+    name: Sagrada Reset
+    picture: sagrada-reset
+
+  - from: 2020-03-03
+
+slot2:
+  - from: 2019-01-08
+    name: Hunter x Hunter
+    picture: hunter-x-hunter
+
+  - from: 2020-06-23
+
+slot3:
+  - from: 2020-01-07
+    name: Slow Start
+    picture: slow-start
+
+  - from: 2020-02-18
+    name: Kaguya-sama, Love is War
+    picture: kaguya-sama
+
+  - from: 2020-03-21
+
+events:
+  - name: Social Meeting
+    date: 2020-02-29
+
+cinema:
+  - name: Kobosuba Movie
+    from: 2019-12-06
+    to: 2019-12-06
+
+  - name: Weathering With You
+    from: 2020-02-17
+    to: 2020-02-30

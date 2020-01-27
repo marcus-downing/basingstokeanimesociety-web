@@ -1,0 +1,12 @@
+#body {
+	background-color: #080c80;
+
+	&.day-1 { background-image: url(images/day-1.jpg); }
+	&.day-2 { background-image: url(images/day-2.jpg); }
+	&.day-3 { background-image: url(images/day-3.jpg); }
+
+	&.night-1 { background-image: url(images/night-1.jpg); }
+	&.night-2 { background-image: url(images/night-2.jpg); }
+	&.night-3 { background-image: url(images/night-3.jpg); }
+}
+
