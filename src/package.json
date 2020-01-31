@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "make": "nodejs ./make.js",
     "test": "nodejs ./make.js"
   },
   "author": "",
