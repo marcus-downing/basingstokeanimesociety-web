@@ -8,5 +8,10 @@
     "test": "nodejs ./make.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.7.2",
+    "js-yaml": "^3.13.1",
+    "node-sass": "^4.13.1"
+  }
 }

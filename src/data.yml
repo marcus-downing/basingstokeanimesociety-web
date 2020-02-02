@@ -29,8 +29,14 @@ slot3:
   - from: 2020-03-21
 
 events:
+  - name: Overwatch League
+    date: 2020-02-08
+    class: esports
+
   - name: Social Meeting
     date: 2020-02-29
+    class: social
+    venue: The Tea Bar
 
 cinema:
   - name: Kobosuba Movie

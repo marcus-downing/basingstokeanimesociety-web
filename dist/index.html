@@ -1,73 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Basingstoke Anime Society</title>
-<link rel="stylesheet" media="all" href="style.css" />
-<script src="script.js"></script>
+  <title>Basingstoke Anime Society</title>
+  <link rel="stylesheet" media="all" href="style.css" />
+  <script src="script.js"></script>
 </head>
-<body class="day-1">
-
+<body class="day">
 
 <div id='section-logo'>
 <img src='images/logo.png' id='logo'>
 </div>
 
 <nav id='section-social'>
-<a id='btn-mail' href='mailto:...'><i></i></a>
-<a id='btn-twitter' href='...'><i></i></a>
-<a id='btn-fb' href='...'><i></i></a>
+<a id='btn-mail' href='mailto:marcus@basingstokeanimesociety.com'><i></i><span>Mail</span></a>
+<a id='btn-twitter' href='https://twitter.com/Basing_animesoc'><i></i><span>Twitter</span></a>
+<a id='btn-fb' href='https://www.facebook.com/groups/basingstokeanimesociety/'><i></i><span>Facebook</span></a>
 </nav>
 
 <main>
 
+<h1 id='main-title'>Basingstoke Anime Society</h1>
+
 <section id='section-next-meeting'>
-    <h2>Next Meeting</h2>
+  <h2>Next Meeting</h2>
 
-    <h1>Tuesday 4st December 2018</h1>
-    <h3>The White Hart</h3>
+  <h1 id='next-meeting-date'>Tuesday, 4 February 2020</h1>
+  <h3><em id='next-meeting-venue'>The White Hart</em> <span id='next-meeting-address'>London Road, Basingstoke RG21 4AE</span></h3>
 
-    <button id='where-when'>Where and When?</button>
+  <button id='where-when'><i></i><span>Where and When?</span></button>
 </section>
 
 <section id='section-now-showing'>
-    <h2>Now Showing</h2>
+  <h2>Now Showing</h2>
 
-    <div id='now-showing'>
-        <figure>
-            <figcaption></figcaption>
-            <img src=''>
-        </figure>
+  <div id='now-showing'>
+    <figure id='slot1'>
+      <figcaption id='slot1name'>Sagrada Reset</figcaption>
+      <img id='slot1picture' src='images/series/sagrada-reset.png'>
+    </figure>
 
-        <figure>
-            <figcaption></figcaption>
-            <img src=''>
-        </figure>
+    <figure id='slot2'>
+      <figcaption id='slot2name'>Hunter x Hunter</figcaption>
+      <img id='slot2picture' src='images/series/hunter-x-hunter.png'>
+    </figure>
 
-        <figure>
-            <figcaption></figcaption>
-            <img src=''>
-        </figure>
-    </div>
+    <figure id='slot3'>
+      <figcaption id='slot3name'>Slow Start</figcaption>
+      <img id='slot3picture' src='images/series/slow-start.png'>
+    </figure>
+  </div>
 </section>
 
+<div class='lr'>
 <section id='section-upcoming'>
-    <h2>Upcoming Events</h2>
+  <h2>Upcoming Events</h2>
 
-    <article id='upcoming-' class='event '>
-        <time datetime="Sat Feb 29 2020 00:00:00 GMT+0000 (GMT)"><span class='day'></span><span class='month'></span></time>
-        <p>Foo</p>
-    </article>
+  <div id='events-list'>
+  <article id='upcoming-Tue Feb 04 2020 19:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-anime'>
+    <time datetime="Tue Feb 04 2020 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>4</span><span class='month'>Feb</span></time>
+    <h3>Anime Society Meeting</h3>
+    <p>The White Hart</h3>
+  </article>
+  <article id='upcoming-Sat Feb 08 2020 00:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-esports'>
+    <time datetime="Sat Feb 08 2020 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>8</span><span class='month'>Feb</span></time>
+    <h3>Overwatch League</h3>
+    <p>The White Hart</h3>
+  </article>
+  <article id='upcoming-Tue Feb 11 2020 19:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-anime'>
+    <time datetime="Tue Feb 11 2020 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>11</span><span class='month'>Feb</span></time>
+    <h3>Anime Society Meeting</h3>
+    <p>The White Hart</h3>
+  </article>
+  <article id='upcoming-Tue Feb 18 2020 19:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-anime'>
+    <time datetime="Tue Feb 18 2020 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>18</span><span class='month'>Feb</span></time>
+    <h3>Anime Society Meeting</h3>
+    <p>The White Hart</h3>
+  </article>
+  <article id='upcoming-Tue Feb 25 2020 19:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-anime'>
+    <time datetime="Tue Feb 25 2020 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>25</span><span class='month'>Feb</span></time>
+    <h3>Anime Society Meeting</h3>
+    <p>The White Hart</h3>
+  </article>
+  <article id='upcoming-Sat Feb 29 2020 00:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-social'>
+    <time datetime="Sat Feb 29 2020 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>29</span><span class='month'>Feb</span></time>
+    <h3>Social Meeting</h3>
+    <p>The Tea Bar</h3>
+  </article>
+  <article id='upcoming-Tue Mar 03 2020 19:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-anime'>
+    <time datetime="Tue Mar 03 2020 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>3</span><span class='month'>Mar</span></time>
+    <h3>Anime Society Meeting</h3>
+    <p>The White Hart</h3>
+  </article>
+  <article id='upcoming-Tue Mar 10 2020 19:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-anime'>
+    <time datetime="Tue Mar 10 2020 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>10</span><span class='month'>Mar</span></time>
+    <h3>Anime Society Meeting</h3>
+    <p>The White Hart</h3>
+  </article>
+  </div>
 
 </section>
 
 <section id='news-feed'>
-    <h2>News Feed</h2>
+  <h2>News Feed</h2>
 
-    <article class='tweet'>
-        <time datetime="2017-02-14">Valentines day</time>
-        <p>Foo</p>
-    </article>
+  <a class="twitter-timeline" data-lang="en"
+    data-width="670" data-height="700"
+    href="https://twitter.com/Basing_animesoc?ref_src=twsrc%5Etfw"
+    data-chrome="noheader nofooter"
+    data-tweet-limit="3"
+    ></a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </section>
+</div>
 
 </main>
 
