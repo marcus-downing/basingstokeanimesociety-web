@@ -15,20 +15,6 @@ basData = yaml.safeLoad(basData);
 basData = _.defaults({
   maxEvents: 8,
   maxTweets: 3,
-
-  nextMeeting: 'Tuesday 4th February 2020',
-  series1: {
-    name: 'Sagrada Reset',
-    picture: 'images/series/sagrada-reset.png'
-  },
-  series2: {
-    name: 'Hunter x Hunter',
-    picture: 'images/series/hunter-x-hunter.png'
-  },
-  series3: {
-    name: 'Slow Start',
-    picture: 'images/series/slow-start.png'
-  }
 }, basData);
 
 // showing anime
@@ -49,6 +35,20 @@ basData.slot2 = sortedSlot(basData.slot2);
 basData.series2 = _.isEmpty(basData.slot2) ? { name: '', picture: '' } : basData.slot2[0];
 basData.slot3 = sortedSlot(basData.slot3);
 basData.series3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[0];
+
+function copySeriesImages(slot) {
+  _.each(slot, series => {
+    fs.copyFile('series/'+series.picture+'.png', '../dist/images/series/'+series.picture+'.png', (err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+  });
+}
+
+copySeriesImages(basData.slot1);
+copySeriesImages(basData.slot2);
+copySeriesImages(basData.slot3);
 
 // future events
 let shortMonthFormat = new Intl.DateTimeFormat('en-GB', { month: 'short' });

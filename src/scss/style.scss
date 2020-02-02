@@ -137,14 +137,20 @@ h3 {
   }
 }
 
-#section-next-meeting {
-  position: relative;
-
+section.box {
   padding: 5px 27px;
   background: rgba(40, 60, 120, 0.4);
   border-radius: 2px;
   margin-top: 2em;
   box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+
+  body.night & {
+    background: rgba(20, 30, 60, 0.4);
+  }
+}
+
+#section-next-meeting {
+  position: relative;
 
   h2 {
     margin-bottom: 3px;
