@@ -27,7 +27,7 @@
   <h1 id='next-meeting-date'>Tuesday, 4 February 2020</h1>
   <h3><em id='next-meeting-venue'>The White Hart</em> <span id='next-meeting-address'>London Road, Basingstoke RG21 4AE</span></h3>
 
-  <button id='where-when'><i></i><span>Where and When?</span></button>
+  <button id='where-when' onclick="showMap()"><span>Where and When?</span></button>
 </section>
 
 <section id='section-now-showing'>
@@ -40,7 +40,7 @@
     </figure>
 
     <figure id='slot2'>
-      <figcaption id='slot2name'>Hunter x Hunter</figcaption>
+      <figcaption id='slot2name'>Hunter &amp;times; Hunter</figcaption>
       <img id='slot2picture' src='images/series/hunter-x-hunter.png'>
     </figure>
 
@@ -81,11 +81,6 @@
     <h3>Anime Society Meeting</h3>
     <p>The White Hart</h3>
   </article>
-  <article id='upcoming-Sat Feb 29 2020 00:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-social'>
-    <time datetime="Sat Feb 29 2020 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>29</span><span class='month'>Feb</span></time>
-    <h3>Social Meeting</h3>
-    <p>The Tea Bar</h3>
-  </article>
   <article id='upcoming-Tue Mar 03 2020 19:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-anime'>
     <time datetime="Tue Mar 03 2020 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>3</span><span class='month'>Mar</span></time>
     <h3>Anime Society Meeting</h3>
@@ -93,6 +88,11 @@
   </article>
   <article id='upcoming-Tue Mar 10 2020 19:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-anime'>
     <time datetime="Tue Mar 10 2020 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>10</span><span class='month'>Mar</span></time>
+    <h3>Anime Society Meeting</h3>
+    <p>The White Hart</h3>
+  </article>
+  <article id='upcoming-Tue Mar 17 2020 19:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-anime'>
+    <time datetime="Tue Mar 17 2020 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>17</span><span class='month'>Mar</span></time>
     <h3>Anime Society Meeting</h3>
     <p>The White Hart</h3>
   </article>
@@ -114,5 +114,16 @@
 </div>
 
 </main>
+
+<div id='blanket'></div>
+
+<aside id='map-overlay'>
+  <div id='map-inner'>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1248.3289793540373!2d-1.0825255249343884!3d51.26220677831826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xda797dee606b2fa8!2sThe%20White%20Hart!5e0!3m2!1sen!2suk!4v1580681206861!5m2!1sen!2suk"
+      frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    <a id='map-close' onclick="hideMap()">&times;</a>
+  </div>
+</aside>
 
 </body>

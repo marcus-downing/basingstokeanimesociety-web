@@ -27,7 +27,7 @@
   <h1 id='next-meeting-date'>{{ nextMeeting }}</h1>
   <h3><em id='next-meeting-venue'>{{ nextMeetingVenue }}</em> <span id='next-meeting-address'>{{ nextMeetingAddress }}</span></h3>
 
-  <button id='where-when'><i></i><span>Where and When?</span></button>
+  <button id='where-when' onclick="showMap()"><span>Where and When?</span></button>
 </section>
 
 <section id='section-now-showing'>
@@ -81,5 +81,16 @@
 </div>
 
 </main>
+
+<div id='blanket'></div>
+
+<aside id='map-overlay'>
+  <div id='map-inner'>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1248.3289793540373!2d-1.0825255249343884!3d51.26220677831826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xda797dee606b2fa8!2sThe%20White%20Hart!5e0!3m2!1sen!2suk!4v1580681206861!5m2!1sen!2suk"
+      frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    <a id='map-close' onclick="hideMap()">&times;</a>
+  </div>
+</aside>
 
 </body>

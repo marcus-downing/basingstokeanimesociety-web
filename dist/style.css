@@ -72,11 +72,14 @@ body {
         width: 40px;
         height: 40px; } }
     #section-social a#btn-mail {
-      background: #ed3b41; }
+      background-color: #ed3b41;
+      background-image: url(images/mail.svg); }
     #section-social a#btn-twitter {
-      background: #4267b2 url(images/fb_icon.png); }
+      background-color: #4267b2;
+      background-image: url(images/fb_icon.png); }
     #section-social a#btn-fb {
-      background: #1da1f2 url(images/tw_icon.png); }
+      background-color: #1da1f2;
+      background-image: url(images/tw_icon.png); }
 
 #main-title {
   display: none; }
@@ -140,7 +143,8 @@ section.box {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background: rgba(255, 255, 255, 0.7); }
+  background-color: white;
+  background-image: url(images/pin.svg); }
   #where-when span {
     display: none; }
   @media (max-width: 1280px) {
@@ -243,6 +247,70 @@ article.tweet {
 .timeline-Header {
   display: none; }
 
+#blanket {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); }
+  #blanket.show {
+    display: block;
+    opacity: 1; }
+  #blanket.hide {
+    display: block;
+    opacity: 0; }
+
+#map-overlay {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  position: fixed;
+  z-index: 100;
+  top: 10px;
+  left: 20px;
+  right: 20px;
+  bottom: 20vh; }
+  #map-overlay.show {
+    display: block;
+    opacity: 1; }
+  #map-overlay.hide {
+    display: block;
+    opacity: 0; }
+
+#map-inner {
+  position: relative;
+  margin: 0 auto;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 3px 5px black;
+  max-width: 1000px;
+  height: 100%;
+  padding: 10px; }
+  #map-inner iframe {
+    width: 100%;
+    height: 100%; }
+
+#map-close {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 36px;
+  height: 36px;
+  border-radius: 30px;
+  background: #ed3b41;
+  box-shadow: 0 1px 2px black;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  cursor: pointer; }
+
 @media (max-width: 1280px) {
   #now-showing figure img {
     width: 22vw;
@@ -260,4 +328,8 @@ article.tweet {
   main {
     padding-left: 10px; }
   #now-showing figure img {
-    width: 28.4vw; } }
+    width: 28.4vw; }
+  #map-overlay {
+    left: 10px;
+    right: 10px;
+    bottom: 30px; } }

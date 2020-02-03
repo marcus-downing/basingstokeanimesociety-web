@@ -3,12 +3,17 @@ const fs = require('fs');
 const Handlebars = require('handlebars');
 const yaml = require('js-yaml');
 const sass = require('node-sass');
+// const ffmpeg = require('ffmpeg');
+const { exec } = require('child_process');
 const _ = require('lodash');
+
+const util = require('./util.js');
 
 Handlebars.registerHelper('json', function (obj) {
   return JSON.stringify(obj);
 });
 
+// read the data
 let basData = fs.readFileSync('data.yml');
 basData = yaml.safeLoad(basData);
 
@@ -18,25 +23,15 @@ basData = _.defaults({
 }, basData);
 
 // showing anime
-let now = new Date(Date.now());
-
-function sortedSlot(slot) {
-  slot = _.sortBy(slot, 'from');
-  let [before, after] = _.partition(slot, series => series.from < now);
-  let current = before[before.length - 1];
-  after = _.filter(after, series => _.has(series, "name"));
-  after.unshift(current);
-  return after;
-}
-
-basData.slot1 = sortedSlot(basData.slot1);
+basData.slot1 = util.currentAndFuture(basData.slot1, 'from');
 basData.series1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[0];
-basData.slot2 = sortedSlot(basData.slot2);
+basData.slot2 = util.currentAndFuture(basData.slot2, 'from');
 basData.series2 = _.isEmpty(basData.slot2) ? { name: '', picture: '' } : basData.slot2[0];
-basData.slot3 = sortedSlot(basData.slot3);
+basData.slot3 = util.currentAndFuture(basData.slot3, 'from');
 basData.series3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[0];
 
-function copySeriesImages(slot) {
+// copy the images for the series
+_.each([basData.slot1, basData.slot2, basData.slot3], slot => {
   _.each(slot, series => {
     fs.copyFile('series/'+series.picture+'.png', '../dist/images/series/'+series.picture+'.png', (err) => {
       if (err) {
@@ -44,33 +39,22 @@ function copySeriesImages(slot) {
       }
     });
   });
-}
-
-copySeriesImages(basData.slot1);
-copySeriesImages(basData.slot2);
-copySeriesImages(basData.slot3);
+});
 
 // future events
-let shortMonthFormat = new Intl.DateTimeFormat('en-GB', { month: 'short' });
-
-let longDateFormat = new Intl.DateTimeFormat('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-function formatLongDate(date) {
-  let parts = _.keyBy(longDateFormat.formatToParts(date), 'type');
-  return parts.weekday.value+", "+parts.day.value+" "+parts.month.value+" "+parts.year.value;
-}
-
 let venueAddress = {
   'The White Hart': 'London Road, Basingstoke RG21 4AE',
   'The Tea Bar': '9 London Rd, Basingstoke RG21 7NT',
 };
 
+let now = new Date(Date.now());
 let events = _.filter(basData.events, event => event.date >= now);
 events = _.map(events, event => {
   event = _.defaults(event, {
     class: 'social',
-    dateLong: formatLongDate(event.date),
+    dateLong: util.formatLongDate(event.date),
     day: event.date.getDate(),
-    month: shortMonthFormat.format(event.date),
+    month: util.formatShortMonth(event.date),
     venue: 'The White Hart',
   });
   return _.defaults(event, {
@@ -93,9 +77,9 @@ for (var i = 0; i < 30; i++) {
   date.setDate(date.getDate() + i*7);
   let event = {
     date: date,
-    dateLong: formatLongDate(date),
+    dateLong: util.formatLongDate(date),
     day: date.getDate(),
-    month: shortMonthFormat.format(date),
+    month: util.formatShortMonth(date),
     name: 'Anime Society Meeting',
     class: 'anime',
     venue: 'The White Hart',
@@ -110,7 +94,7 @@ basData.allEvents = events;
 
 // put the 'next event' at the top
 let nextEvent = events[0];
-basData.nextMeeting = formatLongDate(nextEvent.date);
+basData.nextMeeting = util.formatLongDate(nextEvent.date);
 basData.nextMeetingVenue = nextEvent.venue;
 basData.nextMeetingAddress = venueAddress[nextEvent.venue];
 
@@ -140,3 +124,99 @@ sass.render({
 writeTemplate('www/index.html.h', 'index.html', basData);
 writeTemplate('www/script.js.h', 'script.js', basData);
 
+
+// bookends
+
+// collect the dates on which series change
+let bookends = {};
+_.each({slot1: basData.slot1, slot2: basData.slot2, slot3: basData.slot3}, (slot, slotName) => {
+  _.each(slot, series => {
+    var dateKey = util.formatShortDate(series.from);
+    if (!_.has(bookends[dateKey])) {
+      bookends[dateKey] = {
+        date: series.from,
+        name: dateKey,
+        slot1: null,
+        slot2: null,
+        slot3: null
+      };
+    }
+
+    bookends[dateKey][slotName] = series;
+  });
+});
+
+let bookendDates = _.keys(bookends);
+bookendDates = bookendDates.sort();
+bookends = _.map(bookendDates, dateKey => bookends[dateKey]);
+
+// fill in the ongoing series from one date to the next
+let slot1 = null, slot2 = null, slot3 = null;
+_.each(bookends, bookend => {
+  if (bookend.slot1 !== null) {
+    slot1 = bookend.slot1;
+  } else {
+    bookend.slot1 = slot1;
+  }
+  if (bookend.slot2 !== null) {
+    slot2 = bookend.slot2;
+  } else {
+    bookend.slot2 = slot2;
+  }
+  if (bookend.slot3 !== null) {
+    slot3 = bookend.slot3;
+  } else {
+    bookend.slot3 = slot3;
+  }
+});
+
+bookends = util.currentAndFuture(bookends);
+// console.log(bookends);
+
+_.each(bookends, bookend => {
+  console.log("Bookend:", bookend.name);
+  let series1picture = 'series/'+bookend.slot1.picture+'.png';
+  let series2picture = 'series/'+bookend.slot2.picture+'.png';
+  let series3picture = 'series/'+bookend.slot3.picture+'.png';
+  let cmd = `ffmpeg -y -i video/bookends-base.avi -i ${series1picture} -i ${series2picture} -i ${series3picture} -an `+
+    `-filter_complex "[0:v][1:v] overlay=193:125:enable='between(t,0,16)' [in1]; `+
+    `[in1][2:v] overlay=553:125:enable='between(t,0,16)' [in2]; `+
+    `[in2][3:v] overlay=910:125:enable='between(t,0,16)' [in3]; `+
+    `[in3] fade=in:0:60 [in4]; `+
+    `[in4] fade=out:420:60" `+
+    `../bookends/${bookend.name}.mp4`;
+
+  exec(cmd, (err, stdout, stderr) => {
+    if (err) {
+      //some err occurred
+      console.error(err)
+    } else {
+    }
+  });
+});
+
+
+
+
+
+
+/*
+let series1picture = 'series/'+basData.series1.picture+'.png';
+let series2picture = 'series/'+basData.series2.picture+'.png';
+let series3picture = 'series/'+basData.series3.picture+'.png';
+let cmd = `ffmpeg -y -i video/bookends-base.avi -i ${series1picture} -i ${series2picture} -i ${series3picture} -an `+
+  `-filter_complex "[0:v][1:v] overlay=193:125:enable='between(t,0,16)' [in1]; `+
+  `[in1][2:v] overlay=553:125:enable='between(t,0,16)' [in2]; `+
+  `[in2][3:v] overlay=910:125:enable='between(t,0,16)' [in3]; `+
+  `[in3] fade=in:0:60 [in4]; `+
+  `[in4] fade=out:420:60" `+
+  `../bookends/output.mp4`;
+
+exec(cmd, (err, stdout, stderr) => {
+  if (err) {
+    //some err occurred
+    console.error(err)
+  } else {
+  }
+});
+*/

@@ -9,10 +9,14 @@ slot1:
     picture: sagrada-reset
 
   - from: 2020-03-03
+    name: The Great Passage
+    picture: great-passage
+
+  - from: 2020-04-14
 
 slot2:
   - from: 2019-01-08
-    name: Hunter x Hunter
+    name: Hunter &times; Hunter
     picture: hunter-x-hunter
 
   - from: 2020-06-23
@@ -33,10 +37,17 @@ events:
     date: 2020-02-08
     class: esports
 
-  - name: Social Meeting
-    date: 2020-02-29
-    class: social
-    venue: The Tea Bar
+  # - name: Social Meeting
+  #   date: 2020-02-29
+  #   class: social
+  #   venue: The Tea Bar
+
+  - name: No Meeting
+    date: 2020-12-22
+    class: skip
+  - name: No Meeting
+    date: 2020-12-29
+    class: skip
 
 cinema:
   - name: Kobosuba Movie

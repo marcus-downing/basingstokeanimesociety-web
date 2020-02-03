@@ -68,3 +68,21 @@ window.onload = function () {
   selectBackground();
 };
 setInterval(selectBackground, 300000); // 5 minutes
+
+function showMap() {
+  document.getElementById('blanket').className = "hide";
+  document.getElementById('map-overlay').className = "hide";
+  setTimeout(() => {
+    document.getElementById('blanket').className = "show";
+    document.getElementById('map-overlay').className = "show";
+  }, 1);
+}
+
+function hideMap() {
+  document.getElementById('blanket').className = "hide";
+  document.getElementById('map-overlay').className = "hide";
+  setTimeout(() => {
+    document.getElementById('blanket').className = "";
+    document.getElementById('map-overlay').className = "";
+  }, 500);
+}
