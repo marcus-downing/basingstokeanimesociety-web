@@ -13,8 +13,8 @@
 
 <nav id='section-social'>
 <a id='btn-mail' href='mailto:marcus@basingstokeanimesociety.com'><i></i><span>Mail</span></a>
-<a id='btn-twitter' href='https://twitter.com/BasingAnime'><i></i><span>Twitter</span></a>
-<a id='btn-fb' href='https://www.facebook.com/groups/basingstokeanimesociety/'><i></i><span>Facebook</span></a>
+<a id='btn-twitter' href='https://twitter.com/BasingAnime'target="_blank"><i></i><span>Twitter</span></a>
+<a id='btn-fb' href='https://www.facebook.com/groups/basingstokeanimesociety/'target="_blank"><i></i><span>Facebook</span></a>
 </nav>
 
 <main>
