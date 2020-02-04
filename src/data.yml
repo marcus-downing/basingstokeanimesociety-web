@@ -37,6 +37,11 @@ events:
     date: 2020-02-08
     class: esports
 
+  - name: "My Hero Academia: Heroes Rising"
+    date: 2020-02-26
+    class: cinema
+    venue: Vue Basingstoke
+
   # - name: Social Meeting
   #   date: 2020-02-29
   #   class: social

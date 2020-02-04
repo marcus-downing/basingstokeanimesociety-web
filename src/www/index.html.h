@@ -13,7 +13,7 @@
 
 <nav id='section-social'>
 <a id='btn-mail' href='mailto:marcus@basingstokeanimesociety.com'><i></i><span>Mail</span></a>
-<a id='btn-twitter' href='https://twitter.com/Basing_animesoc'><i></i><span>Twitter</span></a>
+<a id='btn-twitter' href='https://twitter.com/BasingAnime'><i></i><span>Twitter</span></a>
 <a id='btn-fb' href='https://www.facebook.com/groups/basingstokeanimesociety/'><i></i><span>Facebook</span></a>
 </nav>
 
@@ -72,7 +72,7 @@
 
   <a class="twitter-timeline" data-lang="en"
     data-width="670" data-height="700"
-    href="https://twitter.com/Basing_animesoc?ref_src=twsrc%5Etfw"
+    href="https://twitter.com/BasingAnime?ref_src=twsrc%5Etfw"
     data-chrome="noheader nofooter"
     data-tweet-limit="{{ maxTweets }}"
     ></a>
