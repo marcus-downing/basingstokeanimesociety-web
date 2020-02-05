@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157883376-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-157883376-1');
+  </script>
+
   <title>Basingstoke Anime Society</title>
   <link rel="stylesheet" media="all" href="style.css" />
   <script src="script.js"></script>
@@ -24,8 +33,9 @@
 <section id='section-next-meeting' class='box'>
   <h2>Next Meeting</h2>
 
-  <h1 id='next-meeting-date'>{{ nextMeeting }}</h1>
-  <h3><em id='next-meeting-venue'>{{ nextMeetingVenue }}</em> <span id='next-meeting-address'>{{ nextMeetingAddress }}</span></h3>
+  <h1 id='next-meeting-date'>&nbsp;</h1>
+  <h3 id='next-meeting-title'></h3>
+  <h3><em id='next-meeting-venue'>&nbsp;</em> <span id='next-meeting-address'>&nbsp;</span></h3>
 
   <button id='where-when' onclick="showMap()"><span>Where and When?</span></button>
 </section>

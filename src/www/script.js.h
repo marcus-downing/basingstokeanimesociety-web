@@ -60,8 +60,20 @@ window.onload = function () {
   document.getElementById('events-list').innerHTML = eventsHTML;
 
   // adjust the next event headline
-  var nextEvent = events[0];
+  var mainEvents = events.filter(function (event) {
+    switch (event.class) {
+      case 'esports':
+      case 'cinema':
+      case 'skip':
+        return false;
+
+      default:
+        return true;
+    }
+  });
+  var nextEvent = mainEvents[0];
   document.getElementById('next-meeting-date').innerHTML = nextEvent.dateLong;
+  document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);
   document.getElementById('next-meeting-venue').innerHTML = nextEvent.venue;
   document.getElementById('next-meeting-address').innerHTML = nextEvent.address;
 

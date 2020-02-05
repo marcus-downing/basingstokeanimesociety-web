@@ -33,6 +33,18 @@ slot3:
   - from: 2020-03-21
 
 events:
+  - name: Kobosuba Movie
+    date: 2019-12-06
+    to: 2019-12-06
+    class: cinema
+    venue: Vue Festival Place
+
+  - name: Weathering With You
+    date: 2020-01-17
+    to: 2020-01-30
+    class: cinema
+    venue: Vue Festival Place
+
   - name: Overwatch League
     date: 2020-02-08
     class: esports
@@ -53,12 +65,3 @@ events:
   - name: No Meeting
     date: 2020-12-29
     class: skip
-
-cinema:
-  - name: Kobosuba Movie
-    from: 2019-12-06
-    to: 2019-12-06
-
-  - name: Weathering With You
-    from: 2020-02-17
-    to: 2020-02-30
