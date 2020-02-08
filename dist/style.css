@@ -226,6 +226,8 @@ article.event {
     font-size: 19px; }
   article.event p {
     font-size: 16px; }
+  article.event a {
+    color: white; }
   article.event.event-anime time {
     background: linear-gradient(#d8edfa, #a2d7f8); }
   article.event.event-esports time {
@@ -235,16 +237,11 @@ article.event {
   article.event.event-cinema time {
     background: linear-gradient(#faddd8, #f8b3a2); }
 
-article.tweet {
-  background: rgba(255, 255, 255, 0.6);
+#twitter-box {
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 2px;
-  box-shadow: 0 1px 2px black;
-  color: black;
-  padding: 8px 12px; }
-  article.tweet time {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 11pt; }
+  backdrop-filter: blur(20px);
+  box-shadow: 0 1px 2px black; }
 
 .timeline-Header {
   display: none; }

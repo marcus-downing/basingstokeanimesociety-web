@@ -24,6 +24,10 @@ function formatLongDate(date) {
   return parts.weekday.value+", "+parts.day.value+" "+parts.month.value+" "+parts.year.value;
 }
 
+function formatShortTime(time) {
+
+}
+
 // date arrangmeent
 let now = new Date(Date.now());
 
@@ -46,5 +50,6 @@ module.exports = {
   formatShortMonth,
   formatShortDate,
   formatLongDate,
+  formatShortTime,
   currentAndFuture,
 };

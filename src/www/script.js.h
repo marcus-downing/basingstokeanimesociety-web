@@ -50,10 +50,20 @@ window.onload = function () {
   var eventsHTML = '';
   var event;
   for (event of events) {
+    var time = false;
+    if (event.hasOwnProperty("time")) {
+      time = event.time;
+    }
+    var a = "";
+    var _a = "";
+    if (event.hasOwnProperty("link")) {
+      a = "<a href='"+event.link+"'>";
+      _a = "</a>";
+    }
     var html = "<article id='upcoming-"+event.date+"' class='event event-"+event.class+"'>\n"+
       "<time datetime='"+event.date+"'><span class='day'>"+event.day+"</span><span class='month'>"+event.month+"</span></time>\n"+
       "<h3>"+event.name+"</h3>\n"+
-      "<p>"+event.venue+"</h3>\n"+
+      "<p>"+a+event.venue+(time ? ", "+time : "")+_a+"</h3>\n"+
       "</article>\n";
     eventsHTML = eventsHTML + html;
   }

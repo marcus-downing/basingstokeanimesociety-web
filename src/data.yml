@@ -53,6 +53,12 @@ events:
     date: 2020-02-26
     class: cinema
     venue: Vue Festival Place, Odeon Basingstoke
+    link: https://www.myvue.com/cinema/basingstoke-festival-place/film/my-hero-academia-heroes-rising/times
+
+  - name: Social Meeting
+    date: 2020-03-21
+    time: 1pm
+    venue: The Tea Bar
 
   # - name: Social Meeting
   #   date: 2020-02-29

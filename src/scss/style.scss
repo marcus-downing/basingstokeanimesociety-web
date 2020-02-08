@@ -271,6 +271,10 @@ article.event {
     font-size: 16px;
   }
 
+  a {
+    color: white;
+  }
+
   &.event-anime {
     time {
       background: linear-gradient(#d8edfa, #a2d7f8);
@@ -296,20 +300,27 @@ article.event {
   }
 }
 
-article.tweet {
-  background: rgba(255,255,255,0.6);
+#twitter-box {
+  background: rgba(255,255,255,0.9);
   border-radius: 2px;
+  backdrop-filter: blur(20px);
   box-shadow: 0 1px 2px black;
-  color: black;
-
-  padding: 8px 12px;
-
-  time {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 11pt;
-  }
 }
+
+// article.tweet {
+//   background: rgba(255,255,255,0.6);
+//   border-radius: 2px;
+//   box-shadow: 0 1px 2px black;
+//   color: black;
+
+//   padding: 8px 12px;
+
+//   time {
+//     font-weight: bold;
+//     text-transform: uppercase;
+//     font-size: 11pt;
+//   }
+// }
 
 .timeline-Header {
   display: none;

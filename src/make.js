@@ -19,7 +19,7 @@ basData = yaml.safeLoad(basData);
 
 basData = _.defaults({
   maxEvents: 8,
-  maxTweets: 3,
+  maxTweets: 6,
 }, basData);
 
 // showing anime
@@ -52,7 +52,7 @@ let events = _.filter(basData.events, event => event.date >= now);
 events = _.map(events, event => {
   event = _.defaults(event, {
     class: 'social',
-    dateLong: util.formatLongDate(event.date),
+    dateLong: util.formatLongDate(event.date) + (event.time != '' ? ', '+util.formatShortTime(event.time) : ''),
     day: event.date.getDate(),
     month: util.formatShortMonth(event.date),
     venue: 'The White Hart',
@@ -77,7 +77,8 @@ for (var i = 0; i < 30; i++) {
   date.setDate(date.getDate() + i*7);
   let event = {
     date: date,
-    dateLong: util.formatLongDate(date),
+    dateLong: util.formatLongDate(date) + ", 7pm",
+    time: "7pm",
     day: date.getDate(),
     month: util.formatShortMonth(date),
     name: 'Anime Society Meeting',

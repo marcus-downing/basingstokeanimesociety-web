@@ -70,7 +70,7 @@
   <article id='upcoming-{{ date }}' class='event event-{{ class }}'>
     <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
     <h3>{{ name }}</h3>
-    <p>{{ venue }}</h3>
+    <p>{{#if link}}<a href='{{ link }}'>{{/if}}{{ venue }}{{#if time}}, {{ time }}{{/if}}{{#if link}}</a>{{/if}}</h3>
   </article>
   {{/each}}
   </div>
@@ -80,13 +80,16 @@
 <section id='news-feed'>
   <h2>News Feed</h2>
 
+  <div id='twitter-box'>
   <a class="twitter-timeline" data-lang="en"
     data-width="670" data-height="700"
     href="https://twitter.com/BasingAnime?ref_src=twsrc%5Etfw"
-    data-chrome="noheader nofooter"
+    data-chrome="noheader nofooter transparent"
+
     data-tweet-limit="{{ maxTweets }}"
     ></a>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
 </section>
 </div>
 
