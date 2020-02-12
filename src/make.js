@@ -84,6 +84,7 @@ for (var i = 0; i < 30; i++) {
     date: date,
     dateLong: util.formatLongDate(date) + ", 7pm",
     time: "7pm",
+    price: "&pound;4",
     day: date.getDate(),
     month: util.formatShortMonth(date),
     name: 'Anime Society Meeting',

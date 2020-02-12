@@ -63,7 +63,8 @@ window.onload = function () {
     var html = "<article id='upcoming-"+event.date+"' class='event event-"+event.class+"'>\n"+
       "<time datetime='"+event.date+"'><span class='day'>"+event.day+"</span><span class='month'>"+event.month+"</span></time>\n"+
       "<h3>"+event.name+"</h3>\n"+
-      "<p>"+a+event.venue+(time ? ", "+time : "")+_a+"</h3>\n"+
+      "<p>"+a+event.venue+(time ? ", "+time : "")+_a+"</p>\n"+
+      (event.price ? ("<p>Attendance fee: "+event.price+"</p>") : '')+
       "</article>\n";
     eventsHTML = eventsHTML + html;
   }

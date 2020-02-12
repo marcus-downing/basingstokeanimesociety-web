@@ -70,6 +70,11 @@ events:
     venue: University of Reading
     class: convention
 
+  - name: Hibanacon
+    date: 2020-11-06
+    venue: Jury's Inn, Milton Keynes
+    class: convention
+
   - name: No Meeting
     date: 2020-12-22
     class: skip
