@@ -151,7 +151,7 @@ _.each({slot1: basData.slot1, slot2: basData.slot2, slot3: basData.slot3}, (slot
     bookends[dateKey][slotName] = series;
   });
 });
-console.log(bookends);
+// console.log(bookends);
 
 let bookendDates = _.keys(bookends);
 bookendDates = bookendDates.sort();
@@ -178,7 +178,7 @@ _.each(bookends, bookend => {
 });
 
 bookends = util.currentAndFuture(bookends);
-console.log(bookends);
+// console.log(bookends);
 
 _.each(bookends, bookend => {
   console.log("Bookend:", bookend.name);
