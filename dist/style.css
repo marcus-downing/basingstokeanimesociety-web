@@ -162,8 +162,10 @@ section.box {
   #now-showing figure {
     box-shadow: 0 2px 3px black;
     position: relative;
-    margin: 0 auto;
-    max-height: 450px; }
+    margin: 0 auto; }
+    #now-showing figure, #now-showing figure img {
+      width: 315px;
+      height: 450px; }
     #now-showing figure#slot1 {
       margin: 0 auto 0 0; }
     #now-showing figure#slot2 {
@@ -236,6 +238,8 @@ article.event {
     background: linear-gradient(#d8fadc, #a2f8ad); }
   article.event.event-cinema time {
     background: linear-gradient(#faddd8, #f8b3a2); }
+  article.event.event-convention time {
+    background: linear-gradient(#fad8f7, #f8a2ed); }
 
 #twitter-box {
   background: rgba(255, 255, 255, 0.9);

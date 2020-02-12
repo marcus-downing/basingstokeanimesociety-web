@@ -45,18 +45,18 @@
 
   <div id='now-showing'>
     <figure id='slot1'>
-      <figcaption id='slot1name'>{{ series1.name }}</figcaption>
-      <img id='slot1picture' src='images/series/{{ series1.picture }}.png'>
+      <figcaption id='slot1name'></figcaption>
+      <img id='slot1picture' src=''>
     </figure>
 
     <figure id='slot2'>
-      <figcaption id='slot2name'>{{ series2.name }}</figcaption>
-      <img id='slot2picture' src='images/series/{{ series2.picture }}.png'>
+      <figcaption id='slot2name'></figcaption>
+      <img id='slot2picture' src=''>
     </figure>
 
     <figure id='slot3'>
-      <figcaption id='slot3name'>{{ series3.name }}</figcaption>
-      <img id='slot3picture' src='images/series/{{ series3.picture }}.png'>
+      <figcaption id='slot3name'></figcaption>
+      <img id='slot3picture' src=''>
     </figure>
   </div>
 </section>

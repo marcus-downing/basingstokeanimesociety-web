@@ -55,15 +55,20 @@ events:
     venue: Vue Festival Place, Odeon Basingstoke
     link: https://www.myvue.com/cinema/basingstoke-festival-place/film/my-hero-academia-heroes-rising/times
 
+  - name: Minamicon
+    date: 2020-03-06
+    venue: Novotel Hotel, Southampton
+    class: convention
+
   - name: Social Meeting
     date: 2020-03-21
     time: 1pm
     venue: The Tea Bar
 
-  # - name: Social Meeting
-  #   date: 2020-02-29
-  #   class: social
-  #   venue: The Tea Bar
+  - name: CosXPo
+    date: 2020-04-03
+    venue: University of Reading
+    class: convention
 
   - name: No Meeting
     date: 2020-12-22

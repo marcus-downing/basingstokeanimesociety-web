@@ -18,16 +18,21 @@ let basData = fs.readFileSync('data.yml');
 basData = yaml.safeLoad(basData);
 
 basData = _.defaults({
-  maxEvents: 8,
-  maxTweets: 6,
+  maxEvents: 12,
+  maxTweets: 10,
 }, basData);
 
 // showing anime
 basData.slot1 = util.currentAndFuture(basData.slot1, 'from');
+basData.slot1back = util.backdate(basData.slot1);
 basData.series1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[0];
+
 basData.slot2 = util.currentAndFuture(basData.slot2, 'from');
+basData.slot2back = util.backdate(basData.slot2);
 basData.series2 = _.isEmpty(basData.slot2) ? { name: '', picture: '' } : basData.slot2[0];
+
 basData.slot3 = util.currentAndFuture(basData.slot3, 'from');
+basData.slot3back = util.backdate(basData.slot3);
 basData.series3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[0];
 
 // copy the images for the series
@@ -146,6 +151,7 @@ _.each({slot1: basData.slot1, slot2: basData.slot2, slot3: basData.slot3}, (slot
     bookends[dateKey][slotName] = series;
   });
 });
+console.log(bookends);
 
 let bookendDates = _.keys(bookends);
 bookendDates = bookendDates.sort();
@@ -172,7 +178,7 @@ _.each(bookends, bookend => {
 });
 
 bookends = util.currentAndFuture(bookends);
-// console.log(bookends);
+console.log(bookends);
 
 _.each(bookends, bookend => {
   console.log("Bookend:", bookend.name);
@@ -195,29 +201,3 @@ _.each(bookends, bookend => {
     }
   });
 });
-
-
-
-
-
-
-/*
-let series1picture = 'series/'+basData.series1.picture+'.png';
-let series2picture = 'series/'+basData.series2.picture+'.png';
-let series3picture = 'series/'+basData.series3.picture+'.png';
-let cmd = `ffmpeg -y -i video/bookends-base.avi -i ${series1picture} -i ${series2picture} -i ${series3picture} -an `+
-  `-filter_complex "[0:v][1:v] overlay=193:125:enable='between(t,0,16)' [in1]; `+
-  `[in1][2:v] overlay=553:125:enable='between(t,0,16)' [in2]; `+
-  `[in2][3:v] overlay=910:125:enable='between(t,0,16)' [in3]; `+
-  `[in3] fade=in:0:60 [in4]; `+
-  `[in4] fade=out:420:60" `+
-  `../bookends/output.mp4`;
-
-exec(cmd, (err, stdout, stderr) => {
-  if (err) {
-    //some err occurred
-    console.error(err)
-  } else {
-  }
-});
-*/

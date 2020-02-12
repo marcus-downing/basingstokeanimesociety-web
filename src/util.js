@@ -46,10 +46,30 @@ function currentAndFuture(items, key = 'date', requireName = true) {
   return after;
 }
 
+function backdate(items, key = 'from') {
+  return _.map(items, item => {
+    if (!_.has(item, key)) {
+      return item;
+    }
+
+    let date = new Date(item[key]);
+    date.setTime(item[key].getTime());
+    date.setDate(date.getDate() - 7);
+    date.setHours(22);
+    date.setMinutes(0);
+
+    item = _.clone(item);
+    item[key] = date;
+
+    return item;
+  });
+}
+
 module.exports = {
   formatShortMonth,
   formatShortDate,
   formatLongDate,
   formatShortTime,
   currentAndFuture,
+  backdate,
 };

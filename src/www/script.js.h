@@ -1,6 +1,6 @@
-var slot1 = {{{json slot1}}};
-var slot2 = {{{json slot2}}};
-var slot3 = {{{json slot3}}};
+var slot1 = {{{json slot1back}}};
+var slot2 = {{{json slot2back}}};
+var slot3 = {{{json slot3back}}};
 
 var events = {{{json allEvents}}};
 
