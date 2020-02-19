@@ -423,7 +423,7 @@ article.event {
 
 @media (min-width: 1281px) {
   #now-showing figure {
-    img {
+    &, img {
       width: 315px;
       height: 450px;
     }
@@ -432,7 +432,7 @@ article.event {
 
 @media (max-width: 1280px) {
   #now-showing figure {
-    img {
+    &, img {
       width: 22vw;
       margin-bottom: -5px;
     }
@@ -456,7 +456,7 @@ article.event {
     padding-left: 10px;
   }
   #now-showing figure {
-    img { width: 28.4vw; }
+    &, img { width: 28.4vw; }
   }
   #map-overlay {
     left: 10px;
