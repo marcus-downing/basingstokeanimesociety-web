@@ -163,9 +163,6 @@ section.box {
     box-shadow: 0 2px 3px black;
     position: relative;
     margin: 0 auto; }
-    #now-showing figure, #now-showing figure img {
-      width: 315px;
-      height: 450px; }
     #now-showing figure#slot1 {
       margin: 0 auto 0 0; }
     #now-showing figure#slot2 {
@@ -313,6 +310,11 @@ article.event {
   font-size: 36px;
   line-height: 36px;
   cursor: pointer; }
+
+@media (min-width: 1281px) {
+  #now-showing figure img {
+    width: 315px;
+    height: 450px; } }
 
 @media (max-width: 1280px) {
   #now-showing figure img {

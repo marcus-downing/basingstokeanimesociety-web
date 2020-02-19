@@ -185,8 +185,8 @@ section.box {
     margin: 0 auto;
 
     &, img {
-      width: 315px;
-      height: 450px;
+      // width: 315px;
+      // height: 450px;
     }
 
     &#slot1 {
@@ -420,6 +420,15 @@ article.event {
 
 
 // Responsive scaling
+
+@media (min-width: 1281px) {
+  #now-showing figure {
+    img {
+      width: 315px;
+      height: 450px;
+    }
+  }
+}
 
 @media (max-width: 1280px) {
   #now-showing figure {
