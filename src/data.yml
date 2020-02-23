@@ -11,8 +11,13 @@ slot1:
   - from: 2020-03-03
     name: The Great Passage
     picture: great-passage
+    solo: 8
 
   - from: 2020-04-14
+    name: Golden Kamuy
+    picture: golden-kamuy
+
+  - from: 2020-07-07
 
 slot2:
   - from: 2019-01-08
@@ -30,7 +35,15 @@ slot3:
     name: Kaguya-sama, Love is War
     picture: kaguya-sama
 
-  - from: 2020-03-21
+  - from: 2020-03-31
+    name: Hinamatsuri
+    picture: hinamatsuri
+
+  - from: 2020-05-12
+    name: Demi-chan wa Kataritai
+    picture: demi-chan
+
+  - from: 2020-06-23
 
 events:
   - name: Kobosuba Movie
