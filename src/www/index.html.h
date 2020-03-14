@@ -47,16 +47,19 @@
     <figure id='slot1'>
       <figcaption id='slot1name'></figcaption>
       <img id='slot1picture' src=''>
+      <!-- <a class='play'>Play Trailer</a> -->
     </figure>
 
     <figure id='slot2'>
       <figcaption id='slot2name'></figcaption>
       <img id='slot2picture' src=''>
+      <!-- <a class='play'>Play Trailer</a> -->
     </figure>
 
     <figure id='slot3'>
       <figcaption id='slot3name'></figcaption>
       <img id='slot3picture' src=''>
+      <!-- <a class='play'>Play Trailer</a> -->
     </figure>
   </div>
 </section>

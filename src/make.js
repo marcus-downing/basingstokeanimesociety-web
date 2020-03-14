@@ -136,19 +136,24 @@ writeTemplate('www/script.js.h', 'script.js', basData);
 
 // collect the dates on which series change
 let bookends = {};
+
 _.each({slot1: basData.slot1, slot2: basData.slot2, slot3: basData.slot3}, (slot, slotName) => {
   _.each(slot, series => {
     var dateKey = util.formatShortDate(series.from);
-    if (!_.has(bookends[dateKey])) {
-      bookends[dateKey] = {
-        date: series.from,
-        name: dateKey,
-        slot1: null,
-        slot2: null,
-        slot3: null
-      };
-    }
+    bookends[dateKey] = {
+      date: series.from,
+      name: dateKey,
+      slot1: null,
+      slot2: null,
+      slot3: null
+    };
+  });
+});
 
+_.each({slot1: basData.slot1, slot2: basData.slot2, slot3: basData.slot3}, (slot, slotName) => {
+  _.each(slot, series => {
+    var dateKey = util.formatShortDate(series.from);
+    // console.log(`On ${dateKey} slot ${slotName} begin ${series.name}`);
     bookends[dateKey][slotName] = series;
   });
 });

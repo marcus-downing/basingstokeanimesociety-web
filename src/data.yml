@@ -18,6 +18,14 @@ slot1:
     picture: golden-kamuy
 
   - from: 2020-07-07
+    name: Freedom
+    picture: freedom
+
+  - from: 2020-08-11
+    name: The Promised Neverland
+    picture: promised-neverland
+
+  - from: 2020-09-22
 
 slot2:
   - from: 2019-01-08
@@ -25,6 +33,10 @@ slot2:
     picture: hunter-x-hunter
 
   - from: 2020-06-23
+    name: Spice and Wolf
+    picture: spice-and-wolf
+
+  - from: 2020-09-29
 
 slot3:
   - from: 2020-01-07
@@ -44,6 +56,14 @@ slot3:
     picture: demi-chan
 
   - from: 2020-06-23
+    name: Chio's School Road
+    picture: chios-school-road
+
+  - from: 2020-08-04
+    name: Konosuba S2
+    picture: konosuba2
+
+  - from: 2020-09-08
 
 events:
   - name: Kobosuba Movie
