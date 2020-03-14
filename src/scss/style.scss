@@ -152,6 +152,18 @@ section.box {
   }
 }
 
+#section-announce {
+  background: white;
+  background: rgba(255,255,255,0.9);
+  margin-top: 3em;
+
+  h2 {
+    color: black;
+    margin-top: 0.6em;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5)
+  }
+}
+
 #section-next-meeting {
   position: relative;
 

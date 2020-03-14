@@ -3,6 +3,11 @@
 # Basingstoke Anime Society
 # Website data
 
+announce:
+  visible: yes
+  title: "Coronavirus"
+  content: "We will be running this Tuesday, but if you feel sick or may have been exposed please make your own decisions wisely. Watch us on social media for the latest news."
+
 slot1:
   - from: 2019-11-26
     name: Sagrada Reset

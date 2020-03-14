@@ -30,6 +30,14 @@
 
 <h1 id='main-title'>Basingstoke Anime Society</h1>
 
+{{#if announce.visible}}
+<section id='section-announce' class='box'>
+  <h2>{{announce.title}}</h2>
+
+  <p>{{announce.content}}</p>
+</section>
+{{/if}}
+
 <section id='section-next-meeting' class='box'>
   <h2>Next Meeting</h2>
 
