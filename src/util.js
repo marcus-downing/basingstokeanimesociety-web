@@ -25,7 +25,7 @@ function formatLongDate(date) {
 }
 
 function formatShortTime(time) {
-
+  return time;
 }
 
 // date arrangmeent

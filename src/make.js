@@ -56,6 +56,9 @@ let now = new Date(Date.now());
 let events = _.filter(basData.events, event => event.date >= now);
 events = _.map(events, event => {
   event = _.defaults(event, {
+    time: ''
+  });
+  event = _.defaults(event, {
     class: 'social',
     dateLong: util.formatLongDate(event.date) + (event.time != '' ? ', '+util.formatShortTime(event.time) : ''),
     day: event.date.getDate(),

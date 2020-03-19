@@ -21,9 +21,10 @@
 </div>
 
 <nav id='section-social'>
-<a id='btn-mail' href='mailto:marcus@basingstokeanimesociety.com'><i></i><span>Mail</span></a>
-<a id='btn-twitter' href='https://twitter.com/BasingAnime'target="_blank"><i></i><span>Twitter</span></a>
-<a id='btn-fb' href='https://www.facebook.com/groups/basingstokeanimesociety/'target="_blank"><i></i><span>Facebook</span></a>
+<a class='btn btn-mail' href='mailto:marcus@basingstokeanimesociety.com'><i></i><span>Mail</span></a>
+<a class='btn btn-twitter' href='https://twitter.com/BasingAnime' target="_blank"><i></i><span>Twitter</span></a>
+<a class='btn btn-fb' href='https://www.facebook.com/groups/basingstokeanimesociety/' target="_blank"><i></i><span>Facebook</span></a>
+<a class='btn btn-discord' href='https://discord.gg/sypjyaA' target="_blank"><i></i><span>Discord</span></a>
 </nav>
 
 <main>
@@ -35,6 +36,10 @@
   <h2>{{announce.title}}</h2>
 
   <p>{{announce.content}}</p>
+
+  {{#if announce.discord}}
+  <p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
+  {{/if}}
 </section>
 {{/if}}
 
@@ -45,7 +50,7 @@
   <h3 id='next-meeting-title'></h3>
   <h3><em id='next-meeting-venue'>&nbsp;</em> <span id='next-meeting-address'>&nbsp;</span></h3>
 
-  <button id='where-when' onclick="showMap()"><span>Where and When?</span></button>
+  <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Where and When?</span></button>
 </section>
 
 <section id='section-now-showing'>

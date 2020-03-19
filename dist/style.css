@@ -42,6 +42,38 @@ body {
     background-image: url(images/night-3.jpg); }
 
 /* Site furniture */
+.btn {
+  display: block;
+  margin-bottom: 10px;
+  height: 60px;
+  cursor: pointer;
+  background: none;
+  border: 0 none; }
+  .btn i {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 0 1px 2px black;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0 none;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  .btn span {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    border-left-width: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 7px 36px;
+    vertical-align: middle;
+    margin-left: -6px;
+    box-shadow: 1px 1px 1.4px rgba(0, 0, 0, 0.7); }
+
 #logo {
   position: fixed;
   top: 5px;
@@ -51,35 +83,40 @@ body {
   position: fixed;
   top: 20px;
   right: 20px; }
-  #section-social a {
-    display: block;
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-    border-radius: 30px;
-    box-shadow: 0 1px 2px black;
-    -webkit-appearance: none;
-    appearance: none;
-    border: 0 none;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; }
-    #section-social a span {
-      display: none; }
-    @media (max-width: 1280px) {
-      #section-social a {
-        width: 40px;
-        height: 40px; } }
-    #section-social a#btn-mail {
-      background-color: #ed3b41;
-      background-image: url(images/mail.svg); }
-    #section-social a#btn-twitter {
-      background-color: #1da1f2;
-      background-image: url(images/tw_icon.png); }
-    #section-social a#btn-fb {
-      background-color: #4267b2;
-      background-image: url(images/fb_icon.png); }
+  @media (max-width: 1280px) {
+    #section-social .btn i {
+      width: 40px;
+      height: 40px; } }
+  #section-social .btn span {
+    display: none; }
+
+.btn-mail i {
+  background-color: #ed3b41;
+  background-image: url("images/mail.svg"); }
+
+.btn-mail span {
+  background: #ed3b41; }
+
+.btn-twitter i {
+  background-color: #1da1f2;
+  background-image: url("images/tw_icon.png"); }
+
+.btn-twitter span {
+  background: #1da1f2; }
+
+.btn-fb i {
+  background-color: #4267b2;
+  background-image: url("images/fb_icon.png"); }
+
+.btn-fb span {
+  background: #4267b2; }
+
+.btn-discord i {
+  background-color: #7289da;
+  background-image: url("images/discord_icon.svg"); }
+
+.btn-discord span {
+  background: #7289da; }
 
 #main-title {
   display: none; }
@@ -123,7 +160,7 @@ section.box {
 
 #section-announce {
   background: white;
-  background: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.7));
   margin-top: 3em; }
   #section-announce h2 {
     color: black;
@@ -135,31 +172,17 @@ section.box {
   #section-next-meeting h2 {
     margin-bottom: 3px; }
 
-#where-when {
+.btn-where-when {
   position: absolute;
   top: 30%;
-  right: 20px;
-  display: block;
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-  border-radius: 30px;
-  box-shadow: 0 1px 2px black;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 0 none;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: white;
-  background-image: url(images/pin.svg); }
-  #where-when span {
+  right: 20px; }
+  .btn-where-when i {
+    background-color: white;
+    background-image: url("images/pin.svg"); }
+  .btn-where-when span {
+    background: white; }
+  .btn-where-when span {
     display: none; }
-  @media (max-width: 1280px) {
-    #where-when {
-      width: 40px;
-      height: 40px; } }
 
 #section-now-showing {
   margin: 2em 0; }
@@ -351,7 +374,7 @@ article.event {
   #now-showing figure, #now-showing figure img {
     width: 22vw;
     margin-bottom: -5px; }
-  #where-when {
+  .btn-where-when {
     position: static; }
   .lr {
     display: block; } }

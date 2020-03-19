@@ -4,9 +4,10 @@
 # Website data
 
 announce:
-  visible: yes
+  visible: no
   title: "Coronavirus"
-  content: "We will be running this Tuesday, but if you feel sick or may have been exposed please make your own decisions wisely. Watch us on social media for the latest news."
+  content: "Anime society meetings are on hiatus for the time being. Instead, join us online every Tuesday evening."
+  discord: yes
 
 slot1:
   - from: 2019-11-26

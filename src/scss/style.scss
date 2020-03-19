@@ -45,30 +45,52 @@ body {
 }
 
 /* Site furniture */
-
-@mixin btn {
+.btn {
   display: block;
-  width: 60px;
-  height: 60px;
   margin-bottom: 10px;
-  border-radius: 30px;
-  box-shadow: 0 1px 2px black;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 0 none;
+  height: 60px;
   cursor: pointer;
+  background: none;
+  border: 0 none;
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  i {
+    display: inline-block;
+    // position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 0 1px 2px black;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0 none;
+    vertical-align: middle;
 
-  span {
-    display: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
-  @media (max-width: 1280px) {
-    width: 40px;
-    height: 40px;
+  span {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    border-left-width: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 7px 36px;
+    vertical-align: middle;
+    margin-left: -6px;
+    box-shadow: 1px 1px 1.4px rgba(0,0,0,0.7);
+  }
+}
+@mixin btn($color, $icon) {
+  i {
+    background-color: $color;
+    background-image: url($icon);
+  }
+
+  span {
+    background: $color;
   }
 }
 
@@ -83,22 +105,37 @@ body {
   top: 20px;
   right: 20px;
 
-  a {
-    @include btn;
+  .btn {
+    i {
 
-    &#btn-mail {
-      background-color: #ed3b41;
-      background-image: url(images/mail.svg);
+
+      @media (max-width: 1280px) {
+        width: 40px;
+        height: 40px;
+      }
     }
-    &#btn-twitter {
-      background-color: #1da1f2;
-      background-image: url(images/tw_icon.png);
-    }
-    &#btn-fb {
-      background-color: #4267b2;
-      background-image: url(images/fb_icon.png);
+    span {
+      display: none;
     }
   }
+}
+
+$mail_color: #ed3b41;
+$twitter_color: #1da1f2;
+$fb_color: #4267b2;
+$discord_color: #7289da;
+
+.btn-mail {
+  @include btn($mail_color, 'images/mail.svg');
+}
+.btn-twitter {
+  @include btn($twitter_color, 'images/tw_icon.png');
+}
+.btn-fb {
+  @include btn($fb_color, 'images/fb_icon.png');
+}
+.btn-discord {
+  @include btn($discord_color, 'images/discord_icon.svg');
 }
 
 #main-title {
@@ -154,7 +191,7 @@ section.box {
 
 #section-announce {
   background: white;
-  background: rgba(255,255,255,0.9);
+  background: linear-gradient(120deg, rgba(255,255,255,0.9), rgba(245,245,245,0.7));
   margin-top: 3em;
 
   h2 {
@@ -172,14 +209,15 @@ section.box {
   }
 }
 
-#where-when {
+.btn-where-when {
   position: absolute;
   top: 30%;
   right: 20px;
 
-  @include btn;
-  background-color: white;
-  background-image: url(images/pin.svg);
+  @include btn(white, 'images/pin.svg');
+  span {
+    display: none;
+  }
 }
 
 #section-now-showing {
@@ -477,7 +515,7 @@ article.event {
       margin-bottom: -5px;
     }
   }
-  #where-when {
+  .btn-where-when {
     position: static;
   }
   .lr {
