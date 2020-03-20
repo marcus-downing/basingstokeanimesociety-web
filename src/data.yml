@@ -9,6 +9,9 @@ announce:
   content: "Anime society meetings are on hiatus for the time being. Instead, join us online every Tuesday evening."
   discord: yes
 
+options:
+  hiatus: yes
+
 slot1:
   - from: 2019-11-26
     name: Sagrada Reset
@@ -99,15 +102,15 @@ events:
     venue: Novotel Hotel, Southampton
     class: convention
 
-  - name: Social Meeting
-    date: 2020-03-21
-    time: 1pm
-    venue: The Tea Bar
+  # - name: Social Meeting
+  #   date: 2020-03-21
+  #   time: 1pm
+  #   venue: The Tea Bar
 
-  - name: CosXPo
-    date: 2020-04-03
-    venue: University of Reading
-    class: convention
+  # - name: CosXPo
+  #   date: 2020-04-03
+  #   venue: University of Reading
+  #   class: convention
 
   - name: Hibanacon
     date: 2020-11-06

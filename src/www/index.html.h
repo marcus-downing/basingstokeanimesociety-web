@@ -53,28 +53,34 @@
   <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Where and When?</span></button>
 </section>
 
-<section id='section-now-showing'>
+<section id='section-now-showing' class='{{#if options.hiatus}}section-now-showing-hiatus{{/if}}'>
   <h2>Now Showing</h2>
 
   <div id='now-showing'>
     <figure id='slot1'>
-      <figcaption id='slot1name'></figcaption>
-      <img id='slot1picture' src=''>
+      <figcaption id='slot1name'>{{series1.name}}</figcaption>
+      <img id='slot1picture' src='images/series/{{series1.picture}}.png'>
       <!-- <a class='play'>Play Trailer</a> -->
     </figure>
 
     <figure id='slot2'>
-      <figcaption id='slot2name'></figcaption>
-      <img id='slot2picture' src=''>
+      <figcaption id='slot2name'>{{series2.name}}</figcaption>
+      <img id='slot2picture' src='images/series/{{series2.picture}}.png'>
       <!-- <a class='play'>Play Trailer</a> -->
     </figure>
 
     <figure id='slot3'>
-      <figcaption id='slot3name'></figcaption>
-      <img id='slot3picture' src=''>
+      <figcaption id='slot3name'>{{series3.name}}</figcaption>
+      <img id='slot3picture' src='images/series/{{series3.picture}}.png'>
       <!-- <a class='play'>Play Trailer</a> -->
     </figure>
   </div>
+
+  {{#if options.hiatus}}
+  <div class='hiatus-overlay'>
+  <p>The schedule is on hiatus</p>
+  </div>
+  {{/if}}
 </section>
 
 <div class='lr'>
@@ -104,7 +110,6 @@
 
     data-tweet-limit="{{ maxTweets }}"
     ></a>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 </section>
 </div>
@@ -122,4 +127,5 @@
   </div>
 </aside>
 
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>

@@ -49,27 +49,31 @@
   <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Where and When?</span></button>
 </section>
 
-<section id='section-now-showing'>
+<section id='section-now-showing' class='section-now-showing-hold'>
   <h2>Now Showing</h2>
 
   <div id='now-showing'>
     <figure id='slot1'>
-      <figcaption id='slot1name'></figcaption>
-      <img id='slot1picture' src=''>
+      <figcaption id='slot1name'>The Great Passage</figcaption>
+      <img id='slot1picture' src='images/series/great-passage.png'>
       <!-- <a class='play'>Play Trailer</a> -->
     </figure>
 
     <figure id='slot2'>
-      <figcaption id='slot2name'></figcaption>
-      <img id='slot2picture' src=''>
+      <figcaption id='slot2name'>Hunter &amp;times; Hunter</figcaption>
+      <img id='slot2picture' src='images/series/hunter-x-hunter.png'>
       <!-- <a class='play'>Play Trailer</a> -->
     </figure>
 
     <figure id='slot3'>
-      <figcaption id='slot3name'></figcaption>
-      <img id='slot3picture' src=''>
+      <figcaption id='slot3name'>Kaguya-sama, Love is War</figcaption>
+      <img id='slot3picture' src='images/series/kaguya-sama.png'>
       <!-- <a class='play'>Play Trailer</a> -->
     </figure>
+  </div>
+
+  <div class='hold-overlay'>
+  <p>The schedule is on hold</p>
   </div>
 </section>
 
@@ -78,65 +82,65 @@
   <h2>Upcoming Events</h2>
 
   <div id='events-list'>
-  <article id='upcoming-Sat Mar 21 2020 00:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-social'>
-    <time datetime="Sat Mar 21 2020 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>21</span><span class='month'>Mar</span></time>
-    <h3>Social Meeting</h3>
-    <p>The Tea Bar, 1pm</h3>
-  </article>
   <article id='upcoming-Tue Mar 24 2020 19:00:00 GMT+0000 (Greenwich Mean Time)' class='event event-anime'>
     <time datetime="Tue Mar 24 2020 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>24</span><span class='month'>Mar</span></time>
     <h3>Anime Society Meeting</h3>
-    <p>The White Hart, 7pm</h3>
+    <p>Discord, 7pm</h3>
   </article>
   <article id='upcoming-Tue Mar 31 2020 19:00:00 GMT+0100 (British Summer Time)' class='event event-anime'>
     <time datetime="Tue Mar 31 2020 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>31</span><span class='month'>Mar</span></time>
     <h3>Anime Society Meeting</h3>
-    <p>The White Hart, 7pm</h3>
-  </article>
-  <article id='upcoming-Fri Apr 03 2020 01:00:00 GMT+0100 (British Summer Time)' class='event event-convention'>
-    <time datetime="Fri Apr 03 2020 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>3</span><span class='month'>Apr</span></time>
-    <h3>CosXPo</h3>
-    <p>University of Reading</h3>
+    <p>Discord, 7pm</h3>
   </article>
   <article id='upcoming-Tue Apr 07 2020 19:00:00 GMT+0100 (British Summer Time)' class='event event-anime'>
     <time datetime="Tue Apr 07 2020 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>7</span><span class='month'>Apr</span></time>
     <h3>Anime Society Meeting</h3>
-    <p>The White Hart, 7pm</h3>
+    <p>Discord, 7pm</h3>
   </article>
   <article id='upcoming-Tue Apr 14 2020 19:00:00 GMT+0100 (British Summer Time)' class='event event-anime'>
     <time datetime="Tue Apr 14 2020 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>14</span><span class='month'>Apr</span></time>
     <h3>Anime Society Meeting</h3>
-    <p>The White Hart, 7pm</h3>
+    <p>Discord, 7pm</h3>
   </article>
   <article id='upcoming-Tue Apr 21 2020 19:00:00 GMT+0100 (British Summer Time)' class='event event-anime'>
     <time datetime="Tue Apr 21 2020 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>21</span><span class='month'>Apr</span></time>
     <h3>Anime Society Meeting</h3>
-    <p>The White Hart, 7pm</h3>
+    <p>Discord, 7pm</h3>
   </article>
   <article id='upcoming-Tue Apr 28 2020 19:00:00 GMT+0100 (British Summer Time)' class='event event-anime'>
     <time datetime="Tue Apr 28 2020 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>28</span><span class='month'>Apr</span></time>
     <h3>Anime Society Meeting</h3>
-    <p>The White Hart, 7pm</h3>
+    <p>Discord, 7pm</h3>
   </article>
   <article id='upcoming-Tue May 05 2020 19:00:00 GMT+0100 (British Summer Time)' class='event event-anime'>
     <time datetime="Tue May 05 2020 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>5</span><span class='month'>May</span></time>
     <h3>Anime Society Meeting</h3>
-    <p>The White Hart, 7pm</h3>
+    <p>Discord, 7pm</h3>
   </article>
   <article id='upcoming-Tue May 12 2020 19:00:00 GMT+0100 (British Summer Time)' class='event event-anime'>
     <time datetime="Tue May 12 2020 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>12</span><span class='month'>May</span></time>
     <h3>Anime Society Meeting</h3>
-    <p>The White Hart, 7pm</h3>
+    <p>Discord, 7pm</h3>
   </article>
   <article id='upcoming-Tue May 19 2020 19:00:00 GMT+0100 (British Summer Time)' class='event event-anime'>
     <time datetime="Tue May 19 2020 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>19</span><span class='month'>May</span></time>
     <h3>Anime Society Meeting</h3>
-    <p>The White Hart, 7pm</h3>
+    <p>Discord, 7pm</h3>
   </article>
   <article id='upcoming-Tue May 26 2020 19:00:00 GMT+0100 (British Summer Time)' class='event event-anime'>
     <time datetime="Tue May 26 2020 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>26</span><span class='month'>May</span></time>
     <h3>Anime Society Meeting</h3>
-    <p>The White Hart, 7pm</h3>
+    <p>Discord, 7pm</h3>
+  </article>
+  <article id='upcoming-Tue Jun 02 2020 19:00:00 GMT+0100 (British Summer Time)' class='event event-anime'>
+    <time datetime="Tue Jun 02 2020 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>2</span><span class='month'>Jun</span></time>
+    <h3>Anime Society Meeting</h3>
+    <p>Discord, 7pm</h3>
+  </article>
+  <article id='upcoming-Tue Jun 09 2020 19:00:00 GMT+0100 (British Summer Time)' class='event event-anime'>
+    <time datetime="Tue Jun 09 2020 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>9</span><span class='month'>Jun</span></time>
+    <h3>Anime Society Meeting</h3>
+    <p>Discord, 7pm</h3>
   </article>
   </div>
 
@@ -153,7 +157,6 @@
 
     data-tweet-limit="10"
     ></a>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 </section>
 </div>
@@ -171,4 +174,5 @@
   </div>
 </aside>
 
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>

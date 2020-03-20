@@ -63,7 +63,7 @@ events = _.map(events, event => {
     dateLong: util.formatLongDate(event.date) + (event.time != '' ? ', '+util.formatShortTime(event.time) : ''),
     day: event.date.getDate(),
     month: util.formatShortMonth(event.date),
-    venue: 'The White Hart',
+    venue: 'Discord'
   });
   return _.defaults(event, {
     address: venueAddress[event.venue],
@@ -87,13 +87,15 @@ for (var i = 0; i < 30; i++) {
     date: date,
     dateLong: util.formatLongDate(date) + ", 7pm",
     time: "7pm",
-    price: "&pound;4",
     day: date.getDate(),
     month: util.formatShortMonth(date),
     name: 'Anime Society Meeting',
     class: 'anime',
-    venue: 'The White Hart',
-    address: venueAddress['The White Hart']
+    // price: "&pound;4",
+    // venue: 'The White Hart',
+    // address: venueAddress['The White Hart']
+    venue: 'Discord',
+    address: ''
   }
   events.push(event);
 }
