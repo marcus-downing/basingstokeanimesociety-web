@@ -22,6 +22,8 @@ basData = _.defaults({
   maxTweets: 10,
 }, basData);
 
+let options = basData.options;
+
 // showing anime
 basData.slot1 = util.currentAndFuture(basData.slot1, 'from');
 basData.slot1back = util.backdate(basData.slot1);
@@ -63,7 +65,7 @@ events = _.map(events, event => {
     dateLong: util.formatLongDate(event.date) + (event.time != '' ? ', '+util.formatShortTime(event.time) : ''),
     day: event.date.getDate(),
     month: util.formatShortMonth(event.date),
-    venue: 'Discord'
+    venue: options.hiatus ? 'Discord' : 'The White Hart'
   });
   return _.defaults(event, {
     address: venueAddress[event.venue],
@@ -89,13 +91,11 @@ for (var i = 0; i < 30; i++) {
     time: "7pm",
     day: date.getDate(),
     month: util.formatShortMonth(date),
-    name: 'Anime Society Meeting',
+    name: options.hiatus ? 'Online Meeting' : 'Anime Society Meeting',
     class: 'anime',
-    // price: "&pound;4",
-    // venue: 'The White Hart',
-    // address: venueAddress['The White Hart']
-    venue: 'Discord',
-    address: ''
+    price: options.hiatus ? null : "&pound;4",
+    venue: options.hiatus ? 'Discord' : 'The White Hart',
+    address: options.hiatus ? '' : venueAddress['The White Hart']
   }
   events.push(event);
 }

@@ -44,7 +44,11 @@
 {{/if}}
 
 <section id='section-next-meeting' class='box'>
+  {{#if options.hiatus}}
+  <h2>Next Online Meeting</h2>
+  {{else}}
   <h2>Next Meeting</h2>
+  {{/if}}
 
   <h1 id='next-meeting-date'>&nbsp;</h1>
   <h3 id='next-meeting-title'></h3>
@@ -78,7 +82,7 @@
 
   {{#if options.hiatus}}
   <div class='hiatus-overlay'>
-  <p>The schedule is on hiatus</p>
+  <p>The regular schedule is on hiatus</p>
   </div>
   {{/if}}
 </section>

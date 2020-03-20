@@ -187,20 +187,21 @@ section.box {
 #section-now-showing {
   margin: 2em 0;
   position: relative; }
-  #section-now-showing.section-now-showing-hold #now-showing {
-    opacity: 0.3; }
-  #section-now-showing .hold-overlay {
+  #section-now-showing.section-now-showing-hiatus #now-showing {
+    opacity: 0.2; }
+  #section-now-showing .hiatus-overlay {
     position: absolute;
     top: 40%;
     left: 100px;
     right: 100px;
     min-height: 30px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 2px;
     box-shadow: 0 0 150px black, 0 0 80px black;
     text-align: center;
     color: white;
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 20px; }
 
 #now-showing {
   display: grid;

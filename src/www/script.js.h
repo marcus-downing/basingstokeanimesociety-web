@@ -4,6 +4,8 @@ var slot3 = {{{json slot3back}}};
 
 var events = {{{json allEvents}}};
 
+var options = {{{json options}}};
+
 // select a background image
 function selectBackground() {
     var LIMIT = 3;
