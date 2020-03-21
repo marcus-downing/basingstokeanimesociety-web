@@ -1,3 +1,5 @@
+const crypto = require('crypto')
+
 const _ = require('lodash');
 
 // date formats
@@ -65,6 +67,11 @@ function backdate(items, key = 'from') {
   });
 }
 
+function md5sum(data, digits = 6) {
+  let hash = crypto.createHash('md5').update(data).digest("hex");
+  return hash.substr(0, digits);
+}
+
 module.exports = {
   formatShortMonth,
   formatShortDate,
@@ -72,4 +79,5 @@ module.exports = {
   formatShortTime,
   currentAndFuture,
   backdate,
+  md5sum,
 };

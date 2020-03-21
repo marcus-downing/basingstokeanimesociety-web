@@ -137,11 +137,12 @@ sass.render({
   if (err) {
     console.log(err);
   }
+  basData.stylesheetVersion = util.md5sum(result.css);
   fs.writeFile('../dist/style.css', result.css, 'utf-8', err => {});
-});
 
-writeTemplate('www/index.html.h', 'index.html', basData);
-writeTemplate('www/script.js.h', 'script.js', basData);
+  writeTemplate('www/index.html.h', 'index.html', basData);
+  writeTemplate('www/script.js.h', 'script.js', basData);
+});
 
 
 // bookends

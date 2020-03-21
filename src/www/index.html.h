@@ -11,7 +11,7 @@
   </script>
 
   <title>Basingstoke Anime Society</title>
-  <link rel="stylesheet" media="all" href="style.css" />
+  <link rel="stylesheet" media="all" href="style.css?ver={{stylesheetVersion}}" />
   <script src="script.js"></script>
 </head>
 <body class="day">
