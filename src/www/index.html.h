@@ -106,6 +106,16 @@
 <section id='news-feed'>
   <h2>News Feed</h2>
 
+  {{#each news}}
+  <article class='news box'>
+  <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
+  <h3>{{title}}</h3>
+  {{#each body}}
+  <p>{{this}}</p>
+  {{/each}}
+  </article>
+  {{/each}}
+
   <div id='twitter-box'>
   <a class="twitter-timeline" data-lang="en"
     data-width="670" data-height="700"

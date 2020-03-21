@@ -12,6 +12,21 @@ announce:
 options:
   hiatus: yes
 
+news:
+  - title: Basingstoke Anime Society is moving online
+    date: 2020-03-18
+    body:
+      - |
+        Sadly, due to the coronavirus, our meetings in the White Hart are suspended from next Tuesday
+        and so our regular anime schedule is on hiatus.
+      - |
+        Instead we'll be meeting online every Tuesday evening from 7:00 to watch anime together and chat.
+        Click the button above to join our Discord server.
+  - title: Twitter down
+    date: 2020-03-20
+    body:
+      - Our Twitter feed is currently locked due to a silly mistake. Please hold on while we get it fixed.
+
 slot1:
   - from: 2019-11-26
     name: Sagrada Reset

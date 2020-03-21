@@ -48,6 +48,13 @@ _.each([basData.slot1, basData.slot2, basData.slot3], slot => {
   });
 });
 
+// news
+_.each(basData.news, article => {
+  article.day = article.date.getDate();
+  article.month = util.formatShortMonth(article.date);
+});
+basData.news = _.take(_.sortBy(basData.news, 'date').reverse(), 3);
+
 // future events
 let venueAddress = {
   'The White Hart': 'London Road, Basingstoke RG21 4AE',
@@ -92,7 +99,7 @@ for (var i = 0; i < 30; i++) {
     day: date.getDate(),
     month: util.formatShortMonth(date),
     name: options.hiatus ? 'Online Meeting' : 'Anime Society Meeting',
-    class: 'anime',
+    class: options.hiatus ? 'online' : 'anime',
     price: options.hiatus ? null : "&pound;4",
     venue: options.hiatus ? 'Discord' : 'The White Hart',
     address: options.hiatus ? '' : venueAddress['The White Hart']
@@ -192,6 +199,10 @@ bookends = util.currentAndFuture(bookends);
 // console.log(bookends);
 
 _.each(bookends, bookend => {
+  if (fs.existsSync(`../bookends/${bookend.name}.mp4`)) {
+    console.log("Skipping bookend:", bookend.name);
+    return;
+  }
   console.log("Bookend:", bookend.name);
   let series1picture = 'series/'+bookend.slot1.picture+'.png';
   let series2picture = 'series/'+bookend.slot2.picture+'.png';

@@ -177,7 +177,7 @@ h3 {
   }
 }
 
-section.box {
+.box {
   padding: 5px 27px;
   background: rgba(40, 60, 120, 0.4);
   border-radius: 2px;
@@ -325,7 +325,7 @@ section.box {
   grid-gap: 20px;
 }
 
-article.event {
+article {
   position: relative;
   padding-left: 70px;
   margin-bottom: 20px;
@@ -362,7 +362,16 @@ article.event {
     }
   }
 
-  h3, p {
+  &.box {
+    padding-left: 85px;
+    padding-top: 15px;
+    time {
+      top: 16px;
+      left: 16px;
+    }
+  }
+
+  h3, &.event p {
     color: white;
     font-weight: bold;
     text-shadow: 0 1px 1px black;
@@ -374,7 +383,10 @@ article.event {
   }
 
   p {
+    margin: 0.5em 0;
     font-size: 16px;
+    color: white;
+    text-shadow: 0 1px 1px black, 0 0 40px black;
   }
 
   a {
@@ -384,6 +396,12 @@ article.event {
   &.event-anime {
     time {
       background: linear-gradient(#d8edfa, #a2d7f8);
+    }
+  }
+
+  &.event-online {
+    time {
+      background: linear-gradient(#c9d2f8, #97abf3);
     }
   }
 
@@ -410,6 +428,12 @@ article.event {
       background: linear-gradient(#fad8f7, #f8a2ed);
     }
   }
+
+  &.news {
+    time {
+      background: linear-gradient(#d8fadc, #a2f8ad);
+    }
+  }
 }
 
 #twitter-box {
@@ -418,21 +442,6 @@ article.event {
   backdrop-filter: blur(20px);
   box-shadow: 0 1px 2px black;
 }
-
-// article.tweet {
-//   background: rgba(255,255,255,0.6);
-//   border-radius: 2px;
-//   box-shadow: 0 1px 2px black;
-//   color: black;
-
-//   padding: 8px 12px;
-
-//   time {
-//     font-weight: bold;
-//     text-transform: uppercase;
-//     font-size: 11pt;
-//   }
-// }
 
 .timeline-Header {
   display: none;
