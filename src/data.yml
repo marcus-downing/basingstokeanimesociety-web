@@ -37,17 +37,17 @@ slot1:
     picture: great-passage
     solo: 8
 
-  - from: 2020-04-14
-    name: Golden Kamuy
-    picture: golden-kamuy
+  # - from: 2020-04-14
+  #   name: Golden Kamuy
+  #   picture: golden-kamuy
 
-  - from: 2020-07-07
-    name: Freedom
-    picture: freedom
+  # - from: 2020-07-07
+  #   name: Freedom
+  #   picture: freedom
 
-  - from: 2020-08-11
-    name: The Promised Neverland
-    picture: promised-neverland
+  # - from: 2020-08-11
+  #   name: The Promised Neverland
+  #   picture: promised-neverland
 
   - from: 2020-09-22
 
@@ -56,9 +56,9 @@ slot2:
     name: Hunter &times; Hunter
     picture: hunter-x-hunter
 
-  - from: 2020-06-23
-    name: Spice and Wolf
-    picture: spice-and-wolf
+  # - from: 2020-06-23
+  #   name: Spice and Wolf
+  #   picture: spice-and-wolf
 
   - from: 2020-09-29
 
@@ -71,21 +71,21 @@ slot3:
     name: Kaguya-sama, Love is War
     picture: kaguya-sama
 
-  - from: 2020-03-31
-    name: Hinamatsuri
-    picture: hinamatsuri
+  # - from: 2020-03-31
+  #   name: Hinamatsuri
+  #   picture: hinamatsuri
 
-  - from: 2020-05-12
-    name: Demi-chan wa Kataritai
-    picture: demi-chan
+  # - from: 2020-05-12
+  #   name: Demi-chan wa Kataritai
+  #   picture: demi-chan
 
-  - from: 2020-06-23
-    name: Chio's School Road
-    picture: chios-school-road
+  # - from: 2020-06-23
+  #   name: Chio's School Road
+  #   picture: chios-school-road
 
-  - from: 2020-08-04
-    name: Konosuba S2
-    picture: konosuba2
+  # - from: 2020-08-04
+  #   name: Konosuba S2
+  #   picture: konosuba2
 
   - from: 2020-09-08
 
