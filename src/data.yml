@@ -6,11 +6,12 @@
 announce:
   visible: no
   title: "Coronavirus"
-  content: "Anime society meetings are on hiatus for the time being. Instead, join us online every Tuesday evening."
+  content: "Anime society meetings have moved online. Join us on Discord every Tuesday evening."
   discord: yes
 
 options:
   hiatus: yes
+  hiatusMessage: "Our regular schedule resumes on 28 April"
 
 news:
   - title: Basingstoke Anime Society is moving online
@@ -22,10 +23,18 @@ news:
       - |
         Instead we'll be meeting online every Tuesday evening from 7:00 to watch anime together and chat.
         Click the button above to join our Discord server.
+    discordLink: true
   - title: Twitter down
     date: 2020-03-20
     body:
       - Our Twitter feed is currently locked due to a silly mistake. Please hold on while we get it fixed.
+  - title: Schedule resumes on 28 April
+    date: 2020-04-12
+    body:
+      - |
+        The online meetings have been going well, so we're going to resume the shows we were watching from Tuesday 28 April.
+        Until then we'll continue with the irregulars we've been showing. Join us on Discord every Tuesday evening.
+    discordLink: true
 
 slot1:
   - from: 2019-11-26
@@ -37,30 +46,30 @@ slot1:
     picture: great-passage
     solo: 8
 
-  # - from: 2020-04-14
-  #   name: Golden Kamuy
-  #   picture: golden-kamuy
+  - from: 2020-05-19
+    name: Golden Kamuy
+    picture: golden-kamuy
 
-  # - from: 2020-07-07
-  #   name: Freedom
-  #   picture: freedom
+  - from: 2020-08-18
+    name: Freedom
+    picture: freedom
 
-  # - from: 2020-08-11
-  #   name: The Promised Neverland
-  #   picture: promised-neverland
+  - from: 2020-09-15
+    name: The Promised Neverland
+    picture: promised-neverland
 
-  - from: 2020-09-22
+  - from: 2020-10-27
 
 slot2:
   - from: 2019-01-08
     name: Hunter &times; Hunter
     picture: hunter-x-hunter
 
-  # - from: 2020-06-23
-  #   name: Spice and Wolf
-  #   picture: spice-and-wolf
+  - from: 2020-07-28
+    name: Spice and Wolf
+    picture: spice-and-wolf
 
-  - from: 2020-09-29
+  - from: 2020-11-03
 
 slot3:
   - from: 2020-01-07
@@ -71,23 +80,23 @@ slot3:
     name: Kaguya-sama, Love is War
     picture: kaguya-sama
 
-  # - from: 2020-03-31
-  #   name: Hinamatsuri
-  #   picture: hinamatsuri
+  - from: 2020-05-05
+    name: Hinamatsuri
+    picture: hinamatsuri
 
-  # - from: 2020-05-12
-  #   name: Demi-chan wa Kataritai
-  #   picture: demi-chan
+  - from: 2020-06-16
+    name: Demi-chan wa Kataritai
+    picture: demi-chan
 
-  # - from: 2020-06-23
-  #   name: Chio's School Road
-  #   picture: chios-school-road
-
-  # - from: 2020-08-04
-  #   name: Konosuba S2
-  #   picture: konosuba2
+  - from: 2020-07-28
+    name: Chio's School Road
+    picture: chios-school-road
 
   - from: 2020-09-08
+    name: Konosuba S2
+    picture: konosuba2
+
+  - from: 2020-10-13
 
 events:
   - name: Kobosuba Movie

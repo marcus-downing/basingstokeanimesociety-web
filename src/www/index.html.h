@@ -82,7 +82,7 @@
 
   {{#if options.hiatus}}
   <div class='hiatus-overlay'>
-  <p>The regular schedule is on hiatus</p>
+  <p>{{ options.hiatusMessage }}</p>
   </div>
   {{/if}}
 </section>
@@ -92,11 +92,15 @@
   <h2>Upcoming Events</h2>
 
   <div id='events-list'>
-  {{#each events}}
-  <article id='upcoming-{{ date }}' class='event event-{{ class }}'>
+  {{#each eventsByDate}}
+  <article id='upcoming-{{ shortDate }}' class='event event-{{ class }}'>
     <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
-    <h3>{{ name }}</h3>
-    <p>{{#if link}}<a href='{{ link }}'>{{/if}}{{ venue }}{{#if time}}, {{ time }}{{/if}}{{#if link}}</a>{{/if}}</h3>
+    {{#each events}}
+    <div class='event-detail event-detail-{{ class }}'>
+      <h3>{{ name }}</h3>
+      {{#if time}}<p>{{#if link}}<a href='{{ link }}'>{{/if}}{{ venue }}{{#if time}}, {{ time }}{{/if}}{{#if link}}</a>{{/if}}</h3>{{/if}}
+    </div>
+    {{/each}}
   </article>
   {{/each}}
   </div>
@@ -113,6 +117,9 @@
   {{#each body}}
   <p>{{this}}</p>
   {{/each}}
+  {{#if discordLink}}
+  <p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
+  {{/if}}
   </article>
   {{/each}}
 

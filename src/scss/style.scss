@@ -399,6 +399,12 @@ article {
     }
   }
 
+  &.event-new-series {
+    time {
+      background: linear-gradient(#faeed8, #f8dda2);
+    }
+  }
+
   &.event-online {
     time {
       background: linear-gradient(#c9d2f8, #97abf3);
@@ -432,6 +438,17 @@ article {
   &.news {
     time {
       background: linear-gradient(#d8fadc, #a2f8ad);
+    }
+  }
+
+  .event-detail {
+    &.event-detail-new-series {
+      padding: 1px 6px;
+      background: rgba(40, 60, 120, 0.2);
+      border-radius: 2px;
+      margin-bottom: 2px;
+      margin-left: -5px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.3);
     }
   }
 }

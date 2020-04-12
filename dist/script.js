@@ -1,10 +1,10 @@
-var slot1 = [{"from":"2020-02-25T22:00:00.000Z","name":"The Great Passage","picture":"great-passage","solo":8}];
-var slot2 = [{"from":"2019-01-01T22:00:00.000Z","name":"Hunter &times; Hunter","picture":"hunter-x-hunter"}];
-var slot3 = [{"from":"2020-02-11T22:00:00.000Z","name":"Kaguya-sama, Love is War","picture":"kaguya-sama"}];
+var slot1 = [{"from":"2020-02-25T22:00:00.000Z","name":"The Great Passage","picture":"great-passage","solo":8},{"from":"2020-05-12T21:00:00.000Z","name":"Golden Kamuy","picture":"golden-kamuy"},{"from":"2020-08-11T21:00:00.000Z","name":"Freedom","picture":"freedom"},{"from":"2020-09-08T21:00:00.000Z","name":"The Promised Neverland","picture":"promised-neverland"}];
+var slot2 = [{"from":"2019-01-01T22:00:00.000Z","name":"Hunter &times; Hunter","picture":"hunter-x-hunter"},{"from":"2020-07-21T21:00:00.000Z","name":"Spice and Wolf","picture":"spice-and-wolf"}];
+var slot3 = [{"from":"2020-02-11T22:00:00.000Z","name":"Kaguya-sama, Love is War","picture":"kaguya-sama"},{"from":"2020-04-28T21:00:00.000Z","name":"Hinamatsuri","picture":"hinamatsuri"},{"from":"2020-06-09T21:00:00.000Z","name":"Demi-chan wa Kataritai","picture":"demi-chan"},{"from":"2020-07-21T21:00:00.000Z","name":"Chio's School Road","picture":"chios-school-road"},{"from":"2020-09-01T21:00:00.000Z","name":"Konosuba S2","picture":"konosuba2"}];
 
-var events = [{"date":"2020-03-31T18:00:00.000Z","dateLong":"Tuesday, 31 March 2020, 7pm","time":"7pm","day":31,"month":"Mar","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-04-07T18:00:00.000Z","dateLong":"Tuesday, 7 April 2020, 7pm","time":"7pm","day":7,"month":"Apr","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-04-14T18:00:00.000Z","dateLong":"Tuesday, 14 April 2020, 7pm","time":"7pm","day":14,"month":"Apr","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-04-21T18:00:00.000Z","dateLong":"Tuesday, 21 April 2020, 7pm","time":"7pm","day":21,"month":"Apr","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-04-28T18:00:00.000Z","dateLong":"Tuesday, 28 April 2020, 7pm","time":"7pm","day":28,"month":"Apr","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-05-05T18:00:00.000Z","dateLong":"Tuesday, 5 May 2020, 7pm","time":"7pm","day":5,"month":"May","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-05-12T18:00:00.000Z","dateLong":"Tuesday, 12 May 2020, 7pm","time":"7pm","day":12,"month":"May","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-05-19T18:00:00.000Z","dateLong":"Tuesday, 19 May 2020, 7pm","time":"7pm","day":19,"month":"May","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-05-26T18:00:00.000Z","dateLong":"Tuesday, 26 May 2020, 7pm","time":"7pm","day":26,"month":"May","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-06-02T18:00:00.000Z","dateLong":"Tuesday, 2 June 2020, 7pm","time":"7pm","day":2,"month":"Jun","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-06-09T18:00:00.000Z","dateLong":"Tuesday, 9 June 2020, 7pm","time":"7pm","day":9,"month":"Jun","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-06-16T18:00:00.000Z","dateLong":"Tuesday, 16 June 2020, 7pm","time":"7pm","day":16,"month":"Jun","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-06-23T18:00:00.000Z","dateLong":"Tuesday, 23 June 2020, 7pm","time":"7pm","day":23,"month":"Jun","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-06-30T18:00:00.000Z","dateLong":"Tuesday, 30 June 2020, 7pm","time":"7pm","day":30,"month":"Jun","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-07-07T18:00:00.000Z","dateLong":"Tuesday, 7 July 2020, 7pm","time":"7pm","day":7,"month":"Jul","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-07-14T18:00:00.000Z","dateLong":"Tuesday, 14 July 2020, 7pm","time":"7pm","day":14,"month":"Jul","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-07-21T18:00:00.000Z","dateLong":"Tuesday, 21 July 2020, 7pm","time":"7pm","day":21,"month":"Jul","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-07-28T18:00:00.000Z","dateLong":"Tuesday, 28 July 2020, 7pm","time":"7pm","day":28,"month":"Jul","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-08-04T18:00:00.000Z","dateLong":"Tuesday, 4 August 2020, 7pm","time":"7pm","day":4,"month":"Aug","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-08-11T18:00:00.000Z","dateLong":"Tuesday, 11 August 2020, 7pm","time":"7pm","day":11,"month":"Aug","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-08-18T18:00:00.000Z","dateLong":"Tuesday, 18 August 2020, 7pm","time":"7pm","day":18,"month":"Aug","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-08-25T18:00:00.000Z","dateLong":"Tuesday, 25 August 2020, 7pm","time":"7pm","day":25,"month":"Aug","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-09-01T18:00:00.000Z","dateLong":"Tuesday, 1 September 2020, 7pm","time":"7pm","day":1,"month":"Sep","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-09-08T18:00:00.000Z","dateLong":"Tuesday, 8 September 2020, 7pm","time":"7pm","day":8,"month":"Sep","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-09-15T18:00:00.000Z","dateLong":"Tuesday, 15 September 2020, 7pm","time":"7pm","day":15,"month":"Sep","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-09-22T18:00:00.000Z","dateLong":"Tuesday, 22 September 2020, 7pm","time":"7pm","day":22,"month":"Sep","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-09-29T18:00:00.000Z","dateLong":"Tuesday, 29 September 2020, 7pm","time":"7pm","day":29,"month":"Sep","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-10-06T18:00:00.000Z","dateLong":"Tuesday, 6 October 2020, 7pm","time":"7pm","day":6,"month":"Oct","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-10-13T18:00:00.000Z","dateLong":"Tuesday, 13 October 2020, 7pm","time":"7pm","day":13,"month":"Oct","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"date":"2020-10-20T18:00:00.000Z","dateLong":"Tuesday, 20 October 2020, 7pm","time":"7pm","day":20,"month":"Oct","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""},{"name":"Hibanacon","date":"2020-11-06T00:00:00.000Z","venue":"Jury's Inn, Milton Keynes","class":"convention","time":"","dateLong":"Friday, 6 November 2020","day":6,"month":"Nov"},{"name":"No Meeting","date":"2020-12-22T00:00:00.000Z","class":"skip","time":"","dateLong":"Tuesday, 22 December 2020","day":22,"month":"Dec","venue":"Discord"},{"name":"No Meeting","date":"2020-12-29T00:00:00.000Z","class":"skip","time":"","dateLong":"Tuesday, 29 December 2020","day":29,"month":"Dec","venue":"Discord"}];
+var events = [{"date":"2020-04-14T18:00:00.000Z","shortDate":"2020-04-14","month":"Apr","day":14,"class":"online","events":[{"date":"2020-04-14T18:00:00.000Z","dateLong":"Tuesday, 14 April 2020, 7pm","time":"7pm","day":14,"month":"Apr","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""}]},{"date":"2020-04-21T18:00:00.000Z","shortDate":"2020-04-21","month":"Apr","day":21,"class":"online","events":[{"date":"2020-04-21T18:00:00.000Z","dateLong":"Tuesday, 21 April 2020, 7pm","time":"7pm","day":21,"month":"Apr","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""}]},{"date":"2020-04-28T18:00:00.000Z","shortDate":"2020-04-28","month":"Apr","day":28,"class":"online","events":[{"date":"2020-04-28T18:00:00.000Z","dateLong":"Tuesday, 28 April 2020, 7pm","time":"7pm","day":28,"month":"Apr","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""}]},{"date":"2020-05-05T00:00:00.000Z","shortDate":"2020-05-05","month":"May","day":5,"class":"new-series","events":[{"date":"2020-05-05T00:00:00.000Z","dateLong":"Tuesday, 5 May 2020, 9pm","day":5,"month":"May","name":"New series: Hinamatsuri","class":"new-series"},{"date":"2020-05-05T18:00:00.000Z","dateLong":"Tuesday, 5 May 2020, 7pm","time":"7pm","day":5,"month":"May","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""}]},{"date":"2020-05-12T18:00:00.000Z","shortDate":"2020-05-12","month":"May","day":12,"class":"online","events":[{"date":"2020-05-12T18:00:00.000Z","dateLong":"Tuesday, 12 May 2020, 7pm","time":"7pm","day":12,"month":"May","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""}]},{"date":"2020-05-19T00:00:00.000Z","shortDate":"2020-05-19","month":"May","day":19,"class":"new-series","events":[{"date":"2020-05-19T00:00:00.000Z","dateLong":"Tuesday, 19 May 2020, 7pm","day":19,"month":"May","name":"New series: Golden Kamuy","class":"new-series"},{"date":"2020-05-19T18:00:00.000Z","dateLong":"Tuesday, 19 May 2020, 7pm","time":"7pm","day":19,"month":"May","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""}]},{"date":"2020-05-26T18:00:00.000Z","shortDate":"2020-05-26","month":"May","day":26,"class":"online","events":[{"date":"2020-05-26T18:00:00.000Z","dateLong":"Tuesday, 26 May 2020, 7pm","time":"7pm","day":26,"month":"May","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""}]},{"date":"2020-06-02T18:00:00.000Z","shortDate":"2020-06-02","month":"Jun","day":2,"class":"online","events":[{"date":"2020-06-02T18:00:00.000Z","dateLong":"Tuesday, 2 June 2020, 7pm","time":"7pm","day":2,"month":"Jun","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""}]},{"date":"2020-06-09T18:00:00.000Z","shortDate":"2020-06-09","month":"Jun","day":9,"class":"online","events":[{"date":"2020-06-09T18:00:00.000Z","dateLong":"Tuesday, 9 June 2020, 7pm","time":"7pm","day":9,"month":"Jun","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""}]},{"date":"2020-06-16T00:00:00.000Z","shortDate":"2020-06-16","month":"Jun","day":16,"class":"new-series","events":[{"date":"2020-06-16T00:00:00.000Z","dateLong":"Tuesday, 16 June 2020, 9pm","day":16,"month":"Jun","name":"New series: Demi-chan wa Kataritai","class":"new-series"},{"date":"2020-06-16T18:00:00.000Z","dateLong":"Tuesday, 16 June 2020, 7pm","time":"7pm","day":16,"month":"Jun","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""}]},{"date":"2020-06-23T18:00:00.000Z","shortDate":"2020-06-23","month":"Jun","day":23,"class":"online","events":[{"date":"2020-06-23T18:00:00.000Z","dateLong":"Tuesday, 23 June 2020, 7pm","time":"7pm","day":23,"month":"Jun","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""}]},{"date":"2020-06-30T18:00:00.000Z","shortDate":"2020-06-30","month":"Jun","day":30,"class":"online","events":[{"date":"2020-06-30T18:00:00.000Z","dateLong":"Tuesday, 30 June 2020, 7pm","time":"7pm","day":30,"month":"Jun","name":"Online Meeting","class":"online","price":null,"venue":"Discord","address":""}]}];
 
-var options = {"hiatus":"yes"};
+var options = {"hiatus":"yes","hiatusMessage":"Our regular schedule resumes on 28 April"};
 
 // select a background image
 function selectBackground() {
@@ -47,43 +47,54 @@ window.onload = function () {
     return Date.parse(event.date) >= now;
   });
   events = events.slice(0, 12);
-  var nextEvent = events[0];
+  // var nextEvent = events[0].events[0];
 
   var eventsHTML = '';
   var event;
   for (event of events) {
-    var time = false;
-    if (event.hasOwnProperty("time")) {
-      time = event.time;
-    }
-    var a = "";
-    var _a = "";
-    if (event.hasOwnProperty("link")) {
-      a = "<a href='"+event.link+"'>";
-      _a = "</a>";
-    }
     var html = "<article id='upcoming-"+event.date+"' class='event event-"+event.class+"'>\n"+
-      "<time datetime='"+event.date+"'><span class='day'>"+event.day+"</span><span class='month'>"+event.month+"</span></time>\n"+
-      "<h3>"+event.name+"</h3>\n"+
-      "<p>"+a+event.venue+(time ? ", "+time : "")+_a+"</p>\n"+
-      (event.price ? ("<p>Attendance fee: "+event.price+"</p>") : '')+
-      "</article>\n";
+      "<time datetime='"+event.date+"'><span class='day'>"+event.day+"</span><span class='month'>"+event.month+"</span></time>\n";
+    for (ev of event.events) {
+      var time = false;
+      if (ev.hasOwnProperty("time")) {
+        time = ev.time;
+      }
+      var a = "";
+      var _a = "";
+      if (ev.hasOwnProperty("link")) {
+        a = "<a href='"+ev.link+"'>";
+        _a = "</a>";
+      }
+      html = html +"<div class='event-detail event-detail-"+ev.class+"'><h3>"+ev.name+"</h3>\n";
+      if (ev.hasOwnProperty("time")) {
+        html = html+"<p>"+a+ev.venue+(time ? ", "+time : "")+_a+"</p>\n";
+      }
+      if (ev.price) {
+        html = html + "<p>Attendance fee: "+ev.price+"</p>";
+      }
+      html = html+"</div>";
+    };
+    html = html + "</article>\n";
     eventsHTML = eventsHTML + html;
   }
   document.getElementById('events-list').innerHTML = eventsHTML;
 
   // adjust the next event headline
-  var mainEvents = events.filter(function (event) {
-    switch (event.class) {
-      case 'esports':
-      case 'cinema':
-      case 'skip':
-        return false;
+  var mainEvents = [];
+  for (event of events) {
+    for (ev of event.events) {
+      switch (event.class) {
+        case 'esports':
+        case 'cinema':
+        case 'skip':
+        case 'new-series':
+          continue;
 
-      default:
-        return true;
+        default:
+          mainEvents.push(ev);
+      }
     }
-  });
+  }
   var nextEvent = mainEvents[0];
   document.getElementById('next-meeting-date').innerHTML = nextEvent.dateLong;
   document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);

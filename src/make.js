@@ -79,6 +79,32 @@ events = _.map(events, event => {
   })
 });
 
+// add in events for the new series starting
+_.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
+  _.each(slot, series => {
+    if (_.has(series, "name")) {
+      let date = new Date(series.from);
+      // date.setHours(19+i);
+      // date.setMilliseconds(1);
+      if (date > now) {
+        // console.log("Series date", date);
+        let hour = 7+i;
+
+        let event = {
+          date: date,
+          dateLong: util.formatLongDate(date) + ", "+hour+"pm",
+          // time: hour+"pm",
+          day: date.getDate(),
+          month: util.formatShortMonth(date),
+          name: 'New series: '+series.name,
+          class: 'new-series'
+        }
+        events.push(event);
+      }
+    }
+  });
+});
+
 // add in the tuesday events
 let tuesday = new Date(Date.now());
 let dow = 2 - tuesday.getDay();
@@ -111,8 +137,33 @@ events = _.sortBy(events, 'date');
 basData.events = events.slice(0, basData.maxEvents);
 basData.allEvents = events;
 
+basData.eventsByDate = _(events).groupBy(e => util.formatShortDate(e.date)).map((evs, grp) => {
+  return {
+    date: evs[0].date,
+    shortDate: grp,
+    month: evs[0].month,
+    day: evs[0].day,
+    class: evs[0].class,
+    events: evs,
+  };
+}).values().sortBy('shortDate').value().slice(0, basData.maxEvents);
+// console.log(JSON.stringify(basData.eventsByDate, null, 2));
+
 // put the 'next event' at the top
-let nextEvent = events[0];
+let mainEvents = _.filter(events, event => {
+  switch (event.class) {
+    case 'esports':
+    case 'cinema':
+    case 'skip':
+    case 'new-series':
+      return false;
+
+    default:
+      return true;
+  }
+});
+let nextEvent = mainEvents[0];
+// console.log("Next event:", nextEvent);
 basData.nextMeeting = util.formatLongDate(nextEvent.date);
 basData.nextMeetingVenue = nextEvent.venue;
 basData.nextMeetingAddress = venueAddress[nextEvent.venue];

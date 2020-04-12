@@ -2,7 +2,7 @@ var slot1 = {{{json slot1back}}};
 var slot2 = {{{json slot2back}}};
 var slot3 = {{{json slot3back}}};
 
-var events = {{{json allEvents}}};
+var events = {{{json eventsByDate}}};
 
 var options = {{{json options}}};
 
@@ -47,43 +47,54 @@ window.onload = function () {
     return Date.parse(event.date) >= now;
   });
   events = events.slice(0, {{ maxEvents }});
-  var nextEvent = events[0];
+  // var nextEvent = events[0].events[0];
 
   var eventsHTML = '';
   var event;
   for (event of events) {
-    var time = false;
-    if (event.hasOwnProperty("time")) {
-      time = event.time;
-    }
-    var a = "";
-    var _a = "";
-    if (event.hasOwnProperty("link")) {
-      a = "<a href='"+event.link+"'>";
-      _a = "</a>";
-    }
     var html = "<article id='upcoming-"+event.date+"' class='event event-"+event.class+"'>\n"+
-      "<time datetime='"+event.date+"'><span class='day'>"+event.day+"</span><span class='month'>"+event.month+"</span></time>\n"+
-      "<h3>"+event.name+"</h3>\n"+
-      "<p>"+a+event.venue+(time ? ", "+time : "")+_a+"</p>\n"+
-      (event.price ? ("<p>Attendance fee: "+event.price+"</p>") : '')+
-      "</article>\n";
+      "<time datetime='"+event.date+"'><span class='day'>"+event.day+"</span><span class='month'>"+event.month+"</span></time>\n";
+    for (ev of event.events) {
+      var time = false;
+      if (ev.hasOwnProperty("time")) {
+        time = ev.time;
+      }
+      var a = "";
+      var _a = "";
+      if (ev.hasOwnProperty("link")) {
+        a = "<a href='"+ev.link+"'>";
+        _a = "</a>";
+      }
+      html = html +"<div class='event-detail event-detail-"+ev.class+"'><h3>"+ev.name+"</h3>\n";
+      if (ev.hasOwnProperty("time")) {
+        html = html+"<p>"+a+ev.venue+(time ? ", "+time : "")+_a+"</p>\n";
+      }
+      if (ev.price) {
+        html = html + "<p>Attendance fee: "+ev.price+"</p>";
+      }
+      html = html+"</div>";
+    };
+    html = html + "</article>\n";
     eventsHTML = eventsHTML + html;
   }
   document.getElementById('events-list').innerHTML = eventsHTML;
 
   // adjust the next event headline
-  var mainEvents = events.filter(function (event) {
-    switch (event.class) {
-      case 'esports':
-      case 'cinema':
-      case 'skip':
-        return false;
+  var mainEvents = [];
+  for (event of events) {
+    for (ev of event.events) {
+      switch (event.class) {
+        case 'esports':
+        case 'cinema':
+        case 'skip':
+        case 'new-series':
+          continue;
 
-      default:
-        return true;
+        default:
+          mainEvents.push(ev);
+      }
     }
-  });
+  }
   var nextEvent = mainEvents[0];
   document.getElementById('next-meeting-date').innerHTML = nextEvent.dateLong;
   document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);
