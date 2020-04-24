@@ -114,6 +114,11 @@ function showMap() {
   }, 1);
 }
 
+function showNews() {
+  document.getElementById('news-more-switch').className = "hide";
+  document.getElementById('news-more').className = "show";
+}
+
 function hideMap() {
   document.getElementById('blanket').className = "hide";
   document.getElementById('map-overlay').className = "hide";

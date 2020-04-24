@@ -53,7 +53,9 @@ _.each(basData.news, article => {
   article.day = article.date.getDate();
   article.month = util.formatShortMonth(article.date);
 });
-basData.news = _.take(_.sortBy(basData.news, 'date').reverse(), 3);
+basData.news = _.sortBy(basData.news, 'date').reverse();
+basData.freshNews = _.take(basData.news, basData.newsCutoff);
+basData.staleNews = basData.news.slice(basData.newsCutoff, 20);
 
 // future events
 let venueAddress = {
@@ -72,7 +74,7 @@ events = _.map(events, event => {
     dateLong: util.formatLongDate(event.date) + (event.time != '' ? ', '+util.formatShortTime(event.time) : ''),
     day: event.date.getDate(),
     month: util.formatShortMonth(event.date),
-    venue: options.hiatus ? 'Discord' : 'The White Hart'
+    venue: options.online ? 'Discord' : 'The White Hart'
   });
   return _.defaults(event, {
     address: venueAddress[event.venue],
@@ -124,11 +126,11 @@ for (var i = 0; i < 30; i++) {
     time: "7pm",
     day: date.getDate(),
     month: util.formatShortMonth(date),
-    name: options.hiatus ? 'Online Meeting' : 'Anime Society Meeting',
-    class: options.hiatus ? 'online' : 'anime',
-    price: options.hiatus ? null : "&pound;4",
-    venue: options.hiatus ? 'Discord' : 'The White Hart',
-    address: options.hiatus ? '' : venueAddress['The White Hart']
+    name: options.online ? 'Online Meeting' : 'Anime Society Meeting',
+    class: options.online ? 'online' : 'anime',
+    price: options.online ? null : "&pound;4",
+    venue: options.online ? '' : 'The White Hart',
+    address: options.online ? '' : venueAddress['The White Hart']
   }
   events.push(event);
 }

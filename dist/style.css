@@ -330,6 +330,26 @@ article {
     margin-left: -5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
 
+#news-more-switch {
+  text-align: center; }
+  #news-more-switch .btn-news-more {
+    margin: 0 auto 15px; }
+    #news-more-switch .btn-news-more i {
+      background-color: white;
+      background-image: url("images/pin.svg"); }
+    #news-more-switch .btn-news-more span {
+      background: white; }
+    #news-more-switch .btn-news-more span {
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 20px; }
+  #news-more-switch.hide {
+    display: none; }
+
+#news-more {
+  display: none; }
+  #news-more.show {
+    display: block; }
+
 #twitter-box {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 2px;

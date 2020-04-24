@@ -453,6 +453,31 @@ article {
   }
 }
 
+#news-more-switch {
+  text-align: center;
+
+  .btn-news-more {
+    margin: 0 auto 15px;
+    @include btn(white, 'images/pin.svg');
+    span {
+      background: rgba(0,0,0,0.4);
+      border-radius: 20px;
+    }
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+#news-more {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
 #twitter-box {
   background: rgba(255,255,255,0.9);
   border-radius: 2px;

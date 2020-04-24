@@ -52,9 +52,12 @@
 
   <h1 id='next-meeting-date'>&nbsp;</h1>
   <h3 id='next-meeting-title'></h3>
-  <h3><em id='next-meeting-venue'>&nbsp;</em> <span id='next-meeting-address'>&nbsp;</span></h3>
 
+  {{#if options.online}}
+  {{else}}
+  <h3><em id='next-meeting-venue'>&nbsp;</em> <span id='next-meeting-address'>&nbsp;</span></h3>
   <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Where and When?</span></button>
+  {{/if}}
 </section>
 
 <section id='section-now-showing' class='{{#if options.hiatus}}section-now-showing-hiatus{{/if}}'>
@@ -110,7 +113,7 @@
 <section id='news-feed'>
   <h2>News Feed</h2>
 
-  {{#each news}}
+  {{#each freshNews}}
   <article class='news box'>
   <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
   <h3>{{title}}</h3>
@@ -122,6 +125,25 @@
   {{/if}}
   </article>
   {{/each}}
+
+  <div id='news-more-switch'>
+    <button class='btn btn-news-more' onclick="showNews()"><span>Show More News</span></button>
+  </div>
+
+  <div id='news-more'>
+    {{#each staleNews}}
+    <article class='news box'>
+    <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
+    <h3>{{title}}</h3>
+    {{#each body}}
+    <p>{{this}}</p>
+    {{/each}}
+    {{#if discordLink}}
+    <p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
+    {{/if}}
+    </article>
+    {{/each}}
+  </div>
 
   <div id='twitter-box'>
   <a class="twitter-timeline" data-lang="en"
