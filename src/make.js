@@ -129,7 +129,7 @@ for (var i = 0; i < 30; i++) {
     name: options.online ? 'Online Meeting' : 'Anime Society Meeting',
     class: options.online ? 'online' : 'anime',
     price: options.online ? null : "&pound;4",
-    venue: options.online ? '' : 'The White Hart',
+    venue: options.online ? 'Discord' : 'The White Hart',
     address: options.online ? '' : venueAddress['The White Hart']
   }
   events.push(event);

@@ -34,12 +34,22 @@ body {
     background-image: url(images/day-2.jpg); }
   body.day-3 {
     background-image: url(images/day-3.jpg); }
+  body.day-4 {
+    background-image: url(images/day-4.jpg); }
   body.night-1 {
     background-image: url(images/night-1.jpg); }
   body.night-2 {
     background-image: url(images/night-2.jpg); }
   body.night-3 {
     background-image: url(images/night-3.jpg); }
+  body.night-4 {
+    background-image: url(images/night-4.jpg); }
+  body.night-5 {
+    background-image: url(images/night-5.jpg); }
+  body.night-6 {
+    background-image: url(images/night-6.jpg); }
+  body.night-7 {
+    background-image: url(images/night-7.jpg); }
 
 /* Site furniture */
 .btn {

@@ -8,11 +8,12 @@ var options = {{{json options}}};
 
 // select a background image
 function selectBackground() {
-    var LIMIT = 3;
+    var DAY_LIMIT = 4;
+    var NIGHT_LIMIT = 7;
 
     var hour = new Date().getHours();
     var isDay = hour >= 6 && hour < 18;
-    var bgNum = 1+Math.floor(Math.random() * LIMIT);
+    var bgNum = 1+Math.floor(Math.random() * (isDay ? DAY_LIMIT : NIGHT_LIMIT));
     var bodyClass = (isDay ? "day day-" : "night night-")+bgNum;
 
     document.getElementsByTagName("BODY")[0].className = bodyClass;
