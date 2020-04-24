@@ -98,8 +98,12 @@ window.onload = function () {
   var nextEvent = mainEvents[0];
   document.getElementById('next-meeting-date').innerHTML = nextEvent.dateLong;
   document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);
-  document.getElementById('next-meeting-venue').innerHTML = nextEvent.venue;
-  document.getElementById('next-meeting-address').innerHTML = nextEvent.address;
+  if (document.getElementById('next-meeting-venue')) {
+    document.getElementById('next-meeting-venue').innerHTML = nextEvent.venue;
+  }
+  if (document.getElementById('next-meeting-address')) {
+    document.getElementById('next-meeting-address').innerHTML = nextEvent.address;
+  }
 
   selectBackground();
 };
