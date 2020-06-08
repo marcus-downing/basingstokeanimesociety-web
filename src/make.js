@@ -19,23 +19,36 @@ basData = yaml.safeLoad(basData);
 
 basData = _.defaults({
   maxEvents: 12,
+  windowEvents: 20,
   maxTweets: 10,
 }, basData);
 
 let options = basData.options;
 
+function expandDate(target, date = null) {
+  if (date === null) {
+    date = target.date;
+  }
+  target.day = date.getDate();
+  target.month = util.formatShortMonth(date);
+  return target;
+}
+
 // showing anime
-basData.slot1 = util.currentAndFuture(basData.slot1, 'from');
+basData.slot1 = util.currentAndFuture(basData.slot1, 'from').map(series => expandDate(series, series.from));
 basData.slot1back = util.backdate(basData.slot1);
 basData.series1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[0];
+basData.nextSeries1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[1];
 
-basData.slot2 = util.currentAndFuture(basData.slot2, 'from');
+basData.slot2 = util.currentAndFuture(basData.slot2, 'from').map(series => expandDate(series, series.from));
 basData.slot2back = util.backdate(basData.slot2);
 basData.series2 = _.isEmpty(basData.slot2) ? { name: '', picture: '' } : basData.slot2[0];
+basData.nextSeries2 = _.isEmpty(basData.slot2) ? { name: '', picture: '' } : basData.slot2[1];
 
-basData.slot3 = util.currentAndFuture(basData.slot3, 'from');
+basData.slot3 = util.currentAndFuture(basData.slot3, 'from').map(series => expandDate(series, series.from));
 basData.slot3back = util.backdate(basData.slot3);
 basData.series3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[0];
+basData.nextSeries3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[1];
 
 // copy the images for the series
 _.each([basData.slot1, basData.slot2, basData.slot3], slot => {
@@ -136,7 +149,7 @@ for (var i = 0; i < 30; i++) {
 }
 events = _.sortBy(events, 'date');
 
-basData.events = events.slice(0, basData.maxEvents);
+basData.events = events.slice(0, basData.windowEvents);
 basData.allEvents = events;
 
 basData.eventsByDate = _(events).groupBy(e => util.formatShortDate(e.date)).map((evs, grp) => {
@@ -148,7 +161,7 @@ basData.eventsByDate = _(events).groupBy(e => util.formatShortDate(e.date)).map(
     class: evs[0].class,
     events: evs,
   };
-}).values().sortBy('shortDate').value().slice(0, basData.maxEvents);
+}).values().sortBy('shortDate').value().slice(0, basData.windowEvents);
 // console.log(JSON.stringify(basData.eventsByDate, null, 2));
 
 // put the 'next event' at the top

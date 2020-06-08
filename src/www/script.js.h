@@ -30,9 +30,20 @@ window.onload = function () {
     return before[before.length - 1];
   }
 
+  function nextAnime(slot) {
+    var after = slot.filter(function (series) {
+      return Date.parse(series.from) >= now;
+    });
+    return after[0];
+  }
+
   var currentSlot1 = showingAnime(slot1);
   var currentSlot2 = showingAnime(slot2);
   var currentSlot3 = showingAnime(slot3);
+
+  var nextSlot1 = nextAnime(slot1);
+  var nextSlot2 = nextAnime(slot2);
+  var nextSlot3 = nextAnime(slot3);
 
   function editSlot(id, series) {
     document.getElementById(id+'name').innerHTML = series.name;
@@ -42,6 +53,10 @@ window.onload = function () {
   editSlot('slot1', currentSlot1);
   editSlot('slot2', currentSlot2);
   editSlot('slot3', currentSlot3);
+
+  editSlot('nextSlot1', nextSlot1);
+  editSlot('nextSlot2', nextSlot2);
+  editSlot('nextSlot3', nextSlot3);
 
   // adjust the events list
   events = events.filter(function (event) {

@@ -83,6 +83,37 @@
     </figure>
   </div>
 
+  <h2>Coming Soon</h2>
+
+  <div id='next-showing'>
+    <figure id='nextSlot1'>
+      <figcaption>
+        <h3 id='nextSlot1name'>{{nextSeries1.name}}</h3>
+        <p class='starting'>Starting</p>
+        <time datetime="{{ nextSeries1.from }}"><span class='day'>{{ nextSeries1.day }}</span><span class='month'>{{ nextSeries1.month }}</span></time>
+      </figcaption>
+      <img id='nextSlot1picture' src='images/series/{{nextSeries1.picture}}.png'>
+    </figure>
+
+    <figure id='nextSlot2'>
+      <figcaption>
+        <h3 id='nextSlot2name'>{{nextSeries2.name}}</h3>
+        <p class='starting'>Starting</p>
+        <time datetime="{{ nextSeries2.from }}"><span class='day'>{{ nextSeries2.day }}</span><span class='month'>{{ nextSeries2.month }}</span></time>
+      </figcaption>
+      <img id='nextSlot2picture' src='images/series/{{nextSeries2.picture}}.png'>
+    </figure>
+
+    <figure id='nextSlot3'>
+      <figcaption>
+        <h3 id='nextSlot3name'>{{nextSeries3.name}}</h3>
+        <p class='starting'>Starting</p>
+        <time datetime="{{ nextSeries3.from }}"><span class='day'>{{ nextSeries3.day }}</span><span class='month'>{{ nextSeries3.month }}</span></time>
+      </figcaption>
+      <img id='nextSlot3picture' src='images/series/{{nextSeries3.picture}}.png'>
+    </figure>
+  </div>
+
   {{#if options.hiatus}}
   <div class='hiatus-overlay'>
   <p>{{ options.hiatusMessage }}</p>
