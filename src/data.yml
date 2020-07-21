@@ -62,6 +62,10 @@ slot1:
     picture: promised-neverland
 
   - from: 2020-10-27
+    name: Rascal Does Not Dream of Bunny Girl Senpai
+    picture: bunny-girl-senpai
+
+  - from: 2021-01-05
 
 slot2:
   - from: 2019-01-08
@@ -73,6 +77,12 @@ slot2:
     picture: spice-and-wolf
 
   - from: 2020-11-03
+    name: Hosone &amp; Maso-tan
+    picture: hisone-masotan
+
+  - from: 2020-12-08
+  
+  - from: 2021-01-05
 
 slot3:
   - from: 2020-01-07
@@ -99,7 +109,15 @@ slot3:
     name: Konosuba S2
     picture: konosuba2
 
-  - from: 2020-10-13
+  - from: 2020-10-20
+    name: Zombieland Saga
+    picture: zombieland-saga
+
+  - from: 2020-12-01
+    name: Wasteful Days of High School Girls
+    picture: wasteful-days
+
+  - from: 2021-01-26
 
 events:
   - name: Kobosuba Movie
