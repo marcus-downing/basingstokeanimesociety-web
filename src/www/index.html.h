@@ -90,7 +90,7 @@
       <figcaption>
         <h3 id='nextSlot1name'>{{nextSeries1.name}}</h3>
         <p class='starting'>Starting</p>
-        <time datetime="{{ nextSeries1.from }}"><span class='day'>{{ nextSeries1.day }}</span><span class='month'>{{ nextSeries1.month }}</span></time>
+        <time id='nextSlot1date' datetime="{{ nextSeries1.from }}"><span class='day'>{{ nextSeries1.day }}</span><span class='month'>{{ nextSeries1.month }}</span></time>
       </figcaption>
       <img id='nextSlot1picture' src='images/series/{{nextSeries1.picture}}.png'>
     </figure>
@@ -99,7 +99,7 @@
       <figcaption>
         <h3 id='nextSlot2name'>{{nextSeries2.name}}</h3>
         <p class='starting'>Starting</p>
-        <time datetime="{{ nextSeries2.from }}"><span class='day'>{{ nextSeries2.day }}</span><span class='month'>{{ nextSeries2.month }}</span></time>
+        <time id='nextSlot2date' datetime="{{ nextSeries2.from }}"><span class='day'>{{ nextSeries2.day }}</span><span class='month'>{{ nextSeries2.month }}</span></time>
       </figcaption>
       <img id='nextSlot2picture' src='images/series/{{nextSeries2.picture}}.png'>
     </figure>
@@ -108,7 +108,7 @@
       <figcaption>
         <h3 id='nextSlot3name'>{{nextSeries3.name}}</h3>
         <p class='starting'>Starting</p>
-        <time datetime="{{ nextSeries3.from }}"><span class='day'>{{ nextSeries3.day }}</span><span class='month'>{{ nextSeries3.month }}</span></time>
+        <time id='nextSlot3date' datetime="{{ nextSeries3.from }}"><span class='day'>{{ nextSeries3.day }}</span><span class='month'>{{ nextSeries3.month }}</span></time>
       </figcaption>
       <img id='nextSlot3picture' src='images/series/{{nextSeries3.picture}}.png'>
     </figure>

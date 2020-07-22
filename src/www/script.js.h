@@ -48,6 +48,10 @@ window.onload = function () {
   function editSlot(id, series) {
     document.getElementById(id+'name').innerHTML = series.name;
     document.getElementById(id+'picture').setAttribute('src', 'images/series/'+series.picture+'.png');
+    var slotDate = document.getElementById(id+'date');
+    if (slotDate !== null) {
+      slotDate.innerHTML = "<span class='day'>"+series.day+"</span><span class='month'>"+series.month+"</span>";
+    }
   }
 
   editSlot('slot1', currentSlot1);
