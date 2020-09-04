@@ -36,16 +36,19 @@ function expandDate(target, date = null) {
 
 // showing anime
 basData.slot1 = util.currentAndFuture(basData.slot1, 'from').map(series => expandDate(series, series.from));
+console.log("Slot 1:", basData.slot1.map(series => util.formatShortDate(series.from)).join(", "));
 basData.slot1back = util.backdate(basData.slot1);
 basData.series1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[0];
 basData.nextSeries1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[1];
 
 basData.slot2 = util.currentAndFuture(basData.slot2, 'from').map(series => expandDate(series, series.from));
+console.log("Slot 2:", basData.slot2.map(series => util.formatShortDate(series.from)).join(", "));
 basData.slot2back = util.backdate(basData.slot2);
 basData.series2 = _.isEmpty(basData.slot2) ? { name: '', picture: '' } : basData.slot2[0];
 basData.nextSeries2 = _.isEmpty(basData.slot2) ? { name: '', picture: '' } : basData.slot2[1];
 
 basData.slot3 = util.currentAndFuture(basData.slot3, 'from').map(series => expandDate(series, series.from));
+console.log("Slot 3:", basData.slot3.map(series => util.formatShortDate(series.from)).join(", "));
 basData.slot3back = util.backdate(basData.slot3);
 basData.series3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[0];
 basData.nextSeries3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[1];
@@ -77,6 +80,7 @@ let venueAddress = {
 };
 
 let now = new Date(Date.now());
+console.log("Today:           ", util.formatShortDate(now));
 let events = _.filter(basData.events, event => event.date >= now);
 events = _.map(events, event => {
   event = _.defaults(event, {

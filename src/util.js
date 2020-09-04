@@ -32,6 +32,7 @@ function formatShortTime(time) {
 
 // date arrangmeent
 let now = new Date(Date.now());
+console.log("Today:           ", formatShortDate(now));
 
 // find all future items, as well as
 function currentAndFuture(items, key = 'date', requireName = true) {
