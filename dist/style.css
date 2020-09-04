@@ -409,10 +409,12 @@ article {
     display: block; }
 
 #twitter-box {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  background-image: url(images/twitterbg.png);
+  background-size: 100% auto;
+  border-radius: 3px;
   backdrop-filter: blur(20px);
-  box-shadow: 0 1px 2px black; }
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); }
 
 .timeline-Header {
   display: none; }
