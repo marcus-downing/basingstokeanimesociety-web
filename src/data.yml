@@ -37,7 +37,7 @@ news:
         Until then we'll continue with the irregulars we've been showing. Join us on Discord every Tuesday evening.
     discordLink: true
 
-newsCutoff: 1
+newsCutoff: 0
 
 slot1:
   - from: 2019-11-26
@@ -81,7 +81,7 @@ slot2:
     picture: hisone-masotan
 
   - from: 2020-12-08
-  
+
   - from: 2021-01-05
 
 slot3:
