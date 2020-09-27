@@ -66,6 +66,10 @@ slot1:
     picture: bunny-girl-senpai
 
   - from: 2021-01-05
+    name: "Xam'd: Lost Memories"
+    picture: xamd
+
+  - from: 2021-04-06
 
 slot2:
   - from: 2019-01-08
@@ -81,8 +85,14 @@ slot2:
     picture: hisone-masotan
 
   - from: 2020-12-08
+    name: Rascal Does Not Dream of Bunny Girl Senpai
+    picture: bunny-girl-senpai
 
-  - from: 2021-01-05
+  - from: 2021-01-26
+    name: "Astra: Lost in Space"
+    picture: Astra
+
+  - from: 2021-02-23
 
 slot3:
   - from: 2020-01-07
@@ -118,6 +128,10 @@ slot3:
     picture: wasteful-days
 
   - from: 2021-01-26
+    name: Flying Witch
+    picture: flying-witch
+
+  - from: 2021-03-09
 
 events:
   - name: Kobosuba Movie
@@ -142,10 +156,16 @@ events:
     venue: Vue Festival Place, Odeon Basingstoke
     link: https://www.myvue.com/cinema/basingstoke-festival-place/film/my-hero-academia-heroes-rising/times
 
-  - name: Minamicon
-    date: 2020-03-06
-    venue: Novotel Hotel, Southampton
-    class: convention
+  - name: Akira
+    date: 2020-10-07
+    to: 2020-10-08
+    class: cinema
+    venue: Vue Festival Place
+
+  # - name: Minamicon
+  #   date: 2020-03-06
+  #   venue: Novotel Hotel, Southampton
+  #   class: convention
 
   # - name: Social Meeting
   #   date: 2020-03-21
@@ -157,10 +177,10 @@ events:
   #   venue: University of Reading
   #   class: convention
 
-  - name: Hibanacon
-    date: 2020-11-06
-    venue: Jury's Inn, Milton Keynes
-    class: convention
+  # - name: Hibanacon
+  #   date: 2020-11-06
+  #   venue: Jury's Inn, Milton Keynes
+  #   class: convention
 
   - name: No Meeting
     date: 2020-12-22
