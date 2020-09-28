@@ -20,6 +20,12 @@ function formatShortDate(date) {
   return parts.year.value+"-"+padNumber(parts.month.value, 2)+"-"+padNumber(parts.day.value, 2);
 }
 
+let mediumDateFormat = new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'short', day: 'numeric' });
+function formatMediumDate(date) {
+  let parts = _.keyBy(mediumDateFormat.formatToParts(date), 'type');
+  return parts.day.value+" "+parts.month.value+" "+parts.year.value;
+}
+
 let longDateFormat = new Intl.DateTimeFormat('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 function formatLongDate(date) {
   let parts = _.keyBy(longDateFormat.formatToParts(date), 'type');
@@ -76,6 +82,7 @@ function md5sum(data, digits = 6) {
 module.exports = {
   formatShortMonth,
   formatShortDate,
+  formatMediumDate,
   formatLongDate,
   formatShortTime,
   currentAndFuture,

@@ -32,23 +32,11 @@
 <h1 id='main-title'>Basingstoke Anime Society</h1>
 
 {{#if announce.visible}}
-<section id='section-announce' class='box'>
-  <h2>{{announce.title}}</h2>
-
-  <p>{{announce.content}}</p>
-
-  {{#if announce.discord}}
-  <p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
-  {{/if}}
-</section>
+<header id="header">
 {{/if}}
 
 <section id='section-next-meeting' class='box'>
-  {{#if options.hiatus}}
-  <h2>Next Online Meeting</h2>
-  {{else}}
   <h2>Next Meeting</h2>
-  {{/if}}
 
   <h1 id='next-meeting-date'>&nbsp;</h1>
   <h3 id='next-meeting-title'></h3>
@@ -59,6 +47,20 @@
   <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Where and When?</span></button>
   {{/if}}
 </section>
+
+{{#if announce.visible}}
+<section id='section-announce' class='box'>
+  <h2>{{announce.title}}</h2>
+
+  <div class='content'><p>{{{announce.content}}}</p></div>
+
+  {{#if announce.discord}}
+  <p>&nbsp;</p><p>&nbsp;</p>
+  <p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
+  {{/if}}
+</section>
+</header>
+{{/if}}
 
 <section id='section-now-showing' class='{{#if options.hiatus}}section-now-showing-hiatus{{/if}}'>
   <h2>Now Showing</h2>

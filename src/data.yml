@@ -6,7 +6,7 @@
 announce:
   visible: true
   title: "Coronavirus"
-  content: "Anime society meetings have moved online. Join us on Discord every Tuesday evening."
+  content: "Anime society meetings have moved online.<br>Join us on Discord every Tuesday evening."
   discord: yes
 
 options:

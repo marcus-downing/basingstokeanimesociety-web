@@ -89,6 +89,8 @@ events = _.map(events, event => {
   event = _.defaults(event, {
     class: 'social',
     dateLong: util.formatLongDate(event.date) + (event.time != '' ? ', '+util.formatShortTime(event.time) : ''),
+    mediumDate: util.formatMediumDate(event.date),
+    shortDate: util.formatShortDate(event.date),
     day: event.date.getDate(),
     month: util.formatShortMonth(event.date),
     venue: options.online ? 'Discord' : 'The White Hart'
@@ -112,6 +114,8 @@ _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
         let event = {
           date: date,
           dateLong: util.formatLongDate(date) + ", "+hour+"pm",
+          mediumDate: util.formatMediumDate(date),
+          shortDate: util.formatShortDate(date),
           // time: hour+"pm",
           day: date.getDate(),
           month: util.formatShortMonth(date),
@@ -140,7 +144,10 @@ for (var i = 0; i < 30; i++) {
   let event = {
     date: date,
     dateLong: util.formatLongDate(date) + ", 7pm",
+    mediumDate: util.formatMediumDate(date),
+    shortDate: util.formatShortDate(date),
     time: "7pm",
+    weekday: "Tuesday",
     day: date.getDate(),
     month: util.formatShortMonth(date),
     name: options.online ? 'Online Meeting' : 'Anime Society Meeting',
@@ -162,6 +169,7 @@ basData.eventsByDate = _(events).groupBy(e => util.formatShortDate(e.date)).map(
     shortDate: grp,
     month: evs[0].month,
     day: evs[0].day,
+    weekday: evs[0].weekday,
     class: evs[0].class,
     events: evs,
   };
