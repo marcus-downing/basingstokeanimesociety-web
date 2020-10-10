@@ -65,6 +65,10 @@ slot1:
     name: Rascal Does Not Dream of Bunny Girl Senpai
     picture: bunny-girl-senpai
 
+  - from: 2020-12-15
+    name: Rascal Does Not Dream of a Dreaming Girl
+    picture: bunny-girl-senpai-movie
+
   - from: 2021-01-05
     name: "Xam'd: Lost Memories"
     picture: xamd
@@ -84,11 +88,11 @@ slot2:
     name: Hisone &amp; Maso-tan
     picture: hisone-masotan
 
-  - from: 2020-12-08
-    name: Rascal Does Not Dream of Bunny Girl Senpai
-    picture: bunny-girl-senpai
+  - from: 2020-12-15
+    name: Rascal Does Not Dream of a Dreaming Girl
+    picture: bunny-girl-senpai-movie
 
-  - from: 2021-01-26
+  - from: 2021-01-05
     name: "Astra: Lost in Space"
     picture: Astra
 
