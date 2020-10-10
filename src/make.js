@@ -18,7 +18,7 @@ let basData = fs.readFileSync('data.yml');
 basData = yaml.safeLoad(basData);
 
 basData = _.defaults({
-  maxEvents: 12,
+  maxEvents: 18,
   windowEvents: 20,
   maxTweets: 10,
 }, basData);
@@ -75,6 +75,7 @@ basData.staleNews = basData.news.slice(basData.newsCutoff, 20);
 
 // future events
 let venueAddress = {
+  '': '',
   'The White Hart': 'London Road, Basingstoke RG21 4AE',
   'The Tea Bar': '9 London Rd, Basingstoke RG21 7NT',
 };
@@ -82,6 +83,7 @@ let venueAddress = {
 let now = new Date(Date.now());
 console.log("Today:           ", util.formatShortDate(now));
 let events = _.filter(basData.events, event => event.date >= now);
+let skipDates = [];
 events = _.map(events, event => {
   event = _.defaults(event, {
     time: ''
@@ -93,12 +95,25 @@ events = _.map(events, event => {
     shortDate: util.formatShortDate(event.date),
     day: event.date.getDate(),
     month: util.formatShortMonth(event.date),
-    venue: options.online ? 'Discord' : 'The White Hart'
   });
+  let venue = "";
+  switch(event.class) {
+    case 'social':
+      venue = options.online ? 'Discord' : 'The White Hart';
+      break;
+    case 'skip':
+      skipDates[event.shortDate] = true;
+      break;
+    default:
+      venue = "";
+      break;
+  }
   return _.defaults(event, {
-    address: venueAddress[event.venue],
+    venue: venue,
+    address: venueAddress[venue],
   })
 });
+console.log("Skip dates:", skipDates);
 
 // add in events for the new series starting
 _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
@@ -156,6 +171,10 @@ for (var i = 0; i < 30; i++) {
     price: options.online ? null : "&pound;4",
     venue: options.online ? 'Discord' : 'The White Hart',
     address: options.online ? '' : venueAddress['The White Hart']
+  }
+  if (_.has(skipDates, event.shortDate)) {
+    console.log("Skipping event:", event.shortDate);
+    continue;
   }
   events.push(event);
 }
