@@ -104,12 +104,13 @@ events = _.map(events, event => {
 _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
   _.each(slot, series => {
     if (_.has(series, "name")) {
+      let hide = _.has(series, "hide") ? series.hide : false;
       let date = new Date(series.from);
-      // date.setHours(19+i);
-      // date.setMilliseconds(1);
-      if (date > now) {
+
+      if (date > now && !hide) {
         // console.log("Series date", date);
         let hour = 7+i;
+        let movie = _.has(series, "movie") ? series.movie : false;
 
         let event = {
           date: date,
@@ -119,7 +120,7 @@ _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
           // time: hour+"pm",
           day: date.getDate(),
           month: util.formatShortMonth(date),
-          name: 'New series: '+series.name,
+          name: (movie ? 'Movie: ' : 'New series: ')+series.name,
           class: 'new-series'
         }
         events.push(event);

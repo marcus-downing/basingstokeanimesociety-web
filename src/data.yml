@@ -68,6 +68,7 @@ slot1:
   - from: 2020-12-15
     name: Rascal Does Not Dream of a Dreaming Girl
     picture: bunny-girl-senpai-movie
+    movie: true
 
   - from: 2021-01-05
     name: "Xam'd: Lost Memories"
@@ -91,6 +92,7 @@ slot2:
   - from: 2020-12-15
     name: Rascal Does Not Dream of a Dreaming Girl
     picture: bunny-girl-senpai-movie
+    hide: true
 
   - from: 2021-01-05
     name: "Astra: Lost in Space"
