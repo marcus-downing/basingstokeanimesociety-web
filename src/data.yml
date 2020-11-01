@@ -75,6 +75,8 @@ slot1:
     picture: xamd
 
   - from: 2021-04-06
+    name: Ancient Magus Bride
+    picture: ancient-magus-bride
 
 slot2:
   - from: 2019-01-08
@@ -99,6 +101,10 @@ slot2:
     picture: Astra
 
   - from: 2021-02-23
+    name: Ore Monogatari
+    picture: oremonogatari
+
+  - from: 2021-05-18
 
 slot3:
   - from: 2020-01-07
@@ -138,6 +144,10 @@ slot3:
     picture: flying-witch
 
   - from: 2021-03-09
+    name: "Keep Your Hands Off Eizouken!"
+    picture: eizouken
+
+  - from: 2021-04-20
 
 events:
   - name: Kobosuba Movie
