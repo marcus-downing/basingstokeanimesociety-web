@@ -70,6 +70,16 @@ slot1:
     picture: bunny-girl-senpai-movie
     movie: true
 
+  - from: 2020-12-22
+    name: Children Who Chase Lost Voices
+    picture: agartha
+    movie: true
+
+  - from: 2020-12-29
+    name: Patema Inverted
+    picture: patema-inverted
+    movie: true
+
   - from: 2021-01-05
     name: "Xam'd: Lost Memories"
     picture: xamd
@@ -198,9 +208,9 @@ events:
   #   venue: Jury's Inn, Milton Keynes
   #   class: convention
 
-  - name: No Meeting
-    date: 2020-12-22
-    class: skip
-  - name: No Meeting
-    date: 2020-12-29
-    class: skip
+  # - name: No Meeting
+  #   date: 2020-12-22
+  #   class: skip
+  # - name: No Meeting
+  #   date: 2020-12-29
+  #   class: skip
