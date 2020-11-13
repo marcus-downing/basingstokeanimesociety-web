@@ -101,11 +101,6 @@ slot2:
     name: Hisone &amp; Maso-tan
     picture: hisone-masotan
 
-  # - from: 2020-12-15
-  #   name: Rascal Does Not Dream of a Dreaming Girl
-  #   picture: bunny-girl-senpai-movie
-  #   hide: true
-
   - from: 2021-01-05
     name: "Astra: Lost in Space"
     picture: Astra
@@ -187,6 +182,18 @@ events:
     to: 2020-10-08
     class: cinema
     venue: Vue Festival Place
+
+  - name: "Konosuba - Legend of Crimson"
+    date: 2020-11-22
+    class: movie
+    venue: discord
+
+  - name: Tamako Love Story
+    date: 2020-12-17
+    class: movie
+    venue: discord
+
+  - name:
 
   # - name: Minamicon
   #   date: 2020-03-06
