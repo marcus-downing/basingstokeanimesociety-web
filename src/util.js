@@ -55,6 +55,17 @@ function currentAndFuture(items, key = 'date', requireName = true) {
   return after;
 }
 
+function futureN(items, number, key = 'data', requireName = true) {
+  items = _.sortBy(items, key);
+  if (requireName) {
+    items = _.filter(items, item => _.has(item, "name"));
+  }
+
+  items = _.filter(items, item => item[key] > now);
+
+  return items.slice(0, number);
+}
+
 function backdate(items, key = 'from') {
   return _.map(items, item => {
     if (!_.has(item, key)) {
@@ -86,6 +97,7 @@ module.exports = {
   formatLongDate,
   formatShortTime,
   currentAndFuture,
+  futureN,
   backdate,
   md5sum,
 };

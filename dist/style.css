@@ -265,6 +265,59 @@ h3 {
       transition: opacity 0.2s ease-out;
       opacity: 1; }
 
+#movies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 39px; }
+  #movies figure {
+    position: relative;
+    background: rgba(40, 60, 120, 0.4);
+    background: linear-gradient(90deg, rgba(40, 60, 120, 0.4), rgba(40, 60, 120, 0.7));
+    border-radius: 2px;
+    margin: 0;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    height: 360px;
+    padding-right: 252px; }
+    body.night #movies figure {
+      background: rgba(20, 30, 60, 0.4);
+      background: linear-gradient(90deg, rgba(20, 30, 60, 0.4), rgba(20, 30, 60, 0.7)); }
+    #movies figure figcaption {
+      padding: 1px 5px 1px 13px;
+      text-align: left;
+      color: white;
+      font-weight: bold;
+      font-size: 17px;
+      text-shadow: 0 1px 1px black; }
+      #movies figure figcaption h3 {
+        font-size: 22px;
+        margin-top: 8px; }
+      #movies figure figcaption .movie-info {
+        position: absolute;
+        left: 13px;
+        bottom: 72px; }
+        #movies figure figcaption .movie-info p {
+          margin: 0.3em 0; }
+      #movies figure figcaption time {
+        background: linear-gradient(#faeed8, #f8dda2);
+        position: absolute;
+        left: 13px;
+        bottom: 13px; }
+      #movies figure figcaption .trailer {
+        position: absolute;
+        left: 80px;
+        bottom: 13px;
+        line-height: 0;
+        font-size: 0;
+        color: transparent; }
+    #movies figure img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 252px;
+      height: 360px;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px; }
+
 #next-showing {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -338,6 +391,16 @@ time {
     text-align: center;
     font-weight: bold; }
 
+a.trailer {
+  background-image: url(images/play-button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 54px;
+  height: 54px;
+  box-shadow: 0 1px 2px black;
+  border-radius: 2px; }
+
 article {
   position: relative;
   padding-left: 70px;
@@ -369,6 +432,8 @@ article {
     color: white; }
   article.event-anime time {
     background: linear-gradient(#d8edfa, #a2d7f8); }
+  article.event-movie time {
+    background: linear-gradient(#faeed8, #f8dda2); }
   article.event-new-series time {
     background: linear-gradient(#faeed8, #f8dda2); }
   article.event-online time {
@@ -383,7 +448,7 @@ article {
     background: linear-gradient(#fad8f7, #f8a2ed); }
   article.news time {
     background: linear-gradient(#d8fadc, #a2f8ad); }
-  article .event-detail.event-detail-new-series {
+  article .event-detail.event-detail-new-series, article.event-movie .event-detail {
     padding: 1px 6px;
     background: rgba(40, 60, 120, 0.5);
     border-radius: 2px;

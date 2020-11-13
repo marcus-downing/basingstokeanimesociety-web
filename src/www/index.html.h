@@ -85,6 +85,26 @@
     </figure>
   </div>
 
+  {{#if movies}}
+  <h2>Movies</h2>
+  <div id='movies'>
+    {{#each listedMovies}}
+    <figure>
+      <figcaption>
+        <h3>{{name}}</h3>
+        <div class="movie-info">
+          {{#if venue}}<p>Venue: {{ venue }}</p>{{/if}}
+          {{#if time}}<p>Time: {{ time }}</p>{{/if}}
+        </div>
+        <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
+        {{#if trailer}}<a class='trailer' href='{{ trailer }}' target='_blank'>Trailer</a>{{/if}}
+      </figcaption>
+      <img src='images/series/{{picture}}.png'>
+    </figure>
+    {{/each}}
+  </div>
+  {{/if}}
+
   <h2>Coming Soon</h2>
 
   <div id='next-showing'>

@@ -332,6 +332,82 @@ h3 {
   }
 }
 
+#movies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 39px;
+
+  figure {
+    position: relative;
+    background: rgba(40, 60, 120, 0.4);
+    background: linear-gradient(90deg, rgba(40,60,120,0.4), rgba(40,60,120,0.7));
+    border-radius: 2px;
+    margin: 0;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+    height: 360px;
+    padding-right: 252px;
+
+    body.night & {
+      background: rgba(20, 30, 60, 0.4);
+      background: linear-gradient(90deg, rgba(20,30,60,0.4), rgba(20,30,60,0.7));
+    }
+
+    figcaption {
+      padding: 1px 5px 1px 13px;
+      text-align: left;
+
+      color: white;
+      font-weight: bold;
+      font-size: 17px;
+      text-shadow: 0 1px 1px black;
+
+      h3 {
+        font-size: 22px;
+        margin-top: 8px;
+      }
+
+      .movie-info {
+        position: absolute;
+        left: 13px;
+        bottom: 72px;
+
+        p {
+          margin: 0.3em 0;
+        }
+      }
+
+      time {
+        background: linear-gradient(#faeed8, #f8dda2);
+        position: absolute;
+        left: 13px;
+        bottom: 13px;
+      }
+
+      .trailer {
+        position: absolute;
+        left: 80px;
+        bottom: 13px;
+
+
+        line-height: 0;
+        font-size: 0;
+        color: transparent;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 252px;
+      height: 360px;
+
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
+}
+
 #next-showing {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -429,6 +505,19 @@ time {
   }
 }
 
+a.trailer {
+  // background-color: linear-gradient(#e04040, #d02020);
+  background-image: url(images/play-button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  width: 54px;
+  height: 54px;
+  box-shadow: 0 1px 2px black;
+  border-radius: 2px;
+}
+
 article {
   position: relative;
   padding-left: 70px;
@@ -478,6 +567,12 @@ article {
     }
   }
 
+  &.event-movie {
+    time {
+      background: linear-gradient(#faeed8, #f8dda2);
+    }
+  }
+
   &.event-new-series {
     time {
       background: linear-gradient(#faeed8, #f8dda2);
@@ -520,15 +615,13 @@ article {
     }
   }
 
-  .event-detail {
-    &.event-detail-new-series {
-      padding: 1px 6px;
-      background: rgba(40, 60, 120, 0.5);
-      border-radius: 2px;
-      margin-bottom: 2px;
-      margin-left: -5px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.3);
-    }
+  .event-detail.event-detail-new-series, &.event-movie .event-detail {
+    padding: 1px 6px;
+    background: rgba(40, 60, 120, 0.5);
+    border-radius: 2px;
+    margin-bottom: 2px;
+    margin-left: -5px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
   }
 }
 

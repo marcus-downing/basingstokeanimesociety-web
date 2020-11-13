@@ -53,8 +53,12 @@ basData.slot3back = util.backdate(basData.slot3);
 basData.series3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[0];
 basData.nextSeries3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[1];
 
+basData.movies = util.futureN(basData.movies, 10, 'date').map(movie => expandDate(movie, movie.date));
+basData.listedMovies = util.futureN(basData.movies, 2, 'date');
+console.log("Movies:", basData.movies.map(movie => util.formatShortDate(movie.date)).join(", "));
+
 // copy the images for the series
-_.each([basData.slot1, basData.slot2, basData.slot3], slot => {
+_.each([basData.slot1, basData.slot2, basData.slot3, basData.movies], slot => {
   _.each(slot, series => {
     fs.copyFile('series/'+series.picture+'.png', '../dist/images/series/'+series.picture+'.png', (err) => {
       if (err) {
@@ -142,6 +146,29 @@ _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
       }
     }
   });
+});
+
+_.each(basData.movies, movie => {
+  if (_.has(movie, "name")) {
+    let date = new Date(movie.date);
+    let time = _.has(movie, "time") ? movie.time : "7pm";
+
+    if (date > now) {
+      let event = {
+        date: date,
+        dateLong: util.formatLongDate(date) + ", "+time,
+        mediumDate: util.formatMediumDate(date),
+        shortDate: util.formatShortDate(date),
+        time: time,
+        day: date.getDate(),
+        month: util.formatShortMonth(date),
+        name: 'Movie: '+movie.name,
+        class: 'movie',
+        venue: movie.venue
+      };
+      events.push(event);
+    }
+  }
 });
 
 // add in the tuesday events

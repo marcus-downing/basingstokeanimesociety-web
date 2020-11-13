@@ -65,21 +65,6 @@ slot1:
     name: Rascal Does Not Dream of Bunny Girl Senpai
     picture: bunny-girl-senpai
 
-  - from: 2020-12-15
-    name: Rascal Does Not Dream of a Dreaming Girl
-    picture: bunny-girl-senpai-movie
-    movie: true
-
-  - from: 2020-12-22
-    name: Children Who Chase Lost Voices
-    picture: agartha
-    movie: true
-
-  - from: 2020-12-29
-    name: Patema Inverted
-    picture: patema-inverted
-    movie: true
-
   - from: 2021-01-05
     name: "Xam'd: Lost Memories"
     picture: xamd
@@ -154,6 +139,42 @@ slot3:
 
   - from: 2021-04-20
 
+movies:
+  - name: "Konosuba - Legend of Crimson"
+    date: 2020-11-22
+    time: 3pm
+    venue: "Discord"
+    picture: konosuba-legend-of-crimson
+    # trailer: https://www.youtube.com/watch?v=YYg3JtwP2NY
+
+  - name: Rascal Does Not Dream of a Dreaming Girl
+    date: 2020-12-15
+    time: 7pm
+    venue: "Discord"
+    picture: bunny-girl-senpai-movie
+    # trailer: https://www.youtube.com/watch?v=UbLBbxSm8hs
+
+  - name: "Tamako Love Story"
+    date: 2020-12-17
+    time: 7pm
+    venue: "Discord"
+    picture: tamako-love-story
+    # trailer: https://www.youtube.com/watch?v=B8JlGOXjZ28
+
+  - name: "Children who Chase Lost Voices (aka Journey To Agartha)"
+    date: 2020-12-22
+    time: 7pm
+    venue: "Discord"
+    picture: agartha
+    # trailer: https://www.youtube.com/watch?v=tmHo_0mgos0
+
+  - name: "Patema Inverted"
+    date: 2020-12-29
+    time: 7pm
+    venue: "Discord"
+    picture: patema-inverted
+    # trailer: https://www.youtube.com/watch?v=aSOuohS1OvE
+
 events:
   - name: Kobosuba Movie
     date: 2019-12-06
@@ -182,18 +203,6 @@ events:
     to: 2020-10-08
     class: cinema
     venue: Vue Festival Place
-
-  - name: "Konosuba - Legend of Crimson"
-    date: 2020-11-22
-    class: movie
-    venue: discord
-
-  - name: Tamako Love Story
-    date: 2020-12-17
-    class: movie
-    venue: discord
-
-  - name:
 
   # - name: Minamicon
   #   date: 2020-03-06

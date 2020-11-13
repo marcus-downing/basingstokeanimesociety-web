@@ -1,6 +1,7 @@
 var slot1 = {{{json slot1back}}};
 var slot2 = {{{json slot2back}}};
 var slot3 = {{{json slot3back}}};
+var movies = {{{json movies}}};
 
 var events = {{{json eventsByDate}}};
 
