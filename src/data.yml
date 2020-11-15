@@ -161,7 +161,7 @@ movies:
     picture: tamako-love-story
     # trailer: https://www.youtube.com/watch?v=B8JlGOXjZ28
 
-  - name: "Children who Chase Lost Voices (aka Journey To Agartha)"
+  - name: "Children who Chase Lost Voices" # (aka Journey To Agartha)"
     date: 2020-12-22
     time: 7pm
     venue: "Discord"

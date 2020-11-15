@@ -85,6 +85,32 @@
     </figure>
   </div>
 
+  <h2>Coming Soon</h2>
+
+  <div id='coming-soon'>
+  {{#each comingSoon}}
+    <figure {{#if movie}}class="movie"{{/if}}>
+      <figcaption>
+        <h3>{{name}}</h3>
+        {{#if movie}}
+        <div class="movie-info">
+          {{#if venue}}<p>{{ venue }}</p>{{/if}}
+          {{#if time}}<p>{{ time }}</p>{{/if}}
+        </div>
+        {{else}}
+        <div class="series-info">
+          <p class='starting'>Starting</p>
+        </div>
+        {{/if}}
+        <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
+        {{#if trailer}}<a class='trailer' href='{{ trailer }}' target='_blank'>Trailer</a>{{/if}}
+      </figcaption>
+      <img src='images/series/{{picture}}.png'>
+    </figure>
+  {{/each}}
+  </div>
+
+<!--
   {{#if movies}}
   <h2>Movies</h2>
   <div id='movies'>
@@ -135,7 +161,7 @@
       <img id='nextSlot3picture' src='images/series/{{nextSeries3.picture}}.png'>
     </figure>
   </div>
-
+-->
   {{#if options.hiatus}}
   <div class='hiatus-overlay'>
   <p>{{ options.hiatusMessage }}</p>

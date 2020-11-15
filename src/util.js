@@ -55,15 +55,18 @@ function currentAndFuture(items, key = 'date', requireName = true) {
   return after;
 }
 
-function futureN(items, number, key = 'data', requireName = true) {
+function futureN(items, number, key = 'date', requireName = true) {
   items = _.sortBy(items, key);
   if (requireName) {
     items = _.filter(items, item => _.has(item, "name"));
   }
 
   items = _.filter(items, item => item[key] > now);
-
-  return items.slice(0, number);
+  items = items.slice(0, number);
+  if (key != 'date') {
+    _.each(items, item => item.date = item[key]);
+  }
+  return items;
 }
 
 function backdate(items, key = 'from') {

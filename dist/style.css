@@ -265,11 +265,13 @@ h3 {
       transition: opacity 0.2s ease-out;
       opacity: 1; }
 
-#movies {
+#coming-soon {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-areas: "one one one two two two" "three three four four five five" "six six seven seven eight eight";
   grid-gap: 39px; }
-  #movies figure {
+  #coming-soon figure {
     position: relative;
     background: rgba(40, 60, 120, 0.4);
     background: linear-gradient(90deg, rgba(40, 60, 120, 0.4), rgba(40, 60, 120, 0.7));
@@ -278,95 +280,46 @@ h3 {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
     height: 180px;
     padding-right: 126px; }
-    body.night #movies figure {
+    #coming-soon figure:nth-child(1) {
+      grid-area: one; }
+    #coming-soon figure:nth-child(2) {
+      grid-area: two; }
+    #coming-soon figure:nth-child(3) {
+      grid-area: three; }
+    #coming-soon figure:nth-child(4) {
+      grid-area: four; }
+    #coming-soon figure:nth-child(5) {
+      grid-area: five; }
+    #coming-soon figure:nth-child(6) {
+      grid-area: six; }
+    #coming-soon figure:nth-child(7) {
+      grid-area: seven; }
+    #coming-soon figure:nth-child(8) {
+      grid-area: eight; }
+    body.night #coming-soon figure {
       background: rgba(20, 30, 60, 0.4);
       background: linear-gradient(90deg, rgba(20, 30, 60, 0.4), rgba(20, 30, 60, 0.7)); }
-    #movies figure figcaption {
+    #coming-soon figure figcaption {
       padding: 1px 5px 1px 13px;
       text-align: left;
       color: white;
       font-weight: bold;
       font-size: 17px;
       text-shadow: 0 1px 1px black; }
-      #movies figure figcaption h3 {
+      #coming-soon figure figcaption h3 {
         margin-top: 8px; }
-      #movies figure figcaption .movie-info {
-        position: absolute;
-        left: 80px;
-        bottom: 18px; }
-        #movies figure figcaption .movie-info p {
-          margin: 0 0; }
-      #movies figure figcaption time {
+      #coming-soon figure figcaption time {
         background: linear-gradient(#faeed8, #f8dda2);
         position: absolute;
         left: 13px;
         bottom: 13px; }
-      #movies figure figcaption .trailer {
-        position: absolute;
-        left: 80px;
-        bottom: 13px;
-        line-height: 0;
-        font-size: 0;
-        color: transparent; }
-    #movies figure img {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 126px;
-      height: 180px;
-      border-top-right-radius: 2px;
-      border-bottom-right-radius: 2px; }
-    #movies figure:nth-child(1), #movies figure:nth-child(2) {
-      height: 360px;
-      padding-right: 252px; }
-      #movies figure:nth-child(1) figcaption h3, #movies figure:nth-child(2) figcaption h3 {
-        font-size: 22px; }
-      #movies figure:nth-child(1) figcaption .movie-info, #movies figure:nth-child(2) figcaption .movie-info {
-        left: 13px;
-        bottom: 72px; }
-        #movies figure:nth-child(1) figcaption .movie-info p, #movies figure:nth-child(2) figcaption .movie-info p {
-          margin: 0.2em 0; }
-      #movies figure:nth-child(1) img, #movies figure:nth-child(2) img {
-        width: 252px;
-        height: 360px; }
-
-#next-showing {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 39px; }
-  #next-showing figure {
-    position: relative;
-    background: rgba(40, 60, 120, 0.4);
-    background: linear-gradient(90deg, rgba(40, 60, 120, 0.4), rgba(40, 60, 120, 0.7));
-    border-radius: 2px;
-    margin: 0;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
-    height: 180px;
-    padding-right: 126px; }
-    body.night #next-showing figure {
-      background: rgba(20, 30, 60, 0.4);
-      background: linear-gradient(90deg, rgba(20, 30, 60, 0.4), rgba(20, 30, 60, 0.7)); }
-    #next-showing figure figcaption {
-      padding: 1px 5px 1px 13px;
-      text-align: left;
-      color: white;
-      font-weight: bold;
-      font-size: 17px;
-      text-shadow: 0 1px 1px black; }
-      #next-showing figure figcaption h3 {
-        margin-top: 8px; }
-      #next-showing figure figcaption time {
-        background: linear-gradient(#faeed8, #f8dda2);
-        position: absolute;
-        left: 13px;
-        bottom: 13px; }
-      #next-showing figure figcaption p.starting {
+      #coming-soon figure figcaption p.starting {
         position: absolute;
         left: 13px;
         bottom: 59px;
         font-size: 14px;
         text-transform: uppercase; }
-    #next-showing figure img {
+    #coming-soon figure img {
       position: absolute;
       top: 0;
       right: 0;
@@ -374,6 +327,28 @@ h3 {
       height: 180px;
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px; }
+    #coming-soon figure.movie {
+      background: rgba(20, 40, 100, 0.6);
+      background: linear-gradient(90deg, rgba(20, 40, 100, 0.6), #142864); }
+      body.night #coming-soon figure.movie {
+        background: rgba(5, 10, 40, 0.6);
+        background: linear-gradient(90deg, rgba(5, 10, 40, 0.6), #050a28); }
+      #coming-soon figure.movie time {
+        background: linear-gradient(#d8fadc, #a2f8ad); }
+      #coming-soon figure.movie .movie-info {
+        position: absolute;
+        left: 80px;
+        bottom: 15px; }
+        #coming-soon figure.movie .movie-info p {
+          margin: 0.1em 0; }
+    #coming-soon figure:nth-child(1), #coming-soon figure:nth-child(2) {
+      height: 360px;
+      padding-right: 252px; }
+      #coming-soon figure:nth-child(1) figcaption h3, #coming-soon figure:nth-child(2) figcaption h3 {
+        font-size: 22px; }
+      #coming-soon figure:nth-child(1) img, #coming-soon figure:nth-child(2) img {
+        width: 252px;
+        height: 360px; }
 
 .lr {
   display: grid;

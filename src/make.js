@@ -54,8 +54,19 @@ basData.series3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData
 basData.nextSeries3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[1];
 
 basData.movies = util.futureN(basData.movies, 10, 'date').map(movie => expandDate(movie, movie.date));
+_.each(basData.movies, movie => movie.movie = true);
 basData.listedMovies = util.futureN(basData.movies, 2, 'date');
 console.log("Movies:", basData.movies.map(movie => util.formatShortDate(movie.date)).join(", "));
+
+let numComingSoon = 8;
+let comingSoon = [
+  ...util.futureN(basData.slot1, numComingSoon, 'from'),
+  ...util.futureN(basData.slot2, numComingSoon, 'from'),
+  ...util.futureN(basData.slot3, numComingSoon, 'from'),
+  ...util.futureN(basData.movies, numComingSoon, 'date')];
+comingSoon = util.futureN(comingSoon, numComingSoon);
+basData.comingSoon = comingSoon;
+console.log("Coming Soon:", comingSoon);
 
 // copy the images for the series
 _.each([basData.slot1, basData.slot2, basData.slot3, basData.movies], slot => {
@@ -67,6 +78,7 @@ _.each([basData.slot1, basData.slot2, basData.slot3, basData.movies], slot => {
     });
   });
 });
+
 
 // news
 _.each(basData.news, article => {

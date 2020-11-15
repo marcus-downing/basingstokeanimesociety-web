@@ -59,9 +59,9 @@ window.onload = function () {
   editSlot('slot2', currentSlot2);
   editSlot('slot3', currentSlot3);
 
-  editSlot('nextSlot1', nextSlot1);
-  editSlot('nextSlot2', nextSlot2);
-  editSlot('nextSlot3', nextSlot3);
+  // editSlot('nextSlot1', nextSlot1);
+  // editSlot('nextSlot2', nextSlot2);
+  // editSlot('nextSlot3', nextSlot3);
 
   // adjust the events list
   events = events.filter(function (event) {
