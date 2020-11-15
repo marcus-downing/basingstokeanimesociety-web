@@ -94,7 +94,7 @@
         <h3>{{name}}</h3>
         {{#if movie}}
         <div class="movie-info">
-          {{#if venue}}<p>{{ venue }}</p>{{/if}}
+          <!-- {{#if venue}}<p>{{ venue }}</p>{{/if}} -->
           {{#if time}}<p>{{ time }}</p>{{/if}}
         </div>
         {{else}}

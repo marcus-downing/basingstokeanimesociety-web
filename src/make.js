@@ -66,7 +66,7 @@ let comingSoon = [
   ...util.futureN(basData.movies, numComingSoon, 'date')];
 comingSoon = util.futureN(comingSoon, numComingSoon);
 basData.comingSoon = comingSoon;
-console.log("Coming Soon:", comingSoon);
+// console.log("Coming Soon:", comingSoon);
 
 // copy the images for the series
 _.each([basData.slot1, basData.slot2, basData.slot3, basData.movies], slot => {

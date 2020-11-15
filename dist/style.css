@@ -334,13 +334,14 @@ h3 {
         background: rgba(5, 10, 40, 0.6);
         background: linear-gradient(90deg, rgba(5, 10, 40, 0.6), #050a28); }
       #coming-soon figure.movie time {
-        background: linear-gradient(#d8fadc, #a2f8ad); }
+        background: linear-gradient(#d0f5d9, #9af3aa); }
       #coming-soon figure.movie .movie-info {
         position: absolute;
         left: 80px;
-        bottom: 15px; }
+        bottom: 24px; }
         #coming-soon figure.movie .movie-info p {
-          margin: 0.1em 0; }
+          margin: 0.1em 0;
+          font-size: 22px; }
     #coming-soon figure:nth-child(1), #coming-soon figure:nth-child(2) {
       height: 360px;
       padding-right: 252px; }

@@ -433,16 +433,17 @@ h3 {
       }
 
       time {
-        background: linear-gradient(#d8fadc, #a2f8ad);
+        background: linear-gradient(#d0f5d9, #9af3aa);
       }
 
       .movie-info {
         position: absolute;
         left: 80px;
-        bottom: 15px;
+        bottom: 24px;
 
         p {
           margin: 0.1em 0;
+          font-size: 22px;
         }
       }
     }
@@ -455,15 +456,6 @@ h3 {
         h3 {
           font-size: 22px;
         }
-
-        // .movie-info {
-        //   left: 13px;
-        //   bottom: 72px;
-
-        //   p {
-        //     margin: 0.2em 0;
-        //   }
-        // }
       }
 
       img {
