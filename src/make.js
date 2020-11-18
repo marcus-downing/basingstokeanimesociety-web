@@ -171,6 +171,7 @@ _.each(basData.movies, movie => {
         mediumDate: util.formatMediumDate(date),
         shortDate: util.formatShortDate(date),
         time: time,
+        weekday: util.weekday(date),
         day: date.getDate(),
         month: util.formatShortMonth(date),
         name: 'Movie: '+movie.name,

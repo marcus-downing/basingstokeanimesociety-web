@@ -32,6 +32,12 @@ function formatLongDate(date) {
   return parts.weekday.value+", "+parts.day.value+" "+parts.month.value+" "+parts.year.value;
 }
 
+let weekdayFormat = new Intl.DateTimeFormat('en-GB', { weekday: 'long' });
+function weekday(date) {
+  let parts = _.keyBy(weekdayFormat.formatToParts(date), 'type');
+  return parts.weekday.value;
+}
+
 function formatShortTime(time) {
   return time;
 }
@@ -103,6 +109,7 @@ module.exports = {
   formatMediumDate,
   formatLongDate,
   formatShortTime,
+  weekday,
   currentAndFuture,
   futureN,
   future,
