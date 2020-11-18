@@ -67,101 +67,26 @@
 
   <div id='now-showing'>
     <figure id='slot1'>
-      <figcaption id='slot1name'>{{series1.name}}</figcaption>
-      <img id='slot1picture' src='images/series/{{series1.picture}}.png'>
-      <!-- <a class='play'>Play Trailer</a> -->
+      <figcaption id='slot1name'></figcaption>
+      <img id='slot1picture' src=''>
     </figure>
 
     <figure id='slot2'>
-      <figcaption id='slot2name'>{{series2.name}}</figcaption>
-      <img id='slot2picture' src='images/series/{{series2.picture}}.png'>
-      <!-- <a class='play'>Play Trailer</a> -->
+      <figcaption id='slot2name'></figcaption>
+      <img id='slot2picture' src=''>
     </figure>
 
     <figure id='slot3'>
-      <figcaption id='slot3name'>{{series3.name}}</figcaption>
-      <img id='slot3picture' src='images/series/{{series3.picture}}.png'>
-      <!-- <a class='play'>Play Trailer</a> -->
+      <figcaption id='slot3name'></figcaption>
+      <img id='slot3picture' src=''>
     </figure>
   </div>
 
   <h2>Coming Soon</h2>
 
   <div id='coming-soon'>
-  {{#each comingSoon}}
-    <figure {{#if movie}}class="movie"{{/if}}>
-      <figcaption>
-        <h3>{{name}}</h3>
-        {{#if movie}}
-        <div class="movie-info">
-          <!-- {{#if venue}}<p>{{ venue }}</p>{{/if}} -->
-          {{#if time}}<p>{{ time }}</p>{{/if}}
-        </div>
-        {{else}}
-        <div class="series-info">
-          <p class='starting'>Starting</p>
-        </div>
-        {{/if}}
-        <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
-        {{#if trailer}}<a class='trailer' href='{{ trailer }}' target='_blank'>Trailer</a>{{/if}}
-      </figcaption>
-      <img src='images/series/{{picture}}.png'>
-    </figure>
-  {{/each}}
   </div>
 
-<!--
-  {{#if movies}}
-  <h2>Movies</h2>
-  <div id='movies'>
-    {{#each listedMovies}}
-    <figure>
-      <figcaption>
-        <h3>{{name}}</h3>
-        <div class="movie-info">
-          {{#if venue}}<p>Venue: {{ venue }}</p>{{/if}}
-          {{#if time}}<p>Time: {{ time }}</p>{{/if}}
-        </div>
-        <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
-        {{#if trailer}}<a class='trailer' href='{{ trailer }}' target='_blank'>Trailer</a>{{/if}}
-      </figcaption>
-      <img src='images/series/{{picture}}.png'>
-    </figure>
-    {{/each}}
-  </div>
-  {{/if}}
-
-  <h2>Coming Soon</h2>
-
-  <div id='next-showing'>
-    <figure id='nextSlot1'>
-      <figcaption>
-        <h3 id='nextSlot1name'>{{nextSeries1.name}}</h3>
-        <p class='starting'>Starting</p>
-        <time id='nextSlot1date' datetime="{{ nextSeries1.from }}"><span class='day'>{{ nextSeries1.day }}</span><span class='month'>{{ nextSeries1.month }}</span></time>
-      </figcaption>
-      <img id='nextSlot1picture' src='images/series/{{nextSeries1.picture}}.png'>
-    </figure>
-
-    <figure id='nextSlot2'>
-      <figcaption>
-        <h3 id='nextSlot2name'>{{nextSeries2.name}}</h3>
-        <p class='starting'>Starting</p>
-        <time id='nextSlot2date' datetime="{{ nextSeries2.from }}"><span class='day'>{{ nextSeries2.day }}</span><span class='month'>{{ nextSeries2.month }}</span></time>
-      </figcaption>
-      <img id='nextSlot2picture' src='images/series/{{nextSeries2.picture}}.png'>
-    </figure>
-
-    <figure id='nextSlot3'>
-      <figcaption>
-        <h3 id='nextSlot3name'>{{nextSeries3.name}}</h3>
-        <p class='starting'>Starting</p>
-        <time id='nextSlot3date' datetime="{{ nextSeries3.from }}"><span class='day'>{{ nextSeries3.day }}</span><span class='month'>{{ nextSeries3.month }}</span></time>
-      </figcaption>
-      <img id='nextSlot3picture' src='images/series/{{nextSeries3.picture}}.png'>
-    </figure>
-  </div>
--->
   {{#if options.hiatus}}
   <div class='hiatus-overlay'>
   <p>{{ options.hiatusMessage }}</p>

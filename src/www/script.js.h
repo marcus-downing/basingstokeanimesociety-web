@@ -1,7 +1,8 @@
 var slot1 = {{{json slot1back}}};
 var slot2 = {{{json slot2back}}};
 var slot3 = {{{json slot3back}}};
-var movies = {{{json movies}}};
+// var movies = {{{json movies}}};
+var comingSoon = {{{json comingSoon}}};
 
 var events = {{{json eventsByDate}}};
 
@@ -31,24 +32,27 @@ window.onload = function () {
     return before[before.length - 1];
   }
 
-  function nextAnime(slot) {
-    var after = slot.filter(function (series) {
-      return Date.parse(series.from) >= now;
-    });
-    return after[0];
-  }
+  // function nextAnime(slot) {
+  //   var after = slot.filter(function (series) {
+  //     return Date.parse(series.from) >= now;
+  //   });
+  //   return after[0];
+  // }
 
   var currentSlot1 = showingAnime(slot1);
   var currentSlot2 = showingAnime(slot2);
   var currentSlot3 = showingAnime(slot3);
 
-  var nextSlot1 = nextAnime(slot1);
-  var nextSlot2 = nextAnime(slot2);
-  var nextSlot3 = nextAnime(slot3);
+  // var nextSlot1 = nextAnime(slot1);
+  // var nextSlot2 = nextAnime(slot2);
+  // var nextSlot3 = nextAnime(slot3);
 
   function editSlot(id, series) {
     document.getElementById(id+'name').innerHTML = series.name;
-    document.getElementById(id+'picture').setAttribute('src', 'images/series/'+series.picture+'.png');
+    var img = document.getElementById(id+'picture');
+    img.setAttribute('src', 'images/series/'+series.picture+'.png');
+    img.classList.add("show");
+
     var slotDate = document.getElementById(id+'date');
     if (slotDate !== null) {
       slotDate.innerHTML = "<span class='day'>"+series.day+"</span><span class='month'>"+series.month+"</span>";
@@ -62,6 +66,35 @@ window.onload = function () {
   // editSlot('nextSlot1', nextSlot1);
   // editSlot('nextSlot2', nextSlot2);
   // editSlot('nextSlot3', nextSlot3);
+
+
+  // adjust the coming soon list
+  function futureN(items, number) {
+    var after = items.filter(function(item) {
+      return Date.parse(item.date) >= now;
+    });
+    return after.slice(0, number);
+  }
+  comingSoon = futureN(comingSoon, {{{options.comingSoonCutoff}}});
+
+  var comingSoonHTML = '';
+  for (item of comingSoon) {
+    var html = `<figure${item.movie ? " class='movie'" : ""}><figcaption>`;
+    html = html + `<h3>${item.name}</h3>`;
+    if (item.movie) {
+      html = html + `<div class='movie-info'><p>${item.time}</p></div>`;
+    } else {
+      html = html + "<div class='series-info'><p class='starting'>Starting</p></div>";
+    }
+    html = html + `<time datetime="${item.date}"><span class='day'>${item.day}</span><span class='month'>${item.month}</span></time>`;
+    if (item.trailer) {
+      html = html + `<a class='trailer' href='${trailer}' target='_blank'>Trailer</a>`;
+    }
+    html = html + `</figcaption><img src='images/series/${item.picture}.png'></figure>`;
+    comingSoonHTML = comingSoonHTML + html;
+  }
+  document.getElementById('coming-soon').innerHTML = comingSoonHTML;
+
 
   // adjust the events list
   events = events.filter(function (event) {

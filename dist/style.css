@@ -224,9 +224,13 @@ h3 {
   #now-showing figure {
     box-shadow: 0 2px 3px black;
     position: relative;
-    margin: 0 auto; }
+    margin: 0 auto;
+    min-height: 450px; }
     #now-showing figure img {
-      z-index: 1; }
+      z-index: 1;
+      opacity: 0; }
+      #now-showing figure img.show {
+        opacity: 1; }
     #now-showing figure#slot1 {
       margin: 0 auto 0 0; }
     #now-showing figure#slot2 {
@@ -266,6 +270,7 @@ h3 {
       opacity: 1; }
 
 #coming-soon {
+  min-height: 400px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 2fr 1fr 1fr;

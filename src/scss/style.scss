@@ -270,9 +270,15 @@ h3 {
     box-shadow: 0 2px 3px black;
     position: relative;
     margin: 0 auto;
+    min-height: 450px;
 
     img {
       z-index: 1;
+      opacity: 0;
+
+      &.show {
+        opacity: 1;
+      }
     }
 
     &#slot1 {
@@ -333,6 +339,7 @@ h3 {
 }
 
 #coming-soon {
+  min-height: 400px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 2fr 1fr 1fr;

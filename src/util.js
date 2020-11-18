@@ -69,6 +69,10 @@ function futureN(items, number, key = 'date', requireName = true) {
   return items;
 }
 
+function future(items, key = 'date', requireName = true) {
+  return futureN(items, 100, key, requireName);
+}
+
 function backdate(items, key = 'from') {
   return _.map(items, item => {
     if (!_.has(item, key)) {
@@ -101,6 +105,7 @@ module.exports = {
   formatShortTime,
   currentAndFuture,
   futureN,
+  future,
   backdate,
   md5sum,
 };

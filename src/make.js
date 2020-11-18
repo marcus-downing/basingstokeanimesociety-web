@@ -58,15 +58,14 @@ _.each(basData.movies, movie => movie.movie = true);
 basData.listedMovies = util.futureN(basData.movies, 2, 'date');
 console.log("Movies:", basData.movies.map(movie => util.formatShortDate(movie.date)).join(", "));
 
-let numComingSoon = 8;
 let comingSoon = [
-  ...util.futureN(basData.slot1, numComingSoon, 'from'),
-  ...util.futureN(basData.slot2, numComingSoon, 'from'),
-  ...util.futureN(basData.slot3, numComingSoon, 'from'),
-  ...util.futureN(basData.movies, numComingSoon, 'date')];
-comingSoon = util.futureN(comingSoon, numComingSoon);
+  ...util.future(basData.slot1, 'from'),
+  ...util.future(basData.slot2, 'from'),
+  ...util.future(basData.slot3, 'from'),
+  ...util.future(basData.movies, 'date')];
+comingSoon = util.future(comingSoon);
 basData.comingSoon = comingSoon;
-// console.log("Coming Soon:", comingSoon);
+console.log("Coming Soon:", comingSoon.map(item => item.name+" "+util.formatShortDate(item.date)).join(", "));
 
 // copy the images for the series
 _.each([basData.slot1, basData.slot2, basData.slot3, basData.movies], slot => {
@@ -86,8 +85,8 @@ _.each(basData.news, article => {
   article.month = util.formatShortMonth(article.date);
 });
 basData.news = _.sortBy(basData.news, 'date').reverse();
-basData.freshNews = _.take(basData.news, basData.newsCutoff);
-basData.staleNews = basData.news.slice(basData.newsCutoff, 20);
+basData.freshNews = _.take(basData.news, basData.options.newsCutoff);
+basData.staleNews = basData.news.slice(basData.options.newsCutoff, 20);
 
 // future events
 let venueAddress = {
