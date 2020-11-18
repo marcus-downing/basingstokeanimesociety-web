@@ -270,7 +270,7 @@ h3 {
       opacity: 1; }
 
 #coming-soon {
-  min-height: 400px;
+  min-height: 600px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 2fr 1fr 1fr;
@@ -451,6 +451,8 @@ article {
 
 #news-more-switch {
   text-align: center; }
+  h2 + #news-more-switch {
+    margin-top: -60px; }
   #news-more-switch .btn-news-more {
     margin: 0 auto 15px; }
     #news-more-switch .btn-news-more i {
