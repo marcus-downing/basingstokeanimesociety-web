@@ -75,7 +75,19 @@ window.onload = function () {
     });
     return after.slice(0, number);
   }
-  comingSoon = futureN(comingSoon, {{{options.comingSoonCutoff}}});
+
+  var rowCutoffs = {1: 2, 2: 5, 3: 8, 4: 11};
+  function findCutoff(items, maxRow) {
+    for (var row = maxRow; row > 1; row--) {
+      var cutoff = rowCutoffs[row];
+      if (items >= cutoff)
+        return cutoff;
+    }
+    return rowCutoffs[1];
+  }
+
+  var comingSoonCutoff = findCutoff(comingSoon.length, options.comingSoonRows);
+  comingSoon = futureN(comingSoon, comingSoonCutoff);
 
   var comingSoonHTML = '';
   for (item of comingSoon) {

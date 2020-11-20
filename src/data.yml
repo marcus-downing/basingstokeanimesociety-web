@@ -13,7 +13,7 @@ options:
   online: true
   hiatus: false
   hiatusMessage: "Our regular schedule resumes on 28 April"
-  comingSoonCutoff: 8
+  comingSoonRows: 3
   newsCutoff: 0
 
 news:
