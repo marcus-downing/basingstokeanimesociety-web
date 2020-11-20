@@ -82,6 +82,8 @@ window.onload = function () {
     var html = `<figure${item.movie ? " class='movie'" : ""}><figcaption>`;
     if (item.movie) {
       html = html + "<p class='movie-ident'>Movie</p>";
+    } else {
+      html = html + "<p class='series-ident'>New series</p>";
     }
     html = html + `<h3>${item.name}</h3>`;
     if (item.movie) {

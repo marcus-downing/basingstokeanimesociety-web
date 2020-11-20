@@ -321,8 +321,16 @@ h3 {
       #coming-soon figure figcaption p.movie-ident {
         font-size: 14px;
         text-transform: uppercase;
-        margin: 0.5em 0 0 0; }
+        margin: 0.5em 0 0 0;
+        color: #9af3aa; }
         #coming-soon figure figcaption p.movie-ident + h3 {
+          margin-top: 1px; }
+      #coming-soon figure figcaption p.series-ident {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0.5em 0 0 0;
+        color: #f8dda2; }
+        #coming-soon figure figcaption p.series-ident + h3 {
           margin-top: 1px; }
       #coming-soon figure figcaption p.starting {
         position: absolute;

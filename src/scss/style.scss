@@ -413,6 +413,18 @@ h3 {
         font-size: 14px;
         text-transform: uppercase;
         margin: 0.5em 0 0 0;
+        color: #9af3aa;
+
+        + h3 {
+          margin-top: 1px;
+        }
+      }
+
+      p.series-ident {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0.5em 0 0 0;
+        color: #f8dda2;
 
         + h3 {
           margin-top: 1px;
