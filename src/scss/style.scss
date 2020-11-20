@@ -409,6 +409,16 @@ h3 {
         bottom: 13px;
       }
 
+      p.movie-ident {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0.5em 0 0 0;
+
+        + h3 {
+          margin-top: 1px;
+        }
+      }
+
       p.starting {
         position: absolute;
         left: 13px;

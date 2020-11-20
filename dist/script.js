@@ -80,6 +80,9 @@ window.onload = function () {
   var comingSoonHTML = '';
   for (item of comingSoon) {
     var html = `<figure${item.movie ? " class='movie'" : ""}><figcaption>`;
+    if (item.movie) {
+      html = html + "<p class='movie-ident'>Movie</p>";
+    }
     html = html + `<h3>${item.name}</h3>`;
     if (item.movie) {
       html = html + `<div class='movie-info'><p>${item.time}</p></div>`;

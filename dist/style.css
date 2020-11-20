@@ -318,6 +318,12 @@ h3 {
         position: absolute;
         left: 13px;
         bottom: 13px; }
+      #coming-soon figure figcaption p.movie-ident {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0.5em 0 0 0; }
+        #coming-soon figure figcaption p.movie-ident + h3 {
+          margin-top: 1px; }
       #coming-soon figure figcaption p.starting {
         position: absolute;
         left: 13px;
