@@ -25,7 +25,7 @@ basData = _.defaults({
 
 let options = basData.options;
 
-function expandDate(target, date = null, time = null, leeway = 1) {
+function expandDate(target, date = null, time = null, leeway = 0) {
   if (date === null) {
     date = target.date;
   }
@@ -67,7 +67,7 @@ basData.slot3back = util.backdate(basData.slot3);
 basData.series3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[0];
 basData.nextSeries3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[1];
 
-basData.movies = util.futureN(basData.movies.map(movie => expandDate(movie, movie.date, movie.time)), 10, 'date');
+basData.movies = util.futureN(basData.movies.map(movie => expandDate(movie, movie.date, movie.time, 1)), 10, 'date');
 _.each(basData.movies, movie => movie.movie = true);
 basData.listedMovies = util.futureN(basData.movies, 2, 'date');
 console.log("Movies:", basData.movies.map(movie => util.formatShortDate(movie.date)).join(", "));
