@@ -25,7 +25,7 @@ basData = _.defaults({
 
 let options = basData.options;
 
-function expandDate(target, date = null, time = null) {
+function expandDate(target, date = null, time = null, leeway = 1) {
   if (date === null) {
     date = target.date;
   }
@@ -38,7 +38,7 @@ function expandDate(target, date = null, time = null) {
       pm = false;
       time = time.replace(/am$/, '');
     }
-    time = parseInt(time);
+    time = parseInt(time) + leeway;
     date.setHours(time + (pm ? 12 : 0));
     target.date = date;
   }
