@@ -14,7 +14,7 @@ options:
   hiatus: false
   hiatusMessage: "Our regular schedule resumes on 28 April"
   comingSoonRows: 3
-  newsCutoff: 0
+  newsCutoff: 1
 
 news:
   - title: Basingstoke Anime Society is moving online
@@ -38,6 +38,11 @@ news:
         The online meetings have been going well, so we're going to resume the shows we were watching from Tuesday 28 April.
         Until then we'll continue with the irregulars we've been showing. Join us on Discord every Tuesday evening.
     discordLink: true
+  - title: Movies
+    date: 2020-11-22
+    body:
+      - |
+        Instead of taking a break over Christmas and new year like we normally would, we've got a whole load of movies happening over the next few weeks. Check out the schedule above for details.
 
 slot1:
   - from: 2019-11-26
