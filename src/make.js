@@ -25,35 +25,49 @@ basData = _.defaults({
 
 let options = basData.options;
 
-function expandDate(target, date = null) {
+function expandDate(target, date = null, time = null) {
   if (date === null) {
     date = target.date;
   }
+  if (time !== null) {
+    time = time.trim();
+    let pm = true;
+    if (time.match(/pm$/)) {
+      time = time.replace(/pm$/, '');
+    } else if (time.match(/am$/)) {
+      pm = false;
+      time = time.replace(/am$/, '');
+    }
+    time = parseInt(time);
+    date.setHours(time + (pm ? 12 : 0));
+    target.date = date;
+  }
+
   target.day = date.getDate();
   target.month = util.formatShortMonth(date);
   return target;
 }
 
 // showing anime
-basData.slot1 = util.currentAndFuture(basData.slot1, 'from').map(series => expandDate(series, series.from));
+basData.slot1 = util.currentAndFuture(basData.slot1.map(series => expandDate(series, series.from, '7pm')), 'from');
 console.log("Slot 1:", basData.slot1.map(series => util.formatShortDate(series.from)).join(", "));
 basData.slot1back = util.backdate(basData.slot1);
 basData.series1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[0];
 basData.nextSeries1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[1];
 
-basData.slot2 = util.currentAndFuture(basData.slot2, 'from').map(series => expandDate(series, series.from));
+basData.slot2 = util.currentAndFuture(basData.slot2.map(series => expandDate(series, series.from, '8pm')), 'from');
 console.log("Slot 2:", basData.slot2.map(series => util.formatShortDate(series.from)).join(", "));
 basData.slot2back = util.backdate(basData.slot2);
 basData.series2 = _.isEmpty(basData.slot2) ? { name: '', picture: '' } : basData.slot2[0];
 basData.nextSeries2 = _.isEmpty(basData.slot2) ? { name: '', picture: '' } : basData.slot2[1];
 
-basData.slot3 = util.currentAndFuture(basData.slot3, 'from').map(series => expandDate(series, series.from));
+basData.slot3 = util.currentAndFuture(basData.slot3.map(series => expandDate(series, series.from, '9pm')), 'from');
 console.log("Slot 3:", basData.slot3.map(series => util.formatShortDate(series.from)).join(", "));
 basData.slot3back = util.backdate(basData.slot3);
 basData.series3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[0];
 basData.nextSeries3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[1];
 
-basData.movies = util.futureN(basData.movies, 10, 'date').map(movie => expandDate(movie, movie.date));
+basData.movies = util.futureN(basData.movies.map(movie => expandDate(movie, movie.date, movie.time)), 10, 'date');
 _.each(basData.movies, movie => movie.movie = true);
 basData.listedMovies = util.futureN(basData.movies, 2, 'date');
 console.log("Movies:", basData.movies.map(movie => util.formatShortDate(movie.date)).join(", "));
