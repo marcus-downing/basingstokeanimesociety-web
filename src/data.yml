@@ -71,6 +71,7 @@ slot1:
     picture: bunny-girl-senpai
 
   - from: 2021-01-05
+    displayFrom: 2020-12-08
     name: "Xam'd: Lost Memories"
     picture: xamd
 
@@ -92,6 +93,7 @@ slot2:
     picture: hisone-masotan
 
   - from: 2021-01-05
+    displayFrom: 2020-12-08
     name: "Astra: Lost in Space"
     picture: Astra
 
