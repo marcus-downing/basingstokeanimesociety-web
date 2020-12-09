@@ -10,8 +10,8 @@ var options = {{{json options}}};
 
 // select a background image
 function selectBackground() {
-    var DAY_LIMIT = 4;
-    var NIGHT_LIMIT = 7;
+    var DAY_LIMIT = 5;
+    var NIGHT_LIMIT = 9;
 
     var hour = new Date().getHours();
     var isDay = hour >= 6 && hour < 18;
