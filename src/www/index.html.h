@@ -63,7 +63,7 @@
 {{/if}}
 
 <section id='section-now-showing' class='{{#if options.hiatus}}section-now-showing-hiatus{{/if}}'>
-  <h2>Now Showing</h2>
+  {{!-- <h2>Now Showing</h2>
 
   <div id='now-showing'>
     <figure id='slot1'>
@@ -81,6 +81,7 @@
       <img id='slot3picture' src=''>
     </figure>
   </div>
+  --}}
 
   <h2>Coming Soon</h2>
 

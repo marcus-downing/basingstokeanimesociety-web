@@ -59,9 +59,9 @@ window.onload = function () {
     }
   }
 
-  editSlot('slot1', currentSlot1);
-  editSlot('slot2', currentSlot2);
-  editSlot('slot3', currentSlot3);
+  // editSlot('slot1', currentSlot1);
+  // editSlot('slot2', currentSlot2);
+  // editSlot('slot3', currentSlot3);
 
   // editSlot('nextSlot1', nextSlot1);
   // editSlot('nextSlot2', nextSlot2);
