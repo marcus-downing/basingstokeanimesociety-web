@@ -74,10 +74,12 @@ slot1:
     displayFrom: 2020-12-08
     name: "Xam'd: Lost Memories"
     picture: xamd
+    rating: 12
 
   - from: 2021-04-06
     name: Ancient Magus Bride
     picture: ancient-magus-bride
+    rating: 15
 
 slot2:
   - from: 2019-01-08
@@ -96,10 +98,12 @@ slot2:
     displayFrom: 2020-12-08
     name: "Astra: Lost in Space"
     picture: Astra
+    rating: 12
 
   - from: 2021-02-23
     name: Ore Monogatari
     picture: oremonogatari
+    rating: 12
 
   - from: 2021-05-18
 
@@ -173,6 +177,7 @@ movies:
     time: 7pm
     venue: "Discord"
     picture: agartha
+    rating: 12
     # trailer: https://www.youtube.com/watch?v=tmHo_0mgos0
 
   - name: "Patema Inverted"
@@ -180,6 +185,7 @@ movies:
     time: 7pm
     venue: "Discord"
     picture: patema-inverted
+    rating: pg
     # trailer: https://www.youtube.com/watch?v=aSOuohS1OvE
 
 events:

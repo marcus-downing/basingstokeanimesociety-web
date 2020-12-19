@@ -98,14 +98,19 @@ window.onload = function () {
       html = html + "<p class='series-ident'>New series</p>";
     }
     html = html + `<h3>${item.name}</h3>`;
-    if (item.movie) {
-      html = html + `<div class='movie-info'><p>${item.time}</p></div>`;
-    } else {
+    if (!item.movie) {
       html = html + "<div class='series-info'><p class='starting'>Starting</p></div>";
     }
-    html = html + `<time datetime="${item.date}"><span class='day'>${item.day}</span><span class='month'>${item.month}</span></time>`;
+    html = html + `<div class='info-line'><div><time datetime="${item.date}"><span class='day'>${item.day}</span><span class='month'>${item.month}</span></time></div>`;
     if (item.trailer) {
       html = html + `<a class='trailer' href='${trailer}' target='_blank'>Trailer</a>`;
+    }
+    if (item.movie && item.time) {
+      html = html + `<div class='start-time'>${item.time}</div>`;
+    }
+    html = html + "</div>";
+    if (item.rating) {
+      html = html + `<img class='rating rating-${item.rating}' src='images/rating/${item.rating}.svg'>`;
     }
     html = html + `</figcaption><img src='images/series/${item.picture}.png'></figure>`;
     comingSoonHTML = comingSoonHTML + html;

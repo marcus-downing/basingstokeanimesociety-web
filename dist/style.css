@@ -320,12 +320,36 @@ h3 {
       font-size: 17px;
       text-shadow: 0 1px 1px black; }
       #coming-soon figure figcaption h3 {
-        margin-top: 8px; }
-      #coming-soon figure figcaption time {
-        background: linear-gradient(#faeed8, #f8dda2);
+        margin-top: 8px;
+        height: 56px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* white-space: nowrap; */
+        -webkit-box-orient: vertical; }
+      #coming-soon figure figcaption .info-line {
         position: absolute;
         left: 13px;
-        bottom: 13px; }
+        bottom: 13px;
+        display: grid;
+        grid-template-columns: 54px 54px 54px;
+        grid-gap: 13px; }
+        #coming-soon figure figcaption .info-line > * {
+          display: inline-block;
+          width: 54px;
+          height: 54px; }
+      #coming-soon figure figcaption time {
+        background: linear-gradient(#faeed8, #f8dda2); }
+      #coming-soon figure figcaption .start-time {
+        text-align: center;
+        line-height: 54px;
+        font-size: 22px;
+        color: white; }
+      #coming-soon figure figcaption img.rating {
+        position: absolute;
+        bottom: 13px;
+        right: 136px; }
       #coming-soon figure figcaption p.movie-ident {
         font-size: 14px;
         text-transform: uppercase;
@@ -346,7 +370,7 @@ h3 {
         bottom: 59px;
         font-size: 14px;
         text-transform: uppercase; }
-    #coming-soon figure img {
+    #coming-soon figure > img {
       position: absolute;
       top: 0;
       right: 0;
@@ -373,10 +397,16 @@ h3 {
       height: 360px;
       padding-right: 252px; }
       #coming-soon figure:nth-child(1) figcaption h3, #coming-soon figure:nth-child(2) figcaption h3 {
-        font-size: 22px; }
-      #coming-soon figure:nth-child(1) img, #coming-soon figure:nth-child(2) img {
+        font-size: 22px;
+        text-overflow: unset;
+        height: auto;
+        overflow: unset;
+        -webkit-line-clamp: unset; }
+      #coming-soon figure:nth-child(1) > img, #coming-soon figure:nth-child(2) > img {
         width: 252px;
         height: 360px; }
+      #coming-soon figure:nth-child(1) img.rating, #coming-soon figure:nth-child(2) img.rating {
+        right: 260px; }
 
 .lr {
   display: grid;
