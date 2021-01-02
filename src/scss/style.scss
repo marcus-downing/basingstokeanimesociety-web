@@ -864,7 +864,7 @@ article {
           }
         }
 
-        > img {
+        > img.series-picture {
           width: 252px;
           height: 360px;
         }
@@ -946,7 +946,7 @@ article {
     figure {
       &:nth-child(1), &:nth-child(2) {
         height: 180px;
-        img {
+        img.series-picture {
           height: 180px;
           width: 126px;
         }

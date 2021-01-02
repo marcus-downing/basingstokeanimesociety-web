@@ -126,7 +126,7 @@ window.onload = function () {
     if (item.rating) {
       html = html + `<img class='rating rating-${item.rating}' src='images/rating/${item.rating}.svg'>`;
     }
-    html = html + `</figcaption><img src='images/series/${item.picture}.png'></figure>`;
+    html = html + `</figcaption><img class='series-picture' src='images/series/${item.picture}.png'></figure>`;
     comingSoonHTML = comingSoonHTML + html;
   }
   document.getElementById('coming-soon').innerHTML = comingSoonHTML;

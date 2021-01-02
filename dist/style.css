@@ -622,7 +622,7 @@ article {
         height: auto;
         overflow: unset;
         -webkit-line-clamp: unset; }
-      #coming-soon figure:nth-child(1) > img, #coming-soon figure:nth-child(2) > img {
+      #coming-soon figure:nth-child(1) > img.series-picture, #coming-soon figure:nth-child(2) > img.series-picture {
         width: 252px;
         height: 360px; }
       #coming-soon figure:nth-child(1) img.rating, #coming-soon figure:nth-child(2) img.rating {
@@ -671,6 +671,6 @@ article {
     flex-direction: column; }
     #coming-soon figure:nth-child(1), #coming-soon figure:nth-child(2) {
       height: 180px; }
-      #coming-soon figure:nth-child(1) img, #coming-soon figure:nth-child(2) img {
+      #coming-soon figure:nth-child(1) img.series-picture, #coming-soon figure:nth-child(2) img.series-picture {
         height: 180px;
         width: 126px; } }
