@@ -14,7 +14,7 @@ options:
   hiatus: false
   hiatusMessage: "Our regular schedule resumes on 28 April"
   comingSoonRows: 3
-  newsCutoff: 1
+  newsCutoff: 0
 
 news:
   - title: Basingstoke Anime Society is moving online
@@ -139,14 +139,17 @@ slot3:
   - from: 2020-12-01
     name: Wasteful Days of High School Girls
     picture: wasteful-days
+    rating: 15
 
   - from: 2021-01-26
     name: Flying Witch
     picture: flying-witch
+    rating: 12
 
   - from: 2021-03-09
     name: "Keep Your Hands Off Eizouken!"
     picture: eizouken
+    rating: 12
 
   - from: 2021-04-20
 

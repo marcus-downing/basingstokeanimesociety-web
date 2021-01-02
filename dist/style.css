@@ -234,10 +234,10 @@ h3 {
     position: relative;
     margin: 0 auto;
     min-height: 450px; }
-    #now-showing figure img {
+    #now-showing figure img.series-picture {
       z-index: 1;
       opacity: 0; }
-      #now-showing figure img.show {
+      #now-showing figure img.series-picture.show {
         opacity: 1; }
     #now-showing figure#slot1 {
       margin: 0 auto 0 0; }
@@ -250,13 +250,33 @@ h3 {
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 6px 9px;
+      padding: 8px 60px 8px 10px;
       background: rgba(0, 0, 0, 0.5);
+      min-height: 55px;
       color: white;
       text-shadow: none;
       font-size: 18px;
       font-weight: bold;
       z-index: 3; }
+      #now-showing figure figcaption p.movie-ident {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0;
+        color: #9af3aa; }
+        #now-showing figure figcaption p.movie-ident + h3 {
+          margin-top: 3px; }
+      #now-showing figure figcaption p.series-ident {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0;
+        color: #f8dda2; }
+        #now-showing figure figcaption p.series-ident + h3 {
+          margin-top: 3px; }
+    #now-showing figure img.rating {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      z-index: 4; }
     #now-showing figure a.play {
       position: absolute;
       top: 0;
@@ -284,6 +304,10 @@ h3 {
   grid-template-rows: 2fr 1fr 1fr;
   grid-template-areas: "one one one two two two" "three three four four five five" "six six seven seven eight eight";
   grid-gap: 39px; }
+  #coming-soon.coming-soon--short {
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "one one one two two two" "three three four four five five";
+    min-height: 0; }
   #coming-soon figure {
     position: relative;
     background: rgba(40, 60, 120, 0.4);
@@ -599,7 +623,7 @@ article {
   cursor: pointer; }
 
 @media (min-width: 1281px) {
-  #now-showing figure, #now-showing figure img {
+  #now-showing figure, #now-showing figure img.series-picture {
     width: 315px;
     height: 450px; }
   header#header {
@@ -610,7 +634,7 @@ article {
 @media (max-width: 1280px) {
   #now-showing figure {
     min-height: auto; }
-    #now-showing figure, #now-showing figure img {
+    #now-showing figure, #now-showing figure img.series-picture {
       width: 22vw;
       margin-bottom: -5px; }
   .btn-where-when {
@@ -635,7 +659,7 @@ article {
   main {
     padding-left: 10px;
     padding-right: 80px; }
-  #now-showing figure, #now-showing figure img {
+  #now-showing figure, #now-showing figure img.series-picture {
     width: 28.4vw; }
   #map-overlay {
     left: 10px;

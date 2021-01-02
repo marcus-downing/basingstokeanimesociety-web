@@ -48,7 +48,7 @@ window.onload = function () {
   // var nextSlot3 = nextAnime(slot3);
 
   function editSlot(id, series) {
-    document.getElementById(id+'name').innerHTML = series.name;
+    document.getElementById(id+'name').innerHTML = '<p class="series-ident">Series</p>'+series.name;
     var img = document.getElementById(id+'picture');
     img.setAttribute('src', 'images/series/'+series.picture+'.png');
     img.classList.add("show");
@@ -57,11 +57,15 @@ window.onload = function () {
     if (slotDate !== null) {
       slotDate.innerHTML = "<span class='day'>"+series.day+"</span><span class='month'>"+series.month+"</span>";
     }
+
+    if (series.rating) {
+      document.getElementById(id+'rating').innerHTML = `<img class='rating rating-${series.rating}' src='images/rating/${series.rating}.svg'>`;
+    }
   }
 
-  // editSlot('slot1', currentSlot1);
-  // editSlot('slot2', currentSlot2);
-  // editSlot('slot3', currentSlot3);
+  editSlot('slot1', currentSlot1);
+  editSlot('slot2', currentSlot2);
+  editSlot('slot3', currentSlot3);
 
   // editSlot('nextSlot1', nextSlot1);
   // editSlot('nextSlot2', nextSlot2);
@@ -76,6 +80,15 @@ window.onload = function () {
     return after.slice(0, number);
   }
 
+  function excludeSeries(items, exclude) {
+    excludeNames = exclude.map(function (item) {
+      return item.name;
+    });
+    return items.filter(function (item) {
+      return !excludeNames.includes(item.name);
+    });
+  }
+
   var rowCutoffs = {1: 2, 2: 5, 3: 8, 4: 11};
   function findCutoff(items, maxRow) {
     for (var row = maxRow; row > 1; row--) {
@@ -86,8 +99,9 @@ window.onload = function () {
     return rowCutoffs[1];
   }
 
-  var comingSoonCutoff = findCutoff(comingSoon.length, options.comingSoonRows);
-  comingSoon = futureN(comingSoon, comingSoonCutoff);
+  // var comingSoonCutoff = findCutoff(comingSoon.length, options.comingSoonRows);
+  comingSoon = futureN(comingSoon, 8);
+  comingSoon = excludeSeries(comingSoon, [currentSlot1, currentSlot2, currentSlot3]);
 
   var comingSoonHTML = '';
   for (item of comingSoon) {
@@ -116,6 +130,10 @@ window.onload = function () {
     comingSoonHTML = comingSoonHTML + html;
   }
   document.getElementById('coming-soon').innerHTML = comingSoonHTML;
+
+  if (comingSoon.length <= 5) {
+    document.getElementById('coming-soon').classList.add('coming-soon--short');
+  }
 
 
   // adjust the events list

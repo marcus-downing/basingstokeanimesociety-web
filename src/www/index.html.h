@@ -63,25 +63,27 @@
 {{/if}}
 
 <section id='section-now-showing' class='{{#if options.hiatus}}section-now-showing-hiatus{{/if}}'>
-  {{!-- <h2>Now Showing</h2>
+  <h2>Now Showing</h2>
 
   <div id='now-showing'>
     <figure id='slot1'>
       <figcaption id='slot1name'></figcaption>
-      <img id='slot1picture' src=''>
+      <img class='series-picture' id='slot1picture' src=''>
+      <div class='rating' id='slot1rating'></div>
     </figure>
 
     <figure id='slot2'>
       <figcaption id='slot2name'></figcaption>
-      <img id='slot2picture' src=''>
+      <img class='series-picture' id='slot2picture' src=''>
+      <div class='rating' id='slot2rating'></div>
     </figure>
 
     <figure id='slot3'>
       <figcaption id='slot3name'></figcaption>
-      <img id='slot3picture' src=''>
+      <img class='series-picture' id='slot3picture' src=''>
+      <div class='rating' id='slot3rating'></div>
     </figure>
   </div>
-  --}}
 
   <h2>Coming Soon</h2>
 

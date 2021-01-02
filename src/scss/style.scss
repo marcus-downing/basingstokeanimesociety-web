@@ -276,7 +276,7 @@ h3 {
     margin: 0 auto;
     min-height: 450px;
 
-    img {
+    img.series-picture {
       z-index: 1;
       opacity: 0;
 
@@ -302,8 +302,9 @@ h3 {
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 6px 9px;
+      padding: 8px 60px 8px 10px;
       background: rgba(0,0,0,0.5);
+      min-height: 55px;
 
       color: white;
       text-shadow: none;
@@ -311,6 +312,35 @@ h3 {
       font-weight: bold;
 
       z-index: 3;
+
+      p.movie-ident {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0;
+        color: #9af3aa;
+
+        + h3 {
+          margin-top: 3px;
+        }
+      }
+
+      p.series-ident {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0;
+        color: #f8dda2;
+
+        + h3 {
+          margin-top: 3px;
+        }
+      }
+    }
+
+    img.rating {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      z-index: 4;
     }
 
     a.play {
@@ -352,6 +382,15 @@ h3 {
     "three three four four five five"
     "six six seven seven eight eight";
   grid-gap: 39px;
+
+  &.coming-soon--short {
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+      "one one one two two two"
+      "three three four four five five";
+
+    min-height: 0;
+  }
 
   figure {
     &:nth-child(1) {
@@ -826,7 +865,7 @@ article {
 
 @media (min-width: 1281px) {
   #now-showing figure {
-    &, img {
+    &, img.series-picture {
       width: 315px;
       height: 450px;
     }
@@ -841,7 +880,7 @@ article {
 
 @media (max-width: 1280px) {
   #now-showing figure {
-    &, img {
+    &, img.series-picture {
       width: 22vw;
       margin-bottom: -5px;
     }
@@ -887,7 +926,7 @@ article {
     padding-right: 80px;
   }
   #now-showing figure {
-    &, img { width: 28.4vw; }
+    &, img.series-picture { width: 28.4vw; }
   }
   #map-overlay {
     left: 10px;

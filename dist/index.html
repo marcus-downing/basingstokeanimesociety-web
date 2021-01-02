@@ -11,7 +11,7 @@
   </script>
 
   <title>Basingstoke Anime Society</title>
-  <link rel="stylesheet" media="all" href="style.css?ver=3f5734" />
+  <link rel="stylesheet" media="all" href="style.css?ver=df84aa" />
   <script src="script.js"></script>
 </head>
 <body class="day">
@@ -52,6 +52,27 @@
 </header>
 
 <section id='section-now-showing' class=''>
+  <h2>Now Showing</h2>
+
+  <div id='now-showing'>
+    <figure id='slot1'>
+      <figcaption id='slot1name'></figcaption>
+      <img class='series-picture' id='slot1picture' src=''>
+      <div class='rating' id='slot1rating'></div>
+    </figure>
+
+    <figure id='slot2'>
+      <figcaption id='slot2name'></figcaption>
+      <img class='series-picture' id='slot2picture' src=''>
+      <div class='rating' id='slot2rating'></div>
+    </figure>
+
+    <figure id='slot3'>
+      <figcaption id='slot3name'></figcaption>
+      <img class='series-picture' id='slot3picture' src=''>
+      <div class='rating' id='slot3rating'></div>
+    </figure>
+  </div>
 
   <h2>Coming Soon</h2>
 
@@ -65,28 +86,6 @@
   <h2>Upcoming Events</h2>
 
   <div id='events-list'>
-  <article id='upcoming-2020-12-22' class='event event-online'>
-    <time datetime="Tue Dec 22 2020 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>22</span><span class='month'>Dec</span></time>
-    <div class='event-detail event-detail-online'>
-      <h3>Online Meeting</h3>
-      <p>Discord, 7pm</h3>
-    </div>
-    <div class='event-detail event-detail-movie'>
-      <h3>Movie: Children who Chase Lost Voices</h3>
-      <p>Discord, 7pm</h3>
-    </div>
-  </article>
-  <article id='upcoming-2020-12-29' class='event event-online'>
-    <time datetime="Tue Dec 29 2020 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>29</span><span class='month'>Dec</span></time>
-    <div class='event-detail event-detail-online'>
-      <h3>Online Meeting</h3>
-      <p>Discord, 7pm</h3>
-    </div>
-    <div class='event-detail event-detail-movie'>
-      <h3>Movie: Patema Inverted</h3>
-      <p>Discord, 7pm</h3>
-    </div>
-  </article>
   <article id='upcoming-2021-01-05' class='event event-new-series'>
     <time datetime="Tue Jan 05 2021 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>5</span><span class='month'>Jan</span></time>
     <div class='event-detail event-detail-new-series'>
@@ -237,6 +236,20 @@
       <p>Discord, 7pm</h3>
     </div>
   </article>
+  <article id='upcoming-2021-05-11' class='event event-online'>
+    <time datetime="Tue May 11 2021 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>11</span><span class='month'>May</span></time>
+    <div class='event-detail event-detail-online'>
+      <h3>Online Meeting</h3>
+      <p>Discord, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2021-05-18' class='event event-online'>
+    <time datetime="Tue May 18 2021 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>18</span><span class='month'>May</span></time>
+    <div class='event-detail event-detail-online'>
+      <h3>Online Meeting</h3>
+      <p>Discord, 7pm</h3>
+    </div>
+  </article>
   </div>
 
 </section>
@@ -244,18 +257,18 @@
 <section id='news-feed'>
   <h2>News Feed</h2>
 
-  <article class='news box'>
-  <time datetime="Sun Nov 22 2020 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>22</span><span class='month'>Nov</span></time>
-  <h3>Movies</h3>
-  <p>Instead of taking a break over Christmas and new year like we normally would, we&#x27;ve got a whole load of movies happening over the next few weeks. Check out the schedule above for details.
-</p>
-  </article>
 
   <div id='news-more-switch'>
     <button class='btn btn-news-more' onclick="showNews()"><span>Show More News</span></button>
   </div>
 
   <div id='news-more'>
+    <article class='news box'>
+    <time datetime="Sun Nov 22 2020 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>22</span><span class='month'>Nov</span></time>
+    <h3>Movies</h3>
+    <p>Instead of taking a break over Christmas and new year like we normally would, we&#x27;ve got a whole load of movies happening over the next few weeks. Check out the schedule above for details.
+</p>
+    </article>
     <article class='news box'>
     <time datetime="Sun Apr 12 2020 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>12</span><span class='month'>Apr</span></time>
     <h3>Schedule resumes on 28 April</h3>
