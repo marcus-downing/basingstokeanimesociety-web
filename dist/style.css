@@ -298,16 +298,7 @@ h3 {
       opacity: 1; }
 
 #coming-soon {
-  min-height: 600px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 2fr 1fr 1fr;
-  grid-template-areas: "one one one two two two" "three three four four five five" "six six seven seven eight eight";
-  grid-gap: 39px; }
-  #coming-soon.coming-soon--short {
-    grid-template-rows: 2fr 1fr;
-    grid-template-areas: "one one one two two two" "three three four four five five";
-    min-height: 0; }
+  display: grid; }
   #coming-soon figure {
     position: relative;
     background: rgba(40, 60, 120, 0.4);
@@ -417,20 +408,6 @@ h3 {
         #coming-soon figure.movie .movie-info p {
           margin: 0.1em 0;
           font-size: 22px; }
-    #coming-soon figure:nth-child(1), #coming-soon figure:nth-child(2) {
-      height: 360px;
-      padding-right: 252px; }
-      #coming-soon figure:nth-child(1) figcaption h3, #coming-soon figure:nth-child(2) figcaption h3 {
-        font-size: 22px;
-        text-overflow: unset;
-        height: auto;
-        overflow: unset;
-        -webkit-line-clamp: unset; }
-      #coming-soon figure:nth-child(1) > img, #coming-soon figure:nth-child(2) > img {
-        width: 252px;
-        height: 360px; }
-      #coming-soon figure:nth-child(1) img.rating, #coming-soon figure:nth-child(2) img.rating {
-        right: 260px; }
 
 .lr {
   display: grid;
@@ -626,6 +603,30 @@ article {
   #now-showing figure, #now-showing figure img.series-picture {
     width: 315px;
     height: 450px; }
+  #coming-soon {
+    min-height: 600px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas: "one one one two two two" "three three four four five five" "six six seven seven eight eight";
+    grid-gap: 39px; }
+    #coming-soon.coming-soon--short {
+      grid-template-rows: 2fr 1fr;
+      grid-template-areas: "one one one two two two" "three three four four five five";
+      min-height: 0; }
+    #coming-soon figure:nth-child(1), #coming-soon figure:nth-child(2) {
+      height: 360px;
+      padding-right: 252px; }
+      #coming-soon figure:nth-child(1) figcaption h3, #coming-soon figure:nth-child(2) figcaption h3 {
+        font-size: 22px;
+        text-overflow: unset;
+        height: auto;
+        overflow: unset;
+        -webkit-line-clamp: unset; }
+      #coming-soon figure:nth-child(1) > img, #coming-soon figure:nth-child(2) > img {
+        width: 252px;
+        height: 360px; }
+      #coming-soon figure:nth-child(1) img.rating, #coming-soon figure:nth-child(2) img.rating {
+        right: 260px; }
   header#header {
     display: grid;
     grid-template-columns: 1fr 1fr;
