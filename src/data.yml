@@ -106,6 +106,11 @@ slot2:
     rating: 12
 
   - from: 2021-05-18
+    name: Assassination Classroom
+    picture: assassination-classroom
+    rating: 15
+
+  - from: 2021-05-18
 
 slot3:
   - from: 2020-01-07
@@ -152,6 +157,16 @@ slot3:
     rating: 12
 
   - from: 2021-04-20
+    name: "Kaguya-sama, Love is War S2"
+    picture: kaguya-sama2
+    rating: 12
+
+  - from: 2021-06-01
+    name: "My Next Life as a Villainess: All Routes Lead to Doom!"
+    picture: hamefura
+    rating: 12
+
+  - from: 2021-07-13
 
 movies:
   - name: "Konosuba - Legend of Crimson"
@@ -190,6 +205,13 @@ movies:
     picture: patema-inverted
     rating: pg
     # trailer: https://www.youtube.com/watch?v=aSOuohS1OvE
+
+  - name: "Lupin III: The Castle of Cagliostro"
+    date: 2021-02-14
+    time: 3pm
+    venue: "Discord"
+    picture: lupin-cagliostro
+    rating: pg
 
 events:
   - name: Kobosuba Movie
