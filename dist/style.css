@@ -254,7 +254,7 @@ h3 {
       background: rgba(0, 0, 0, 0.5);
       min-height: 55px;
       color: white;
-      text-shadow: none;
+      text-shadow: 0 0.5px 2px black;
       font-size: 18px;
       font-weight: bold;
       z-index: 3; }
