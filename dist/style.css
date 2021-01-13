@@ -656,7 +656,7 @@ article {
   #coming-soon {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: none;
-    grid-template-areas: "one one" "two two" "three four" "five six" "seven eight";
+    grid-template-areas: "one two" "three four" "five six" "seven eight";
     grid-gap: 20px; } }
 
 @media (max-width: 800px) {
