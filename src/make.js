@@ -45,6 +45,7 @@ function expandDate(target, date = null, time = null, leeway = 0) {
 
   target.day = date.getDate();
   target.month = util.formatShortMonth(date);
+  target.weekday = util.weekday(date);
   return target;
 }
 

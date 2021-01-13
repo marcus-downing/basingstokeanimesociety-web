@@ -356,11 +356,18 @@ h3 {
           height: 54px; }
       #coming-soon figure figcaption time {
         background: linear-gradient(#faeed8, #f8dda2); }
-      #coming-soon figure figcaption .start-time {
-        text-align: center;
-        line-height: 54px;
-        font-size: 22px;
-        color: white; }
+      #coming-soon figure figcaption .movie-time {
+        display: inline-block;
+        height: 54px; }
+        #coming-soon figure figcaption .movie-time .movie-weekday {
+          font-size: 14px;
+          text-transform: uppercase;
+          margin: 0.1em 0 0 0;
+          color: #9af3aa; }
+        #coming-soon figure figcaption .movie-time .movie-start-time {
+          font-size: 22px;
+          color: white;
+          margin: 0; }
       #coming-soon figure figcaption img.rating {
         position: absolute;
         bottom: 13px;

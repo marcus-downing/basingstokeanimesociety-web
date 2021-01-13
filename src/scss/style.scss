@@ -456,13 +456,30 @@ h3 {
         background: linear-gradient(#faeed8, #f8dda2);
       }
 
-      .start-time {
-        text-align: center;
-        line-height: 54px;
+      .movie-time {
+        display: inline-block;
+        height: 54px;
 
-        font-size: 22px;
-        color: white;
+        .movie-weekday {
+          font-size: 14px;
+          text-transform: uppercase;
+          margin: 0.1em 0 0 0;
+          color: #9af3aa;
+        }
+        .movie-start-time {
+          font-size: 22px;
+          color: white;
+          margin: 0;
+        }
       }
+
+      // .start-time {
+      //   text-align: center;
+      //   line-height: 54px;
+
+      //   font-size: 22px;
+      //   color: white;
+      // }
 
       img.rating {
         position: absolute;

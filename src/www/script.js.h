@@ -120,7 +120,7 @@ window.onload = function () {
       html = html + `<a class='trailer' href='${trailer}' target='_blank'>Trailer</a>`;
     }
     if (item.movie && item.time) {
-      html = html + `<div class='start-time'>${item.time}</div>`;
+      html = html + `<div class='movie-time'><p class='movie-weekday'>${item.weekday}</p><p class='movie-start-time'>${item.time}</p></div>`;
     }
     html = html + "</div>";
     if (item.rating) {
