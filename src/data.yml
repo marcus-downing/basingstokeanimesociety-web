@@ -81,6 +81,16 @@ slot1:
     picture: ancient-magus-bride
     rating: 15
 
+  - from: 2021-07-13
+    name: "Golden Kamuy Third Season"
+    picture: golden-kamuy
+    rating: 15
+
+  - from: 2021-08-24
+    name: "Legend of the Galactic Heroes: Die Neue These"
+    picture: legend-of-galactic-heroes
+    rating: 15
+
 slot2:
   - from: 2019-01-08
     name: Hunter &times; Hunter
@@ -111,6 +121,14 @@ slot2:
     rating: 15
 
   - from: 2021-05-18
+    name: Bunny Drop
+    picture: bunny-drop
+    rating: pg
+
+  - from: 2021-09-14
+    name: "Carole & Tuesday"
+    picture: carole-and-tuesday
+    rating: 15
 
 slot3:
   - from: 2020-01-07
@@ -167,6 +185,14 @@ slot3:
     rating: 12
 
   - from: 2021-07-13
+    name: Sound of the Sky
+    picture: sound-of-the-sky
+    rating: 12
+
+  - from: 2021-08-31
+    name: BOFURI
+    picture: bofuri
+    rating: 12
 
 movies:
   - name: "Konosuba - Legend of Crimson"
