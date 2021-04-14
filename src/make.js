@@ -375,4 +375,12 @@ _.each(bookends, bookend => {
     } else {
     }
   });
+
+  cmd = `ffmpeg -y -i video/bookends-base-long.avi -i ${series1picture} -i ${series2picture} -i ${series3picture} -an `+
+    `-filter_complex "[0:v][1:v] overlay=193:125:enable='between(t,0,16)' [in1]; `+
+    `[in1][2:v] overlay=553:125:enable='between(t,0,16)' [in2]; `+
+    `[in2][3:v] overlay=910:125:enable='between(t,0,16)' [in3]; `+
+    `[in3] fade=in:0:60 [in4]; `+
+    `[in4] fade=out:420:60" `+
+    `../bookends/${bookend.name}-long.mp4`;
 });
