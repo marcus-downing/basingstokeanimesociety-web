@@ -272,7 +272,7 @@ h3 {
         color: #f8dda2; }
         #now-showing figure figcaption p.series-ident + h3 {
           margin-top: 3px; }
-    #now-showing figure img.rating {
+    #now-showing figure img.rating-img {
       position: absolute;
       bottom: 8px;
       right: 8px;
@@ -298,6 +298,10 @@ h3 {
     #now-showing figure:hover a.play {
       transition: opacity 0.2s ease-out;
       opacity: 1; }
+    #now-showing figure .rating-hover {
+      right: 5px; }
+      #now-showing figure .rating-hover .rating__tag {
+        right: 21px; }
 
 #coming-soon {
   display: grid; }
@@ -370,7 +374,7 @@ h3 {
           font-size: 22px;
           color: white;
           margin: 0; }
-      #coming-soon figure figcaption img.rating {
+      #coming-soon figure figcaption img.rating-img {
         position: absolute;
         bottom: 13px;
         right: 136px;
@@ -433,6 +437,49 @@ h3 {
         #coming-soon figure.movie .movie-info p {
           margin: 0.1em 0;
           font-size: 22px; }
+    #coming-soon figure .rating-hover {
+      left: 20%;
+      right: auto; }
+      #coming-soon figure .rating-hover .rating__tag {
+        left: 78px; }
+
+.rating-hover {
+  display: none;
+  position: absolute;
+  bottom: -52px;
+  right: 0;
+  background: black;
+  border-radius: 3px;
+  padding: 2px;
+  border: 1px solid #333;
+  box-shadow: 0 2px 6px black;
+  z-index: 1000; }
+  .rating-hover.rating-hover--show {
+    display: block; }
+  .rating-hover span {
+    display: block;
+    border: 2px solid white;
+    border-radius: 2px;
+    padding: 3px 7px;
+    color: white;
+    font-weight: normal;
+    white-space: nowrap; }
+  .rating-hover.rating-hover-15 span {
+    border-color: #FFA4F2; }
+  .rating-hover.rating-hover-12 span {
+    border-color: #FFC673; }
+  .rating-hover.rating-hover-pg span {
+    border-color: #FFFE89; }
+  .rating-hover.rating-hover-u span {
+    border-color: #A6FFA5; }
+  .rating-hover .rating__tag {
+    position: absolute;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black; }
 
 .lr {
   display: grid;
@@ -650,7 +697,7 @@ article {
       #coming-soon figure:nth-child(1) > img.series-picture, #coming-soon figure:nth-child(2) > img.series-picture {
         width: 252px;
         height: 360px; }
-      #coming-soon figure:nth-child(1) img.rating, #coming-soon figure:nth-child(2) img.rating {
+      #coming-soon figure:nth-child(1) img.rating-img, #coming-soon figure:nth-child(2) img.rating-img {
         right: 260px; }
   header#header {
     display: grid;

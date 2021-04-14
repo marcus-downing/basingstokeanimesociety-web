@@ -336,7 +336,7 @@ h3 {
       }
     }
 
-    img.rating {
+    img.rating-img {
       position: absolute;
       bottom: 8px;
       right: 8px;
@@ -369,6 +369,14 @@ h3 {
       a.play {
         transition: opacity 0.2s ease-out;
         opacity: 1;
+      }
+    }
+
+    .rating-hover {
+      right: 5px;
+
+      .rating__tag {
+        right: 21px;
       }
     }
   }
@@ -483,7 +491,7 @@ h3 {
       //   color: white;
       // }
 
-      img.rating {
+      img.rating-img {
         position: absolute;
         bottom: 13px;
         right: 136px;
@@ -579,6 +587,64 @@ h3 {
         }
       }
     }
+
+    .rating-hover {
+      left: 20%;
+      right: auto;
+
+      .rating__tag {
+        left: 78px;
+      }
+    }
+  }
+}
+
+.rating-hover {
+  display: none;
+  &.rating-hover--show {
+    display: block;
+  }
+
+  position: absolute;
+  bottom: -52px;
+  right: 0;
+  background: black;
+  border-radius: 3px;
+  padding: 2px;
+  border: 1px solid #333;
+  box-shadow: 0 2px 6px black;
+  z-index: 1000;
+
+  span {
+    display: block;
+    border: 2px solid white;
+    border-radius: 2px;
+    padding: 3px 7px;
+    color: white;
+    font-weight: normal;
+    white-space: nowrap;
+  }
+  &.rating-hover-15 span {
+    border-color: #FFA4F2;
+  }
+  &.rating-hover-12 span {
+    border-color: #FFC673;
+  }
+  &.rating-hover-pg span {
+    border-color: #FFFE89;
+  }
+  &.rating-hover-u span {
+    border-color: #A6FFA5;
+  }
+
+  .rating__tag {
+    position: absolute;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
   }
 }
 
@@ -911,7 +977,7 @@ article {
           height: 360px;
         }
 
-        img.rating {
+        img.rating-img {
           right: 260px;
         }
       }

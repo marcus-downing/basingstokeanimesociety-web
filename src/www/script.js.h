@@ -8,6 +8,8 @@ var events = {{{json eventsByDate}}};
 
 var options = {{{json options}}};
 
+var ratingText = {"u": "Universal", "pg": "Parental Guidance", "12": "12 and older", "15": "15 and older"};
+
 // select a background image
 function selectBackground() {
     var DAY_LIMIT = 6;
@@ -59,7 +61,8 @@ window.onload = function () {
     }
 
     if (series.rating) {
-      document.getElementById(id+'rating').innerHTML = `<img class='rating rating-${series.rating}' src='images/rating/${series.rating}.svg'>`;
+      document.getElementById(id+'rating').innerHTML = `<img class='rating-img rating-${series.rating}' src='images/rating/${series.rating}.svg'>` +
+        `<div class='rating-hover rating-hover-${series.rating}'><span>Age rating: ${ratingText[series.rating]}</span><div class='rating__tag'></div></div>`;
     }
   }
 
@@ -125,7 +128,10 @@ window.onload = function () {
     }
     html = html + "</div>";
     if (item.rating) {
-      html = html + `<img class='rating rating-${item.rating}' src='images/rating/${item.rating}.svg'>`;
+      html = html + "<div class='rating'>";
+      html = html + `<img class='rating-img rating-${item.rating}' src='images/rating/${item.rating}.svg'>`;
+      html = html + `<div class='rating-hover rating-hover-${item.rating}'><span>Age rating: ${ratingText[item.rating]}</span><div class='rating__tag'></div></div>`;
+      html = html + "</div>";
     }
     html = html + `</figcaption><img class='series-picture' src='images/series/${item.picture}.png'></figure>`;
     comingSoonHTML = comingSoonHTML + html;
@@ -198,6 +204,31 @@ window.onload = function () {
   }
   if (document.getElementById('next-meeting-address')) {
     document.getElementById('next-meeting-address').innerHTML = nextEvent.address;
+  }
+
+  // add hover on all the rating symbols
+  function addRatingHover(item) {
+    var img = item.getElementsByClassName("rating-img")[0];
+    var hover = item.getElementsByClassName("rating-hover")[0];
+    var tag = item.getElementsByClassName("rating__tag")[0];
+
+    img.addEventListener("mouseover", function(event) {
+      hover.classList.add("rating-hover--show");
+
+      var imgbox = img.getBoundingClientRect();
+      var hoverbox = hover.getBoundingClientRect();
+
+      var left = imgbox.left - hoverbox.left + 17;
+      tag.style.left = left+"px";
+    });
+    img.addEventListener("mouseout", function(event) {
+      hover.classList.remove("rating-hover--show");
+    });
+  }
+
+  var ratingElements = document.getElementsByClassName('rating');
+  for (var item of ratingElements) {
+    addRatingHover(item);
   }
 
   selectBackground();
