@@ -91,6 +91,11 @@ slot1:
     picture: legend-of-galactic-heroes
     rating: 15
 
+  - from: 2021-11-16
+    name: "Time of Eve"
+    picture: time-of-eve
+    rating: pg
+
 slot2:
   - from: 2019-01-08
     name: Hunter &times; Hunter
@@ -194,6 +199,16 @@ slot3:
     picture: bofuri
     rating: 12
 
+  - from: 2021-10-12
+    name: "Yuru Camp S2"
+    picture: yuru-camp-s2
+    rating: pg
+
+  - from: 2021-11-30
+    name: "Tonikawa: Over The Moon For You"
+    picture: tonikawa
+    rating: 12
+
 movies:
   - name: "Konosuba - Legend of Crimson"
     date: 2020-11-22
@@ -238,6 +253,20 @@ movies:
     venue: "Discord"
     picture: lupin-cagliostro
     rating: pg
+
+  - name: Empire of Corpses
+    date: 2021-12-07
+    time: 7pm
+    venue: "Discord"
+    picture: empire-of-corpses
+    rating: 15
+
+  # - name: Your Name
+  #   date: 2021-12-14
+  #   time: 7pm
+  #   venue: "Discord"
+  #   picture: your-name
+  #   rating: 12
 
 events:
   - name: Kobosuba Movie
