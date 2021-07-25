@@ -467,7 +467,7 @@ h3 {
       }
 
       .movie-time {
-        display: inline-block;
+        display: none;
         height: 54px;
 
         .movie-weekday {
@@ -584,6 +584,12 @@ h3 {
         p {
           margin: 0.1em 0;
           font-size: 22px;
+        }
+      }
+
+      &:nth-child(1), &:nth-child(2) {
+        .movie-time {
+          display: inline-block;          
         }
       }
     }

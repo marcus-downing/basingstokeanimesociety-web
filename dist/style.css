@@ -363,7 +363,7 @@ h3 {
       #coming-soon figure figcaption time {
         background: linear-gradient(#faeed8, #f8dda2); }
       #coming-soon figure figcaption .movie-time {
-        display: inline-block;
+        display: none;
         height: 54px; }
         #coming-soon figure figcaption .movie-time .movie-weekday {
           font-size: 14px;
@@ -437,6 +437,8 @@ h3 {
         #coming-soon figure.movie .movie-info p {
           margin: 0.1em 0;
           font-size: 22px; }
+      #coming-soon figure.movie:nth-child(1) .movie-time, #coming-soon figure.movie:nth-child(2) .movie-time {
+        display: inline-block; }
     #coming-soon figure .rating-hover {
       left: 20%;
       right: auto; }
