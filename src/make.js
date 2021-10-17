@@ -73,6 +73,11 @@ _.each(basData.movies, movie => movie.movie = true);
 basData.listedMovies = util.futureN(basData.movies, 2, 'date');
 console.log("Movies:", basData.movies.map(movie => util.formatShortDate(movie.date)).join(", "));
 
+let pastAnime = [
+  ...basData.past_anime,
+
+];
+
 let comingSoon = [
   ...util.future(basData.slot1, 'from'),
   ...util.future(basData.slot2, 'from'),
@@ -352,35 +357,90 @@ bookends = util.currentAndFuture(bookends);
 // console.log(bookends);
 
 _.each(bookends, bookend => {
-  if (fs.existsSync(`../bookends/${bookend.name}.mp4`)) {
-    console.log("Skipping bookend:", bookend.name);
-    return;
-  }
   console.log("Bookend:", bookend.name);
   let series1picture = 'series/'+bookend.slot1.picture+'.png';
   let series2picture = 'series/'+bookend.slot2.picture+'.png';
   let series3picture = 'series/'+bookend.slot3.picture+'.png';
-  let cmd = `ffmpeg -y -i video/bookends-base.avi -i ${series1picture} -i ${series2picture} -i ${series3picture} -an `+
-    `-filter_complex "[0:v][1:v] overlay=193:125:enable='between(t,0,16)' [in1]; `+
-    `[in1][2:v] overlay=553:125:enable='between(t,0,16)' [in2]; `+
-    `[in2][3:v] overlay=910:125:enable='between(t,0,16)' [in3]; `+
-    `[in3] fade=in:0:60 [in4]; `+
-    `[in4] fade=out:420:60" `+
-    `../bookends/${bookend.name}.mp4`;
 
-  exec(cmd, (err, stdout, stderr) => {
-    if (err) {
-      //some err occurred
-      console.error(err)
-    } else {
-    }
-  });
+  if (fs.existsSync(`../bookends/bookend-${bookend.name}.mkv`)) {
+    console.log("Skipping bookend:", bookend.name);
+  } else {
+    let cmd = `ffmpeg -y -i video/bookends-base.avi -i ${series1picture} -i ${series2picture} -i ${series3picture} -an `+
+      `-filter_complex "[0:v][1:v] overlay=193:125:enable='between(t,0,16)' [in1]; `+
+      `[in1][2:v] overlay=553:125:enable='between(t,0,16)' [in2]; `+
+      `[in2][3:v] overlay=910:125:enable='between(t,0,16)' [in3]; `+
+      `[in3] fade=in:0:60 [in4]; `+
+      `[in4] fade=out:420:60" `+
+      `../bookends/bookend-${bookend.name}.mp4`;
 
-  cmd = `ffmpeg -y -i video/bookends-base-long.avi -i ${series1picture} -i ${series2picture} -i ${series3picture} -an `+
-    `-filter_complex "[0:v][1:v] overlay=193:125:enable='between(t,0,16)' [in1]; `+
-    `[in1][2:v] overlay=553:125:enable='between(t,0,16)' [in2]; `+
-    `[in2][3:v] overlay=910:125:enable='between(t,0,16)' [in3]; `+
-    `[in3] fade=in:0:60 [in4]; `+
-    `[in4] fade=out:420:60" `+
-    `../bookends/${bookend.name}-long.mp4`;
+    exec(cmd, (err, stdout, stderr) => {
+      if (err) {
+        //some err occurred
+        console.error(err)
+      } else {
+      }
+    });
+  }
+
+
+  if (fs.existsSync(`../bookends/interval-${bookend.name}.mkv`)) {
+    console.log("Skipping interval:", bookend.name);
+  } else {
+    let frameRate = 29.976;
+    let intervalDur = 20 * 60;
+    let fade = 2;
+    let fadeStart = intervalDur - fade;
+
+    let plateDur = 35;
+    let plateOffset = 0.5;
+    let plateFade = 1.5;
+    let plateEndBuf = 3;
+    let plateStart = intervalDur - plateEndBuf - plateDur;
+    let plateEnd = intervalDur - plateEndBuf;
+
+    console.log(`  Interval dur = ${intervalDur}`);
+    console.log(`  Fade start = ${fadeStart}`);
+    console.log(`  Fade dur = ${fade}`);
+
+    console.log(`  Plate dur = ${plateDur}`);
+    console.log(`  Plate fade dur = ${plateFade}`);
+    console.log(`  Plate start = ${plateStart}`);
+    console.log(`  Plate end = ${plateEnd}`);
+
+    let cmd = `ffmpeg -y -i video/interval-base4.mkv -loop 1 -i ${series1picture} -loop 1 -i ${series2picture} -loop 1 -i ${series3picture} -c:a copy -filter_complex "`+
+
+      // `[1:v] fps=fps=${frameRate},scale=170x243,fade=in:st=${plateStart}:d=${plateFade}:alpha=1,fade=out:st=${plateEnd - plateFade}:d=${plateFade}:alpha=1 [s1];`+
+      // `[2:v] fps=fps=${frameRate},scale=170x243,fade=in:st=${plateStart}:d=${plateFade}:alpha=1,fade=out:st=${plateEnd - plateFade}:d=${plateFade}:alpha=1 [s2];`+
+      // `[3:v] fps=fps=${frameRate},scale=170x243,fade=in:st=${plateStart}:d=${plateFade}:alpha=1,fade=out:st=${plateEnd - plateFade}:d=${plateFade}:alpha=1 [s3];`+
+
+      // `[1:v] fps=fps=${frameRate},scale=170x243,fade=in:st=${plateStart-plateOffset*2}:d=${plateFade}:alpha=1 [s1];`+
+      // `[2:v] fps=fps=${frameRate},scale=170x243,fade=in:st=${plateStart-plateOffset}:d=${plateFade}:alpha=1 [s2];`+
+      // `[3:v] fps=fps=${frameRate},scale=170x243,fade=in:st=${plateStart}:d=${plateFade}:alpha=1 [s3];`+
+      // `[0:v][s1] overlay=680:327 [in1]; `+
+      // `[in1][s2] overlay=880:327 [in2]; `+
+      // `[in2][s3] overlay=1080:327 [in3]; `+
+
+      `[1:v] fps=fps=${frameRate},scale=255x366,fade=in:st=${plateStart-plateOffset*2}:d=${plateFade}:alpha=1 [s1];`+
+      `[2:v] fps=fps=${frameRate},scale=255x366,fade=in:st=${plateStart-plateOffset}:d=${plateFade}:alpha=1 [s2];`+
+      `[3:v] fps=fps=${frameRate},scale=255x366,fade=in:st=${plateStart}:d=${plateFade}:alpha=1 [s3];`+
+
+      `[0:v][s1] overlay=425:327 [in1]; `+
+      `[in1][s2] overlay=710:327 [in2]; `+
+      `[in2][s3] overlay=995:327 [in3]; `+
+
+      `[in3] fade=out:st=${fadeStart}:d=${fade}" `+
+      // `[in3] fade=in:0:60 [in4]; `+
+      // `[in3] fade=out:35911:60" `+
+      `-t 00:20:00 ../bookends/interval-${bookend.name}.mkv`;
+
+    console.log(cmd);
+
+    exec(cmd, (err, stdout, stderr) => {
+      if (err) {
+        //some err occurred
+        console.error(err)
+      } else {
+      }
+    });
+  }
 });
