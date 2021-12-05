@@ -195,7 +195,7 @@ h3 {
   box-shadow: 0 2px 3px rgba(0,0,0,0.5);
 
   body.night & {
-    background: rgba(20, 30, 60, 0.4);
+    background: rgba(20, 30, 60, 0.5);
   }
 }
 
@@ -219,10 +219,45 @@ h3 {
 #section-next-meeting {
   position: relative;
 
-
   h2 {
     margin-top: 0.6em;
     margin-bottom: 3px;
+  }
+
+  h3 {
+    margin-top: 1.5em;
+  }
+
+  #next-meeting-date {
+    position: relative;
+    padding-left: 100px;
+    margin-top: 20px;
+    
+    time {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 82px;
+      width: 82px;
+      background: linear-gradient(#faeed8, #f8dda2);
+
+      .day {
+        font-size: 46px;
+        line-height: 46px;
+      }
+      .month {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+
+    .next-meeting-side {
+      padding-top: 4px;
+      color: white;
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: bold;
+    }
   }
 }
 

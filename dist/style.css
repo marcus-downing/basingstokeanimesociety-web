@@ -175,7 +175,7 @@ h3 {
   margin-top: 2em;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5); }
   body.night .box {
-    background: rgba(20, 30, 60, 0.4); }
+    background: rgba(20, 30, 60, 0.5); }
 
 #section-announce {
   background: white;
@@ -193,6 +193,31 @@ h3 {
   #section-next-meeting h2 {
     margin-top: 0.6em;
     margin-bottom: 3px; }
+  #section-next-meeting h3 {
+    margin-top: 1.5em; }
+  #section-next-meeting #next-meeting-date {
+    position: relative;
+    padding-left: 100px;
+    margin-top: 20px; }
+    #section-next-meeting #next-meeting-date time {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 82px;
+      width: 82px;
+      background: linear-gradient(#faeed8, #f8dda2); }
+      #section-next-meeting #next-meeting-date time .day {
+        font-size: 46px;
+        line-height: 46px; }
+      #section-next-meeting #next-meeting-date time .month {
+        font-size: 24px;
+        line-height: 24px; }
+    #section-next-meeting #next-meeting-date .next-meeting-side {
+      padding-top: 4px;
+      color: white;
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: bold; }
 
 .btn-where-when {
   position: absolute;

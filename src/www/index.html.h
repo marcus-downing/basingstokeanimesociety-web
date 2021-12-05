@@ -38,7 +38,11 @@
 <section id='section-next-meeting' class='box'>
   <h2>Next Meeting</h2>
 
-  <h1 id='next-meeting-date'>&nbsp;</h1>
+  <div id="next-meeting-date">
+    <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
+    <div class="next-meeting-date-side">Wednesday<br>7pm</div>
+  </div>
+
   <h3 id='next-meeting-title'></h3>
 
   {{#if options.online}}
@@ -55,7 +59,6 @@
   <div class='content'><p>{{{announce.content}}}</p></div>
 
   {{#if announce.discord}}
-  <p>&nbsp;</p><p>&nbsp;</p>
   <p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
   {{/if}}
 </section>
