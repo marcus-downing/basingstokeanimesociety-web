@@ -1269,9 +1269,9 @@ events:
   #   venue: Jury's Inn, Milton Keynes
   #   class: convention
 
-  # - name: No Meeting
-  #   date: 2020-12-22
-  #   class: skip
-  # - name: No Meeting
-  #   date: 2020-12-29
-  #   class: skip
+  - name: No Meeting
+    date: 2021-12-21
+    class: skip
+  - name: No Meeting
+    date: 2021-12-28
+    class: skip
