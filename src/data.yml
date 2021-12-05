@@ -997,6 +997,13 @@ slot1:
     picture: time-of-eve
     rating: pg
 
+  - from: 2021-12-07
+    name: "Empire of Corpses"
+    picture: empire-of-corpses
+    movie: true
+    rating: 15
+    preview: false
+
   - from: 2021-12-14
     name: "Burn The Witch"
     picture: burn-the-witch
@@ -1005,6 +1012,11 @@ slot1:
   - from: 2022-01-04
     name: Last Exile
     picture: last-exile
+    rating: 15
+
+  - from: 2022-04-05
+    name: "Ranpo Kitan: Game of Laplace"
+    picture: ranpo-kitan
     rating: 15
 
 slot2:
@@ -1046,9 +1058,18 @@ slot2:
     picture: carole-and-tuesday
     rating: 15
 
+  - from: 2021-12-01
+    name: ""
+    picture: ""
+
   - from: 2022-01-04
     name: Assassination Classroom Season 2
     picture: assassination-classroom
+    rating: 15
+
+  - from: 2022-04-05
+    name: "Maoyuu: Maou Yuusha"
+    picture: maoyuu
     rating: 15
 
 slot3:
@@ -1134,6 +1155,11 @@ slot3:
     name: "Non Non Biyori Non Stop"
     picture: non-non-biyori-non-stop
     rating: pg
+
+  - from: 2022-04-19
+    name: Recovery of an MMO Junkie
+    picture: mmo-junkie
+    rating: 12
 
 movies:
   - name: "Konosuba - Legend of Crimson"

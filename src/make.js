@@ -90,11 +90,13 @@ console.log("Coming Soon:", comingSoon.map(item => item.name+" "+util.formatShor
 // copy the images for the series
 _.each([basData.slot1, basData.slot2, basData.slot3, basData.movies], slot => {
   _.each(slot, series => {
-    fs.copyFile('series/'+series.picture+'.png', '../dist/images/series/'+series.picture+'.png', (err) => {
-      if (err) {
-        console.log(err);
-      }
-    });
+    if (fs.existsSync('series/'+series.picture+'.png')) {
+      fs.copyFile('series/'+series.picture+'.png', '../dist/images/series/'+series.picture+'.png', (err) => {
+        if (err) {
+          console.log(err);
+        }
+      });
+    }
   });
 });
 
@@ -362,16 +364,45 @@ _.each(bookends, bookend => {
   let series2picture = 'series/'+bookend.slot2.picture+'.png';
   let series3picture = 'series/'+bookend.slot3.picture+'.png';
 
-  if (fs.existsSync(`../bookends/bookend-${bookend.name}.mkv`)) {
+  let shadow255 = "video/shadow255.png";
+  let shadow315 = "video/shadow315.png";
+
+  if (fs.existsSync(`../bookends/bookend-${bookend.name}.mp4`)) {
     console.log("Skipping bookend:", bookend.name);
   } else {
-    let cmd = `ffmpeg -y -i video/bookends-base.avi -i ${series1picture} -i ${series2picture} -i ${series3picture} -an `+
-      `-filter_complex "[0:v][1:v] overlay=193:125:enable='between(t,0,16)' [in1]; `+
-      `[in1][2:v] overlay=553:125:enable='between(t,0,16)' [in2]; `+
-      `[in2][3:v] overlay=910:125:enable='between(t,0,16)' [in3]; `+
-      `[in3] fade=in:0:60 [in4]; `+
-      `[in4] fade=out:420:60" `+
-      `../bookends/bookend-${bookend.name}.mp4`;
+
+    let frameRate = 29.976;
+    let bookendDur = 15;
+
+    // let plateDur = 35;
+    let plateOffset = 0.5;
+    let plateFade = 1.5;
+    // let plateEndBuf = 3;
+    let plateStart = 2;
+
+    let cmd = `ffmpeg -y -i video/bookend-base.mkv -loop 1 -i ${series1picture} -loop 1 -i ${series2picture} -loop 1 -i ${series3picture} -loop 1 -i ${shadow315} -an `+
+      `-filter_complex "`+
+
+      `[1:v] fps=fps=${frameRate},fade=in:st=${plateStart-plateOffset*2}:d=${plateFade}:alpha=1 [s1];`+
+      `[2:v] fps=fps=${frameRate},fade=in:st=${plateStart-plateOffset}:d=${plateFade}:alpha=1 [s2];`+
+      `[3:v] fps=fps=${frameRate},fade=in:st=${plateStart}:d=${plateFade}:alpha=1 [s3];`+
+      `[4:v] fps=fps=${frameRate},fade=in:st=${plateStart-plateOffset*2}:d=${plateFade}:alpha=1 [sh1];` +
+      `[4:v] fps=fps=${frameRate},fade=in:st=${plateStart-plateOffset}:d=${plateFade}:alpha=1 [sh2];` +
+      `[4:v] fps=fps=${frameRate},fade=in:st=${plateStart}:d=${plateFade}:alpha=1 [sh3];` +
+
+      `[0:v][s1] overlay=205:135 [in1]; `+
+      `[in1][s2] overlay=555:135 [in2]; `+
+      `[in2][s3] overlay=905:135 [in3]; `+
+
+      `[in3][sh1] overlay=200:135 [in4]; `+
+      `[in4][sh2] overlay=550:135 [in5]; `+
+      `[in5][sh3] overlay=900:135 [in6]; `+
+
+      `[in6] fade=in:st=0:d=1 [in7]; `+
+      `[in7] fade=out:st=14:d=1" `+
+      `-t 00:00:15 ../bookends/bookend-${bookend.name}.mp4`;
+
+    console.log(cmd);
 
     exec(cmd, (err, stdout, stderr) => {
       if (err) {
@@ -398,37 +429,33 @@ _.each(bookends, bookend => {
     let plateStart = intervalDur - plateEndBuf - plateDur;
     let plateEnd = intervalDur - plateEndBuf;
 
-    console.log(`  Interval dur = ${intervalDur}`);
-    console.log(`  Fade start = ${fadeStart}`);
-    console.log(`  Fade dur = ${fade}`);
+    // console.log(`  Interval dur = ${intervalDur}`);
+    // console.log(`  Fade start = ${fadeStart}`);
+    // console.log(`  Fade dur = ${fade}`);
 
-    console.log(`  Plate dur = ${plateDur}`);
-    console.log(`  Plate fade dur = ${plateFade}`);
-    console.log(`  Plate start = ${plateStart}`);
-    console.log(`  Plate end = ${plateEnd}`);
+    // console.log(`  Plate dur = ${plateDur}`);
+    // console.log(`  Plate fade dur = ${plateFade}`);
+    // console.log(`  Plate start = ${plateStart}`);
+    // console.log(`  Plate end = ${plateEnd}`);
 
-    let cmd = `ffmpeg -y -i video/interval-base4.mkv -loop 1 -i ${series1picture} -loop 1 -i ${series2picture} -loop 1 -i ${series3picture} -c:a copy -filter_complex "`+
-
-      // `[1:v] fps=fps=${frameRate},scale=170x243,fade=in:st=${plateStart}:d=${plateFade}:alpha=1,fade=out:st=${plateEnd - plateFade}:d=${plateFade}:alpha=1 [s1];`+
-      // `[2:v] fps=fps=${frameRate},scale=170x243,fade=in:st=${plateStart}:d=${plateFade}:alpha=1,fade=out:st=${plateEnd - plateFade}:d=${plateFade}:alpha=1 [s2];`+
-      // `[3:v] fps=fps=${frameRate},scale=170x243,fade=in:st=${plateStart}:d=${plateFade}:alpha=1,fade=out:st=${plateEnd - plateFade}:d=${plateFade}:alpha=1 [s3];`+
-
-      // `[1:v] fps=fps=${frameRate},scale=170x243,fade=in:st=${plateStart-plateOffset*2}:d=${plateFade}:alpha=1 [s1];`+
-      // `[2:v] fps=fps=${frameRate},scale=170x243,fade=in:st=${plateStart-plateOffset}:d=${plateFade}:alpha=1 [s2];`+
-      // `[3:v] fps=fps=${frameRate},scale=170x243,fade=in:st=${plateStart}:d=${plateFade}:alpha=1 [s3];`+
-      // `[0:v][s1] overlay=680:327 [in1]; `+
-      // `[in1][s2] overlay=880:327 [in2]; `+
-      // `[in2][s3] overlay=1080:327 [in3]; `+
+    let cmd = `ffmpeg -y -i video/interval-base5.mkv -loop 1 -i ${series1picture} -loop 1 -i ${series2picture} -loop 1 -i ${series3picture} -loop 1 -i ${shadow255} -c:a copy -filter_complex "`+
 
       `[1:v] fps=fps=${frameRate},scale=255x366,fade=in:st=${plateStart-plateOffset*2}:d=${plateFade}:alpha=1 [s1];`+
       `[2:v] fps=fps=${frameRate},scale=255x366,fade=in:st=${plateStart-plateOffset}:d=${plateFade}:alpha=1 [s2];`+
       `[3:v] fps=fps=${frameRate},scale=255x366,fade=in:st=${plateStart}:d=${plateFade}:alpha=1 [s3];`+
+      `[4:v] fps=fps=${frameRate},scale=265x376,fade=in:st=${plateStart-plateOffset*2}:d=${plateFade}:alpha=1 [sh1];` +
+      `[4:v] fps=fps=${frameRate},scale=265x376,fade=in:st=${plateStart-plateOffset}:d=${plateFade}:alpha=1 [sh2];` +
+      `[4:v] fps=fps=${frameRate},scale=265x376,fade=in:st=${plateStart}:d=${plateFade}:alpha=1 [sh3];` +
 
       `[0:v][s1] overlay=425:327 [in1]; `+
       `[in1][s2] overlay=710:327 [in2]; `+
       `[in2][s3] overlay=995:327 [in3]; `+
 
-      `[in3] fade=out:st=${fadeStart}:d=${fade}" `+
+      `[in3][sh1] overlay=420:327 [in4]; `+
+      `[in4][sh2] overlay=705:327 [in5]; `+
+      `[in5][sh3] overlay=990:327 [in6]; `+
+
+      `[in6] fade=out:st=${fadeStart}:d=${fade}" `+
       // `[in3] fade=in:0:60 [in4]; `+
       // `[in3] fade=out:35911:60" `+
       `-t 00:20:00 ../bookends/interval-${bookend.name}.mkv`;

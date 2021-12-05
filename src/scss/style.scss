@@ -297,6 +297,10 @@ h3 {
       margin: 0 0 0 auto;
     }
 
+    &.hide {
+      display: none;
+    }
+
     figcaption {
       position: absolute;
       bottom: 0;

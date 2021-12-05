@@ -245,6 +245,8 @@ h3 {
       margin: 0 auto 0 auto; }
     #now-showing figure#slot3 {
       margin: 0 0 0 auto; }
+    #now-showing figure.hide {
+      display: none; }
     #now-showing figure figcaption {
       position: absolute;
       bottom: 0;

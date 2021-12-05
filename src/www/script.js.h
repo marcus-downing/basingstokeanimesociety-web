@@ -50,7 +50,13 @@ window.onload = function () {
   // var nextSlot3 = nextAnime(slot3);
 
   function editSlot(id, series) {
-    document.getElementById(id+'name').innerHTML = '<p class="series-ident">Series</p>'+series.name;
+    if (series.name == "") {
+      document.getElementById(id).classList.add('hide');
+      return;
+    }
+
+
+    document.getElementById(id+'name').innerHTML = '<p class="series-ident">'+(series.movie ? 'Movie' : 'Series')+'</p>'+series.name;
     var img = document.getElementById(id+'picture');
     img.setAttribute('src', 'images/series/'+series.picture+'.png');
     img.classList.add("show");
@@ -58,6 +64,10 @@ window.onload = function () {
     var slotDate = document.getElementById(id+'date');
     if (slotDate !== null) {
       slotDate.innerHTML = "<span class='day'>"+series.day+"</span><span class='month'>"+series.month+"</span>";
+    }
+
+    if (series.movie) {
+      document.getElementById(id).classList.add('movie');
     }
 
     if (series.rating) {
@@ -211,6 +221,10 @@ window.onload = function () {
     var img = item.getElementsByClassName("rating-img")[0];
     var hover = item.getElementsByClassName("rating-hover")[0];
     var tag = item.getElementsByClassName("rating__tag")[0];
+
+    if (img === undefined) {
+      return;
+    }
 
     img.addEventListener("mouseover", function(event) {
       hover.classList.add("rating-hover--show");
