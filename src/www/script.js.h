@@ -29,7 +29,8 @@ window.onload = function () {
   // adjust the showing anime
   function showingAnime(slot) {
     var before = slot.filter(function (series) {
-      return Date.parse(series.from) < now;
+      var from = series.hasOwnProperty('displayFrom') ? series.displayFrom : series.from;
+      return Date.parse(from) < now;
     });
     return before[before.length - 1];
   }

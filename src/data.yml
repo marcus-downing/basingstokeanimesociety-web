@@ -1010,6 +1010,7 @@ slot1:
     rating: 12
 
   - from: 2022-01-04
+    displayFrom: 2021-12-15
     name: Last Exile
     picture: last-exile
     rating: 15
@@ -1063,6 +1064,7 @@ slot2:
     picture: ""
 
   - from: 2022-01-04
+    displayFrom: 2021-12-15
     name: Assassination Classroom Season 2
     picture: assassination-classroom
     rating: 15
