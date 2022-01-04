@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "make": "nodejs ./make.js",
-    "test": "nodejs ./make.js"
+    "make": "node ./make.js",
+    "test": "node ./make.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "handlebars": "^4.7.7",
-    "js-yaml": "^3.13.1",
-    "node-sass": "^4.13.1"
+    "js-yaml": "^3.13.1"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1"
   }
 }

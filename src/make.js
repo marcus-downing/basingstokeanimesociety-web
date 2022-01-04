@@ -359,6 +359,16 @@ bookends = util.currentAndFuture(bookends);
 // console.log(bookends);
 
 _.each(bookends, bookend => {
+  if (bookend.slot1 === null || bookend.slot1.picture === null || bookend.slot1.picture == "") {
+    console.log("Skipping bookend:", bookend.name, "due to missing slot 1");
+  }
+  if (bookend.slot2 === null || bookend.slot2.picture === null || bookend.slot2.picture == "") {
+    console.log("Skipping bookend:", bookend.name, "due to missing slot 2");
+  }
+  if (bookend.slot3 === null || bookend.slot3.picture === null || bookend.slot3.picture == "") {
+    console.log("Skipping bookend:", bookend.name, "due to missing slot 3");
+  }
+
   console.log("Bookend:", bookend.name);
   let series1picture = 'series/'+bookend.slot1.picture+'.png';
   let series2picture = 'series/'+bookend.slot2.picture+'.png';
@@ -370,7 +380,6 @@ _.each(bookends, bookend => {
   if (fs.existsSync(`../bookends/bookend-${bookend.name}.mp4`)) {
     console.log("Skipping bookend:", bookend.name);
   } else {
-
     let frameRate = 29.976;
     let bookendDur = 15;
 
@@ -409,6 +418,17 @@ _.each(bookends, bookend => {
         //some err occurred
         console.error(err)
       } else {
+        let cmd2 = `ffmpeg -y -i ../bookends/bookend-${bookend.name}.mp4 -ss 7 -vframes 1 -f image2 ../bookends/preview-${bookend.name}.png`;
+
+        console.log(cmd2);
+
+        exec(cmd2, (err, stdout, stderr) => {
+          if (err) {
+            //some err occurred
+            console.error(err);
+          } else {
+          }
+        });
       }
     });
   }
