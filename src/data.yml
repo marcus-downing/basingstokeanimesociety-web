@@ -1020,6 +1020,16 @@ slot1:
     picture: ranpo-kitan
     rating: 15
 
+  - from: 2022-05-17
+    name: "Aldnoah.Zero"
+    picture: aldnoah-zero
+    rating: 15
+
+  - from: 2022-06-28
+    name: "Talentless Nana"
+    picture: talentless-nana
+    rating: 15
+
 slot2:
   - from: 2019-01-08
     name: Hunter &times; Hunter
@@ -1073,6 +1083,11 @@ slot2:
     name: "Maoyuu: Maou Yuusha"
     picture: maoyuu
     rating: 15
+
+  - from: 2022-05-17
+    name: "Dr Stone"
+    picture: dr-stone
+    rating: 12
 
 slot3:
   - from: 2020-01-07
@@ -1161,6 +1176,16 @@ slot3:
   - from: 2022-04-19
     name: Recovery of an MMO Junkie
     picture: mmo-junkie
+    rating: 12
+
+  - from: 2022-05-24
+    name: "Kino's Journey"
+    picture: kinos-journey
+    rating: 12
+
+  - from: 2022-07-05
+    name: "By the Grace of the Gods"
+    picture: by-the-grace-of-the-gods
     rating: 12
 
 movies:
