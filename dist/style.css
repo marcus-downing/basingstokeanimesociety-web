@@ -130,11 +130,11 @@ body {
   background: #4267b2; }
 
 .btn-discord i {
-  background-color: #7289da;
-  background-image: url("images/discord_icon.svg"); }
+  background-color: #5165F6;
+  background-image: url("images/discord.gif"); }
 
 .btn-discord span {
-  background: #7289da; }
+  background: #5165F6; }
 
 #main-title {
   display: none; }
@@ -185,8 +185,53 @@ h3 {
     margin-top: 0.6em;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); }
   #section-announce .content p {
+    margin: 26px 0;
+    padding-left: 50px;
     font-weight: 600;
-    font-size: 20px; }
+    font-size: 16px; }
+    #section-announce .content p .icon {
+      display: block;
+      float: left;
+      margin-top: -8px;
+      margin-left: -50px; }
+    #section-announce .content p img.icon {
+      height: 40px;
+      width: 40px; }
+    #section-announce .content p .entry-fee {
+      width: 36px;
+      height: 36px;
+      border-radius: 20px;
+      border: 2px solid #b09010;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      background: #fff8e0;
+      text-align: center;
+      line-height: 36px;
+      font-weight: bold; }
+  #section-announce #announce-date {
+    position: relative;
+    padding-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-height: 82px; }
+    #section-announce #announce-date time {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 82px;
+      width: 82px;
+      background: linear-gradient(#faeed8, #f8dda2); }
+      #section-announce #announce-date time .day {
+        font-size: 46px;
+        line-height: 46px; }
+      #section-announce #announce-date time .month {
+        font-size: 24px;
+        line-height: 24px; }
+    #section-announce #announce-date .announce-date-side {
+      padding-top: 4px;
+      color: black;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 600; }
 
 #section-next-meeting {
   position: relative; }

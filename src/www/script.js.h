@@ -182,7 +182,7 @@ window.onload = function () {
         html = html+"<p>"+a+ev.venue+(time ? ", "+time : "")+_a+"</p>\n";
       }
       if (ev.price) {
-        html = html + "<p>Attendance fee: "+ev.price+"</p>";
+        html = html + "<p>Club fee: "+ev.price+"</p>";
       }
       html = html+"</div>";
     };

@@ -5,9 +5,11 @@
 
 announce:
   visible: true
-  title: "Coronavirus"
-  content: "Anime society meetings have moved online.<br>Join us on Discord every Tuesday evening."
-  discord: yes
+  title: "Resuming Meetings"
+  date: 2022-04-05
+  tagline: "We'll be returning to the White Hart from Tuesday 5th April."
+  # content: "White Hart, London Road, "
+  discord: no
 
 options:
   online: true
@@ -1015,17 +1017,17 @@ slot1:
     picture: last-exile
     rating: 15
 
-  - from: 2022-04-05
+  - from: 2022-04-12
     name: "Ranpo Kitan: Game of Laplace"
     picture: ranpo-kitan
     rating: 15
 
-  - from: 2022-05-17
+  - from: 2022-05-24
     name: "Aldnoah.Zero"
     picture: aldnoah-zero
     rating: 15
 
-  - from: 2022-06-28
+  - from: 2022-07-05
     name: "Talentless Nana"
     picture: talentless-nana
     rating: 15
@@ -1079,12 +1081,12 @@ slot2:
     picture: assassination-classroom
     rating: 15
 
-  - from: 2022-04-05
+  - from: 2022-04-12
     name: "Maoyuu: Maou Yuusha"
     picture: maoyuu
     rating: 15
 
-  - from: 2022-05-17
+  - from: 2022-05-24
     name: "Dr Stone"
     picture: dr-stone
     rating: 12
@@ -1168,22 +1170,22 @@ slot3:
     picture: zombieland-saga-revenge
     rating: 15
 
-  - from: 2022-03-08
+  - from: 2022-03-15
     name: "Non Non Biyori Non Stop"
     picture: non-non-biyori-non-stop
     rating: pg
 
-  - from: 2022-04-19
+  - from: 2022-04-26
     name: Recovery of an MMO Junkie
     picture: mmo-junkie
     rating: 12
 
-  - from: 2022-05-24
+  - from: 2022-05-31
     name: "Kino's Journey"
     picture: kinos-journey
     rating: 12
 
-  - from: 2022-07-05
+  - from: 2022-07-12
     name: "By the Grace of the Gods"
     picture: by-the-grace-of-the-gods
     rating: 12
@@ -1276,6 +1278,11 @@ events:
     class: cinema
     venue: Vue Festival Place
 
+  - name: "Resume Meetings!"
+    date: 2022-04-05
+    venue: ""
+
+
   # - name: Minamicon
   #   date: 2020-03-06
   #   venue: Novotel Hotel, Southampton
@@ -1302,3 +1309,25 @@ events:
   - name: No Meeting
     date: 2021-12-28
     class: skip
+
+  - name: No Meeting
+    date: 2022-12-27
+    class: skip
+  - name: No Meeting
+    date: 2023-01-03
+    class: skip
+
+  - name: No Meeting
+    date: 2023-12-26
+    class: skip
+  - name: No Meeting
+    date: 2024-01-02
+    class: skip
+
+  - name: No Meeting
+    date: 2024-12-24
+    class: skip
+  - name: No Meeting
+    date: 2024-12-31
+    class: skip
+    

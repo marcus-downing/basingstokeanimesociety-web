@@ -31,39 +31,45 @@
 
 <h1 id='main-title'>Basingstoke Anime Society</h1>
 
-{{#if announce.visible}}
 <header id="header">
-{{/if}}
 
 <section id='section-next-meeting' class='box'>
   <h2>Next Meeting</h2>
 
   <div id="next-meeting-date">
     <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
-    <div class="next-meeting-date-side">Wednesday<br>7pm</div>
+    <div class="next-meeting-date-side">Tuesday<br>7pm</div>
   </div>
 
   <h3 id='next-meeting-title'></h3>
 
   {{#if options.online}}
+  <p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
   {{else}}
   <h3><em id='next-meeting-venue'>&nbsp;</em> <span id='next-meeting-address'>&nbsp;</span></h3>
   <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Where and When?</span></button>
   {{/if}}
 </section>
 
-{{#if announce.visible}}
 <section id='section-announce' class='box'>
-  <h2>{{announce.title}}</h2>
+  <h2>Resuming Meetings</h2>
 
-  <div class='content'><p>{{{announce.content}}}</p></div>
+  <div id="announce-date">
+    <time datetime="Tue Apr 05 2022 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>5</span><span class='month'>Apr</span></time>
+    <div class="announce-date-side">We'll be returning to the White Hart from Tuesday 5th April.</div>
+  </div>
 
-  {{#if announce.discord}}
-  <p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
-  {{/if}}
+  <div class='content'>
+    <p><img class='icon' src='images/pin.svg'><a href='https://www.thewhitehartbasingstoke.com/'>The White Hart Inn</a>, Basingstoke RG21 4AE</p>
+    <p><span class='icon entry-fee'>£4</span>Club fee</p>
+    <p><img class='icon' src='images/biohazard.svg'>Vaccination required</p>
+    <p><img class="rating-img rating-15 icon" src="images/rating/15.svg">Age limit</p>
+  </div>
+
 </section>
 </header>
-{{/if}}
+
+{{#if announce.visible}}{{/if}}
 
 <section id='section-now-showing' class='{{#if options.hiatus}}section-now-showing-hiatus{{/if}}'>
   <h2>Now Showing</h2>

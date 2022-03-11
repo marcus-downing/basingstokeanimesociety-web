@@ -162,6 +162,8 @@ _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
       if (date > now && !hide) {
         // console.log("Series date", date);
         let hour = 7+i;
+        date.setHours(hour+12)
+        date.setMinutes(5)
         let movie = _.has(series, "movie") ? series.movie : false;
 
         let event = {
@@ -215,9 +217,15 @@ tuesday.setMinutes(0);
 tuesday.setSeconds(0);
 tuesday.setMilliseconds(0);
 
+const greatReturn = new Date('April 5, 2022 00:00:00');
+
 for (var i = 0; i < 30; i++) {
   let date = new Date(tuesday);
   date.setDate(date.getDate() + i*7);
+
+  let online = date < greatReturn;
+  // console.log("Comparing dates: ", date.getDate(), greatReturn.getDate());
+
   let event = {
     date: date,
     dateLong: util.formatLongDate(date) + ", 7pm",
@@ -227,11 +235,11 @@ for (var i = 0; i < 30; i++) {
     weekday: "Tuesday",
     day: date.getDate(),
     month: util.formatShortMonth(date),
-    name: options.online ? 'Online Meeting' : 'Anime Society Meeting',
-    class: options.online ? 'online' : 'anime',
-    price: options.online ? null : "&pound;4",
-    venue: options.online ? 'Discord' : 'The White Hart',
-    address: options.online ? '' : venueAddress['The White Hart']
+    name: online ? 'Online Meeting' : 'Anime Society Meeting',
+    class: online ? 'online' : 'anime',
+    price: online ? null : "&pound;4",
+    venue: online ? 'Discord' : 'The White Hart',
+    address: online ? '' : venueAddress['The White Hart']
   }
   if (_.has(skipDates, event.shortDate)) {
     console.log("Skipping event:", event.shortDate);

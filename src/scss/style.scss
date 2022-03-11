@@ -132,7 +132,7 @@ body {
 $mail_color: #ed3b41;
 $twitter_color: #1da1f2;
 $fb_color: #4267b2;
-$discord_color: #7289da;
+$discord_color: #5165F6;
 
 .btn-mail {
   @include btn($mail_color, 'images/mail.svg');
@@ -144,7 +144,7 @@ $discord_color: #7289da;
   @include btn($fb_color, 'images/fb_icon.png');
 }
 .btn-discord {
-  @include btn($discord_color, 'images/discord_icon.svg');
+  @include btn($discord_color, 'images/discord.gif');
 }
 
 #main-title {
@@ -211,8 +211,71 @@ h3 {
   }
 
   .content p {
+    $indent: 50px;
+    
+    margin: 26px 0;
+    padding-left: $indent;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
+
+    .icon {
+      display: block;
+      float: left;
+      margin-top: -8px;
+      margin-left: -$indent;
+    }
+
+    img.icon {
+      height: 40px;
+      width: 40px;
+    }
+
+    .entry-fee {
+      width: 36px;
+      height: 36px;
+      border-radius: 20px;
+      border: 2px solid #b09010;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+
+      background: #fff8e0;
+      text-align: center;
+      line-height: 36px;
+      font-weight: bold;
+    }
+  }
+
+  #announce-date {
+    position: relative;
+    padding-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-height: 82px;
+    
+    time {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 82px;
+      width: 82px;
+      background: linear-gradient(#faeed8, #f8dda2);
+
+      .day {
+        font-size: 46px;
+        line-height: 46px;
+      }
+      .month {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+
+    .announce-date-side {
+      padding-top: 4px;
+      color: black;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 600;
+    }
   }
 }
 
