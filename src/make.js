@@ -19,7 +19,7 @@ basData = yaml.safeLoad(basData);
 
 basData = _.defaults({
   maxEvents: 18,
-  windowEvents: 20,
+  windowEvents: 30,
   maxTweets: 10,
 }, basData);
 
@@ -131,6 +131,7 @@ events = _.map(events, event => {
     mediumDate: util.formatMediumDate(event.date),
     shortDate: util.formatShortDate(event.date),
     day: event.date.getDate(),
+    weekday: util.weekday(event.date),
     month: util.formatShortMonth(event.date),
   });
   let venue = "";
@@ -171,7 +172,8 @@ _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
           dateLong: util.formatLongDate(date) + ", "+hour+"pm",
           mediumDate: util.formatMediumDate(date),
           shortDate: util.formatShortDate(date),
-          // time: hour+"pm",
+          weekday: util.weekday(date),
+          time: hour+"pm",
           day: date.getDate(),
           month: util.formatShortMonth(date),
           name: (movie ? 'Movie: ' : 'New series: ')+series.name,

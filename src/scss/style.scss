@@ -97,6 +97,10 @@ body {
     background-color: $color;
     background-image: url($icon);
   }
+}
+
+@mixin btn-with-label($color, $icon) {
+  @include btn($color, $icon);
 
   span {
     background: $color;
@@ -324,14 +328,89 @@ h3 {
   }
 }
 
+#section-about {
+  position: relative;
+  padding-left: 12px;
+  padding-right: 65px;
+
+  .content {
+    margin: -10px 0;
+  }
+  .content p {
+    $indent: 50px;
+    
+    margin: 26px 0;
+    padding-left: $indent;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+
+    a, a:visited {
+      color: white;
+    }
+
+    .icon {
+      display: block;
+      float: left;
+      margin-top: -8px;
+      margin-left: -$indent;
+    }
+
+    img.icon {
+      height: 40px;
+      width: 40px;
+    }
+
+    .entry-fee {
+      width: 36px;
+      height: 36px;
+      border-radius: 20px;
+      border: 2px solid #b08010;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+
+      background: #fff8e0;
+      text-align: center;
+      line-height: 36px;
+      font-weight: bold;
+      color: black;
+    }
+  }
+}
+
 .btn-where-when {
   position: absolute;
-  top: 30%;
-  right: 20px;
+  top: 15px;
+  right: 15px;
 
   @include btn(white, 'images/pin.svg');
   span {
-    display: none;
+    background: none;
+    box-shadow: none;
+    padding: 7px 0;
+    display: block;
+    text-align: center;
+  }
+}
+
+#section-leaflets {
+  padding-top: 60px;
+
+  img {
+    height: 430px;
+    margin-right: -200px;
+    box-shadow: 0 2px 3px black;
+  }
+
+  #leaflet1 {
+    transform: rotate(-0.03turn);
+  }
+
+  #leaflet2 {
+    transform: rotate(-0.01turn);
+  }
+
+  #leaflet3 {
+    transform: rotate(0.01turn);
   }
 }
 

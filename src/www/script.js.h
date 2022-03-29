@@ -208,10 +208,10 @@ window.onload = function () {
     }
   }
   var nextEvent = mainEvents[0];
-  // document.getElementById('next-meeting-date').innerHTML = "<div>"+nextEvent.weekday+"</div><div>"+nextEvent.mediumDate+"</div><div>"+nextEvent.time+"</div>";
+  
   document.getElementById('next-meeting-date').innerHTML = "<time datetime='"+nextEvent.date+"'><span class='day'>"+nextEvent.day+"</span><span class='month'>"+nextEvent.month+"</span></time>"+
     "<div class='next-meeting-side'>"+nextEvent.weekday+"<br>"+nextEvent.time+"</div>";
-  document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);
+  // document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);
   if (document.getElementById('next-meeting-venue')) {
     document.getElementById('next-meeting-venue').innerHTML = nextEvent.venue;
   }

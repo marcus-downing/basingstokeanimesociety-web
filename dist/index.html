@@ -11,7 +11,7 @@
   </script>
 
   <title>Basingstoke Anime Society</title>
-  <link rel="stylesheet" media="all" href="style.css?ver=d2542f" />
+  <link rel="stylesheet" media="all" href="style.css?ver=80a758" />
   <script src="script.js"></script>
 </head>
 <body class="day">
@@ -38,33 +38,22 @@
 
   <div id="next-meeting-date">
     <time datetime=""><span class='day'></span><span class='month'></span></time>
-    <div class="next-meeting-date-side">Tuesday<br>7pm</div>
+    <div class="next-meeting-side">Tuesday<br>7pm</div>
   </div>
-
-  <h3 id='next-meeting-title'></h3>
-
-  <p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
 </section>
 
-<section id='section-announce' class='box'>
-  <h2>Resuming Meetings</h2>
-
-  <div id="announce-date">
-    <time datetime="Tue Apr 05 2022 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>5</span><span class='month'>Apr</span></time>
-    <div class="announce-date-side">We'll be returning to the White Hart from Tuesday 5th April.</div>
-  </div>
+<section id='section-about' class='box'>
+  <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Show Map</span></button>
 
   <div class='content'>
-    <p><img class='icon' src='images/pin.svg'><a href='https://www.thewhitehartbasingstoke.com/'>The White Hart Inn</a>, Basingstoke RG21 4AE</p>
+    <p><img class='icon' src='images/pin.svg'>Function room, upstairs at <a href='https://www.thewhitehartbasingstoke.com/'>The White Hart</a>, Basingstoke RG21 4AE</p>
     <p><span class='icon entry-fee'>£4</span>Club fee</p>
-    <p><img class='icon' src='images/biohazard.svg'>Vaccination required</p>
+    <p><img class='icon' src='images/biohazard-white.svg'>Vaccination required</p>
     <p><img class="rating-img rating-15 icon" src="images/rating/15.svg">Age requirement</p>
   </div>
 
 </section>
 </header>
-
-
 
 <section id='section-now-showing' class=''>
   <h2>Now Showing</h2>
@@ -101,24 +90,6 @@
   <h2>Upcoming Events</h2>
 
   <div id='events-list'>
-  <article id='upcoming-2022-03-15' class='event event-online'>
-    <time datetime="Tue Mar 15 2022 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>15</span><span class='month'>Mar</span></time>
-    <div class='event-detail event-detail-online'>
-      <h3>Online Meeting</h3>
-      <p>Discord, 7pm</h3>
-    </div>
-    <div class='event-detail event-detail-new-series'>
-      <h3>New series: Non Non Biyori Non Stop</h3>
-      
-    </div>
-  </article>
-  <article id='upcoming-2022-03-22' class='event event-online'>
-    <time datetime="Tue Mar 22 2022 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>22</span><span class='month'>Mar</span></time>
-    <div class='event-detail event-detail-online'>
-      <h3>Online Meeting</h3>
-      <p>Discord, 7pm</h3>
-    </div>
-  </article>
   <article id='upcoming-2022-03-29' class='event event-online'>
     <time datetime="Tue Mar 29 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>29</span><span class='month'>Mar</span></time>
     <div class='event-detail event-detail-online'>
@@ -126,12 +97,8 @@
       <p>Discord, 7pm</h3>
     </div>
   </article>
-  <article id='upcoming-2022-04-05' class='event event-social'>
-    <time datetime="Tue Apr 05 2022 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>5</span><span class='month'>Apr</span></time>
-    <div class='event-detail event-detail-social'>
-      <h3>Resume Meetings!</h3>
-      
-    </div>
+  <article id='upcoming-2022-04-05' class='event event-anime'>
+    <time datetime="Tue Apr 05 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>5</span><span class='month'>Apr</span></time>
     <div class='event-detail event-detail-anime'>
       <h3>Anime Society Meeting</h3>
       <p>The White Hart, 7pm</h3>
@@ -145,11 +112,11 @@
     </div>
     <div class='event-detail event-detail-new-series'>
       <h3>New series: Ranpo Kitan: Game of Laplace</h3>
-      
+      <p>, 7pm</h3>
     </div>
     <div class='event-detail event-detail-new-series'>
       <h3>New series: Maoyuu: Maou Yuusha</h3>
-      
+      <p>, 8pm</h3>
     </div>
   </article>
   <article id='upcoming-2022-04-19' class='event event-anime'>
@@ -167,7 +134,7 @@
     </div>
     <div class='event-detail event-detail-new-series'>
       <h3>New series: Recovery of an MMO Junkie</h3>
-      
+      <p>, 9pm</h3>
     </div>
   </article>
   <article id='upcoming-2022-05-03' class='event event-anime'>
@@ -199,11 +166,11 @@
     </div>
     <div class='event-detail event-detail-new-series'>
       <h3>New series: Aldnoah.Zero</h3>
-      
+      <p>, 7pm</h3>
     </div>
     <div class='event-detail event-detail-new-series'>
       <h3>New series: Dr Stone</h3>
-      
+      <p>, 8pm</h3>
     </div>
   </article>
   <article id='upcoming-2022-05-31' class='event event-anime'>
@@ -214,7 +181,7 @@
     </div>
     <div class='event-detail event-detail-new-series'>
       <h3>New series: Kino&#x27;s Journey</h3>
-      
+      <p>, 9pm</h3>
     </div>
   </article>
   <article id='upcoming-2022-06-07' class='event event-anime'>
@@ -253,7 +220,7 @@
     </div>
     <div class='event-detail event-detail-new-series'>
       <h3>New series: Talentless Nana</h3>
-      
+      <p>, 7pm</h3>
     </div>
   </article>
   <article id='upcoming-2022-07-12' class='event event-anime'>
@@ -264,7 +231,7 @@
     </div>
     <div class='event-detail event-detail-new-series'>
       <h3>New series: By the Grace of the Gods</h3>
-      
+      <p>, 9pm</h3>
     </div>
   </article>
   <article id='upcoming-2022-07-19' class='event event-anime'>
@@ -276,6 +243,90 @@
   </article>
   <article id='upcoming-2022-07-26' class='event event-anime'>
     <time datetime="Tue Jul 26 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>26</span><span class='month'>Jul</span></time>
+    <div class='event-detail event-detail-anime'>
+      <h3>Anime Society Meeting</h3>
+      <p>The White Hart, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2022-08-02' class='event event-anime'>
+    <time datetime="Tue Aug 02 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>2</span><span class='month'>Aug</span></time>
+    <div class='event-detail event-detail-anime'>
+      <h3>Anime Society Meeting</h3>
+      <p>The White Hart, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2022-08-09' class='event event-anime'>
+    <time datetime="Tue Aug 09 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>9</span><span class='month'>Aug</span></time>
+    <div class='event-detail event-detail-anime'>
+      <h3>Anime Society Meeting</h3>
+      <p>The White Hart, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2022-08-16' class='event event-anime'>
+    <time datetime="Tue Aug 16 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>16</span><span class='month'>Aug</span></time>
+    <div class='event-detail event-detail-anime'>
+      <h3>Anime Society Meeting</h3>
+      <p>The White Hart, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2022-08-23' class='event event-anime'>
+    <time datetime="Tue Aug 23 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>23</span><span class='month'>Aug</span></time>
+    <div class='event-detail event-detail-anime'>
+      <h3>Anime Society Meeting</h3>
+      <p>The White Hart, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2022-08-30' class='event event-anime'>
+    <time datetime="Tue Aug 30 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>30</span><span class='month'>Aug</span></time>
+    <div class='event-detail event-detail-anime'>
+      <h3>Anime Society Meeting</h3>
+      <p>The White Hart, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2022-09-06' class='event event-anime'>
+    <time datetime="Tue Sep 06 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>6</span><span class='month'>Sept</span></time>
+    <div class='event-detail event-detail-anime'>
+      <h3>Anime Society Meeting</h3>
+      <p>The White Hart, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2022-09-13' class='event event-anime'>
+    <time datetime="Tue Sep 13 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>13</span><span class='month'>Sept</span></time>
+    <div class='event-detail event-detail-anime'>
+      <h3>Anime Society Meeting</h3>
+      <p>The White Hart, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2022-09-20' class='event event-anime'>
+    <time datetime="Tue Sep 20 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>20</span><span class='month'>Sept</span></time>
+    <div class='event-detail event-detail-anime'>
+      <h3>Anime Society Meeting</h3>
+      <p>The White Hart, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2022-09-27' class='event event-anime'>
+    <time datetime="Tue Sep 27 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>27</span><span class='month'>Sept</span></time>
+    <div class='event-detail event-detail-anime'>
+      <h3>Anime Society Meeting</h3>
+      <p>The White Hart, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2022-10-04' class='event event-anime'>
+    <time datetime="Tue Oct 04 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>4</span><span class='month'>Oct</span></time>
+    <div class='event-detail event-detail-anime'>
+      <h3>Anime Society Meeting</h3>
+      <p>The White Hart, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2022-10-11' class='event event-anime'>
+    <time datetime="Tue Oct 11 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>11</span><span class='month'>Oct</span></time>
+    <div class='event-detail event-detail-anime'>
+      <h3>Anime Society Meeting</h3>
+      <p>The White Hart, 7pm</h3>
+    </div>
+  </article>
+  <article id='upcoming-2022-10-18' class='event event-anime'>
+    <time datetime="Tue Oct 18 2022 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>18</span><span class='month'>Oct</span></time>
     <div class='event-detail event-detail-anime'>
       <h3>Anime Society Meeting</h3>
       <p>The White Hart, 7pm</h3>

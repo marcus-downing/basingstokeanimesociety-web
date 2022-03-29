@@ -12,9 +12,9 @@ announce:
   discord: no
 
 options:
-  online: true
+  online: false
   hiatus: false
-  hiatusMessage: "Our regular schedule resumes on 28 April"
+  hiatusMessage: ""
   comingSoonRows: 3
   newsCutoff: 0
 
@@ -1278,9 +1278,9 @@ events:
     class: cinema
     venue: Vue Festival Place
 
-  - name: "Resume Meetings!"
-    date: 2022-04-05
-    venue: ""
+  # - name: "Resume Meetings!"
+  #   date: 2022-04-05
+  #   venue: ""
 
 
   # - name: Minamicon
