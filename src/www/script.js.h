@@ -177,9 +177,17 @@ window.onload = function () {
         a = "<a href='"+ev.link+"'>";
         _a = "</a>";
       }
-      html = html +"<div class='event-detail event-detail-"+ev.class+"'><h3>"+ev.name+"</h3>\n";
+      html = html + "<div class='event-detail event-detail-"+ev.class+"'>";
+      if (ev.hasOwnProperty("prename") && ev.prename != "") {
+        html = html + "<p class='series-ident'>"+ev.prename+"</p>";
+      }
+      html = html + "<h3>"+ev.name+"</h3>\n";
       if (ev.hasOwnProperty("time")) {
-        html = html+"<p>"+a+ev.venue+(time ? ", "+time : "")+_a+"</p>\n";
+        html = html+"<p>"+a;
+        if (ev.hasOwnProperty("venue") && ev.venue) {
+          html = html + ev.venue + (time ? ", " : "");
+        }
+        html = html+(time ? time : "")+_a+"</p>\n";
       }
       if (ev.price) {
         html = html + "<p>Club fee: "+ev.price+"</p>";

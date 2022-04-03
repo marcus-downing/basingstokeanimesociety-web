@@ -201,6 +201,12 @@ h3 {
   body.night & {
     background: rgba(20, 30, 60, 0.5);
   }
+
+  p {
+    color: white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    font-weight: 600;
+  }
 }
 
 #section-announce {
@@ -211,7 +217,7 @@ h3 {
   h2 {
     color: black;
     margin-top: 0.6em;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.5)
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
   }
 
   .content p {
@@ -442,6 +448,19 @@ h3 {
   }
 }
 
+p.series-ident {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0;
+  &, article.event & {
+    color: #f8dda2;
+  }
+
+  + h3 {
+    margin-top: 3px;
+  }
+}
+
 #now-showing {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -499,17 +518,6 @@ h3 {
         text-transform: uppercase;
         margin: 0;
         color: #9af3aa;
-
-        + h3 {
-          margin-top: 3px;
-        }
-      }
-
-      p.series-ident {
-        font-size: 14px;
-        text-transform: uppercase;
-        margin: 0;
-        color: #f8dda2;
 
         + h3 {
           margin-top: 3px;
@@ -695,7 +703,6 @@ h3 {
         font-size: 14px;
         text-transform: uppercase;
         margin: 0.5em 0 0 0;
-        color: #f8dda2;
 
         + h3 {
           margin-top: 1px;
@@ -978,14 +985,27 @@ article {
       background: linear-gradient(#d8fadc, #a2f8ad);
     }
   }
+}
 
-  .event-detail.event-detail-new-series, .event-detail.event-detail-movie {
-    padding: 1px 6px;
-    background: rgba(40, 60, 120, 0.5);
-    border-radius: 2px;
-    margin-bottom: 2px;
-    margin-left: -5px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+#events-list {
+  margin-top: 1em;
+}
+
+article.event {
+  margin: 1.5em 0;
+}
+
+.event-detail {
+  + .event-detail {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  &.event-detail-anime {
+    h3 {
+      color: #a2d7f8;
+    }
   }
 }
 

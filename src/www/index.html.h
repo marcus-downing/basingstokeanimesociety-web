@@ -52,6 +52,8 @@ twq('track','PageView');
     <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
     <div class="next-meeting-side">Tuesday<br>7pm</div>
   </div>
+
+  <h3>Venue: <span id="next-meeting-venue">{{ nextMeetingVenue }}</span></h3>
 </section>
 
 <section id='section-about' class='box'>
@@ -106,14 +108,15 @@ twq('track','PageView');
 <section id='section-upcoming'>
   <h2>Upcoming Events</h2>
 
-  <div id='events-list'>
+  <div id='events-list' class='box'>
   {{#each eventsByDate}}
   <article id='upcoming-{{ shortDate }}' class='event event-{{ class }}'>
     <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
     {{#each events}}
     <div class='event-detail event-detail-{{ class }}'>
+      {{#if prename}}<p class="series-ident">{{ prename }}</p>{{/if}}
       <h3>{{ name }}</h3>
-      {{#if time}}<p>{{#if link}}<a href='{{ link }}'>{{/if}}{{ venue }}{{#if time}}, {{ time }}{{/if}}{{#if link}}</a>{{/if}}</h3>{{/if}}
+      {{#if time}}<p>{{#if link}}<a href='{{ link }}'>{{#if time}}, {{/if}}{{/if}}{{ venue }}{{#if time}}{{ time }}{{/if}}{{#if link}}</a>{{/if}}</h3>{{/if}}
     </div>
     {{/each}}
   </article>
@@ -138,9 +141,9 @@ twq('track','PageView');
   </article>
   {{/each}}
 
-  <div id='news-more-switch'>
+  <!-- <div id='news-more-switch'>
     <button class='btn btn-news-more' onclick="showNews()"><span>Show More News</span></button>
-  </div>
+  </div> -->
 
   <div id='news-more'>
     {{#each staleNews}}
