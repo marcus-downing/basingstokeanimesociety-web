@@ -178,6 +178,7 @@ _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
           month: util.formatShortMonth(date),
           prename: (movie ? 'Movie' : 'New series'),
           name: series.name,
+          picture: series.picture,
           class: 'new-series'
         }
         events.push(event);
@@ -255,15 +256,20 @@ events = _.sortBy(events, 'date');
 basData.events = events.slice(0, basData.windowEvents);
 basData.allEvents = events;
 
+// group the events by date, summarising class
 basData.eventsByDate = _(events).groupBy(e => util.formatShortDate(e.date)).map((evs, grp) => {
   let cls = evs[0].class;
-  if (cls == 'online' || cls == 'anime') {
-    for (let ev of evs) {
-      if (ev.hasOwnProperty('cvls') && ev.cls != "" && ev.cls != 'online' && ev.cls != 'anime') {
-        cls = ev.cls;
-      }
-    }
-  }
+  // switch colours on days with new series
+  // if (cls == 'online' || cls == 'anime') {
+  //   for (let ev of evs) {
+  //     if (ev.hasOwnProperty('class') && ev.cls != "") {
+  //       if (ev.class != 'online' && ev.class != 'anime') {
+  //         cls = ev.class;
+  //       }
+  //     }
+  //   }
+  // }
+  
   return {
     date: evs[0].date,
     shortDate: grp,

@@ -87,7 +87,7 @@ body {
     border-left-width: 0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 7px 36px;
+    padding: 7px 24px;
     vertical-align: middle;
     margin-left: -6px;
     box-shadow: 1px 1px 1.4px rgba(0, 0, 0, 0.7); }
@@ -108,6 +108,11 @@ body {
   #section-social .btn span {
     display: none; }
 
+#section-discord {
+  padding: 8px 20px; }
+  #section-discord h2, #section-discord h3, #section-discord p {
+    margin: 8px 0; }
+
 .btn-mail i {
   background-color: #ed3b41;
   background-image: url("images/mail.svg"); }
@@ -123,6 +128,9 @@ body {
 .btn-discord i {
   background-color: #5165F6;
   background-image: url("images/discord.gif"); }
+
+.btn-discord span {
+  background: #5165F6; }
 
 #main-title {
   display: none; }
@@ -155,13 +163,18 @@ h3 {
     font-size: 24px;
     font-style: normal;
     margin-right: 4px; }
+  h3.big {
+    padding-left: 20px;
+    font-size: 23px;
+    margin-bottom: 40px; }
 
 .box {
   padding: 5px 27px;
   background: rgba(40, 60, 120, 0.6);
   border-radius: 2px;
   margin-top: 2em;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  position: relative; }
   body.night .box {
     background: rgba(20, 30, 60, 0.5); }
   .box p {
@@ -259,7 +272,7 @@ h3 {
 #section-about {
   position: relative;
   padding-left: 12px;
-  padding-right: 65px; }
+  padding-right: 70px; }
   #section-about .content {
     margin: -10px 0; }
   #section-about .content p {
@@ -687,15 +700,30 @@ article {
   margin-top: 1em; }
 
 article.event {
-  margin: 1.5em 0; }
+  margin: 1.5em 0;
+  clear: left; }
 
-.event-detail + .event-detail {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin-top: 10px;
-  padding-top: 10px; }
-
-.event-detail.event-detail-anime h3 {
-  color: #a2d7f8; }
+.event-detail {
+  clear: right; }
+  .event-detail:after {
+    content: "";
+    display: block;
+    clear: both; }
+  .event-detail img {
+    float: right;
+    margin-left: 10px;
+    margin-right: -10px;
+    max-height: 100px;
+    box-shadow: 0 1px 3px black; }
+  .event-detail + .event-detail {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-left: -20px;
+    margin-right: -10px;
+    padding-right: 10px; }
+  .event-detail.event-detail-anime h3 {
+    color: #a2d7f8; }
 
 #news-more-switch {
   text-align: center; }
@@ -727,6 +755,12 @@ article.event {
 
 .timeline-Header {
   display: none; }
+
+.float-right {
+  position: absolute;
+  top: 14%;
+  right: 1em;
+  display: block; }
 
 #blanket {
   display: none;
@@ -832,7 +866,7 @@ article.event {
       width: 22vw;
       margin-bottom: -5px; }
   .btn-where-when {
-    position: static; }
+    right: 5px; }
   .lr {
     display: block; }
   #next-showing {
@@ -855,6 +889,8 @@ article.event {
     padding-right: 80px; }
   #now-showing figure, #now-showing figure img.series-picture {
     width: 28.4vw; }
+  #section-discord .btn-discord {
+    position: revert; }
   #map-overlay {
     left: 10px;
     right: 10px;

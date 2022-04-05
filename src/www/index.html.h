@@ -12,7 +12,9 @@
 
   <title>Basingstoke Anime Society</title>
   <link rel="stylesheet" media="all" href="style.css?ver={{stylesheetVersion}}" />
-  <script src="script.js"></script>
+
+  <meta name="description" content="Showing anime in Basingstoke every Tuesday" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Twitter universal website tag code -->
 <script>
@@ -45,6 +47,7 @@ twq('track','PageView');
 
 <header id="header">
 
+<div>
 <section id='section-next-meeting' class='box'>
   <h2>Next Meeting</h2>
 
@@ -56,18 +59,34 @@ twq('track','PageView');
   <h3>Venue: <span id="next-meeting-venue">{{ nextMeetingVenue }}</span></h3>
 </section>
 
+<section id='section-discord' class='box'>
+  <h3>Social</h3>
+  <p>Chat with us on Discord</p>
+  <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join our Discord</span></a>
+</section>
+</div>
+
 <section id='section-about' class='box'>
   <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Show Map</span></button>
+
+  <h3 class='big'>Showing anime in Basingstoke every Tuesday.</h3>
 
   <div class='content'>
     <p><img class='icon' src='images/pin.svg'>Function room, upstairs at <a href='https://www.thewhitehartbasingstoke.com/'>The White Hart</a>, Basingstoke RG21 4AE</p>
     <p><span class='icon entry-fee'>£4</span>Club fee</p>
     <p><img class='icon' src='images/biohazard-white.svg'>Vaccination required</p>
     <p><img class="rating-img rating-15 icon" src="images/rating/15.svg">Age requirement</p>
+    <!-- <p class='center'><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join our Discord</span></a></p> -->
   </div>
 
 </section>
 </header>
+
+<!-- <section id='section-discord' class='box'>
+  <h3>Social</h3>
+  <p>Chat with us on Discord</p>
+  <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join our Discord</span></a>
+</section> -->
 
 <section id='section-now-showing' class='{{#if options.hiatus}}section-now-showing-hiatus{{/if}}'>
   <h2>Now Showing</h2>
@@ -114,6 +133,7 @@ twq('track','PageView');
     <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
     {{#each events}}
     <div class='event-detail event-detail-{{ class }}'>
+      {{#if picture}}<img src="images/series/{{picture}}.png">{{/if}}
       {{#if prename}}<p class="series-ident">{{ prename }}</p>{{/if}}
       <h3>{{ name }}</h3>
       {{#if time}}<p>{{#if link}}<a href='{{ link }}'>{{#if time}}, {{/if}}{{/if}}{{ venue }}{{#if time}}{{ time }}{{/if}}{{#if link}}</a>{{/if}}</h3>{{/if}}
@@ -185,5 +205,6 @@ twq('track','PageView');
   </div>
 </aside>
 
+<script src="script.js"></script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>

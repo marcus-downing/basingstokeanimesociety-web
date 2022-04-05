@@ -178,6 +178,9 @@ window.onload = function () {
         _a = "</a>";
       }
       html = html + "<div class='event-detail event-detail-"+ev.class+"'>";
+      if (ev.hasOwnProperty("picture") && ev.picture != "") {
+        html = html + "<img src='images/series/"+ev.picture+".png'>";
+      }
       if (ev.hasOwnProperty("prename") && ev.prename != "") {
         html = html + "<p class='series-ident'>"+ev.prename+"</p>";
       }

@@ -86,7 +86,7 @@ body {
     border-left-width: 0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 7px 36px;
+    padding: 7px 24px;
     vertical-align: middle;
     margin-left: -6px;
     box-shadow: 1px 1px 1.4px rgba(0,0,0,0.7);
@@ -133,6 +133,14 @@ body {
   }
 }
 
+#section-discord {
+  padding: 8px 20px;
+
+  h2, h3, p {
+    margin: 8px 0;
+  }
+}
+
 $mail_color: #ed3b41;
 $twitter_color: #1da1f2;
 $fb_color: #4267b2;
@@ -149,6 +157,9 @@ $discord_color: #5165F6;
 }
 .btn-discord {
   @include btn($discord_color, 'images/discord.gif');
+  span {
+    background: $discord_color;
+  }
 }
 
 #main-title {
@@ -189,6 +200,12 @@ h3 {
     font-style: normal;
     margin-right: 4px;
   }
+
+  &.big {
+    padding-left: 20px;
+    font-size: 23px;
+    margin-bottom: 40px;
+  }
 }
 
 .box {
@@ -197,6 +214,7 @@ h3 {
   border-radius: 2px;
   margin-top: 2em;
   box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+  position: relative;
 
   body.night & {
     background: rgba(20, 30, 60, 0.5);
@@ -337,7 +355,7 @@ h3 {
 #section-about {
   position: relative;
   padding-left: 12px;
-  padding-right: 65px;
+  padding-right: 70px;
 
   .content {
     margin: -10px 0;
@@ -993,13 +1011,34 @@ article {
 
 article.event {
   margin: 1.5em 0;
+  clear: left;
 }
 
 .event-detail {
+  clear: right;
+
+  // clear fix
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  img {
+    float: right;
+    margin-left: 10px;
+    margin-right: -10px;
+    max-height: 100px;
+    box-shadow: 0 1px 3px black;
+  }
+
   + .event-detail {
     border-top: 1px solid rgba(255,255,255,0.2);
     margin-top: 10px;
     padding-top: 10px;
+    margin-left: -20px;
+    margin-right: -10px;
+    padding-right: 10px;
   }
 
   &.event-detail-anime {
@@ -1049,6 +1088,13 @@ article.event {
 
 .timeline-Header {
   display: none;
+}
+
+.float-right {
+  position: absolute;
+  top: 14%;
+  right: 1em;
+  display: block;
 }
 
 #blanket {
@@ -1208,7 +1254,7 @@ article.event {
     min-height: auto;
   }
   .btn-where-when {
-    position: static;
+    right: 5px;
   }
   .lr {
     display: block;
@@ -1247,6 +1293,11 @@ article.event {
   }
   #now-showing figure {
     &, img.series-picture { width: 28.4vw; }
+  }
+  #section-discord {
+    .btn-discord {
+      position: revert;
+    }
   }
   #map-overlay {
     left: 10px;
