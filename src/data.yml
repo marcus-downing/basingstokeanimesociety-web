@@ -1032,6 +1032,11 @@ slot1:
     picture: talentless-nana
     rating: 15
 
+  - from: 2022-08-23
+    name: "Aldnoah.Zero part 2"
+    picture: aldnoah-zero
+    rating: 15
+
 slot2:
   - from: 2019-01-08
     name: Hunter &times; Hunter
