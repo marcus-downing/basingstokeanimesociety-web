@@ -21,7 +21,7 @@
   var isRecommendations = true;
 </script>
 </head>
-<body class="day">
+<body class="day recommendations-page">
 
 <div id='section-logo'>
 <img src='images/logo.png' id='logo'>

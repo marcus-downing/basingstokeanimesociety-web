@@ -25,7 +25,7 @@ a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,
 twq('init','o898i');
 twq('track','PageView');
 </script>
-<!-- End Twitter universal website tag code -->#
+<!-- End Twitter universal website tag code -->
 
 <script>
   var isHome = true;
@@ -33,7 +33,7 @@ twq('track','PageView');
 </script>
 
 </head>
-<body class="day">
+<body class="day home-page">
 
 <div id='section-logo'>
 <img src='images/logo.png' id='logo'>
@@ -51,7 +51,7 @@ twq('track','PageView');
 <h1 id='main-title'>Basingstoke Anime Society</h1>
 
 <header id="header">
-
+<div>
 <section id='section-next-meeting' class='box'>
   <h2>Next Meeting</h2>
 
