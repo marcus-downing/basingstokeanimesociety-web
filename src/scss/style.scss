@@ -174,7 +174,7 @@ main {
   max-width: 1024px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: white;
   font-weight: bold;
   text-shadow: 0 1px 2px black;
@@ -866,6 +866,18 @@ p.series-ident {
   grid-gap: 20px;
 }
 
+.lre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.c3e {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
 time {
   background: white;
   width: 54px;
@@ -1180,6 +1192,231 @@ article.event {
 }
 
 
+.top10 {
+  margin-top: 2em;
+
+  > h3 {
+    img {
+      margin-top: -16px;
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.7);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      clear: both;
+      margin-top: 0;
+      margin-bottom: 20px;
+      height: 156px;
+      padding: 12px;
+
+      img.top10-pic {
+        float: right;
+        margin: -12px -12px 0 20px;
+        width: 126px;
+        height: 180px;
+      }
+
+      .top10-index {
+        img {
+          display: inline-block;
+          width: 36px;
+          height: 36px;
+          margin-right: -8px;
+          border-radius: 40px;
+          vertical-align: bottom;
+        }
+        span {
+          display: inline-block;
+          color: #f8dda2;
+          font-weight: bold;
+          width: 36px;
+          height: 36px;
+          border-radius: 36px;
+          line-height: 36px;
+          text-align: center;
+          background: rgba(0,0,0,0.4);
+          box-shadow: 0 1px 2px rgba(0,0,0,0.6);
+        }
+      }
+
+      h4 {
+        margin: 2px 0;
+        font-size: 19px;
+      }
+
+      &:first-child {
+        .top10-index {
+          span {
+            background: #f8dda2;
+            color: black;
+          }
+        }
+      }
+
+      &:nth-child(2), &:nth-child(3) {
+        .top10-index {
+          span {
+            border: 2px solid #f8dda2;
+            margin-top: -2px;
+            margin-bottom: -2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.top10-genres {
+  line-height: 30px;
+
+  a {
+    cursor: pointer;
+  }
+}
+
+@mixin genre($genre, $colour) {
+  .genre.genre-#{$genre} {
+    background: #{$colour};
+  }
+
+  body.genre-filter.genre-filter-#{$genre} {
+    .anime.anime-genre-#{$genre} {
+      display: block;
+    }
+  }
+}
+
+#clear-genre {
+  display: none;
+
+  margin: 6px 0;
+  background: white;
+  background: linear-gradient(#ffffff, #e0e0e0);
+  padding: 3px 10px;
+  border-radius: 2px;
+  box-shadow: 0 2px 3px black;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+body.genre-filter {
+  .anime {
+    display: none;
+  }
+
+  #clear-genre {
+    display: inline-block;
+  }
+}
+
+.genre {
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 6px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  line-height: 20px;
+  font-size: 13px;
+
+  background: rgba(0,0,0,0.6);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.6);
+
+  // &.genre-thriller {
+  //   background: rgba(128,0,0,0.6);
+  // }
+  // &.genre-romance {
+  //   background: rgba(160,16,0,0.6);
+  // }
+  // &.genre-sports {
+  //   background: rgba(180,110,0,0.6);
+  // }
+  // &.genre-action {
+  //   background: rgba(128,128,0,0.6);
+  // }
+  // &.genre-crime {
+  //   background: rgba(64,128,0,0.6);
+  // }
+  // &.genre-drama {
+  //   background: rgba(32,160,0,0.6);
+  // }
+  // &.genre-comedy {
+  //   background: rgba(0,128,0,0.6);
+  // }
+  // &.genre-adventure {
+  //   background: rgba(0,96,0,0.6);
+  // }
+  // &.genre-sci-fi {
+  //   background: rgba(0,96,96,0.6);
+  // }
+  // &.genre-mecha {
+  //   background: rgba(0,128,96,0.6);
+  // }
+  // &.genre-isekai {
+  //   background: rgba(0,64,128,0.6);
+  // }
+  // &.genre-slice-of-life {
+  //   background: rgba(0,0,128,0.6);
+  // }
+  // &.genre-mystery {
+  //   background: rgba(128,0,64,0.6);
+  // }
+  // &.genre-war {
+  //   background: rgba(160,0,32,0.6);
+  // }
+
+  &.genre-selected {
+    position: relative;
+    outline: 2px solid black;
+
+    &:before {
+      content: "";
+      display: block;
+      pointer-events: none;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border: 2px solid white;
+      border-radius: 8px;
+    }
+  }
+}
+
+@include genre(thriller,  rgb(128,0,0));
+@include genre(romance,   rgb(160,16,0));
+@include genre(sports,    rgb(180,110,0));
+@include genre(action,    rgb(128,128,0));
+@include genre(crime,     rgb(96,16,0));
+@include genre(drama,     rgb(32,116,0));
+@include genre(comedy,    rgb(0,128,0));
+@include genre(adventure, rgb(0,96,0));
+@include genre(sci-fi,    rgb(0,96,96));
+@include genre(music,     rgb(96,0,160));
+@include genre(shounen,   rgb(0,140,180));
+@include genre(mecha,     rgb(0,128,96));
+@include genre(isekai,    rgb(0,64,128));
+@include genre(slice-of-life, rgb(0,0,128));
+@include genre(mystery,   rgb(110,0,96));
+@include genre(war,       rgb(160,0,32));
+@include genre(dark,      rgb(32,32,32));
+
 // Responsive scaling
 
 @media (min-width: 1281px) {
@@ -1256,7 +1493,7 @@ article.event {
   .btn-where-when {
     right: 5px;
   }
-  .lr {
+  .lr, .lre {
     display: block;
   }
   #next-showing {

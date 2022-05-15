@@ -46,6 +46,243 @@ news:
       - |
         Instead of taking a break over Christmas and new year like we normally would, we've got a whole load of movies happening over the next few weeks. Check out the schedule above for details.
 
+top10genres:
+  - Action
+  - Adventure
+  - Comedy
+  - Crime
+  - Dark
+  - Drama
+  - Isekai
+  - Mecha
+  - Music
+  - Mystery
+  - Romance
+  - Sci fi
+  - Shounen
+  - Slice of life
+  - Sports
+  - Thriller
+  - War
+
+top10:
+  - name: Blobberu
+    picture: blobberu
+    anime:
+      - name: Terror in Resonance
+        picture: terror-in-resonance
+        genre: [ "Thriller", "Crime" ]
+      - name: Erased
+        picture: erased
+        genre: [ "Crime", "Mystery" ]
+      - name: Eden of the East
+        picture: eden-of-the-east
+        genre: [ "Thriller", "Mystery" ]
+      - name: "B: The Beginning"
+        picture: b-the-beginning
+        genre: [ "Thriller", "Crime" ]
+      # - name: Konosuba
+      #   picture: konosuba-legend-of-crimson
+      #   genre: [ "Comedy", "Isekai" ]
+      - name: Death Note
+        picture: death-note
+        genre: [ "Thriller", "Shounen", "Dark" ]
+      - name: "Astra: Lost in Space"
+        picture: astra
+        genre: [ "Adventure", "Sci fi", "Mystery", "Shounen" ]
+      - name: "The Great Passage"
+        picture: great-passage
+        genre: [ "Slice of life", "Drama" ]
+      - name: "Working!"
+        picture: working
+        genre: [ "Comedy", "Slice of life" ]
+      - name: "Eizouken ni wa Te wo Dasu na!"
+        picture: eizouken
+        genre: [ "Slice of life", "Comedy" ]
+      - name: "Magatsu Wahrheit: ZUERST"
+        picture: magatsu-wahrheit-zuerst
+        genre: [ "War", "Action", "Mystery" ]
+
+  - name: Shrink Laureate
+    picture: shrink-laureate
+    anime:
+      - name: Haibane Renmei
+        picture: haibane-renmei
+        genre: [ "Drama", "Slice of life", "Mystery" ]
+      - name: Violet Evergarden
+        picture: violet-evergarden
+        genre: [ "Drama", "War" ]
+      - name: Crest of the Stars
+        picture: crest-of-the-stars
+        genre: [ "Sci fi", "Action", "Romance", "War" ]
+      - name: Fullmetal Alchemist
+        picture: fullmetal-alchemist
+        genre: [ "Action", "Adventure", "War", "Shounen" ]
+      # - name: Log Horizon
+      #   picture: log-horizon
+      #   genre: [ "Isekai", "Action", "Adventure", "Drama" ]
+      # - name: Made In Abyss
+      #   picture: made-in-abyss
+      #   genre: [ "Adventure", "Drama", "Mystery", "Dark" ]
+      - name: "Higurashi: When They Cry"
+        picture: higurashi
+        genre: [ "Mystery", "Crime", "Drama", "Dark" ]
+      - name: "Baccano!"
+        picture: baccano
+        genre: [ "Crime", "Action", "Mystery" ]
+      - name: Bamboo Blade
+        picture: bamboo-blade
+        genre: [ "Comedy", "Slice of life", "Sports" ]
+      - name: "Steins;Gate"
+        picture: steins-gate
+        genre: [ "Sci fi", "Drama", "Mystery" ]
+      - name: Your Name
+        picture: your-name
+        genre: [ "Romance", "Mystery" ]
+      - name: "Re:Creators"
+        picture: re-creators
+        genre: [ "Isekai", "Action", "Shounen", "Mecha" ]
+
+  - name: NoviceOtaku
+    picture: novice-otaku
+    anime:
+      - name: Eureka Seven
+        picture: eureka-seven
+        genre: [ "Action", "Adventure", "Mystery", "Mecha", "Sci fi" ]
+      - name: Last Exile
+        picture: last-exile
+        genre: [ "Action", "Adventure", "Mystery", "War" ]
+      - name: Alderamin on the Sky
+        picture: alderamin-on-the-sky
+        genre: [ "War", "Action" ]
+      - name: Hinamatsuri
+        picture: hinamatsuri
+        genre: [ "Comedy", "Slice of life" ]
+      - name: My Love Story!
+        picture: oremonogatari
+        genre: [ "Romance", "Comedy" ]
+      - name: Miss Kobayashi's Dragon Maid
+        picture: kobayashi-dragon-maid
+        genre: [ "Comedy", "Romance", "Slice of life" ]
+      - name: Bunny Drop
+        picture: bunny-drop
+        genre: [ "Slice of life" ]
+      - name: Oban Star Racers
+        picture: oban-star-racers
+        genre: [ "Action", "Adventure", "Sci fi" ]
+      - name: From The New World
+        picture: shinsekai-yori
+        genre: [ "Mystery", "Drama", "Dark" ]
+      - name: Carole & Tuesday
+        picture: carole-and-tuesday
+        genre: [ "Music", "Drama", "Sci fi" ]
+      # - name: Chrno Crusade
+      #   picture: chrno-crusade
+      #   genre: [ "Action", "Comedy", "Romance" ]
+      # - name: Garden of Words
+      #   picture: garden-of-words
+      #   genre: [ "Romance", "Drama" ]
+      # - name: Rascal Does Not Dream of Bunny Girl Senpai
+      #   picture: bunny-girl-senpai
+      #   genre: [ "Romance", "Mystery" ]
+      # - name: Your Name
+      #   picture: your-name
+      #   genre: [ "Romance", "Mystery" ]
+
+  - name: Big Ed
+    picture: big-ed
+    anime:
+      - name: BOFURI
+        picture: bofuri
+        genre: [ "Comedy", "Slice of life" ]
+      - name: The Third
+        picture: the-third
+        genre: [ "Sci fi", "Action" ]
+      - name: "The Ancient Magus' Bride"
+        picture: ancient-magus-bride
+        genre: [ "Adventure", "Drama", "Romance" ]
+      - name: Golden Kamuy
+        picture: golden-kamuy
+        genre: [ "Adventure", "Shounen" ]
+      - name: Konosuba
+        picture: konosuba-legend-of-crimson
+        genre: [ "Comedy", "Isekai" ]
+      - name: Death Parade
+        picture: death-parade
+        genre: [ "Mystery", "Drama", "Dark" ]
+      - name: "Free!"
+        picture: free
+        genre: [ "Slice of life", "Sports" ]
+      - name: "No Game No Life"
+        picture: no-game-no-life
+        genre: [ "Comedy", "Isekai", "Adventure" ]
+      # - name: "Steins;Gate"
+      #   picture: steins-gate
+      #   genre: [ "Adventure", "Sci fi" ]
+      - name: "Stellvia of the Universe"
+        picture: stellvia
+        genre: [ "Sci fi", "Adventure" ]
+      - name: Black Butler
+        picture: black-butler
+        genre: [ "Adventure", "Dark" ]
+      # - name: "Kenichi: The Mightiest Disciple"
+      #   picture: kenichi
+      #   genre: [ "Shounen", "Adventure", "Action" ]
+      # - name: Barakamon
+      #   picture: barakamon
+      #   genre: [ "Slice of life" ]
+
+  - name: Furlaylie
+    picture: furlaylie
+    anime:
+      - name: Made In Abyss
+        picture: made-in-abyss
+        genre: [ "Adventure", "Drama", "Mystery", "Dark" ]
+      - name: Log Horizon
+        picture: log-horizon
+        genre: [ "Isekai", "Action", "Adventure", "Drama", "Shounen" ]
+      - name: MegaloBox
+        picture: megalobox
+        genre: [ "Sports", "Drama" ]
+      - name: Kids on the Slope
+        picture: kids-on-the-slope
+        genre: [ "Music", "Slice of life", "Romance" ]
+      - name: Dragonball
+        picture: dragonball
+        genre: [ "Action", "Shounen" ]
+      - name: Tamako Market
+        picture: tamako-market
+        genre: [ "Slice of life", "Romance" ]
+      - name: The Promised Neverland
+        picture: promised-neverland
+        genre: [ "Adventure", "Thriller", "Dark" ]
+      - name: "Howl's Moving Castle"
+        picture: howls-moving-castle
+        genre: [ "Adventure", "Romance" ]
+      - name: Silver Spoon
+        picture: silver-spoon
+        genre: [ "Slice of life" ]
+      - name: "No.6"
+        picture: no6
+        genre: [ "Thriller", "Adventure", "Sci fi" ]
+      # - name: Amagi Brilliant Park
+      #   picture: amagi-brilliant-park
+      #   genre: [ "Comedy", "Slice of life" ]
+      # - name: Steamboy
+      #   picture: steamboy
+      #   genre: [ "Action", "Adventure" ]
+      # - name: My Hero Academia
+      #   picture: my-hero-academia-heroes-rising
+      #   genre: [ "Action", "Adventure" ]
+
+  - name: PB
+    picture: pb
+    anime:
+      - name: Bloom Into You
+        picture: bloom-into-you
+        genre: [ "Romance", "Drama" ]
+
+
 past_anime:
   - from: 2006-09-19
     name: Paradise Kiss
@@ -140,8 +377,8 @@ past_anime:
     picture: puni-puni-poemi
 
   - from: 2008-01-08
-    name: Kenchi
-    picture: kenchi
+    name: Kenichi
+    picture: kenichi
 
   - from: 2008-01-08
     name: Karin
@@ -912,8 +1149,8 @@ past_anime:
     picture: overlord-ii-iii
 
   - from: 2019-02-19
-    name: Kobyashi's Dragon Maid
-    picture: kobyashi-dragon-maid
+    name: Kobayashi's Dragon Maid
+    picture: kobayashi-dragon-maid
 
   - from: 2019-04-09
     name: Otaku ni Koi wa Muzukashi
@@ -1053,7 +1290,7 @@ slot2:
   - from: 2021-01-05
     displayFrom: 2020-12-08
     name: "Astra: Lost in Space"
-    picture: Astra
+    picture: astra
     rating: 12
 
   - from: 2021-02-23

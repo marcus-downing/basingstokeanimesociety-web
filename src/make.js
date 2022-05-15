@@ -12,6 +12,14 @@ const util = require('./util.js');
 Handlebars.registerHelper('json', function (obj) {
   return JSON.stringify(obj);
 });
+Handlebars.registerHelper('inc', function(value, options) {
+  return parseInt(value) + 1;
+});
+Handlebars.registerHelper('slug', function(value) {
+  value = value.toLowerCase();
+  value = value.replaceAll(/[^a-z0-9]+/g, '-');
+  return value;
+})
 
 // read the data
 let basData = fs.readFileSync('data.yml');
@@ -301,7 +309,19 @@ basData.nextMeeting = util.formatLongDate(nextEvent.date);
 basData.nextMeetingVenue = nextEvent.venue;
 basData.nextMeetingAddress = venueAddress[nextEvent.venue];
 
+// Recommendations
 
+_.each(basData.top10, person => {
+  _.each(person.anime, series => {
+    if (fs.existsSync('series/'+series.picture+'.png')) {
+      fs.copyFile('series/'+series.picture+'.png', '../dist/images/series/'+series.picture+'.png', (err) => {
+        if (err) {
+          console.log(err);
+        }
+      });
+    }
+  });
+});
 
 // compile sources
 
@@ -325,6 +345,7 @@ sass.render({
   fs.writeFile('../dist/style.css', result.css, 'utf-8', err => {});
 
   writeTemplate('www/index.html.h', 'index.html', basData);
+  writeTemplate('www/recommendations.html.h', 'recommendations.html', basData);
   writeTemplate('www/script.js.h', 'script.js', basData);
 });
 

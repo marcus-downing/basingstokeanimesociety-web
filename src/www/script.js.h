@@ -24,6 +24,48 @@ function selectBackground() {
 }
 
 window.onload = function () {
+  if (isHome) {
+    setupHome();
+  }
+
+  if (isRecommendations) {
+    setupRecommendations();
+  }
+
+  // add hover on all the rating symbols
+  function addRatingHover(item) {
+    var img = item.getElementsByClassName("rating-img")[0];
+    var hover = item.getElementsByClassName("rating-hover")[0];
+    var tag = item.getElementsByClassName("rating__tag")[0];
+
+    if (img === undefined) {
+      return;
+    }
+
+    img.addEventListener("mouseover", function(event) {
+      hover.classList.add("rating-hover--show");
+
+      var imgbox = img.getBoundingClientRect();
+      var hoverbox = hover.getBoundingClientRect();
+
+      var left = imgbox.left - hoverbox.left + 17;
+      tag.style.left = left+"px";
+    });
+    img.addEventListener("mouseout", function(event) {
+      hover.classList.remove("rating-hover--show");
+    });
+  }
+
+  var ratingElements = document.getElementsByClassName('rating');
+  for (var item of ratingElements) {
+    addRatingHover(item);
+  }
+
+  selectBackground();
+};
+setInterval(selectBackground, 300000); // 5 minutes
+
+function setupHome() {
   var now = new Date(Date.now());
 
   // adjust the showing anime
@@ -55,7 +97,6 @@ window.onload = function () {
       document.getElementById(id).classList.add('hide');
       return;
     }
-
 
     document.getElementById(id+'name').innerHTML = '<p class="series-ident">'+(series.movie ? 'Movie' : 'Series')+'</p>'+series.name;
     var img = document.getElementById(id+'picture');
@@ -229,39 +270,35 @@ window.onload = function () {
   if (document.getElementById('next-meeting-address')) {
     document.getElementById('next-meeting-address').innerHTML = nextEvent.address;
   }
+}
 
-  // add hover on all the rating symbols
-  function addRatingHover(item) {
-    var img = item.getElementsByClassName("rating-img")[0];
-    var hover = item.getElementsByClassName("rating-hover")[0];
-    var tag = item.getElementsByClassName("rating__tag")[0];
+function setupRecommendations() {
+  for (let genreLink of document.getElementById('search-genres').getElementsByClassName('genre')) {
+    (function (genreLink) {
+      genreLink.onclick = function (event) {
+        for (let otherGenreLink of document.getElementById('search-genres').getElementsByClassName('genre')) {
+          let otherGenre = otherGenreLink.dataset.genre;
+          document.body.classList.remove('genre-filter-'+otherGenre);
+          otherGenreLink.classList.remove('genre-selected');
+        }
+        let genre = genreLink.dataset.genre;
+        document.body.classList.add('genre-filter');
+        document.body.classList.add('genre-filter-'+genre);
+        genreLink.classList.add('genre-selected');
+      }
+    })(genreLink);
+  }
 
-    if (img === undefined) {
-      return;
+  let clearLink = document.getElementById('clear-genre');
+  clearLink.onclick = function (event) {
+    document.body.classList.remove('genre-filter');
+    for (let genreLink of document.getElementById('search-genres').getElementsByClassName('genre')) {
+      let genre = genreLink.dataset.genre;
+      document.body.classList.remove('genre-filter-'+genre);
+      genreLink.classList.remove('genre-selected');
     }
-
-    img.addEventListener("mouseover", function(event) {
-      hover.classList.add("rating-hover--show");
-
-      var imgbox = img.getBoundingClientRect();
-      var hoverbox = hover.getBoundingClientRect();
-
-      var left = imgbox.left - hoverbox.left + 17;
-      tag.style.left = left+"px";
-    });
-    img.addEventListener("mouseout", function(event) {
-      hover.classList.remove("rating-hover--show");
-    });
   }
-
-  var ratingElements = document.getElementsByClassName('rating');
-  for (var item of ratingElements) {
-    addRatingHover(item);
-  }
-
-  selectBackground();
-};
-setInterval(selectBackground, 300000); // 5 minutes
+}
 
 function showMap() {
   document.getElementById('blanket').className = "hide";

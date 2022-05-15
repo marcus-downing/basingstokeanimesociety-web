@@ -142,7 +142,7 @@ main {
   padding-right: 90px;
   max-width: 1024px; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: white;
   font-weight: bold;
   text-shadow: 0 1px 2px black; }
@@ -615,6 +615,16 @@ p.series-ident {
   grid-template-columns: 1fr 2fr;
   grid-gap: 20px; }
 
+.lre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px; }
+
+.c3e {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px; }
+
 time {
   background: white;
   width: 54px;
@@ -826,6 +836,214 @@ article.event {
   line-height: 36px;
   cursor: pointer; }
 
+.top10 {
+  margin-top: 2em; }
+  .top10 > h3 img {
+    margin-top: -16px;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); }
+  .top10 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .top10 ul li {
+      clear: both;
+      margin-top: 0;
+      margin-bottom: 20px;
+      height: 156px;
+      padding: 12px; }
+      .top10 ul li img.top10-pic {
+        float: right;
+        margin: -12px -12px 0 20px;
+        width: 126px;
+        height: 180px; }
+      .top10 ul li .top10-index img {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        margin-right: -8px;
+        border-radius: 40px;
+        vertical-align: bottom; }
+      .top10 ul li .top10-index span {
+        display: inline-block;
+        color: #f8dda2;
+        font-weight: bold;
+        width: 36px;
+        height: 36px;
+        border-radius: 36px;
+        line-height: 36px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.4);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+      .top10 ul li h4 {
+        margin: 2px 0;
+        font-size: 19px; }
+      .top10 ul li:first-child .top10-index span {
+        background: #f8dda2;
+        color: black; }
+      .top10 ul li:nth-child(2) .top10-index span, .top10 ul li:nth-child(3) .top10-index span {
+        border: 2px solid #f8dda2;
+        margin-top: -2px;
+        margin-bottom: -2px; }
+
+.top10-genres {
+  line-height: 30px; }
+  .top10-genres a {
+    cursor: pointer; }
+
+#clear-genre {
+  display: none;
+  margin: 6px 0;
+  background: white;
+  background: linear-gradient(#ffffff, #e0e0e0);
+  padding: 3px 10px;
+  border-radius: 2px;
+  box-shadow: 0 2px 3px black;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer; }
+
+body.genre-filter .anime {
+  display: none; }
+
+body.genre-filter #clear-genre {
+  display: inline-block; }
+
+.genre {
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 6px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  line-height: 20px;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+  .genre.genre-selected {
+    position: relative;
+    outline: 2px solid black; }
+    .genre.genre-selected:before {
+      content: "";
+      display: block;
+      pointer-events: none;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border: 2px solid white;
+      border-radius: 8px; }
+
+.genre.genre-thriller {
+  background: maroon; }
+
+body.genre-filter.genre-filter-thriller .anime.anime-genre-thriller {
+  display: block; }
+
+.genre.genre-romance {
+  background: #a01000; }
+
+body.genre-filter.genre-filter-romance .anime.anime-genre-romance {
+  display: block; }
+
+.genre.genre-sports {
+  background: #b46e00; }
+
+body.genre-filter.genre-filter-sports .anime.anime-genre-sports {
+  display: block; }
+
+.genre.genre-action {
+  background: olive; }
+
+body.genre-filter.genre-filter-action .anime.anime-genre-action {
+  display: block; }
+
+.genre.genre-crime {
+  background: #601000; }
+
+body.genre-filter.genre-filter-crime .anime.anime-genre-crime {
+  display: block; }
+
+.genre.genre-drama {
+  background: #207400; }
+
+body.genre-filter.genre-filter-drama .anime.anime-genre-drama {
+  display: block; }
+
+.genre.genre-comedy {
+  background: green; }
+
+body.genre-filter.genre-filter-comedy .anime.anime-genre-comedy {
+  display: block; }
+
+.genre.genre-adventure {
+  background: #006000; }
+
+body.genre-filter.genre-filter-adventure .anime.anime-genre-adventure {
+  display: block; }
+
+.genre.genre-sci-fi {
+  background: #006060; }
+
+body.genre-filter.genre-filter-sci-fi .anime.anime-genre-sci-fi {
+  display: block; }
+
+.genre.genre-music {
+  background: #6000a0; }
+
+body.genre-filter.genre-filter-music .anime.anime-genre-music {
+  display: block; }
+
+.genre.genre-shounen {
+  background: #008cb4; }
+
+body.genre-filter.genre-filter-shounen .anime.anime-genre-shounen {
+  display: block; }
+
+.genre.genre-mecha {
+  background: #008060; }
+
+body.genre-filter.genre-filter-mecha .anime.anime-genre-mecha {
+  display: block; }
+
+.genre.genre-isekai {
+  background: #004080; }
+
+body.genre-filter.genre-filter-isekai .anime.anime-genre-isekai {
+  display: block; }
+
+.genre.genre-slice-of-life {
+  background: navy; }
+
+body.genre-filter.genre-filter-slice-of-life .anime.anime-genre-slice-of-life {
+  display: block; }
+
+.genre.genre-mystery {
+  background: #6e0060; }
+
+body.genre-filter.genre-filter-mystery .anime.anime-genre-mystery {
+  display: block; }
+
+.genre.genre-war {
+  background: #a00020; }
+
+body.genre-filter.genre-filter-war .anime.anime-genre-war {
+  display: block; }
+
+.genre.genre-dark {
+  background: #202020; }
+
+body.genre-filter.genre-filter-dark .anime.anime-genre-dark {
+  display: block; }
+
 @media (min-width: 1281px) {
   #now-showing figure, #now-showing figure img.series-picture {
     width: 315px;
@@ -867,7 +1085,7 @@ article.event {
       margin-bottom: -5px; }
   .btn-where-when {
     right: 5px; }
-  .lr {
+  .lr, .lre {
     display: block; }
   #next-showing {
     grid-template-columns: 1fr;
