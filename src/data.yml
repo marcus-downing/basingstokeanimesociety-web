@@ -88,7 +88,7 @@ top10:
         picture: death-note
         genre: [ "Thriller", "Shounen", "Dark" ]
       - name: "Astra: Lost in Space"
-        picture: astra
+        picture: astra-lost-in-space
         genre: [ "Adventure", "Sci fi", "Mystery", "Shounen" ]
       - name: "The Great Passage"
         picture: great-passage
@@ -169,7 +169,7 @@ top10:
         genre: [ "Slice of life" ]
       - name: Oban Star Racers
         picture: oban-star-racers
-        genre: [ "Action", "Adventure", "Sci fi" ]
+        genre: [ "Action", "Adventure", "Sci fi", "Shounen" ]
       - name: From The New World
         picture: shinsekai-yori
         genre: [ "Mystery", "Drama", "Dark" ]
