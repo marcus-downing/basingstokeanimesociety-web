@@ -273,9 +273,10 @@ function setupHome() {
 }
 
 function setupRecommendations() {
+  // select genre
   for (let genreLink of document.getElementById('search-genres').getElementsByClassName('genre')) {
     (function (genreLink) {
-      genreLink.onclick = function (event) {
+      function selectGenre(event) {
         for (let otherGenreLink of document.getElementById('search-genres').getElementsByClassName('genre')) {
           let otherGenre = otherGenreLink.dataset.genre;
           document.body.classList.remove('genre-filter-'+otherGenre);
@@ -286,11 +287,13 @@ function setupRecommendations() {
         document.body.classList.add('genre-filter-'+genre);
         genreLink.classList.add('genre-selected');
       }
+      genreLink.onclick = selectGenre
+      genreLink.ontouchend = selectGenre
     })(genreLink);
   }
 
-  let clearLink = document.getElementById('clear-genre');
-  clearLink.onclick = function (event) {
+  // clear genre
+  function clearGenre (event) {
     document.body.classList.remove('genre-filter');
     for (let genreLink of document.getElementById('search-genres').getElementsByClassName('genre')) {
       let genre = genreLink.dataset.genre;
@@ -298,6 +301,10 @@ function setupRecommendations() {
       genreLink.classList.remove('genre-selected');
     }
   }
+
+  let clearLink = document.getElementById('clear-genre');
+  clearLink.onclick = clearGenre
+  clearLink.ontouchend = clearGenre
 }
 
 function showMap() {
