@@ -160,13 +160,13 @@ top10:
         genre: [ "Comedy", "Slice of life" ]
       - name: My Love Story!
         picture: oremonogatari
-        genre: [ "Romance", "Comedy" ]
+        genre: [ "Romance", "Comedy", "Slice of life" ]
       - name: Miss Kobayashi's Dragon Maid
         picture: kobayashi-dragon-maid
         genre: [ "Comedy", "Romance", "Slice of life" ]
       - name: Bunny Drop
         picture: bunny-drop
-        genre: [ "Slice of life" ]
+        genre: [ "Slice of life", "Drama" ]
       - name: Oban Star Racers
         picture: oban-star-racers
         genre: [ "Action", "Adventure", "Sci fi", "Shounen" ]

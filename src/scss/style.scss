@@ -34,23 +34,6 @@ body {
   &.night {
     background-color: #080c80;
   }
-
-	&.day-1 { background-image: url(images/day-1.jpg); }
-	&.day-2 { background-image: url(images/day-2.jpg); }
-	&.day-3 { background-image: url(images/day-3.jpg); }
-	&.day-4 { background-image: url(images/day-4.jpg); }
-  &.day-5 { background-image: url(images/day-5.jpg); }
-  &.day-6 { background-image: url(images/day-6.jpg); }
-
-	&.night-1 { background-image: url(images/night-1.jpg); }
-	&.night-2 { background-image: url(images/night-2.jpg); }
-	&.night-3 { background-image: url(images/night-3.jpg); }
-	&.night-4 { background-image: url(images/night-4.jpg); }
-	&.night-5 { background-image: url(images/night-5.jpg); }
-	&.night-6 { background-image: url(images/night-6.jpg); }
-  &.night-7 { background-image: url(images/night-7.jpg); }
-  &.night-8 { background-image: url(images/night-8.jpg); }
-  &.night-9 { background-image: url(images/night-9.jpg); }
 }
 
 /* Site furniture */
@@ -1493,7 +1476,7 @@ body.genre-filter {
   .btn-where-when {
     right: 5px;
   }
-  .lr, .lre {
+  .lr, .lre, .c3e {
     display: block;
   }
   #next-showing {
@@ -1517,7 +1500,47 @@ body.genre-filter {
   }
 }
 
+@media (min-width: 801px) {
+  body {
+    &.day-1 { background-image: url(images/day-1.jpg); }
+    &.day-2 { background-image: url(images/day-2.jpg); }
+    &.day-3 { background-image: url(images/day-3.jpg); }
+    &.day-4 { background-image: url(images/day-4.jpg); }
+    &.day-5 { background-image: url(images/day-5.jpg); }
+    &.day-6 { background-image: url(images/day-6.jpg); }
+
+    &.night-1 { background-image: url(images/night-1.jpg); }
+    &.night-2 { background-image: url(images/night-2.jpg); }
+    &.night-3 { background-image: url(images/night-3.jpg); }
+    &.night-4 { background-image: url(images/night-4.jpg); }
+    &.night-5 { background-image: url(images/night-5.jpg); }
+    &.night-6 { background-image: url(images/night-6.jpg); }
+    &.night-7 { background-image: url(images/night-7.jpg); }
+    &.night-8 { background-image: url(images/night-8.jpg); }
+    &.night-9 { background-image: url(images/night-9.jpg); }
+  }
+}
+
 @media (max-width: 800px) {
+  body {
+    &.day-1 { background-image: url(images/sm-day-1.jpg); }
+    &.day-2 { background-image: url(images/sm-day-2.jpg); }
+    &.day-3 { background-image: url(images/sm-day-3.jpg); }
+    &.day-4 { background-image: url(images/sm-day-4.jpg); }
+    &.day-5 { background-image: url(images/sm-day-5.jpg); }
+    &.day-6 { background-image: url(images/sm-day-6.jpg); }
+
+    &.night-1 { background-image: url(images/sm-night-1.jpg); }
+    &.night-2 { background-image: url(images/sm-night-2.jpg); }
+    &.night-3 { background-image: url(images/sm-night-3.jpg); }
+    &.night-4 { background-image: url(images/sm-night-4.jpg); }
+    &.night-5 { background-image: url(images/sm-night-5.jpg); }
+    &.night-6 { background-image: url(images/sm-night-6.jpg); }
+    &.night-7 { background-image: url(images/sm-night-7.jpg); }
+    &.night-8 { background-image: url(images/sm-night-8.jpg); }
+    &.night-9 { background-image: url(images/sm-night-9.jpg); }
+  }
+
   #logo {
     display: none;
   }

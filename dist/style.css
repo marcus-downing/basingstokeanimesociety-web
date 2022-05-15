@@ -28,36 +28,6 @@ body {
     background-color: #468fe2; }
   body.night {
     background-color: #080c80; }
-  body.day-1 {
-    background-image: url(images/day-1.jpg); }
-  body.day-2 {
-    background-image: url(images/day-2.jpg); }
-  body.day-3 {
-    background-image: url(images/day-3.jpg); }
-  body.day-4 {
-    background-image: url(images/day-4.jpg); }
-  body.day-5 {
-    background-image: url(images/day-5.jpg); }
-  body.day-6 {
-    background-image: url(images/day-6.jpg); }
-  body.night-1 {
-    background-image: url(images/night-1.jpg); }
-  body.night-2 {
-    background-image: url(images/night-2.jpg); }
-  body.night-3 {
-    background-image: url(images/night-3.jpg); }
-  body.night-4 {
-    background-image: url(images/night-4.jpg); }
-  body.night-5 {
-    background-image: url(images/night-5.jpg); }
-  body.night-6 {
-    background-image: url(images/night-6.jpg); }
-  body.night-7 {
-    background-image: url(images/night-7.jpg); }
-  body.night-8 {
-    background-image: url(images/night-8.jpg); }
-  body.night-9 {
-    background-image: url(images/night-9.jpg); }
 
 /* Site furniture */
 .btn {
@@ -1085,7 +1055,7 @@ body.genre-filter.genre-filter-dark .anime.anime-genre-dark {
       margin-bottom: -5px; }
   .btn-where-when {
     right: 5px; }
-  .lr, .lre {
+  .lr, .lre, .c3e {
     display: block; }
   #next-showing {
     grid-template-columns: 1fr;
@@ -1097,7 +1067,69 @@ body.genre-filter.genre-filter-dark .anime.anime-genre-dark {
     grid-template-areas: "one two" "three four" "five six" "seven eight";
     grid-gap: 20px; } }
 
+@media (min-width: 801px) {
+  body.day-1 {
+    background-image: url(images/day-1.jpg); }
+  body.day-2 {
+    background-image: url(images/day-2.jpg); }
+  body.day-3 {
+    background-image: url(images/day-3.jpg); }
+  body.day-4 {
+    background-image: url(images/day-4.jpg); }
+  body.day-5 {
+    background-image: url(images/day-5.jpg); }
+  body.day-6 {
+    background-image: url(images/day-6.jpg); }
+  body.night-1 {
+    background-image: url(images/night-1.jpg); }
+  body.night-2 {
+    background-image: url(images/night-2.jpg); }
+  body.night-3 {
+    background-image: url(images/night-3.jpg); }
+  body.night-4 {
+    background-image: url(images/night-4.jpg); }
+  body.night-5 {
+    background-image: url(images/night-5.jpg); }
+  body.night-6 {
+    background-image: url(images/night-6.jpg); }
+  body.night-7 {
+    background-image: url(images/night-7.jpg); }
+  body.night-8 {
+    background-image: url(images/night-8.jpg); }
+  body.night-9 {
+    background-image: url(images/night-9.jpg); } }
+
 @media (max-width: 800px) {
+  body.day-1 {
+    background-image: url(images/sm-day-1.jpg); }
+  body.day-2 {
+    background-image: url(images/sm-day-2.jpg); }
+  body.day-3 {
+    background-image: url(images/sm-day-3.jpg); }
+  body.day-4 {
+    background-image: url(images/sm-day-4.jpg); }
+  body.day-5 {
+    background-image: url(images/sm-day-5.jpg); }
+  body.day-6 {
+    background-image: url(images/sm-day-6.jpg); }
+  body.night-1 {
+    background-image: url(images/sm-night-1.jpg); }
+  body.night-2 {
+    background-image: url(images/sm-night-2.jpg); }
+  body.night-3 {
+    background-image: url(images/sm-night-3.jpg); }
+  body.night-4 {
+    background-image: url(images/sm-night-4.jpg); }
+  body.night-5 {
+    background-image: url(images/sm-night-5.jpg); }
+  body.night-6 {
+    background-image: url(images/sm-night-6.jpg); }
+  body.night-7 {
+    background-image: url(images/sm-night-7.jpg); }
+  body.night-8 {
+    background-image: url(images/sm-night-8.jpg); }
+  body.night-9 {
+    background-image: url(images/sm-night-9.jpg); }
   #logo {
     display: none; }
   #main-title {
