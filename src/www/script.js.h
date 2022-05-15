@@ -287,8 +287,8 @@ function setupRecommendations() {
         document.body.classList.add('genre-filter-'+genre);
         genreLink.classList.add('genre-selected');
       }
-      genreLink.onclick = selectGenre
-      genreLink.ontouchend = selectGenre
+      genreLink.addEventListener('click', selectGenre);
+      genreLink.addEventListener('touchend', selectGenre);
     })(genreLink);
   }
 
@@ -303,8 +303,8 @@ function setupRecommendations() {
   }
 
   let clearLink = document.getElementById('clear-genre');
-  clearLink.onclick = clearGenre
-  clearLink.ontouchend = clearGenre
+  clearLink.addEventListener('click', clearGenre);
+  clearLink.addEventListener('touchend', clearGenre);
 }
 
 function showMap() {
