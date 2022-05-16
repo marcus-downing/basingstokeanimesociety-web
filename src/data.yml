@@ -96,12 +96,18 @@ top10:
       - name: "Working!"
         picture: working
         genre: [ "Comedy", "Slice of life" ]
-      - name: "Eizouken ni wa Te wo Dasu na!"
-        picture: eizouken
-        genre: [ "Slice of life", "Comedy" ]
+      # - name: "Eizouken ni wa Te wo Dasu na!"
+      #   picture: eizouken
+      #   genre: [ "Slice of life", "Comedy" ]
       - name: "Magatsu Wahrheit: ZUERST"
         picture: magatsu-wahrheit-zuerst
         genre: [ "War", "Action", "Mystery" ]
+      - name: "Everything Becomes F: The Perfect Insider"
+        picture: everything-becomes-f
+        genre: [ "Mystery", "Crime", "Thriller" ]
+      # - name: Nichijou
+      #   picture: nichijou
+      #   genre: [ "Comedy" ]
 
   - name: Shrink Laureate
     picture: shrink-laureate
@@ -139,9 +145,12 @@ top10:
       - name: Your Name
         picture: your-name
         genre: [ "Romance", "Mystery" ]
-      - name: "Re:Creators"
-        picture: re-creators
-        genre: [ "Isekai", "Action", "Shounen", "Mecha" ]
+      # - name: "Re:Creators"
+      #   picture: re-creators
+      #   genre: [ "Isekai", "Action", "Shounen", "Mecha" ]
+      - name: Monthly Girls' Nozaki-kun
+        picture: nozaki-kun
+        genre: [ "Comedy", "Romance" ]
 
   - name: NoviceOtaku
     picture: novice-otaku
@@ -278,10 +287,39 @@ top10:
   - name: PB
     picture: pb
     anime:
+      - name: Yuru Camp
+        picture: yuru-camp-s2
+        genre: [ "Slice of life" ]
+      - name: "Eizouken ni wa Te wo Dasu na!"
+        picture: eizouken
+        genre: [ "Slice of life", "Comedy" ]
+      - name: The Irresponsible Captain Tyler
+        picture: irresponsible-captain-tylor
+        genre: [ "Comedy", "Sci fi", "Adventure" ]
+      - name: Adolescense of Utena
+        picture: utena
+        genre: []
+      - name: Fantastic Children
+        picture: fantastic-children
+        genre: [ "Adventure", "Mystery" ]
+      - name: "Re:Creators"
+        picture: re-creators
+        genre: [ "Isekai", "Action", "Shounen", "Mecha" ]
+      - name: "Laputa: Castle In The Sky"
+        picture: laputa
+        genre: [ "Adventure" ]
       - name: Bloom Into You
         picture: bloom-into-you
         genre: [ "Romance", "Drama" ]
-
+      - name: Ghost Hound
+        picture: ghost-hound
+        genre: [ "Mystery" ]
+      - name: Simoun
+        picture: simoun
+        genre: [ "Mystery", "Romance", "Sci fi" ]
+      # - name: Mikagura School Suite
+      #   picture: mikagura-gakuen-kumikyo
+      #   genre: [ "Comedy", "Romance", "Action" ]
 
 past_anime:
   - from: 2006-09-19
