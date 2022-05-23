@@ -1558,37 +1558,18 @@ events:
     class: cinema
     venue: Vue Festival Place
 
-  # - name: "Resume Meetings!"
-  #   date: 2022-04-05
-  #   venue: ""
-
-
-  # - name: Minamicon
-  #   date: 2020-03-06
-  #   venue: Novotel Hotel, Southampton
-  #   class: convention
-
-  # - name: Social Meeting
-  #   date: 2020-03-21
-  #   time: 1pm
-  #   venue: The Tea Bar
-
-  # - name: CosXPo
-  #   date: 2020-04-03
-  #   venue: University of Reading
-  #   class: convention
-
-  # - name: Hibanacon
-  #   date: 2020-11-06
-  #   venue: Jury's Inn, Milton Keynes
-  #   class: convention
-
   - name: No Meeting
     date: 2021-12-21
     class: skip
   - name: No Meeting
     date: 2021-12-28
     class: skip
+
+  - name: Board Games
+    date: 2022-06-09
+    class: social
+    venue: Dice Tower
+    time: 7pm
 
   - name: No Meeting
     date: 2022-12-27

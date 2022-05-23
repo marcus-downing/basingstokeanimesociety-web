@@ -949,6 +949,10 @@ article {
     time {
       background: linear-gradient(#d8edfa, #a2d7f8);
     }
+
+    .event-detail h3 {
+      color: #a2d7f8;
+    }
   }
 
   &.event-movie {
@@ -978,6 +982,10 @@ article {
   &.event-social {
     time {
       background: linear-gradient(#d8fadc, #a2f8ad);
+    }
+
+    .event-detail h3 {
+      color: #a2f8ad;
     }
   }
 
@@ -1036,11 +1044,11 @@ article.event {
     padding-right: 10px;
   }
 
-  &.event-detail-anime {
-    h3 {
-      color: #a2d7f8;
-    }
-  }
+  // &.event-detail-anime {
+  //   h3 {
+  //     color: #a2d7f8;
+  //   }
+  // }
 }
 
 #news-more-switch {

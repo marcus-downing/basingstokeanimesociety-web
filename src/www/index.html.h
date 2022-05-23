@@ -140,7 +140,13 @@ twq('track','PageView');
       {{#if picture}}<img src="images/series/{{picture}}.png">{{/if}}
       {{#if prename}}<p class="series-ident">{{ prename }}</p>{{/if}}
       <h3>{{ name }}</h3>
-      {{#if time}}<p>{{#if link}}<a href='{{ link }}'>{{#if time}}, {{/if}}{{/if}}{{ venue }}{{#if time}}{{ time }}{{/if}}{{#if link}}</a>{{/if}}</h3>{{/if}}
+      <p>
+        {{#if link}}<a href='{{ link }}'>{{/if}}
+        {{#if time}}{{venue}}, {{/if}}{{/if}}{{ venue }}{{ time }}
+
+
+        {{#if link}}</a>{{/if}}
+      </p>
     </div>
     {{/each}}
   </article>
