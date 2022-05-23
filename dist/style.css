@@ -138,6 +138,14 @@ h3 {
     font-size: 23px;
     margin-bottom: 40px; }
 
+a#home-link {
+  display: block;
+  margin: 1em 0;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0 1px 2px black; }
+
 .box {
   padding: 5px 27px;
   background: rgba(40, 60, 120, 0.6);
@@ -1072,6 +1080,11 @@ body.genre-filter.genre-filter-dark .anime.anime-genre-dark {
   display: block; }
 
 @media (min-width: 1281px) {
+  a#home-link {
+    font-size: 18px;
+    float: left;
+    margin-top: 2em;
+    margin-left: -100px; }
   #now-showing figure, #now-showing figure img.series-picture {
     width: 315px;
     height: 450px; }
