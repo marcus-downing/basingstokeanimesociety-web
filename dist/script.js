@@ -226,12 +226,19 @@ function setupHome() {
         html = html + "<p class='series-ident'>"+ev.prename+"</p>";
       }
       html = html + "<h3>"+ev.name+"</h3>\n";
-      if (ev.hasOwnProperty("time")) {
+      if (ev.hasOwnProperty("time") || (ev.hasOwnProperty("venue") && ev.venue)) {
         html = html+"<p>"+a;
         if (ev.hasOwnProperty("venue") && ev.venue) {
-          html = html + ev.venue + (time ? ", " : "");
+          html = html + ev.venue;
+          if (ev.hasOwnProperty("time")) {
+            html = html + (time ? ", " : "");
+            html = html+(time ? time : "");
+          }
+        } else {
+          html = html+(time ? time : "");
         }
-        html = html+(time ? time : "")+_a+"</p>\n";
+
+        html = html+_a+"</p>\n";
       }
       if (ev.price) {
         html = html + "<p>Club fee: "+ev.price+"</p>";
@@ -273,38 +280,72 @@ function setupHome() {
 }
 
 function setupRecommendations() {
+  // clear genre and list selection
+  function clearPick (event) {
+    document.body.classList.remove('genre-filter');
+    document.body.classList.remove('list-filter');
+    for (let genreLink of document.getElementsByClassName('genre')) {
+      let genre = genreLink.dataset.genre;
+      document.body.classList.remove('genre-filter-'+genre);
+      genreLink.classList.remove('genre-selected');
+    }
+
+    for (let listLink of document.getElementsByClassName('pick-list')) {
+      let list = listLink.dataset.list;
+      document.body.classList.remove('list-filter-'+list);
+      listLink.classList.remove('pick-show');
+      document.getElementById('pick-pane-'+list).classList.remove('pick-pane-show');
+    }
+  }
+
+  function pickGenre(genre) {
+    clearPick();
+
+    document.body.classList.add('genre-filter');
+    document.body.classList.add('genre-filter-'+genre);
+    for (let link of document.getElementsByClassName('genre-'+genre)) {
+      link.classList.add('genre-selected');
+    }
+  }
+
+  function pickList(list) {
+    clearPick();
+
+    document.body.classList.add('list-filter')
+    document.body.classList.add('list-filter-'+list);
+    document.getElementById('pick-list-'+list).classList.add('pick-show');
+    document.getElementById('pick-pane-'+list).classList.add('pick-pane-show');
+  }
+
   // select genre
-  for (let genreLink of document.getElementById('search-genres').getElementsByClassName('genre')) {
+  for (let genreLink of document.getElementsByClassName('genre')) {
     (function (genreLink) {
+      let genre = genreLink.dataset.genre;
       function selectGenre(event) {
-        for (let otherGenreLink of document.getElementById('search-genres').getElementsByClassName('genre')) {
-          let otherGenre = otherGenreLink.dataset.genre;
-          document.body.classList.remove('genre-filter-'+otherGenre);
-          otherGenreLink.classList.remove('genre-selected');
-        }
-        let genre = genreLink.dataset.genre;
-        document.body.classList.add('genre-filter');
-        document.body.classList.add('genre-filter-'+genre);
-        genreLink.classList.add('genre-selected');
+        pickGenre(genre);
       }
       genreLink.addEventListener('click', selectGenre);
       genreLink.addEventListener('touchend', selectGenre);
     })(genreLink);
   }
 
-  // clear genre
-  function clearGenre (event) {
-    document.body.classList.remove('genre-filter');
-    for (let genreLink of document.getElementById('search-genres').getElementsByClassName('genre')) {
-      let genre = genreLink.dataset.genre;
-      document.body.classList.remove('genre-filter-'+genre);
-      genreLink.classList.remove('genre-selected');
-    }
+  // select list
+  for (let listLink of document.getElementsByClassName('pick-list')) {
+    (function (listLink) {
+      let list = listLink.dataset.list;
+      function selectList(event) {
+        pickList(list);
+      }
+      listLink.addEventListener('click', selectList);
+      listLink.addEventListener('touchend', selectList);
+    })(listLink);
   }
 
-  let clearLink = document.getElementById('clear-genre');
-  clearLink.addEventListener('click', clearGenre);
-  clearLink.addEventListener('touchend', clearGenre);
+  let clearLink = document.getElementById('clear-filter');
+  if (clearLink !== null) {
+    clearLink.addEventListener('click', clearPick);
+    clearLink.addEventListener('touchend', clearPick);
+  }
 }
 
 function showMap() {

@@ -109,6 +109,15 @@ top10:
       #   picture: nichijou
       #   genre: [ "Comedy" ]
 
+  - name: Blobberu
+    code: slice-of-life
+    title: Blobberu's top 10 slice of life anime
+    picture: blobberu
+    anime:
+      - name: "Working!"
+        picture: working
+        genre: [ "Comedy", "Slice of life" ]
+
   - name: Shrink Laureate
     picture: shrink-laureate
     anime:
@@ -320,6 +329,15 @@ top10:
       # - name: Mikagura School Suite
       #   picture: mikagura-gakuen-kumikyo
       #   genre: [ "Comedy", "Romance", "Action" ]
+
+  - name: PB
+    code: manga
+    title: PB's top 10 manga
+    picture: pb
+    anime:
+      - name: Bloom Into You
+        picture: bloom-into-you
+        genre: [ "Romance", "Drama" ]
 
 past_anime:
   - from: 2006-09-19

@@ -595,6 +595,30 @@ p.series-ident {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px; }
 
+.vpick {
+  list-style: none; }
+  .vpick li {
+    padding: 0;
+    display: block;
+    clear: both;
+    margin: 0.5em 0;
+    cursor: pointer; }
+    .vpick li a {
+      padding: 5px 15px 5px 5px;
+      color: white;
+      font-weight: bold;
+      text-shadow: 0 1px 2px black; }
+      .vpick li a.pick-show {
+        padding-right: 12px;
+        border-right: 3px solid white;
+        border-radius: 3px;
+        background: rgba(0, 0, 0, 0.3); }
+
+.pick-pane {
+  display: none; }
+  .pick-pane.pick-pane-show {
+    display: block; }
+
 time {
   background: white;
   width: 54px;
@@ -808,6 +832,32 @@ article.event {
   line-height: 36px;
   cursor: pointer; }
 
+header.top10pick {
+  height: 170px; }
+
+.top10pick + .top10pick {
+  margin-top: 1.3em; }
+
+.top10pick h2 {
+  margin-top: 0.8em; }
+
+.top10pick a.pick-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .top10pick a.pick-list img {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    margin-right: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); }
+  .top10pick a.pick-list span {
+    display: inline-block; }
+
+.top10pick .vpick {
+  padding: 0;
+  margin: 0 -30px 0 -10px; }
+
 .top10 {
   margin-top: 2em; }
   .top10 > h3 img {
@@ -824,50 +874,55 @@ article.event {
     list-style: none;
     padding: 0;
     margin: 0; }
-    .top10 ul li {
-      clear: both;
-      margin-top: 0;
-      margin-bottom: 20px;
-      height: 156px;
-      padding: 12px; }
-      .top10 ul li img.top10-pic {
-        float: right;
-        margin: -12px -12px 0 20px;
-        width: 126px;
-        height: 180px; }
-      .top10 ul li .top10-index img {
-        display: inline-block;
-        width: 36px;
-        height: 36px;
-        margin-right: -8px;
-        border-radius: 40px;
-        vertical-align: bottom; }
-      .top10 ul li .top10-index span {
-        display: inline-block;
-        color: #f8dda2;
-        font-weight: bold;
-        width: 36px;
-        height: 36px;
-        border-radius: 36px;
-        line-height: 36px;
-        text-align: center;
-        background: rgba(0, 0, 0, 0.4);
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-      .top10 ul li h4 {
-        margin: 2px 0;
-        font-size: 19px; }
-      .top10 ul li:first-child .top10-index span {
-        background: #f8dda2;
-        color: black; }
-      .top10 ul li:nth-child(2) .top10-index span, .top10 ul li:nth-child(3) .top10-index span {
-        border: 2px solid #f8dda2;
-        margin-top: -2px;
-        margin-bottom: -2px; }
+  .top10 .anime {
+    clear: both;
+    margin-top: 0;
+    height: 156px;
+    padding: 12px; }
+    .top10 .anime img.top10-pic {
+      float: right;
+      margin: -12px -12px 0 20px;
+      width: 126px;
+      height: 180px; }
+    .top10 .anime .top10-index img {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      margin-right: -8px;
+      border-radius: 40px;
+      vertical-align: bottom; }
+    .top10 .anime .top10-index span {
+      display: inline-block;
+      color: #f8dda2;
+      font-weight: bold;
+      width: 36px;
+      height: 36px;
+      border-radius: 36px;
+      line-height: 36px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+    .top10 .anime h4 {
+      margin: 2px 0;
+      font-size: 19px; }
+    .top10 .anime:first-child .top10-index span {
+      background: #f8dda2;
+      color: black; }
+    .top10 .anime:nth-child(2) .top10-index span, .top10 .anime:nth-child(3) .top10-index span {
+      border: 2px solid #f8dda2;
+      margin-top: -2px;
+      margin-bottom: -2px; }
 
 .top10-genres {
   line-height: 30px; }
   .top10-genres a {
     cursor: pointer; }
+
+body.genre-filter #top10random, body.list-filter #top10random {
+  display: none; }
+
+body.genre-filter .pick-pane {
+  display: block; }
 
 #clear-genre {
   display: none;

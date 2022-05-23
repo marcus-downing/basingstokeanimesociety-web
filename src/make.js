@@ -9,6 +9,9 @@ const _ = require('lodash');
 
 const util = require('./util.js');
 
+Handlebars.registerHelper('eq', function(value1, value2, options) {
+  return value1 == value2;
+});
 Handlebars.registerHelper('json', function (obj) {
   return JSON.stringify(obj);
 });
@@ -345,7 +348,7 @@ sass.render({
   fs.writeFile('../dist/style.css', result.css, 'utf-8', err => {});
 
   writeTemplate('www/index.html.h', 'index.html', basData);
-  writeTemplate('www/recommendations.html.h', 'recommendations.html', basData);
+  writeTemplate('www/recommendations2.html.h', 'recommendations.html', basData);
   writeTemplate('www/script.js.h', 'script.js', basData);
 });
 
