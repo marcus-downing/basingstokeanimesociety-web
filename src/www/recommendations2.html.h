@@ -38,7 +38,7 @@
 
 <h1 id='main-title'>Basingstoke Anime Society</h1>
 
-<a id='home-link' href='/'>🠔 Home</a>
+<a id='home-link' href='/'><img src='images/back.png'> Home</a>
 
 
 <div class='lr'>
