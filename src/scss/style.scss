@@ -1581,6 +1581,14 @@ body.genre-filter {
   }
   .lr, .lre, .c3e {
     display: block;
+    > * {
+      margin-top: 1em !important;
+    }
+  }
+  .top10 {
+    .anime img.top10-pic {
+      margin-left: 5px;
+    }
   }
   #next-showing {
     grid-template-columns: 1fr;

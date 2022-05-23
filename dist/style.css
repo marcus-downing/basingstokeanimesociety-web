@@ -1127,6 +1127,10 @@ body.genre-filter.genre-filter-dark .anime.anime-genre-dark {
     right: 5px; }
   .lr, .lre, .c3e {
     display: block; }
+    .lr > *, .lre > *, .c3e > * {
+      margin-top: 1em !important; }
+  .top10 .anime img.top10-pic {
+    margin-left: 5px; }
   #next-showing {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;

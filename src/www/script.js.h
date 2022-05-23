@@ -298,6 +298,10 @@ function setupRecommendations() {
     }
   }
 
+  function scrollToResults() {
+    document.getElementById('top10results').scrollIntoView();
+  }
+
   function pickGenre(genre) {
     clearPick();
 
@@ -306,6 +310,7 @@ function setupRecommendations() {
     for (let link of document.getElementsByClassName('genre-'+genre)) {
       link.classList.add('genre-selected');
     }
+    scrollToResults();
   }
 
   function pickList(list) {
@@ -315,6 +320,7 @@ function setupRecommendations() {
     document.body.classList.add('list-filter-'+list);
     document.getElementById('pick-list-'+list).classList.add('pick-show');
     document.getElementById('pick-pane-'+list).classList.add('pick-pane-show');
+    scrollToResults();
   }
 
   // select genre

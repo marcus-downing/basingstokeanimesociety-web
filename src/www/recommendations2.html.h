@@ -72,21 +72,7 @@
 		</div>
 	</div>
 
-	<div>
-		<!-- <div class='top10'>
-			<ul id='top10random'>
-				<li class="box anime  anime-genre-war anime-genre-action">
-					<img src="images/series/alderamin-on-the-sky.png" class="top10-pic">
-					<div class="top10-index top10-index-3"><img src="images/avatars/noviceotaku.png"><span>#3</span></div>
-					<h4>Alderamin on the Sky</h4>
-					<div class="top10-genres">
-						<span class="genre genre-war">War</span>
-						<span class="genre genre-action">Action</span>
-					</div>
-				</li>
-			</ul>
-		</div> -->
-
+	<div id="top10results">
 		{{#each top10}}
 		<section class='top10 pick-pane' id='pick-pane-{{slug name}}{{#if code}}-{{slug code}}{{/if}}' data-show='{{slug name}}{{#if code}}-{{slug code}}{{/if}}'>
 			<ul class='lre'>
@@ -107,31 +93,6 @@
 		{{/each}}
 	</div>
 </div>
-
-<!-- 
-<div class='c3e'>
-	{{#each top10}}
-	<section class='top10'>
-		<h3><img src="images/avatars/{{slug name}}.png">{{name}}'s Top 10</h3>
-
-		<ul>
-		{{#each anime}}
-			<li class="box anime {{#each genre}} anime-genre-{{slug this}}{{/each}}">
-				<img src="images/series/{{picture}}.png" class="top10-pic">
-				<div class="top10-index"><img src="images/avatars/{{slug ../name}}.png"><span>#{{inc @index}}</span></div>
-				<h4>{{name}}</h4>
-				<div class="top10-genres">
-				{{#each genre}}
-					<span class="genre genre-{{slug this}}">{{this}}</span>
-				{{/each}}
-				</div>
-			</li>
-		{{/each}}
-		</ul>
-	</section>
-	{{/each}}
-
-</div> -->
 
 </main>
 
