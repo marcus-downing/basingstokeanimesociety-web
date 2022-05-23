@@ -1595,6 +1595,12 @@ body.genre-filter {
       margin-left: 5px;
     }
   }
+  .anime h4 {
+    font-size: 17px;
+  }
+  .top10-genres {
+    line-height: 28px;
+  }
   #next-showing {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
