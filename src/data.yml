@@ -90,12 +90,12 @@ top10:
       - name: "Astra: Lost in Space"
         picture: astra-lost-in-space
         genre: [ "Adventure", "Sci fi", "Mystery", "Shounen" ]
-      - name: "The Great Passage"
-        picture: great-passage
-        genre: [ "Slice of life", "Drama" ]
-      - name: "Working!"
-        picture: working
-        genre: [ "Comedy", "Slice of life" ]
+      # - name: "The Great Passage"
+      #   picture: great-passage
+      #   genre: [ "Slice of life", "Drama" ]
+      # - name: "Working!"
+      #   picture: working
+      #   genre: [ "Comedy", "Slice of life" ]
       # - name: "Eizouken ni wa Te wo Dasu na!"
       #   picture: eizouken
       #   genre: [ "Slice of life", "Comedy" ]
@@ -108,6 +108,12 @@ top10:
       # - name: Nichijou
       #   picture: nichijou
       #   genre: [ "Comedy" ]
+      - name: Code Geass
+        picture: code-geass
+        genre: [ "Action", "Adventure", "War", "Shounen" ]
+      - name: Charlotte
+        picture: charlotte
+        genre: [ "Action", "Drama" ]
 
   - name: Blobberu
     code: slice-of-life
@@ -117,6 +123,42 @@ top10:
       - name: "Working!"
         picture: working
         genre: [ "Comedy", "Slice of life" ]
+      # - name: "Eizouken ni wa Te wo Dasu na!"
+      #   picture: eizouken
+      #   genre: [ "Slice of life", "Comedy" ]
+      - name: "The Great Passage"
+        picture: great-passage
+        genre: [ "Slice of life", "Drama" ]
+      - name: "Welcome to the NHK!"
+        picture: welcome-to-the-nhk
+        genre: [ "Slice of life", "Comedy" ]
+      # - name: "Tamako Market"
+      #   picture: great-passage
+      #   genre: [ "Slice of life", "Comedy", "Romance" ]
+      - name: "K-ON!"
+        picture: k-on
+        genre: [ "Comedy", "Slice of life", "Music" ]
+      - name: "Blue Spring Ride"
+        picture: blue-spring-ride
+        genre: [ "Romance", "Slice of life" ]
+      - name: "Teasing Master Takagi"
+        picture: takagi-san
+        genre: [ "Romance", "Slice of life", "Comedy" ]
+      # - name: Silver Spoon
+      #   picture: silver-spoon
+      #   genre: [ "Slice of life", "Comedy" ]
+      - name: Non Non Biyori
+        picture: non-non-biyori-non-stop
+        genre: [ "Comedy", "Slice of life" ]
+      - name: Hinamatsuri
+        picture: hinamatsuri
+        genre: [ "Comedy", "Slice of life" ]
+      - name: Nichijou
+        picture: nichijou
+        genre: [ "Comedy", "Slice of life" ]
+      - name: Sing Yesterday For Me
+        picture: sing-yesterday
+        genre: [ "Drama", "Romance", "Slife of life" ]
 
   - name: Shrink Laureate
     picture: shrink-laureate
@@ -307,7 +349,7 @@ top10:
         genre: [ "Comedy", "Sci fi", "Adventure" ]
       - name: Adolescense of Utena
         picture: utena
-        genre: []
+        genre: [ "Drama" ]
       - name: Fantastic Children
         picture: fantastic-children
         genre: [ "Adventure", "Mystery" ]
@@ -330,14 +372,14 @@ top10:
       #   picture: mikagura-gakuen-kumikyo
       #   genre: [ "Comedy", "Romance", "Action" ]
 
-  - name: PB
-    code: manga
-    title: PB's top 10 manga
-    picture: pb
-    anime:
-      - name: Bloom Into You
-        picture: bloom-into-you
-        genre: [ "Romance", "Drama" ]
+  # - name: PB
+  #   code: manga
+  #   title: PB's top 10 manga
+  #   picture: pb
+  #   anime:
+  #     - name: Bloom Into You
+  #       picture: bloom-into-you
+  #       genre: [ "Romance", "Drama" ]
 
 past_anime:
   - from: 2006-09-19
