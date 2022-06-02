@@ -33,7 +33,6 @@ body {
 .btn {
   display: block;
   margin-bottom: 10px;
-  height: 60px;
   cursor: pointer;
   background: none;
   border: 0 none; }
@@ -50,13 +49,15 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
+    .btn i + span {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
   .btn span {
     display: inline-block;
     color: white;
     font-weight: bold;
     border-left-width: 0;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
     padding: 7px 24px;
     vertical-align: middle;
     margin-left: -6px;
@@ -102,6 +103,12 @@ body {
 .btn-discord span {
   background: #5165F6; }
 
+.btn-recommendations span {
+  background: #047848; }
+
+.btn-recommendations span {
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 1px 2px black; }
+
 #main-title {
   display: none; }
 
@@ -126,6 +133,12 @@ h2 {
   text-transform: uppercase;
   font-size: 20px;
   margin-top: 1.5em; }
+  h2.underline {
+    font-size: 26px;
+    box-shadow: inset 0 -22px 0 rgba(20, 30, 60, 0.5);
+    text-shadow: 0 1px 2px black, 0 0 3px black, 0 0 2px black;
+    display: inline-block;
+    padding: 2px 10px; }
 
 h3 {
   font-size: 19px; }
@@ -134,9 +147,10 @@ h3 {
     font-style: normal;
     margin-right: 4px; }
   h3.big {
-    padding-left: 20px;
-    font-size: 23px;
-    margin-bottom: 40px; }
+    padding-left: 10px;
+    font-size: 26px;
+    margin-bottom: 20px;
+    margin-top: 15px; }
 
 a#home-link {
   display: block;
@@ -151,7 +165,7 @@ a#home-link {
 
 .box {
   padding: 5px 27px;
-  background: rgba(40, 60, 120, 0.6);
+  background: rgba(40, 60, 120, 0.7);
   border-radius: 2px;
   margin-top: 2em;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
@@ -219,60 +233,64 @@ a#home-link {
       line-height: 30px;
       font-weight: 600; }
 
-#section-next-meeting {
+#section-next-meeting, #section-next-social {
   position: relative; }
-  #section-next-meeting h2 {
+  #section-next-meeting h2, #section-next-social h2 {
     margin-top: 0.6em;
     margin-bottom: 3px; }
-  #section-next-meeting h3 {
+  #section-next-meeting h3, #section-next-social h3 {
     margin-top: 1.5em; }
-  #section-next-meeting #next-meeting-date {
-    position: relative;
-    padding-left: 100px;
-    margin-top: 20px; }
-    #section-next-meeting #next-meeting-date time {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 82px;
-      width: 82px;
-      background: linear-gradient(#faeed8, #f8dda2); }
-      #section-next-meeting #next-meeting-date time .day {
-        font-size: 46px;
-        line-height: 46px; }
-      #section-next-meeting #next-meeting-date time .month {
-        font-size: 24px;
-        line-height: 24px; }
-    #section-next-meeting #next-meeting-date .next-meeting-side {
-      padding-top: 4px;
-      color: white;
-      font-size: 32px;
-      line-height: 36px;
-      font-weight: bold; }
+  #section-next-meeting .next-social-title, #section-next-social .next-social-title {
+    color: #a2f8ad; }
 
-#section-about {
+.focus-date {
   position: relative;
-  padding-left: 12px;
-  padding-right: 70px; }
-  #section-about .content {
+  padding-left: 100px;
+  margin-top: 20px;
+  min-height: 76px; }
+  .focus-date time {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 82px;
+    width: 82px;
+    background: linear-gradient(#faeed8, #f8dda2); }
+    .focus-date time .day {
+      font-size: 46px;
+      line-height: 46px; }
+    .focus-date time .month {
+      font-size: 24px;
+      line-height: 24px; }
+  .focus-date .focus-date-side {
+    padding-top: 4px;
+    color: white;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px black; }
+
+#about {
+  position: relative;
+  padding: 6px 70px 6px 0; }
+  #about .content {
     margin: -10px 0; }
-  #section-about .content p {
+  #about .content p {
     margin: 26px 0;
     padding-left: 50px;
     font-weight: 600;
     font-size: 16px;
     color: white; }
-    #section-about .content p a, #section-about .content p a:visited {
+    #about .content p a, #about .content p a:visited {
       color: white; }
-    #section-about .content p .icon {
+    #about .content p .icon {
       display: block;
       float: left;
       margin-top: -8px;
       margin-left: -50px; }
-    #section-about .content p img.icon {
+    #about .content p img.icon {
       height: 40px;
       width: 40px; }
-    #section-about .content p .entry-fee {
+    #about .content p .entry-fee {
       width: 36px;
       height: 36px;
       border-radius: 20px;
@@ -286,8 +304,8 @@ a#home-link {
 
 .btn-where-when {
   position: absolute;
-  top: 15px;
-  right: 15px; }
+  top: 10px;
+  right: 0; }
   .btn-where-when i {
     background-color: white;
     background-image: url("images/pin.svg"); }
@@ -963,8 +981,9 @@ body.genre-filter #clear-genre {
   border-radius: 3px;
   line-height: 20px;
   font-size: 13px;
+  text-decoration: none;
   background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.6); }
   .genre.genre-selected {
     position: relative;
     outline: 2px solid black; }
@@ -1118,7 +1137,13 @@ body.genre-filter.genre-filter-dark .anime.anime-genre-dark {
   header#header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 40px; } }
+    grid-gap: 40px; }
+    header#header > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+    header#header section {
+      flex: 1 0 auto; } }
 
 @media (max-width: 1280px) {
   #now-showing figure {

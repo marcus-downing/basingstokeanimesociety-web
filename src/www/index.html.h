@@ -52,38 +52,74 @@ twq('track','PageView');
 
 <header id="header">
 <div>
-<section id='section-next-meeting' class='box'>
-  <h2>Next Meeting</h2>
+  <!-- <section class='box'>
+    <h3 class='big'>Showing anime in Basingstoke every Tuesday.</h3>
+  </section> -->
 
-  <div id="next-meeting-date">
-    <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
-    <div class="next-meeting-side">Tuesday<br>7pm</div>
-  </div>
+  <section id='section-next-meeting' class='box'>
+    <h2>Next Meeting</h2>
 
-  <h3>Venue: <span id="next-meeting-venue">{{ nextMeetingVenue }}</span></h3>
-</section>
+    <article id="next-meeting-date" class="focus-date event-anime">
+      <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
+      <div class="next-meeting-side focus-date-side">Tuesday<br>7pm</div>
+    </article>
 
-<section id='section-discord' class='box'>
-  <h3>Social</h3>
-  <p>Chat with us on Discord</p>
-  <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join our Discord</span></a>
-</section>
+    <h3>Venue: <span id="next-meeting-venue">{{ nextMeetingVenue }}</span></h3>
+  <!-- </section>
+
+  <section id='section-about' class='box'> -->
+
+    <hr>
+
+    <div id='about'>
+      <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Show Map</span></button>
+
+      <div class='content'>
+        <p><img class='icon' src='images/pin.svg'>Function room, upstairs at <a href='https://www.thewhitehartbasingstoke.com/'>The White Hart</a>, Basingstoke RG21 4AE</p>
+        <p><span class='icon entry-fee'>£4</span>Club fee</p>
+        <p><img class='icon' src='images/biohazard-white.svg'>Vaccination required</p>
+        <p><img class="rating-img rating-15 icon" src="images/rating/15.svg">Age requirement</p>
+      </div>
+    </div>
+  </section>
 </div>
 
-<section id='section-about' class='box'>
-  <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Show Map</span></button>
+<div>
+  <section class='box'>
+    <h3 class='big'>Showing anime in Basingstoke every Tuesday.</h3>
+  </section>
 
-  <h3 class='big'>Showing anime in Basingstoke every Tuesday.</h3>
+  <section id='section-next-social' class='box'>
+    <h2>Next Social Event</h2>
 
-  <div class='content'>
-    <p><img class='icon' src='images/pin.svg'>Function room, upstairs at <a href='https://www.thewhitehartbasingstoke.com/'>The White Hart</a>, Basingstoke RG21 4AE</p>
-    <p><span class='icon entry-fee'>£4</span>Club fee</p>
-    <p><img class='icon' src='images/biohazard-white.svg'>Vaccination required</p>
-    <p><img class="rating-img rating-15 icon" src="images/rating/15.svg">Age requirement</p>
-    <!-- <p class='center'><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join our Discord</span></a></p> -->
-  </div>
+    <article id="next-social-date" class="focus-date event-social">
+      <time datetime="{{ nextSocial.date }}"><span class='day'>{{ nextSocialDay }}</span><span class='month'>{{ nextSocialMonth }}</span></time>
+      <div class="next-social-side focus-date-side">{{ nextSocialTitle }}<br>{{ nextSocialWeekday }} {{ nextSocialTime }}</div>
+    </article>
 
-</section>
+    <h3>Venue: <span id="next-social-venue">{{ nextSocialVenue }}</span></h3>
+  </section>
+
+  <section id='section-discord' class='box'>
+    <h3>Social</h3>
+    <p>Chat with us on Discord</p>
+    <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join our Discord</span></a>
+  </section>
+
+  <!-- <section id='section-recommendations' class='box'>
+    <h3>Recommendations</h3>
+    <p>Need a new anime to watch? Check out one of our favourites.</p>
+    <a class='btn btn-recommendations' href='recommendations.html'><span>Recommendations</span></a>
+    <p>
+      <a href='recommendations.html#genre=action' class='genre genre-action'>Action</a>
+      <a href='recommendations.html#genre=romance' class='genre genre-romance'>Romance</a>
+      <a href='recommendations.html#genre=slice-of-life' class='genre genre-slice-of-life'>Slice of life</a>
+      <a href='recommendations.html#genre=comedy' class='genre genre-comedy'>Comedy</a>
+      <a href='recommendations.html#genre=mystery' class='genre genre-mystery'>Mystery</a>
+      ...
+    </p>
+  </section> -->
+</div>
 </header>
 
 <!-- <section id='section-discord' class='box'>
@@ -93,7 +129,7 @@ twq('track','PageView');
 </section> -->
 
 <section id='section-now-showing' class='{{#if options.hiatus}}section-now-showing-hiatus{{/if}}'>
-  <h2>Now Showing</h2>
+  <h2 class='underline'>Now Showing</h2>
 
   <div id='now-showing'>
     <figure id='slot1'>
@@ -115,7 +151,7 @@ twq('track','PageView');
     </figure>
   </div>
 
-  <h2>Coming Soon</h2>
+  <h2 class='underline'>Coming Soon</h2>
 
   <div id='coming-soon'>
   </div>
@@ -129,7 +165,7 @@ twq('track','PageView');
 
 <div class='lr'>
 <section id='section-upcoming'>
-  <h2>Upcoming Events</h2>
+  <h2 class='underline'>Upcoming Events</h2>
 
   <div id='events-list' class='box'>
   {{#each eventsByDate}}
@@ -154,7 +190,7 @@ twq('track','PageView');
 </section>
 
 <section id='news-feed'>
-  <h2>News Feed</h2>
+  <h2 class='underline'>News Feed</h2>
 
   {{#each freshNews}}
   <article class='news box'>

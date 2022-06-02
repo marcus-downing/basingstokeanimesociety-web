@@ -1630,6 +1630,23 @@ events:
     class: social
     venue: Dice Tower
     time: 7pm
+  - name: Board Games
+    date: 2022-07-14
+    class: social
+    venue: Dice Tower
+    time: 7pm
+  - name: Board Games
+    date: 2022-08-11
+    class: social
+    venue: Dice Tower
+    time: 7pm
+  - name: Board Games
+    date: 2022-09-08
+    class: social
+    venue: Dice Tower
+    time: 7pm
+
+
 
   - name: No Meeting
     date: 2022-12-27

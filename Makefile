@@ -30,3 +30,6 @@ bookend2:
 bookend1:
 	mkdir -p bookends
 	cd src; node ./make-bookend1 "$(show1)" "$(date)"
+
+serve:
+	cd src; npx http-server -d false ../dist

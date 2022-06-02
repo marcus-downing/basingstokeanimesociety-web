@@ -23,6 +23,16 @@ function selectBackground() {
     document.getElementsByTagName("BODY")[0].className = bodyClass;
 }
 
+function parseQuery(queryString) {
+    var query = {};
+    var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
+    for (var i = 0; i < pairs.length; i++) {
+        var pair = pairs[i].split('=');
+        query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+    }
+    return query;
+}
+
 window.onload = function () {
   if (isHome) {
     setupHome();
@@ -157,7 +167,7 @@ function setupHome() {
   // var comingSoonCutoff = findCutoff(comingSoon.length, options.comingSoonRows);
   comingSoon = futureN(comingSoon, 12);
   comingSoon = excludeSeries(comingSoon, [currentSlot1, currentSlot2, currentSlot3]);
-  comingSoon = futureN(comingSoon, 8);
+  comingSoon = futureN(comingSoon, 5);
 
   var comingSoonHTML = '';
   for (item of comingSoon) {
@@ -251,31 +261,67 @@ function setupHome() {
   document.getElementById('events-list').innerHTML = eventsHTML;
 
   // adjust the next event headline
-  var mainEvents = [];
-  for (event of events) {
+  // var mainEvents = [];
+  // for (event of events) {
+  //   for (ev of event.events) {
+  //     switch (ev.class) {
+  //       case 'esports':
+  //       case 'cinema':
+  //       case 'skip':
+  //       case 'new-series':
+  //         continue;
+
+  //       default:
+  //         mainEvents.push(ev);
+  //     }
+  //   }
+  // }
+  // var nextEvent = mainEvents[0];
+
+  var meetings = [];
+  var social = [];
+  for (var event of events) {
     for (ev of event.events) {
       switch (ev.class) {
-        case 'esports':
-        case 'cinema':
-        case 'skip':
-        case 'new-series':
-          continue;
+        case 'anime':
+          meetings.push(ev);
+          break;
 
-        default:
-          mainEvents.push(ev);
+        case 'social':
+          social.push(ev);
+          break;
       }
     }
   }
-  var nextEvent = mainEvents[0];
+
+  // next main meeting
+  var nextMeeting = meetings[0];
   
-  document.getElementById('next-meeting-date').innerHTML = "<time datetime='"+nextEvent.date+"'><span class='day'>"+nextEvent.day+"</span><span class='month'>"+nextEvent.month+"</span></time>"+
-    "<div class='next-meeting-side'>"+nextEvent.weekday+"<br>"+nextEvent.time+"</div>";
+  document.getElementById('next-meeting-date').innerHTML = "<time datetime='"+nextMeeting.date+"'><span class='day'>"+nextMeeting.day+"</span><span class='month'>"+nextMeeting.month+"</span></time>"+
+    "<div class='next-meeting-side focus-date-side'>"+nextMeeting.weekday+"<br>"+nextMeeting.time+"</div>";
   // document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);
   if (document.getElementById('next-meeting-venue')) {
-    document.getElementById('next-meeting-venue').innerHTML = nextEvent.venue;
+    document.getElementById('next-meeting-venue').innerHTML = nextMeeting.venue;
   }
   if (document.getElementById('next-meeting-address')) {
-    document.getElementById('next-meeting-address').innerHTML = nextEvent.address;
+    document.getElementById('next-meeting-address').innerHTML = nextMeeting.address;
+  }
+
+  // next social
+  if (social.length > 0) {
+    var nextSocial = social[0];
+
+    document.getElementById('next-social-date').innerHTML = "<time datetime='"+nextSocial.date+"'><span class='day'>"+nextSocial.day+"</span><span class='month'>"+nextSocial.month+"</span></time>"+
+      "<div class='next-social-side focus-date-side'><span class='next-social-title'>"+nextSocial.name+"</span><br>"+nextSocial.weekday+" "+nextSocial.time+"</div>";
+    // document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);
+    if (document.getElementById('next-social-venue')) {
+      document.getElementById('next-social-venue').innerHTML = nextSocial.venue;
+    }
+    if (document.getElementById('next-social-address')) {
+      document.getElementById('next-social-address').innerHTML = nextSocial.address;
+    }
+  } else {
+    document.getElementById('section-next-social').remove();
   }
 }
 
@@ -352,6 +398,18 @@ function setupRecommendations() {
     clearLink.addEventListener('click', clearPick);
     clearLink.addEventListener('touchend', clearPick);
   }
+
+  // initial selection
+  setTimeout(function () {
+    if (window.location.hash !== null && window.location.hash.length > 1) {
+      let hash = window.location.hash.substring(1);
+      let vars = parseQuery(hash);
+
+      if (vars.hasOwnProperty('genre')) {
+        pickGenre(vars.genre);
+      }
+    }
+  });
 }
 
 function showMap() {
