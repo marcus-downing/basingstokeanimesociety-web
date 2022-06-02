@@ -1243,8 +1243,14 @@ body.genre-filter.genre-filter-dark .anime.anime-genre-dark {
   main {
     padding-left: 10px;
     padding-right: 80px; }
-  #now-showing figure, #now-showing figure img.series-picture {
-    width: 28.4vw; }
+  #now-showing {
+    display: block; }
+    #now-showing figure {
+      display: block;
+      width: auto;
+      margin-bottom: 1em !important; }
+      #now-showing figure img.series-picture {
+        width: 100%; }
   #section-discord .btn-discord {
     position: revert; }
   #map-overlay {

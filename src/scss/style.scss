@@ -1726,8 +1726,20 @@ body.genre-filter {
     padding-left: 10px;
     padding-right: 80px;
   }
-  #now-showing figure {
-    &, img.series-picture { width: 28.4vw; }
+  #now-showing {
+    display: block;
+    figure {
+      display: block;
+      width: auto;
+      margin-bottom: 1em !important;
+
+      img.series-picture {
+        width: 100%;
+      }
+    }
+    // figure {
+    //   &, img.series-picture { width: 28.4vw; }
+    // }
   }
   #section-discord {
     .btn-discord {

@@ -377,7 +377,7 @@ function setupRecommendations() {
         pickGenre(genre);
       }
       genreLink.addEventListener('click', selectGenre);
-      genreLink.addEventListener('touchend', selectGenre);
+      // genreLink.addEventListener('touchend', selectGenre);
     })(genreLink);
   }
 
@@ -389,14 +389,14 @@ function setupRecommendations() {
         pickList(list);
       }
       listLink.addEventListener('click', selectList);
-      listLink.addEventListener('touchend', selectList);
+      // listLink.addEventListener('touchend', selectList);
     })(listLink);
   }
 
   let clearLink = document.getElementById('clear-filter');
   if (clearLink !== null) {
     clearLink.addEventListener('click', clearPick);
-    clearLink.addEventListener('touchend', clearPick);
+    // clearLink.addEventListener('touchend', clearPick);
   }
 
   // initial selection
