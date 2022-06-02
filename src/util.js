@@ -14,6 +14,12 @@ function padNumber(num, digits) {
   return num;
 }
 
+let dayFormat = new Intl.DateTimeFormat('en-GB', { day: 'numeric' });
+function formatDay(date) {
+  let parts = _.keyBy(dayFormat.formatToParts(date), 'type');
+  return parts.day.value;
+}
+
 let shortDateFormat = new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'numeric', day: 'numeric' });
 function formatShortDate(date) {
   let parts = _.keyBy(shortDateFormat.formatToParts(date), 'type');
@@ -104,6 +110,7 @@ function md5sum(data, digits = 6) {
 }
 
 module.exports = {
+  formatDay,
   formatShortMonth,
   formatShortDate,
   formatMediumDate,

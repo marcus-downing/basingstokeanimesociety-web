@@ -312,6 +312,27 @@ basData.nextMeeting = util.formatLongDate(nextEvent.date);
 basData.nextMeetingVenue = nextEvent.venue;
 basData.nextMeetingAddress = venueAddress[nextEvent.venue];
 
+let socialEvents = _.filter(events, event => {
+  switch(event.class) {
+    case 'social':
+    case 'cinema':
+      return true;
+
+    default:
+      return false;
+  }
+})
+
+if (socialEvents.length > 0) {
+  let nextSocial = socialEvents[0];
+  basData.nextSocialTitle = nextSocial.name;
+  basData.nextSocialDay = util.formatDay(nextSocial.date);
+  basData.nextSocialMonth = util.formatShortMonth(nextSocial.date);
+  basData.nextSocialWeekday = util.weekday(nextSocial.date);
+  basData.nextSocialTime = nextSocial.time;
+  basData.nextSocialVenue = nextSocial.venue;
+}
+
 // Recommendations
 
 _.each(basData.top10, person => {
