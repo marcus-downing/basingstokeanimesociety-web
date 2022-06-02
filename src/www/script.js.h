@@ -345,7 +345,7 @@ function setupRecommendations() {
   }
 
   function scrollToResults() {
-    document.getElementById('top10results').scrollIntoView();
+    document.getElementById('top10results').scrollIntoView({ block: 'start', behavior: 'smooth' });
   }
 
   function pickGenre(genre) {
