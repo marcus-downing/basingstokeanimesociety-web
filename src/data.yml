@@ -1372,6 +1372,11 @@ slot1:
     picture: aldnoah-zero
     rating: 15
 
+  - from: 2022-10-04
+    name: "Moriarty The Patriot"
+    picture: moriarty
+    rating: 15
+
 slot2:
   - from: 2019-01-08
     name: Hunter &times; Hunter
@@ -1430,6 +1435,11 @@ slot2:
     name: "Dr Stone"
     picture: dr-stone
     rating: 12
+
+  - from: 2022-09-27
+    name: Beyond The Boundary
+    picture: beyond-the-boundary
+    rating: 15
 
 slot3:
   - from: 2020-01-07
@@ -1528,6 +1538,16 @@ slot3:
   - from: 2022-07-12
     name: "By the Grace of the Gods"
     picture: by-the-grace-of-the-gods
+    rating: 12
+
+  - from: 2022-08-23
+    name: "Love, Chunibyou & Other Delusions"
+    picture: chunibyou
+    rating: 12
+
+  - from: 2022-10-04
+    name: "Wave, Listen to Me!"
+    picture: wave-listen-to-me
     rating: 12
 
 movies:
