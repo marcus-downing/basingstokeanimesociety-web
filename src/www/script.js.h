@@ -284,6 +284,7 @@ function setupHome() {
     for (ev of event.events) {
       switch (ev.class) {
         case 'anime':
+        case 'online':
           meetings.push(ev);
           break;
 

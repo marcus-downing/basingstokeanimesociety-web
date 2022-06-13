@@ -233,12 +233,13 @@ tuesday.setSeconds(0);
 tuesday.setMilliseconds(0);
 
 const greatReturn = new Date('April 5, 2022 00:00:00');
+basData.onlineDates = basData.onlineDates.map((date) => util.formatShortDate(date))
 
 for (var i = 0; i < 30; i++) {
   let date = new Date(tuesday);
   date.setDate(date.getDate() + i*7);
 
-  let online = date < greatReturn;
+  let online = date < greatReturn || basData.onlineDates.includes(util.formatShortDate(date));
   // console.log("Comparing dates: ", date.getDate(), greatReturn.getDate());
 
   let event = {

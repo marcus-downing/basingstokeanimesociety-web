@@ -64,10 +64,13 @@ twq('track','PageView');
       <div class="next-meeting-side focus-date-side">Tuesday<br>7pm</div>
     </article>
 
-    <h3>Venue: <span id="next-meeting-venue">{{ nextMeetingVenue }}</span></h3>
-  <!-- </section>
+    <div style='position: relative'>
+    {{#if (eq nextMeetingVenue 'Discord')}}
+    <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA' style='top: -15px; right: 0'><i></i><span>Join our Discord</span></a>
+    {{/if}}
 
-  <section id='section-about' class='box'> -->
+    <h3>Venue: <span id="next-meeting-venue">{{ nextMeetingVenue }}</span></h3>
+    </div>
 
     <hr>
 

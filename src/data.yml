@@ -18,6 +18,9 @@ options:
   comingSoonRows: 3
   newsCutoff: 0
 
+onlineDates:
+  - 2022-06-14
+
 news:
   - title: Basingstoke Anime Society is moving online
     date: 2020-03-18
