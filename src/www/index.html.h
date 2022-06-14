@@ -65,9 +65,9 @@ twq('track','PageView');
     </article>
 
     <div style='position: relative'>
-    {{#if (eq nextMeetingVenue 'Discord')}}
+    <!-- {{#if (eq nextMeetingVenue 'Discord')}}
     <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA' style='top: -15px; right: 0'><i></i><span>Join our Discord</span></a>
-    {{/if}}
+    {{/if}} -->
 
     <h3>Venue: <span id="next-meeting-venue">{{ nextMeetingVenue }}</span></h3>
     </div>
@@ -96,8 +96,8 @@ twq('track','PageView');
     <h2>Next Social Event</h2>
 
     <article id="next-social-date" class="focus-date event-social">
-      <time datetime="{{ nextSocial.date }}"><span class='day'>{{ nextSocialDay }}</span><span class='month'>{{ nextSocialMonth }}</span></time>
-      <div class="next-social-side focus-date-side">{{ nextSocialTitle }}<br>{{ nextSocialWeekday }} {{ nextSocialTime }}</div>
+      <time datetime="{{ nextSocial.date }}"><span class='day'></span><span class='month'></span></time>
+      <div class="next-social-side focus-date-side"><br></div>
     </article>
 
     <h3>Venue: <span id="next-social-venue">{{ nextSocialVenue }}</span></h3>
