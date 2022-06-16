@@ -350,11 +350,11 @@ _.each(basData.top10, person => {
 
 // compile sources
 
-function writeTemplate(src, dest, data) {
+function writeTemplate(src, dest, data, callback = (err) => {}) {
     let sourceData = fs.readFileSync(src, 'utf-8');
     let template = Handlebars.compile(sourceData);
     let compiled = template(data);
-    fs.writeFile('../dist/'+dest, compiled, 'utf-8', err => {});
+    fs.writeFile('../dist/'+dest, compiled, 'utf-8', callback);
 }
 
 // stylesheet
@@ -369,9 +369,13 @@ sass.render({
   basData.stylesheetVersion = util.md5sum(result.css);
   fs.writeFile('../dist/style.css', result.css, 'utf-8', err => {});
 
-  writeTemplate('www/index.html.h', 'index.html', basData);
-  writeTemplate('www/recommendations2.html.h', 'recommendations.html', basData);
-  writeTemplate('www/script.js.h', 'script.js', basData);
+  writeTemplate('www/script.js.h', 'script.js', basData, (err) => {
+    let scriptData = fs.readFileSync('../dist/script.js');
+    basData.scriptVersion = util.md5sum(scriptData);
+    
+    writeTemplate('www/index.html.h', 'index.html', basData);
+    writeTemplate('www/recommendations2.html.h', 'recommendations.html', basData);
+  });
 });
 
 
