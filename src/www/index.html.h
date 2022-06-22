@@ -65,9 +65,9 @@ twq('track','PageView');
     </article>
 
     <div style='position: relative'>
-    {{#if (eq nextMeetingVenue 'Discord')}}
+    <!-- {{#if (eq nextMeetingVenue 'Discord')}}
     <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA' style='top: -15px; right: 0'><i></i><span>Join our Discord</span></a>
-    {{/if}}
+    {{/if}} -->
 
     <h3>Venue: <span id="next-meeting-venue">{{ nextMeetingVenue }}</span></h3>
     </div>
