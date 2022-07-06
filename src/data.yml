@@ -1664,12 +1664,46 @@ events:
     class: social
     venue: Dice Tower
     time: 6pm
+  # - name: Board Games
+  #   date: 2022-09-08
+  #   class: social
+  #   venue: Dice Tower
+  #   time: 6pm
+  - name: Blobberu's Birthday Bash
+    date: 2022-09-10
+    class: social
+    venue: Dice Tower
+    time: 5pm
+  # - name: Board Games
+  #   date: 2022-10-13
+  #   class: social
+  #   venue: Dice Tower
+  #   time: 6pm
+  - name: Shrink Laureate's Birthday Board Games
+    date: 2022-10-15
+    class: social
+    venue: Dice Tower
+    time: 1pm
   - name: Board Games
-    date: 2022-09-08
+    date: 2022-11-10
     class: social
     venue: Dice Tower
     time: 6pm
-
+  - name: Board Games
+    date: 2022-12-08
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2023-01-12
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2023-02-
+    class: social
+    venue: Dice Tower
+    time: 6pm
 
 
   - name: No Meeting

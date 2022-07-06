@@ -29,8 +29,8 @@ let basData = fs.readFileSync('data.yml');
 basData = yaml.safeLoad(basData);
 
 basData = _.defaults({
-  maxEvents: 18,
-  windowEvents: 30,
+  maxEvents: 24,
+  windowEvents: 40,
   maxTweets: 10,
 }, basData);
 

@@ -617,7 +617,7 @@ p.series-ident {
 .lre {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px; }
+  grid-gap: 0 20px; }
 
 .c3e {
   display: grid;
@@ -734,10 +734,11 @@ article {
     background: linear-gradient(#d8fadc, #a2f8ad); }
 
 #events-list {
-  margin-top: 1em; }
+  margin-top: 1em;
+  padding: 2px 27px 5px 18px; }
 
 article.event {
-  margin: 1.5em 0;
+  margin: 1em 0 1.5em 0;
   clear: left; }
 
 .event-detail {
@@ -887,60 +888,63 @@ header.top10pick {
   padding: 0;
   margin: 0 -30px 0 -10px; }
 
-.top10 {
-  margin-top: 2em; }
-  .top10 > h3 img {
-    margin-top: -16px;
-    width: 60px;
-    height: 60px;
-    border-radius: 60px;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); }
-  .top10 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-  .top10 .anime {
-    clear: both;
-    margin-top: 0;
-    height: 156px;
-    padding: 12px; }
-    .top10 .anime img.top10-pic {
-      float: right;
-      margin: -12px -12px 0 20px;
-      width: 126px;
-      height: 180px; }
-    .top10 .anime .top10-index img {
-      display: inline-block;
-      width: 36px;
-      height: 36px;
-      margin-right: -8px;
-      border-radius: 40px;
-      vertical-align: bottom; }
-    .top10 .anime .top10-index span {
-      display: inline-block;
-      color: #f8dda2;
-      font-weight: bold;
-      width: 36px;
-      height: 36px;
-      border-radius: 36px;
-      line-height: 36px;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.4);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-    .top10 .anime h4 {
-      margin: 2px 0;
-      font-size: 19px; }
-    .top10 .anime:first-child .top10-index span {
-      background: #f8dda2;
-      color: black; }
-    .top10 .anime:nth-child(2) .top10-index span, .top10 .anime:nth-child(3) .top10-index span {
-      border: 2px solid #f8dda2;
-      margin-top: -2px;
-      margin-bottom: -2px; }
+#top10results {
+  margin-top: 1em; }
+
+.top10 > h3 img {
+  margin-top: -16px;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); }
+
+.top10 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.top10 .anime {
+  clear: both;
+  margin-top: 1em;
+  height: 156px;
+  padding: 12px; }
+  .top10 .anime img.top10-pic {
+    float: right;
+    margin: -12px -12px 0 20px;
+    width: 126px;
+    height: 180px; }
+  .top10 .anime .top10-index img {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-right: -8px;
+    border-radius: 40px;
+    vertical-align: bottom; }
+  .top10 .anime .top10-index span {
+    display: inline-block;
+    color: #f8dda2;
+    font-weight: bold;
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+  .top10 .anime h4 {
+    margin: 2px 0;
+    font-size: 19px; }
+  .top10 .anime:first-child .top10-index span {
+    background: #f8dda2;
+    color: black; }
+  .top10 .anime:nth-child(2) .top10-index span, .top10 .anime:nth-child(3) .top10-index span {
+    border: 2px solid #f8dda2;
+    margin-top: -2px;
+    margin-bottom: -2px; }
 
 .top10-genres {
   line-height: 30px; }

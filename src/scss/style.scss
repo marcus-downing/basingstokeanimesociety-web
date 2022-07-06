@@ -908,7 +908,7 @@ p.series-ident {
 .lre {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 0 20px;
 }
 
 .c3e {
@@ -1100,10 +1100,11 @@ article {
 
 #events-list {
   margin-top: 1em;
+  padding: 2px 27px 5px 18px;
 }
 
 article.event {
-  margin: 1.5em 0;
+  margin: 1em 0 1.5em 0;
   clear: left;
 }
 
@@ -1308,8 +1309,12 @@ header.top10pick {
   }
 }
 
+#top10results {
+  margin-top: 1em;
+}
+
 .top10 {
-  margin-top: 2em;
+  // margin-top: 2em;
 
   > h3 {
     img {
@@ -1332,7 +1337,7 @@ header.top10pick {
   }
   .anime {
     clear: both;
-    margin-top: 0;
+    margin-top: 1em;
     height: 156px;
     padding: 12px;
 

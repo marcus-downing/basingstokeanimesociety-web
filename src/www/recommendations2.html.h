@@ -83,7 +83,7 @@
 					<h4>{{name}}</h4>
 					<div class="top10-genres">
 					{{#each genre}}
-						<span class="genre genre-{{slug this}}">{{this}}</span>
+						<a class="genre genre-{{slug this}}" data-genre='{{slug this}}'>{{this}}</a>
 					{{/each}}
 					</div>
 				</li>
