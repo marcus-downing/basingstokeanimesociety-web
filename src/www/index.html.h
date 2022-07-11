@@ -181,7 +181,7 @@ twq('track','PageView');
       <h3>{{ name }}</h3>
       <p>
         {{#if link}}<a href='{{ link }}'>{{/if}}
-        {{#if time}}{{#if venue}}{{venue}}, {{time}}{{else}}{{time}}{{/if}}{{else}}{{#if venue}}{{ venue }}{{/if}}{{/if}}
+        {{#if time}}{{#if venue}}{{venue}}, {{shortWeekday}} {{time}}{{else}}{{shortWeekday}} {{time}}{{/if}}{{else}}{{#if venue}}{{ venue }}{{/if}}{{/if}}
         {{#if link}}</a>{{/if}}
       </p>
     </div>

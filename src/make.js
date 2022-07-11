@@ -143,6 +143,7 @@ events = _.map(events, event => {
     shortDate: util.formatShortDate(event.date),
     day: event.date.getDate(),
     weekday: util.weekday(event.date),
+    shortWeekday: util.shortWeekday(event.date),
     month: util.formatShortMonth(event.date),
   });
   let venue = "";
@@ -184,6 +185,7 @@ _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
           mediumDate: util.formatMediumDate(date),
           shortDate: util.formatShortDate(date),
           weekday: util.weekday(date),
+          shortWeekday: (movie ? util.shortWeekday(date) : ''),
           time: hour+"pm",
           day: date.getDate(),
           month: util.formatShortMonth(date),
@@ -249,6 +251,7 @@ for (var i = 0; i < 30; i++) {
     shortDate: util.formatShortDate(date),
     time: "7pm",
     weekday: "Tuesday",
+    shortWeekday: util.shortWeekday(date),
     day: date.getDate(),
     month: util.formatShortMonth(date),
     name: online ? 'Online Meeting' : 'Anime Society Meeting',

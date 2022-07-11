@@ -219,9 +219,6 @@ function setupHome() {
       "<time datetime='"+event.date+"'><span class='day'>"+event.day+"</span><span class='month'>"+event.month+"</span></time>\n";
     for (ev of event.events) {
       var time = false;
-      if (ev.hasOwnProperty("time")) {
-        time = ev.time;
-      }
       var a = "";
       var _a = "";
       if (ev.hasOwnProperty("link")) {
@@ -241,11 +238,13 @@ function setupHome() {
         if (ev.hasOwnProperty("venue") && ev.venue) {
           html = html + ev.venue;
           if (ev.hasOwnProperty("time")) {
-            html = html + (time ? ", " : "");
-            html = html+(time ? time : "");
+            html = html + ", ";
+            if (ev.hasOwnProperty("shortWeekday")) html = html + ev.shortWeekday + " ";
+            html = html + ev.time
           }
         } else {
-          html = html+(time ? time : "");
+          if (ev.hasOwnProperty("shortWeekday")) html = html + ev.shortWeekday + " ";
+          html = html+ev.time;
         }
 
         html = html+_a+"</p>\n";

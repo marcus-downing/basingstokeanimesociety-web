@@ -732,6 +732,8 @@ article {
     background: linear-gradient(#fad8f7, #f8a2ed); }
   article.news time {
     background: linear-gradient(#d8fadc, #a2f8ad); }
+  article.event-skip time span {
+    color: #b00; }
 
 #events-list {
   margin-top: 1em;

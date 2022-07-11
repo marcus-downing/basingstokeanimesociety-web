@@ -44,6 +44,12 @@ function weekday(date) {
   return parts.weekday.value;
 }
 
+let shortWeekdayFormat = new Intl.DateTimeFormat('en-GB', { weekday: 'short' });
+function shortWeekday(date) {
+  let parts = _.keyBy(shortWeekdayFormat.formatToParts(date), 'type');
+  return parts.weekday.value;
+}
+
 function formatShortTime(time) {
   return time;
 }
@@ -117,6 +123,7 @@ module.exports = {
   formatLongDate,
   formatShortTime,
   weekday,
+  shortWeekday,
   currentAndFuture,
   futureN,
   future,
