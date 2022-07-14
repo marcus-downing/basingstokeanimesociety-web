@@ -732,6 +732,8 @@ article {
     background: linear-gradient(#faddd8, #f8b3a2); }
     article.event-cinema time .time__special {
       border-color: #f8b3a2; }
+  article.event-cinema .event-detail h3 {
+    color: #f8b3a2; }
   article.event-convention time {
     background: linear-gradient(#fad8f7, #f8a2ed); }
   article.news time {
