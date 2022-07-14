@@ -91,6 +91,18 @@ function future(items, key = 'date', requireName = true) {
   return futureN(items, 100, key, requireName);
 }
 
+function tomorrow() {
+  let date = new Date();
+  date.setDate(date.getDate() + 1);
+  return date;
+}
+
+function yesterday() {
+  let date = new Date();
+  date.setDate(date.getDate() - 1);
+  return date;
+}
+
 function backdate(items, key = 'from') {
   return _.map(items, item => {
     if (!_.has(item, key)) {
@@ -127,6 +139,8 @@ module.exports = {
   currentAndFuture,
   futureN,
   future,
+  tomorrow,
+  yesterday,
   backdate,
   md5sum,
 };

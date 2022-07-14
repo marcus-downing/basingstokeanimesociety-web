@@ -130,7 +130,8 @@ let venueAddress = {
 
 let now = new Date(Date.now());
 console.log("Today:           ", util.formatShortDate(now));
-let events = _.filter(basData.events, event => event.date >= now);
+console.log("Yesterday:       ", util.formatShortDate(util.yesterday()));
+let events = _.filter(basData.events, event => event.date >= util.yesterday());
 let skipDates = [];
 events = _.map(events, event => {
   event = _.defaults(event, {
