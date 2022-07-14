@@ -1072,6 +1072,9 @@ article {
   &.event-social {
     time {
       background: linear-gradient(#d8fadc, #a2f8ad);
+      .time__special {
+        border-color: #a2f8ad;
+      }
     }
 
     .event-detail h3 {
@@ -1082,6 +1085,9 @@ article {
   &.event-cinema {
     time {
       background: linear-gradient(#faddd8, #f8b3a2);
+      .time__special {
+        border-color: #f8b3a2;
+      }
     }
   }
 
@@ -1101,6 +1107,16 @@ article {
     time span {
       color: #b00;
     }
+  }
+
+  .time__special {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #a2f8ad;
+    border-radius: 5px;
   }
 }
 

@@ -173,7 +173,7 @@ twq('track','PageView');
   <div id='events-list' class='box'>
   {{#each eventsByDate}}
   <article id='upcoming-{{ shortDate }}' class='event event-{{ class }}'>
-    <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
+    <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span>{{#if special}}<span class='time__special'></span>{{/if}}</time>
     {{#each events}}
     <div class='event-detail event-detail-{{ class }}'>
       {{#if picture}}<img src="images/series/{{picture}}.png">{{/if}}

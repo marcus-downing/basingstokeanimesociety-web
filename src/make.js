@@ -145,6 +145,7 @@ events = _.map(events, event => {
     weekday: util.weekday(event.date),
     shortWeekday: util.shortWeekday(event.date),
     month: util.formatShortMonth(event.date),
+    special: event.class == 'cinema',
   });
   let venue = "";
   switch(event.class) {
@@ -284,6 +285,12 @@ basData.eventsByDate = _(events).groupBy(e => util.formatShortDate(e.date)).map(
   //     }
   //   }
   // }
+  let special = false;
+  for (let ev of evs) {
+    if (ev.special) {
+      special = true;
+    }
+  }
   
   return {
     date: evs[0].date,
@@ -293,6 +300,7 @@ basData.eventsByDate = _(events).groupBy(e => util.formatShortDate(e.date)).map(
     weekday: evs[0].weekday,
     class: cls,
     events: evs,
+    special: special
   };
 }).values().sortBy('shortDate').value().slice(0, basData.windowEvents);
 // console.log(JSON.stringify(basData.eventsByDate, null, 2));

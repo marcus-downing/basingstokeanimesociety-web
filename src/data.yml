@@ -1659,6 +1659,18 @@ events:
     class: social
     venue: Dice Tower
     time: 6pm
+  - name: Fruits Basket -Prelude-
+    date: 2022-07-20
+    class: cinema
+    venue: Vue Basingstoke
+    time: 7.30pm
+    special: true
+  - name: The Deer King
+    date: 2022-07-27
+    class: cinema
+    venue: Vue Basingstoke
+    time: 7pm
+    special: true
   - name: Board Games
     date: 2022-08-11
     class: social
@@ -1674,6 +1686,12 @@ events:
     class: social
     venue: Dice Tower
     time: 5pm
+  - name: 16th Anniversary BBQ
+    date: 2022-09-17
+    class: social
+    venue: Swarraton Village Hall
+    time: 11am
+    special: true
   # - name: Board Games
   #   date: 2022-10-13
   #   class: social

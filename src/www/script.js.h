@@ -216,7 +216,7 @@ function setupHome() {
   var event;
   for (event of events) {
     var html = "<article id='upcoming-"+event.date+"' class='event event-"+event.class+"'>\n"+
-      "<time datetime='"+event.date+"'><span class='day'>"+event.day+"</span><span class='month'>"+event.month+"</span></time>\n";
+      "<time datetime='"+event.date+"'><span class='day'>"+event.day+"</span><span class='month'>"+event.month+"</span>"+(event.special ? "<span class='time__special'></span>" : "")+"</time>\n";
     for (ev of event.events) {
       var time = false;
       var a = "";
