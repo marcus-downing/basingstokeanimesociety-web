@@ -77,6 +77,8 @@ setInterval(selectBackground, 300000); // 5 minutes
 
 function setupHome() {
   var now = new Date(Date.now());
+  var yesterday = new Date(now);
+  yesterday.setDate(yesterday.getDate() - 1);
 
   // adjust the showing anime
   function showingAnime(slot) {
@@ -207,7 +209,7 @@ function setupHome() {
 
   // adjust the events list
   events = events.filter(function (event) {
-    return Date.parse(event.date) >= now;
+    return Date.parse(event.date) >= yesterday;
   });
   events = events.slice(0, {{ maxEvents }});
   // var nextEvent = events[0].events[0];
