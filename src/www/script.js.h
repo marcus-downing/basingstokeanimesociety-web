@@ -42,6 +42,8 @@ window.onload = function () {
     setupRecommendations();
   }
 
+  setupSlideshow();
+
   // add hover on all the rating symbols
   function addRatingHover(item) {
     var img = item.getElementsByClassName("rating-img")[0];
@@ -412,6 +414,22 @@ function setupRecommendations() {
       }
     }
   });
+}
+
+function setupSlideshow() {
+  for (let slideshow of document.getElementsByClassName('slideshow')) {
+    (function (slideshow) {
+      let pos = 1;
+      setInterval(function () {
+        slideshow.classList.remove('pos'+pos);
+        pos++;
+        if (pos > 4) {
+          pos -= 4;
+        }
+        slideshow.classList.add('pos'+pos);
+      }, 3000);
+    })(slideshow);
+  }
 }
 
 function showMap() {

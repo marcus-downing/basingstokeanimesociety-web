@@ -52,9 +52,9 @@ twq('track','PageView');
 
 <header id="header">
 <div>
-  <!-- <section class='box'>
+  <section class='box'>
     <h3 class='big'>Showing anime in Basingstoke every Tuesday.</h3>
-  </section> -->
+  </section>
 
   <section id='section-next-meeting' class='box'>
     <h2>Next Meeting</h2>
@@ -88,9 +88,9 @@ twq('track','PageView');
 </div>
 
 <div>
-  <section class='box'>
+  <!-- <section class='box'>
     <h3 class='big'>Showing anime in Basingstoke every Tuesday.</h3>
-  </section>
+  </section> -->
 
   <section id='section-next-social' class='box'>
     <h2>Next Social Event</h2>
@@ -109,7 +109,7 @@ twq('track','PageView');
     <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join our Discord</span></a>
   </section>
 
-  <!-- <section id='section-recommendations' class='box'>
+  <section id='section-recommendations' class='box'>
     <h3>Recommendations</h3>
     <p>Need a new anime to watch? Check out one of our favourites.</p>
     <a class='btn btn-recommendations' href='recommendations.html'><span>Recommendations</span></a>
@@ -121,7 +121,7 @@ twq('track','PageView');
       <a href='recommendations.html#genre=mystery' class='genre genre-mystery'>Mystery</a>
       ...
     </p>
-  </section> -->
+  </section>
 </div>
 </header>
 

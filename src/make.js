@@ -386,6 +386,7 @@ sass.render({
     basData.scriptVersion = util.md5sum(scriptData);
     
     writeTemplate('www/index.html.h', 'index.html', basData);
+    // writeTemplate('www/bbq.html.h', 'bbq.html', basData);
     writeTemplate('www/recommendations2.html.h', 'recommendations.html', basData);
   });
 });
