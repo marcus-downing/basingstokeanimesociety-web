@@ -1581,14 +1581,16 @@ body.genre-filter {
 
 // Responsive scaling
 
-@media (min-width: 1281px) {
+@media (min-width: 1470px) {
   a#home-link {
     font-size: 18px;
     float: left;
     margin-top: 2em;
     margin-left: -100px;
   }
+}
 
+@media (min-width: 1281px) {
   #now-showing figure {
     &, img.series-picture {
       width: 315px;

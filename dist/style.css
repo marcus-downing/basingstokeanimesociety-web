@@ -1123,12 +1123,14 @@ body.genre-filter.genre-filter-war .anime.anime-genre-war {
 body.genre-filter.genre-filter-dark .anime.anime-genre-dark {
   display: block; }
 
-@media (min-width: 1281px) {
+@media (min-width: 1470px) {
   a#home-link {
     font-size: 18px;
     float: left;
     margin-top: 2em;
-    margin-left: -100px; }
+    margin-left: -100px; } }
+
+@media (min-width: 1281px) {
   #now-showing figure, #now-showing figure img.series-picture {
     width: 315px;
     height: 450px; }
