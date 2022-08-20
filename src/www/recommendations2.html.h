@@ -50,7 +50,13 @@
 		</header>
 
 		<div class="box top10pick">
-			<p>Pick a genre:</p>
+			<p class='top10-genres'>
+				<a class='genre genre-number1' data-genre='number1'>Our #1s</a>
+			</p>
+
+			<hr>
+
+			<p>Or pick a genre:</p>
 			<p id='search-genres' class='top10-genres'>
 				{{#each top10genres}}
 				<a class='genre genre-{{slug this}}' data-genre='{{slug this}}'>{{this}}</a>
@@ -77,7 +83,7 @@
 		<section class='top10 pick-pane' id='pick-pane-{{slug name}}{{#if code}}-{{slug code}}{{/if}}' data-show='{{slug name}}{{#if code}}-{{slug code}}{{/if}}'>
 			<ul class='lre'>
 			{{#each anime}}
-				<li class="box anime {{#each genre}} anime-genre-{{slug this}}{{/each}}">
+				<li class="box anime {{#each genre}} anime-genre-{{slug this}}{{/each}}{{#if (eq (inc @index) 1)}} anime-genre-number1{{/if}} anime-index-{{inc @index}}">
 					<img src="images/series/{{picture}}.png" class="top10-pic">
 					<div class="top10-index top10-index-{{inc @index}}"><img src="images/avatars/{{slug ../name}}.png"><span>#{{inc @index}}</span></div>
 					<h4>{{name}}</h4>

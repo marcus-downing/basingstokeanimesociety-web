@@ -376,14 +376,41 @@ top10:
       #   picture: mikagura-gakuen-kumikyo
       #   genre: [ "Comedy", "Romance", "Action" ]
 
-  # - name: PB
-  #   code: manga
-  #   title: PB's top 10 manga
-  #   picture: pb
-  #   anime:
-  #     - name: Bloom Into You
-  #       picture: bloom-into-you
-  #       genre: [ "Romance", "Drama" ]
+  - name: PB
+    code: yuri
+    title: PB's top 10 yuri anime and manga
+    picture: pb
+    anime:
+      - name: Doughnuts Under A Crescent Moon
+        picture: doughnuts-under-a-crescent-moon-manga
+        genre: [ "Romance", "Slice of life" ]
+      - name: Maria is watching us
+        picture: mari-mite
+        genre: [ "Romance", "Drama" ]
+      - name: After Hours
+        picture: after-hours-manga
+        genre: [ "Romance" ]
+      - name: R.O.D the TV
+        picture: rod
+        genre: [ "Action", "Adventure", "Comedy" ]
+      - name: Catch These Hands!
+        picture: catch-these-hands-manga
+        genre: [ "Comedy", "Romance", "Slice of life" ]
+      - name: Canaan
+        picture: canaan
+        genre: [ "Action", "Adventure", "Romance" ]
+      - name: Hayate X Blade
+        picture: hayate-x-blade-manga
+        genre: [ "Action", "Comedy" ]
+      - name: Whispered Words
+        picture: whispered-words-manga
+        genre: [ "Comedy", "Drama", "Romance" ]
+      - name: New Game!
+        picture: new-game
+        genre: [ "Comedy" ]
+      - name: School Zone
+        picture: school-zone
+        genre: [ "Comedy", "Romance" ]
 
 past_anime:
   - from: 2006-09-19

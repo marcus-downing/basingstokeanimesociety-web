@@ -932,7 +932,7 @@ header.top10pick {
   padding: 12px; }
   .top10 .anime img.top10-pic {
     float: right;
-    margin: -12px -12px 0 20px;
+    margin: -12px -12px 0 12px;
     width: 126px;
     height: 180px; }
   .top10 .anime .top10-index img {
@@ -956,13 +956,31 @@ header.top10pick {
   .top10 .anime h4 {
     margin: 2px 0;
     font-size: 19px; }
-  .top10 .anime:first-child .top10-index span {
+  .top10 .anime.anime-index-1 .top10-index span {
     background: #f8dda2;
     color: black; }
-  .top10 .anime:nth-child(2) .top10-index span, .top10 .anime:nth-child(3) .top10-index span {
+  .top10 .anime.anime-index-1:after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #f8dda2;
+    border-radius: 5px; }
+  .top10 .anime.anime-index-2 .top10-index span, .top10 .anime.anime-index-3 .top10-index span {
     border: 2px solid #f8dda2;
     margin-top: -2px;
     margin-bottom: -2px; }
+  .top10 .anime.anime-index-2:after, .top10 .anime.anime-index-3:after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid #f8dda2;
+    border-radius: 5px; }
 
 .top10-genres {
   line-height: 30px; }
@@ -1020,6 +1038,12 @@ body.genre-filter #clear-genre {
       bottom: -5px;
       border: 2px solid white;
       border-radius: 8px; }
+
+.genre.genre-number1 {
+  background: #aa8c00; }
+
+body.genre-filter.genre-filter-number1 .anime.anime-genre-number1 {
+  display: block; }
 
 .genre.genre-thriller {
   background: maroon; }

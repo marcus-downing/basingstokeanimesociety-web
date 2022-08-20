@@ -1373,7 +1373,7 @@ header.top10pick {
 
     img.top10-pic {
       float: right;
-      margin: -12px -12px 0 20px;
+      margin: -12px -12px 0 12px;
       width: 126px;
       height: 180px;
     }
@@ -1406,22 +1406,44 @@ header.top10pick {
       font-size: 19px;
     }
 
-    &:first-child {
+    &.anime-index-1 {
       .top10-index {
         span {
           background: #f8dda2;
           color: black;
         }
       }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        border: 2px solid #f8dda2;
+        border-radius: 5px;
+      }
     }
 
-    &:nth-child(2), &:nth-child(3) {
+    &.anime-index-2, &.anime-index-3 {
       .top10-index {
         span {
           border: 2px solid #f8dda2;
           margin-top: -2px;
           margin-bottom: -2px;
         }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        border: 1px solid #f8dda2;
+        border-radius: 5px;
       }
     }
   }
@@ -1561,6 +1583,7 @@ body.genre-filter {
   }
 }
 
+@include genre(number1,   rgb(170,140,0));
 @include genre(thriller,  rgb(128,0,0));
 @include genre(romance,   rgb(160,16,0));
 @include genre(sports,    rgb(180,110,0));
