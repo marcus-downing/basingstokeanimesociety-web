@@ -1472,6 +1472,11 @@ slot2:
     picture: beyond-the-boundary
     rating: 15
 
+  - from: 2022-11-08
+    name: That Time I Got Reincarnated as a Slime
+    picture: tensura
+    rating: 15
+
 slot3:
   - from: 2020-01-07
     name: Slow Start
@@ -1580,6 +1585,11 @@ slot3:
     name: "Wave, Listen to Me!"
     picture: wave-listen-to-me
     rating: 12
+
+  - from: 2022-11-15
+    name: My Senpai is Annoying
+    picture: senpai-ga-uzai
+    rating: 15
 
 movies:
   - name: "Konosuba - Legend of Crimson"
