@@ -1639,6 +1639,14 @@ body.genre-filter {
 
       min-height: 0;
     }
+    &.coming-soon--very-short {
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "one one one two two two";
+
+      min-height: 0;
+    }
+
 
     figure {
       &:nth-child(1), &:nth-child(2) {

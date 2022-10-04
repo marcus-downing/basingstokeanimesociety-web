@@ -204,7 +204,9 @@ function setupHome() {
   }
   document.getElementById('coming-soon').innerHTML = comingSoonHTML;
 
-  if (comingSoon.length <= 5) {
+  if (comingSoon.length <= 2) {
+    document.getElementById('coming-soon').classList.add('coming-soon--very-short');
+  } else if (comingSoon.length <= 5) {
     document.getElementById('coming-soon').classList.add('coming-soon--short');
   }
 
