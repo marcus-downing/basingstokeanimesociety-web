@@ -241,7 +241,7 @@ a#home-link {
     margin-top: 0.6em;
     margin-bottom: 3px; }
   #section-next-meeting h3, #section-next-social h3 {
-    margin-top: 1.5em; }
+    margin-top: 1em; }
   #section-next-meeting .next-social-title, #section-next-social .next-social-title {
     color: #a2f8ad; }
 
@@ -775,7 +775,7 @@ article.event {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 10px;
     padding-top: 10px;
-    margin-left: -20px;
+    margin-left: -30px;
     margin-right: -10px;
     padding-right: 10px; }
 

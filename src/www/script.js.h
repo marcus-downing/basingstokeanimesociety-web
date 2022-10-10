@@ -91,20 +91,9 @@ function setupHome() {
     return before[before.length - 1];
   }
 
-  // function nextAnime(slot) {
-  //   var after = slot.filter(function (series) {
-  //     return Date.parse(series.from) >= now;
-  //   });
-  //   return after[0];
-  // }
-
   var currentSlot1 = showingAnime(slot1);
   var currentSlot2 = showingAnime(slot2);
   var currentSlot3 = showingAnime(slot3);
-
-  // var nextSlot1 = nextAnime(slot1);
-  // var nextSlot2 = nextAnime(slot2);
-  // var nextSlot3 = nextAnime(slot3);
 
   function editSlot(id, series) {
     if (series.name == "") {
@@ -135,10 +124,6 @@ function setupHome() {
   editSlot('slot1', currentSlot1);
   editSlot('slot2', currentSlot2);
   editSlot('slot3', currentSlot3);
-
-  // editSlot('nextSlot1', nextSlot1);
-  // editSlot('nextSlot2', nextSlot2);
-  // editSlot('nextSlot3', nextSlot3);
 
 
   // adjust the coming soon list
@@ -264,24 +249,6 @@ function setupHome() {
     eventsHTML = eventsHTML + html;
   }
   document.getElementById('events-list').innerHTML = eventsHTML;
-
-  // adjust the next event headline
-  // var mainEvents = [];
-  // for (event of events) {
-  //   for (ev of event.events) {
-  //     switch (ev.class) {
-  //       case 'esports':
-  //       case 'cinema':
-  //       case 'skip':
-  //       case 'new-series':
-  //         continue;
-
-  //       default:
-  //         mainEvents.push(ev);
-  //     }
-  //   }
-  // }
-  // var nextEvent = mainEvents[0];
 
   var meetings = [];
   var social = [];
