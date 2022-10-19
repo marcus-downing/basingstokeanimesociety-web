@@ -1759,6 +1759,11 @@ events:
     class: social
     venue: Dice Tower
     time: 1pm
+  - name: One Piece Red
+    date: 2022-11-04
+    class: cinema
+    venue: Vue and Odeon
+    special: true
   - name: Board Games
     date: 2022-11-10
     class: social
