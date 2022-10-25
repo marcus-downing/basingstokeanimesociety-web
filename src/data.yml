@@ -1769,6 +1769,15 @@ events:
     class: social
     venue: Dice Tower
     time: 6pm
+  - name: Tea & Chat
+    date: 2022-11-20
+    class: social
+    venue: Tea Bar
+    time: 1pm
+  - name: Goodbye Don Glees
+    date: 2022-11-30
+    class: cinema
+    venue: Vue Basingstoke
   - name: Board Games
     date: 2022-12-08
     class: social
