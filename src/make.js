@@ -446,6 +446,8 @@ _.each(bookends, bookend => {
 bookends = util.currentAndFuture(bookends);
 // console.log(bookends);
 
+
+// Generate bookends
 _.each(bookends, bookend => {
   if (bookend.slot1 === null || bookend.slot1.picture === null || bookend.slot1.picture == "") {
     console.log("Skipping bookend:", bookend.name, "due to missing slot 1");
@@ -462,9 +464,95 @@ _.each(bookends, bookend => {
   let series2picture = 'series/'+bookend.slot2.picture+'.png';
   let series3picture = 'series/'+bookend.slot3.picture+'.png';
 
+  // console.log("Comparing dates:", util.formatShortDate(bookend.slot1.from));
+  let series1new = util.formatShortDate(bookend.slot1.from) == bookend.name;
+  let series2new = util.formatShortDate(bookend.slot2.from) == bookend.name;
+  let series3new = util.formatShortDate(bookend.slot3.from) == bookend.name;
+
   let shadow255 = "video/shadow255.png";
   let shadow315 = "video/shadow315.png";
 
+
+  // Discord promo banner
+  if (fs.existsSync(`../bookends/banner-${bookend.name}.png`)) {
+    console.log("Skipping banner:", bookend.name);
+  } else {
+    let banner_cmd = `magick video/banner-night-9.png -size 800x320`+
+      // logo
+      ` -draw 'image SrcOver 10,0 72,320 video/logo.png'`+
+
+      // series pic shadows
+        // ` -draw 'image SrcOver 86,9 219,310 video/shadow255.png'`+
+        // ` -draw 'image SrcOver 321,9 219,310 video/shadow255.png'`+
+        // ` -draw 'image SrcOver 556,9 219,310 video/shadow255.png'`+
+        ` -draw 'image SrcOver 86,14 212,300 video/shadow255.png'`+
+        ` -draw 'image SrcOver 321,14 212,300 video/shadow255.png'`+
+        ` -draw 'image SrcOver 556,14 212,300 video/shadow255.png'`+
+
+      // series pics
+      ` -draw 'image SrcOver 90,15 203,290 ${series1picture}'`+
+      (series1new ? ` -draw 'image SrcOver 90,15 100,100 video/new-series-ribbon.png'` : '')+
+      ` -draw 'image SrcOver 325,15 203,290 ${series2picture}'`+
+      (series2new ? ` -draw 'image SrcOver 325,15 100,100 video/new-series-ribbon.png'` : '')+
+      ` -draw 'image SrcOver 560,15 203,290 ${series3picture}'`+
+      (series3new ? ` -draw 'image SrcOver 560,15 100,100 video/new-series-ribbon.png'`: '')+
+      ` ../bookends/banner-${bookend.name}.png`;
+
+    // console.log(banner_cmd);
+
+    exec(banner_cmd, (err, stdout, stderr) => {
+      if (err) {
+        //some err occurred
+        console.error(err);
+      } else {
+      }
+    });
+  }
+
+  // Also do the next date, unless there's a new series starting that day
+  let nextDate = util.plus1week(bookend.date);
+  let nextDateKey = util.formatShortDate(nextDate);
+
+  if (!bookendDates.includes(nextDateKey)) {
+    console.log("Next date:", nextDateKey);
+
+    if (!fs.existsSync(`../bookends/banner-${nextDateKey}.png`)) {
+      let banner2_cmd = `magick video/banner-night-9.png -size 800x320`+
+        // logo
+        ` -draw 'image SrcOver 10,0 72,320 video/logo.png'`+
+
+        // series pic shadows
+        // ` -draw 'image SrcOver 86,9 219,310 video/shadow255.png'`+
+        // ` -draw 'image SrcOver 321,9 219,310 video/shadow255.png'`+
+        // ` -draw 'image SrcOver 556,9 219,310 video/shadow255.png'`+
+        ` -draw 'image SrcOver 86,14 212,300 video/shadow255.png'`+
+        ` -draw 'image SrcOver 321,14 212,300 video/shadow255.png'`+
+        ` -draw 'image SrcOver 556,14 212,300 video/shadow255.png'`+
+
+        // series pics
+        // ` -draw 'image SrcOver 90,10 210,300 ${series1picture}'`+
+        // ` -draw 'image SrcOver 325,10 210,300 ${series2picture}'`+
+        // ` -draw 'image SrcOver 560,10 210,300 ${series3picture}'`+
+      ` -draw 'image SrcOver 90,15 203,290 ${series1picture}'`+
+      ` -draw 'image SrcOver 325,15 203,290 ${series2picture}'`+
+      ` -draw 'image SrcOver 560,15 203,290 ${series3picture}'`+
+        ` ../bookends/banner-${nextDateKey}.png`;
+
+      // console.log(banner2_cmd);
+
+      exec(banner2_cmd, (err, stdout, stderr) => {
+        if (err) {
+          //some err occurred
+          console.error(err);
+        } else {
+        }
+      });
+    }
+  }
+
+
+
+  // End of night bookend
   if (fs.existsSync(`../bookends/bookend-${bookend.name}.mp4`)) {
     console.log("Skipping bookend:", bookend.name);
   } else {
@@ -522,6 +610,7 @@ _.each(bookends, bookend => {
   }
 
 
+  // Interval video
   if (fs.existsSync(`../bookends/interval-${bookend.name}.mkv`)) {
     console.log("Skipping interval:", bookend.name);
   } else {

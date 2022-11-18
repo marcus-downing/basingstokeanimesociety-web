@@ -103,6 +103,12 @@ function yesterday() {
   return date;
 }
 
+function plus1week(from) {
+  let date = new Date(from);
+  date.setDate(date.getDate() + 7);
+  return date;
+}
+
 function backdate(items, key = 'from') {
   return _.map(items, item => {
     if (!_.has(item, key)) {
@@ -141,6 +147,7 @@ module.exports = {
   future,
   tomorrow,
   yesterday,
+  plus1week,
   backdate,
   md5sum,
 };
