@@ -156,7 +156,7 @@ function setupHome() {
   // var comingSoonCutoff = findCutoff(comingSoon.length, options.comingSoonRows);
   comingSoon = futureN(comingSoon, 12);
   comingSoon = excludeSeries(comingSoon, [currentSlot1, currentSlot2, currentSlot3]);
-  comingSoon = futureN(comingSoon, 5);
+  comingSoon = futureN(comingSoon, 8);
 
   var comingSoonHTML = '';
   for (item of comingSoon) {

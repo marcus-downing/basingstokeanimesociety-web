@@ -1413,6 +1413,16 @@ slot1:
     picture: kabaneri
     rating: 15
 
+  - from: 2023-02-21
+    name: "Haibane Renmei"
+    picture: haibane-renmei
+    rating: 12
+
+  - from: 2023-04-11
+    name: "Eureka Seven"
+    picture: eureka-seven
+    rating: 12
+
 slot2:
   - from: 2019-01-08
     name: Hunter &times; Hunter
@@ -1486,6 +1496,16 @@ slot2:
     name: "BNA: Brand New Animal"
     picture: bna
     rating: 12
+
+  - from: 2023-03-28
+    name: "Sakugan"
+    picture: sakugan
+    rating: 12
+
+  - from: 2023-05-09
+    name: "The Aquatope on White Sand"
+    picture: aquatope
+    rating: pg
 
 slot3:
   - from: 2020-01-07
@@ -1610,6 +1630,11 @@ slot3:
     name: "Kaguya-sama, Love is War: Ultra Romantic"
     picture: kaguya-sama3
     rating: 12
+
+  - from: 2023-05-30
+    name: "Slime Diaries"
+    picture: tensura
+    rating: pg
 
 movies:
   - name: "Konosuba - Legend of Crimson"
