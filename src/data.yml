@@ -1801,6 +1801,7 @@ events:
     time: 1pm
   - name: Goodbye Don Glees
     date: 2022-11-30
+    time: 7pm
     class: cinema
     venue: Vue Basingstoke
   - name: Board Games
