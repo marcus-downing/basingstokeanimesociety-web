@@ -11,7 +11,7 @@
   </script>
 
   <title>Basingstoke Anime Society</title>
-  <link rel="stylesheet" media="all" href="style.css?ver=e9a2d3" />
+  <link rel="stylesheet" media="all" href="style.css?ver=bf77ce" />
 
   <meta name="description" content="Showing anime in Basingstoke every Tuesday" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -98,7 +98,7 @@ twq('track','PageView');
       <div class="next-social-side focus-date-side"><br></div>
     </article>
 
-    <h3>Venue: <span id="next-social-venue">Vue Basingstoke</span></h3>
+    <h3>Venue: <span id="next-social-venue">Dice Tower</span></h3>
   </section>
 
   <section id='section-discord' class='box'>
@@ -154,7 +154,11 @@ twq('track','PageView');
 
   <h2 class='underline'>Coming Soon</h2>
 
-  <div id='coming-soon'>
+  <div id='coming-soon' class='coming-soon--less'>
+  </div>
+
+  <div id='coming-soon-more-switch'>
+    <button class='btn btn-coming-soon-more' onclick="expandComingSoon()"><span>Show More</span></button>
   </div>
 
 </section>
@@ -164,32 +168,6 @@ twq('track','PageView');
   <h2 class='underline'>Upcoming Events</h2>
 
   <div id='events-list' class='box'>
-  <article id='upcoming-2022-11-29' class='event event-anime'>
-    <time datetime="Tue Nov 29 2022 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>29</span><span class='month'>Nov</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2022-11-30' class='event event-cinema'>
-    <time datetime="Wed Nov 30 2022 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>30</span><span class='month'>Nov</span><span class='time__special'></span></time>
-    <div class='event-detail event-detail-cinema'>
-      
-      
-      <h3>Goodbye Don Glees</h3>
-      <p>
-        
-        Vue Basingstoke, Wed 7pm
-        
-      </p>
-    </div>
-  </article>
   <article id='upcoming-2022-12-06' class='event event-anime'>
     <time datetime="Tue Dec 06 2022 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>6</span><span class='month'>Dec</span></time>
     <div class='event-detail event-detail-anime'>
@@ -748,6 +726,19 @@ twq('track','PageView');
       </p>
     </div>
   </article>
+  <article id='upcoming-2023-06-27' class='event event-anime'>
+    <time datetime="Tue Jun 27 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>27</span><span class='month'>Jun</span></time>
+    <div class='event-detail event-detail-anime'>
+      
+      
+      <h3>Anime Society Meeting</h3>
+      <p>
+        
+        The White Hart, Tue 7pm
+        
+      </p>
+    </div>
+  </article>
   <article id='upcoming-2023-12-26' class='event event-skip'>
     <time datetime="Tue Dec 26 2023 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>26</span><span class='month'>Dec</span></time>
     <div class='event-detail event-detail-skip'>
@@ -763,6 +754,19 @@ twq('track','PageView');
   </article>
   <article id='upcoming-2024-01-02' class='event event-skip'>
     <time datetime="Tue Jan 02 2024 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>2</span><span class='month'>Jan</span></time>
+    <div class='event-detail event-detail-skip'>
+      
+      
+      <h3>No Meeting</h3>
+      <p>
+        
+        
+        
+      </p>
+    </div>
+  </article>
+  <article id='upcoming-2024-12-24' class='event event-skip'>
+    <time datetime="Tue Dec 24 2024 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>24</span><span class='month'>Dec</span></time>
     <div class='event-detail event-detail-skip'>
       
       
@@ -844,6 +848,6 @@ Click the button above to join our Discord server.
   </div>
 </aside>
 
-<script src="script.js?ver=9f85e9"></script>
+<script src="script.js?ver=0619e0"></script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>

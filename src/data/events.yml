@@ -1,0 +1,169 @@
+---
+
+events:
+  - name: Kobosuba Movie
+    date: 2019-12-06
+    to: 2019-12-06
+    class: cinema
+    venue: Vue Festival Place
+
+  - name: Weathering With You
+    date: 2020-01-17
+    to: 2020-01-30
+    class: cinema
+    venue: Vue Festival Place
+
+  - name: Overwatch League
+    date: 2020-02-08
+    class: esports
+
+  - name: "My Hero Academia: Heroes Rising"
+    date: 2020-02-26
+    class: cinema
+    venue: Vue Festival Place, Odeon Basingstoke
+    link: https://www.myvue.com/cinema/basingstoke-festival-place/film/my-hero-academia-heroes-rising/times
+
+  - name: Akira
+    date: 2020-10-07
+    to: 2020-10-08
+    class: cinema
+    venue: Vue Festival Place
+
+  - name: No Meeting
+    date: 2021-12-21
+    class: skip
+  - name: No Meeting
+    date: 2021-12-28
+    class: skip
+
+  - name: Board Games
+    date: 2022-06-09
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2022-07-14
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Fruits Basket -Prelude-
+    date: 2022-07-20
+    class: cinema
+    venue: Vue Basingstoke
+    time: 7.30pm
+    special: true
+  - name: The Deer King
+    date: 2022-07-27
+    class: cinema
+    venue: Vue Basingstoke
+    time: 7pm
+    special: true
+  - name: Board Games
+    date: 2022-08-11
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  # - name: Board Games
+  #   date: 2022-09-08
+  #   class: social
+  #   venue: Dice Tower
+  #   time: 6pm
+  - name: Blobberu's Birthday Bash
+    date: 2022-09-10
+    class: social
+    venue: Dice Tower
+    time: 5pm
+  - name: 16th Anniversary BBQ
+    date: 2022-09-17
+    class: social
+    venue: Swarraton Village Hall, SO24 9TQ
+    time: 11am
+    special: true
+  # - name: Board Games
+  #   date: 2022-10-13
+  #   class: social
+  #   venue: Dice Tower
+  #   time: 6pm
+  - name: Shrink Laureate's Birthday Board Games
+    date: 2022-10-16
+    class: social
+    venue: Dice Tower
+    time: 1pm
+  - name: One Piece Red
+    date: 2022-11-04
+    class: cinema
+    venue: Vue and Odeon
+    special: true
+  - name: Board Games
+    date: 2022-11-10
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Tea & Chat
+    date: 2022-11-20
+    class: social
+    venue: Dice Tower
+    time: 1pm
+  - name: Goodbye Don Glees
+    date: 2022-11-30
+    time: 7pm
+    class: cinema
+    venue: Vue Basingstoke
+  - name: Board Games
+    date: 2022-12-08
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2023-01-12
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2023-02-09
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2023-03-09
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2023-04-13
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2023-05-11
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2023-06-08
+    class: social
+    venue: Dice Tower
+    time: 6pm
+
+
+  - name: No Meeting
+    date: 2022-12-27
+    class: skip
+  - name: No Meeting
+    date: 2023-01-03
+    class: skip
+
+  - name: No Meeting
+    date: 2023-12-26
+    class: skip
+  - name: No Meeting
+    date: 2024-01-02
+    class: skip
+
+  - name: No Meeting
+    date: 2024-12-24
+    class: skip
+  - name: No Meeting
+    date: 2024-12-31
+    class: skip
+    

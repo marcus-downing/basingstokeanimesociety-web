@@ -1,0 +1,383 @@
+---
+
+slot1:
+  - from: 2019-11-26
+    name: Sagrada Reset
+    picture: sagrada-reset
+
+  - from: 2020-03-03
+    name: The Great Passage
+    picture: great-passage
+    solo: 8
+
+  - from: 2020-05-19
+    name: Golden Kamuy
+    picture: golden-kamuy
+
+  - from: 2020-08-18
+    name: Freedom
+    picture: freedom
+
+  - from: 2020-09-15
+    name: The Promised Neverland
+    picture: promised-neverland
+
+  - from: 2020-10-27
+    name: Rascal Does Not Dream of Bunny Girl Senpai
+    picture: bunny-girl-senpai
+
+  - from: 2021-01-05
+    displayFrom: 2020-12-08
+    name: "Xam'd: Lost Memories"
+    picture: xamd
+    rating: 12
+
+  - from: 2021-04-06
+    name: The Ancient Magus' Bride
+    picture: ancient-magus-bride
+    rating: 15
+
+  - from: 2021-07-13
+    name: "Golden Kamuy Third Season"
+    picture: golden-kamuy
+    rating: 15
+
+  - from: 2021-08-24
+    name: "Legend of the Galactic Heroes: Die Neue These"
+    picture: legend-of-galactic-heroes
+    rating: 15
+
+  - from: 2021-11-16
+    name: "Time of Eve"
+    picture: time-of-eve
+    rating: pg
+
+  - from: 2021-12-07
+    name: "Empire of Corpses"
+    picture: empire-of-corpses
+    movie: true
+    rating: 15
+    preview: false
+
+  - from: 2021-12-14
+    name: "Burn The Witch"
+    picture: burn-the-witch
+    rating: 12
+
+  - from: 2022-01-04
+    displayFrom: 2021-12-15
+    name: Last Exile
+    picture: last-exile
+    rating: 15
+
+  - from: 2022-04-12
+    name: "Ranpo Kitan: Game of Laplace"
+    picture: ranpo-kitan
+    rating: 15
+
+  - from: 2022-05-24
+    name: "Aldnoah.Zero"
+    picture: aldnoah-zero
+    rating: 15
+
+  - from: 2022-07-05
+    name: "Talentless Nana"
+    picture: talentless-nana
+    rating: 15
+
+  - from: 2022-08-23
+    name: "Aldnoah.Zero part 2"
+    picture: aldnoah-zero
+    rating: 15
+
+  - from: 2022-10-04
+    name: "Moriarty The Patriot"
+    picture: moriarty
+    rating: 15
+
+  - from: 2023-01-10
+    name: "Kabaneri of the Iron Fortress"
+    picture: kabaneri
+    rating: 15
+
+  - from: 2023-02-21
+    name: "Haibane Renmei"
+    picture: haibane-renmei
+    rating: 12
+
+  - from: 2023-04-11
+    name: "Eureka Seven"
+    picture: eureka-seven
+    rating: 12
+
+slot2:
+  - from: 2019-01-08
+    name: Hunter &times; Hunter
+    picture: hunter-x-hunter
+
+  - from: 2020-07-28
+    name: Spice and Wolf
+    picture: spice-and-wolf
+
+  - from: 2020-11-03
+    name: Hisone &amp; Maso-tan
+    picture: hisone-masotan
+
+  - from: 2021-01-05
+    displayFrom: 2020-12-08
+    name: "Astra: Lost in Space"
+    picture: astra
+    rating: 12
+
+  - from: 2021-02-23
+    name: Ore Monogatari
+    picture: oremonogatari
+    rating: 12
+
+  - from: 2021-05-18
+    name: Assassination Classroom
+    picture: assassination-classroom
+    rating: 15
+
+  - from: 2021-08-03
+    name: Bunny Drop
+    picture: bunny-drop
+    rating: pg
+
+  - from: 2021-09-14
+    name: "Carole & Tuesday"
+    picture: carole-and-tuesday
+    rating: 15
+
+  - from: 2021-12-01
+    name: ""
+    picture: ""
+
+  - from: 2022-01-04
+    displayFrom: 2021-12-15
+    name: Assassination Classroom Season 2
+    picture: assassination-classroom
+    rating: 15
+
+  - from: 2022-04-12
+    name: "Maoyuu: Maou Yuusha"
+    picture: maoyuu
+    rating: 15
+
+  - from: 2022-05-24
+    name: "Dr Stone"
+    picture: dr-stone
+    rating: 12
+
+  - from: 2022-09-27
+    name: Beyond The Boundary
+    picture: beyond-the-boundary
+    rating: 15
+
+  - from: 2022-11-08
+    name: That Time I Got Reincarnated as a Slime
+    picture: tensura
+    rating: 15
+
+  - from: 2023-02-14
+    name: "BNA: Brand New Animal"
+    picture: bna
+    rating: 12
+
+  - from: 2023-03-28
+    name: "Sakugan"
+    picture: sakugan
+    rating: 12
+
+  - from: 2023-05-09
+    name: "The Aquatope on White Sand"
+    picture: aquatope
+    rating: pg
+
+slot3:
+  - from: 2020-01-07
+    name: Slow Start
+    picture: slow-start
+
+  - from: 2020-02-18
+    name: Kaguya-sama, Love is War
+    picture: kaguya-sama
+
+  - from: 2020-05-05
+    name: Hinamatsuri
+    picture: hinamatsuri
+
+  - from: 2020-06-16
+    name: Demi-chan wa Kataritai
+    picture: demi-chan
+
+  - from: 2020-07-28
+    name: Chio's School Road
+    picture: chios-school-road
+
+  - from: 2020-09-08
+    name: Konosuba S2
+    picture: konosuba2
+
+  - from: 2020-10-20
+    name: Zombieland Saga
+    picture: zombieland-saga
+
+  - from: 2020-12-01
+    name: Wasteful Days of High School Girls
+    picture: wasteful-days
+    rating: 15
+
+  - from: 2021-01-26
+    name: Flying Witch
+    picture: flying-witch
+    rating: 12
+
+  - from: 2021-03-09
+    name: "Keep Your Hands Off Eizouken!"
+    picture: eizouken
+    rating: 12
+
+  - from: 2021-04-20
+    name: "Kaguya-sama, Love is War S2"
+    picture: kaguya-sama2
+    rating: 12
+
+  - from: 2021-06-01
+    name: "My Next Life as a Villainess: All Routes Lead to Doom!"
+    picture: hamefura
+    rating: 12
+
+  - from: 2021-07-13
+    name: Sound of the Sky
+    picture: sound-of-the-sky
+    rating: 12
+
+  - from: 2021-08-31
+    name: BOFURI
+    picture: bofuri
+    rating: 12
+
+  - from: 2021-10-12
+    name: "Yuru Camp S2"
+    picture: yuru-camp-s2
+    rating: pg
+
+  - from: 2021-11-30
+    name: "Tonikawa: Over The Moon For You"
+    picture: tonikawa
+    rating: 12
+
+  - from: 2022-01-25
+    name: "Zombieland Saga: Revenge"
+    picture: zombieland-saga-revenge
+    rating: 15
+
+  - from: 2022-03-15
+    name: "Non Non Biyori Non Stop"
+    picture: non-non-biyori-non-stop
+    rating: pg
+
+  - from: 2022-04-26
+    name: Recovery of an MMO Junkie
+    picture: mmo-junkie
+    rating: 12
+
+  - from: 2022-05-31
+    name: "Kino's Journey"
+    picture: kinos-journey
+    rating: 12
+
+  - from: 2022-07-12
+    name: "By the Grace of the Gods"
+    picture: by-the-grace-of-the-gods
+    rating: 12
+
+  - from: 2022-08-23
+    name: "Love, Chunibyou & Other Delusions"
+    picture: chunibyou
+    rating: 12
+
+  - from: 2022-10-04
+    name: "Wave, Listen to Me!"
+    picture: wave-listen-to-me
+    rating: 12
+
+  - from: 2022-11-15
+    name: My Senpai is Annoying
+    picture: senpai-ga-uzai
+    rating: 15
+
+  - from: 2023-01-10
+    name: Snow White with the Red Hair
+    picture: snow-white-red-hair
+    rating: 12
+
+  - from: 2023-04-04
+    name: "Kaguya-sama, Love is War: Ultra Romantic"
+    picture: kaguya-sama3
+    rating: 12
+
+  - from: 2023-05-30
+    name: "Slime Diaries"
+    picture: tensura
+    rating: pg
+
+movies:
+  - name: "Konosuba - Legend of Crimson"
+    date: 2020-11-22
+    time: 3pm
+    venue: "Discord"
+    picture: konosuba-legend-of-crimson
+    # trailer: https://www.youtube.com/watch?v=YYg3JtwP2NY
+
+  - name: Rascal Does Not Dream of a Dreaming Girl
+    date: 2020-12-15
+    time: 7pm
+    venue: "Discord"
+    picture: bunny-girl-senpai-movie
+    # trailer: https://www.youtube.com/watch?v=UbLBbxSm8hs
+
+  - name: "Tamako Love Story"
+    date: 2020-12-17
+    time: 7pm
+    venue: "Discord"
+    picture: tamako-love-story
+    # trailer: https://www.youtube.com/watch?v=B8JlGOXjZ28
+
+  - name: "Children who Chase Lost Voices" # (aka Journey To Agartha)"
+    date: 2020-12-22
+    time: 7pm
+    venue: "Discord"
+    picture: agartha
+    rating: 12
+    # trailer: https://www.youtube.com/watch?v=tmHo_0mgos0
+
+  - name: "Patema Inverted"
+    date: 2020-12-29
+    time: 7pm
+    venue: "Discord"
+    picture: patema-inverted
+    rating: pg
+    # trailer: https://www.youtube.com/watch?v=aSOuohS1OvE
+
+  - name: "Lupin III: The Castle of Cagliostro"
+    date: 2021-02-14
+    time: 3pm
+    venue: "Discord"
+    picture: lupin-cagliostro
+    rating: pg
+
+  - name: Empire of Corpses
+    date: 2021-12-07
+    time: 7pm
+    venue: "Discord"
+    picture: empire-of-corpses
+    rating: 15
+
+  # - name: Your Name
+  #   date: 2021-12-14
+  #   time: 7pm
+  #   venue: "Discord"
+  #   picture: your-name
+  #   rating: 12

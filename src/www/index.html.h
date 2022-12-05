@@ -156,7 +156,11 @@ twq('track','PageView');
 
   <h2 class='underline'>Coming Soon</h2>
 
-  <div id='coming-soon'>
+  <div id='coming-soon' class='coming-soon--less'>
+  </div>
+
+  <div id='coming-soon-more-switch'>
+    <button class='btn btn-coming-soon-more' onclick="expandComingSoon()"><span>Show More</span></button>
   </div>
 
   {{#if options.hiatus}}

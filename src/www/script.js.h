@@ -77,6 +77,14 @@ window.onload = function () {
 };
 setInterval(selectBackground, 300000); // 5 minutes
 
+function expandComingSoon() {
+  let elem = document.getElementById('coming-soon');
+  if (elem !== null) {
+    elem.classList.remove('coming-soon--less');
+    elem.classList.add('coming-soon--more');
+  }
+}
+
 function setupHome() {
   var now = new Date(Date.now());
   var yesterday = new Date(now);

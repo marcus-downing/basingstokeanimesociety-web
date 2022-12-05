@@ -88,9 +88,23 @@ body {
   background-color: #ed3b41;
   background-image: url("images/mail.svg"); }
 
-.btn-twitter i {
-  background-color: #1da1f2;
-  background-image: url("images/tw_icon.png"); }
+.btn-twitter {
+  /*
+  // broken twitter
+  position: fixed;
+  right: 30px;
+  bottom: 10px;
+  height: 30px;
+
+  i {
+    background-size: 60px 30px;
+    height: 30px;
+    border-radius: 30px / 15px;
+  }
+  */ }
+  .btn-twitter i {
+    background-color: #1da1f2;
+    background-image: url("images/tw_icon.png"); }
 
 .btn-fb i {
   background-color: #4267b2;
@@ -572,6 +586,15 @@ p.series-ident {
       right: auto; }
       #coming-soon figure .rating-hover .rating__tag {
         left: 78px; }
+  #coming-soon.coming-soon--less figure:nth-child(3), #coming-soon.coming-soon--less figure:nth-child(4), #coming-soon.coming-soon--less figure:nth-child(5), #coming-soon.coming-soon--less figure:nth-child(6), #coming-soon.coming-soon--less figure:nth-child(7), #coming-soon.coming-soon--less figure:nth-child(8) {
+    display: none; }
+  #coming-soon.coming-soon--more + #coming-soon-more-switch {
+    display: none; }
+
+#coming-soon-more-switch button {
+  margin: 1em auto; }
+  #coming-soon-more-switch button span {
+    background: rgba(0, 0, 0, 0.5); }
 
 .rating-hover {
   display: none;
@@ -1159,19 +1182,23 @@ body.genre-filter.genre-filter-dark .anime.anime-genre-dark {
     width: 315px;
     height: 450px; }
   #coming-soon {
-    min-height: 600px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
-    grid-template-areas: "one one one two two two" "three three four four five five" "six six seven seven eight eight";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "one two";
     grid-gap: 39px; }
-    #coming-soon.coming-soon--short {
-      grid-template-rows: 2fr 1fr;
-      grid-template-areas: "one one one two two two" "three three four four five five";
-      min-height: 0; }
-    #coming-soon.coming-soon--very-short {
-      grid-template-rows: 1fr;
-      grid-template-areas: "one one one two two two";
-      min-height: 0; }
+    #coming-soon.coming-soon--more {
+      min-height: 600px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 2fr 1fr 1fr;
+      grid-template-areas: "one one one two two two" "three three four four five five" "six six seven seven eight eight"; }
+      #coming-soon.coming-soon--more.coming-soon--short {
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: "one one one two two two" "three three four four five five";
+        min-height: 0; }
+      #coming-soon.coming-soon--more.coming-soon--very-short {
+        grid-template-rows: 1fr;
+        grid-template-areas: "one one one two two two";
+        min-height: 0; }
     #coming-soon figure:nth-child(1), #coming-soon figure:nth-child(2) {
       height: 360px;
       padding-right: 252px; }
@@ -1219,7 +1246,12 @@ body.genre-filter.genre-filter-dark .anime.anime-genre-dark {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 20px; }
-  #coming-soon {
+  #coming-soon.coming-soon--less {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    grid-template-areas: "one two";
+    grid-gap: 20px; }
+  #coming-soon.coming-soon--more {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: none;
     grid-template-areas: "one two" "three four" "five six" "seven eight";

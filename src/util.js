@@ -1,6 +1,30 @@
-const crypto = require('crypto')
-
+const crypto = require('crypto');
+const fs = require('fs');
+const yaml = require('js-yaml');
 const _ = require('lodash');
+
+
+// read in the combined 
+function readData() {
+  var files = fs.readdirSync("data", { withFileTypes: true });
+
+  let basData = {};
+  _.each(files, file => {
+    let fileData = fs.readFileSync('data/'+file.name);
+    let loadData = yaml.safeLoad(fileData);
+    basData = {...basData, ...loadData};
+  });
+
+  basData = {
+    ...basData,
+    maxEvents: 24,
+    windowEvents: 40,
+    maxTweets: 10,
+  };
+
+  return basData;
+}
+
 
 // date formats
 let shortMonthFormat = new Intl.DateTimeFormat('en-GB', { month: 'short' });
@@ -134,6 +158,7 @@ function md5sum(data, digits = 6) {
 }
 
 module.exports = {
+  readData,
   formatDay,
   formatShortMonth,
   formatShortDate,

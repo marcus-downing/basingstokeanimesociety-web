@@ -1,0 +1,23 @@
+---
+
+# Basingstoke Anime Society
+# Website data
+
+announce:
+  visible: true
+  title: "Resuming Meetings"
+  date: 2022-04-05
+  tagline: "We'll be returning to the White Hart from Tuesday 5th April."
+  # content: "White Hart, London Road, "
+  discord: no
+
+options:
+  online: false
+  hiatus: false
+  hiatusMessage: ""
+  comingSoonRows: 3
+  newsCutoff: 0
+
+onlineDates:
+  - 2022-06-14
+  - 2022-06-21

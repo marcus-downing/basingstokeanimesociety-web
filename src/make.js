@@ -25,15 +25,7 @@ Handlebars.registerHelper('slug', function(value) {
 })
 
 // read the data
-let basData = fs.readFileSync('data.yml');
-basData = yaml.safeLoad(basData);
-
-basData = _.defaults({
-  maxEvents: 24,
-  windowEvents: 40,
-  maxTweets: 10,
-}, basData);
-
+let basData = util.readData();
 let options = basData.options;
 
 function expandDate(target, date = null, time = null, leeway = 0) {
