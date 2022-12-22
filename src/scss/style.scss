@@ -203,7 +203,7 @@ h1 {
 h2 {
   text-transform: uppercase;
   font-size: 20px;
-  margin-top: 1.5em;
+  margin-top: 0.8em;
 
   // &.brush {
   //   background: url(images/stroke1.png);
@@ -891,6 +891,31 @@ p.series-ident {
   }
 }
 
+figure#recommendation {
+  margin: 0;
+  height: 360px;
+  padding: 0;
+
+  figcaption {
+    padding: 20px 270px 0 20px;
+    
+    h3 {
+      font-size: 22px;
+    }
+  }
+
+  > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 252px;
+    height: 360px;
+
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+}
+
 .rating-hover {
   display: none;
   &.rating-hover--show {
@@ -1166,7 +1191,7 @@ article {
 }
 
 #events-list {
-  margin-top: 1em;
+  margin-top: 0;
   padding: 2px 27px 5px 18px;
 }
 
@@ -1486,11 +1511,31 @@ header.top10pick {
   }
 }
 
+.top10-genre-intro {
+  margin-top: 1rem;
+  h3 {
+    margin: 0.7rem 0;
+  }
+}
+
 .top10-genres {
   line-height: 30px;
 
   a {
     cursor: pointer;
+  }
+
+  &.top10-genres-big {
+    line-height: 42px;
+    a {
+      font-size: 18px;
+      padding: 6px 16px;
+      border-radius: 20px;
+
+      &.genre.genre-selected:before {
+        border-radius: 20px;
+      }
+    }
   }
 }
 
@@ -1512,6 +1557,9 @@ body.genre-filter {
   }
 
   body.genre-filter.genre-filter-#{$genre} {
+    // .top10-genre-intro-#{$genre} {
+    //   display: block;
+    // }
     .anime.anime-genre-#{$genre} {
       display: block;
     }
@@ -1638,6 +1686,7 @@ body.genre-filter {
 @include genre(mystery,   rgb(110,0,96));
 @include genre(war,       rgb(160,0,32));
 @include genre(dark,      rgb(32,32,32));
+@include genre(first,     rgb(0,128,0));
 
 // Responsive scaling
 
@@ -1796,43 +1845,43 @@ body.genre-filter {
 
 @media (min-width: 801px) {
   body {
-    &.day-1 { background-image: url(images/day-1.jpg); }
-    &.day-2 { background-image: url(images/day-2.jpg); }
-    &.day-3 { background-image: url(images/day-3.jpg); }
-    &.day-4 { background-image: url(images/day-4.jpg); }
-    &.day-5 { background-image: url(images/day-5.jpg); }
-    &.day-6 { background-image: url(images/day-6.jpg); }
+    &[bg='day-1'] { background-image: url(images/day-1.jpg); }
+    &[bg='day-2'] { background-image: url(images/day-2.jpg); }
+    &[bg='day-3'] { background-image: url(images/day-3.jpg); }
+    &[bg='day-4'] { background-image: url(images/day-4.jpg); }
+    &[bg='day-5'] { background-image: url(images/day-5.jpg); }
+    &[bg='day-6'] { background-image: url(images/day-6.jpg); }
 
-    &.night-1 { background-image: url(images/night-1.jpg); }
-    &.night-2 { background-image: url(images/night-2.jpg); }
-    &.night-3 { background-image: url(images/night-3.jpg); }
-    &.night-4 { background-image: url(images/night-4.jpg); }
-    &.night-5 { background-image: url(images/night-5.jpg); }
-    &.night-6 { background-image: url(images/night-6.jpg); }
-    &.night-7 { background-image: url(images/night-7.jpg); }
-    &.night-8 { background-image: url(images/night-8.jpg); }
-    &.night-9 { background-image: url(images/night-9.jpg); }
+    &[bg='night-1'] { background-image: url(images/night-1.jpg); }
+    &[bg='night-2'] { background-image: url(images/night-2.jpg); }
+    &[bg='night-3'] { background-image: url(images/night-3.jpg); }
+    &[bg='night-4'] { background-image: url(images/night-4.jpg); }
+    &[bg='night-5'] { background-image: url(images/night-5.jpg); }
+    &[bg='night-6'] { background-image: url(images/night-6.jpg); }
+    &[bg='night-7'] { background-image: url(images/night-7.jpg); }
+    &[bg='night-8'] { background-image: url(images/night-8.jpg); }
+    &[bg='night-9'] { background-image: url(images/night-9.jpg); }
   }
 }
 
 @media (max-width: 800px) {
   body {
-    &.day-1 { background-image: url(images/sm-day-1.jpg); }
-    &.day-2 { background-image: url(images/sm-day-2.jpg); }
-    &.day-3 { background-image: url(images/sm-day-3.jpg); }
-    &.day-4 { background-image: url(images/sm-day-4.jpg); }
-    &.day-5 { background-image: url(images/sm-day-5.jpg); }
-    &.day-6 { background-image: url(images/sm-day-6.jpg); }
+    &[bg='day-1'] { background-image: url(images/sm-day-1.jpg); }
+    &[bg='day-2'] { background-image: url(images/sm-day-2.jpg); }
+    &[bg='day-3'] { background-image: url(images/sm-day-3.jpg); }
+    &[bg='day-4'] { background-image: url(images/sm-day-4.jpg); }
+    &[bg='day-5'] { background-image: url(images/sm-day-5.jpg); }
+    &[bg='day-6'] { background-image: url(images/sm-day-6.jpg); }
 
-    &.night-1 { background-image: url(images/sm-night-1.jpg); }
-    &.night-2 { background-image: url(images/sm-night-2.jpg); }
-    &.night-3 { background-image: url(images/sm-night-3.jpg); }
-    &.night-4 { background-image: url(images/sm-night-4.jpg); }
-    &.night-5 { background-image: url(images/sm-night-5.jpg); }
-    &.night-6 { background-image: url(images/sm-night-6.jpg); }
-    &.night-7 { background-image: url(images/sm-night-7.jpg); }
-    &.night-8 { background-image: url(images/sm-night-8.jpg); }
-    &.night-9 { background-image: url(images/sm-night-9.jpg); }
+    &[bg='night-1'] { background-image: url(images/sm-night-1.jpg); }
+    &[bg='night-2'] { background-image: url(images/sm-night-2.jpg); }
+    &[bg='night-3'] { background-image: url(images/sm-night-3.jpg); }
+    &[bg='night-4'] { background-image: url(images/sm-night-4.jpg); }
+    &[bg='night-5'] { background-image: url(images/sm-night-5.jpg); }
+    &[bg='night-6'] { background-image: url(images/sm-night-6.jpg); }
+    &[bg='night-7'] { background-image: url(images/sm-night-7.jpg); }
+    &[bg='night-8'] { background-image: url(images/sm-night-8.jpg); }
+    &[bg='night-9'] { background-image: url(images/sm-night-9.jpg); }
   }
 
   #logo {

@@ -340,8 +340,11 @@ if (socialEvents.length > 0) {
 
 // Recommendations
 
+basData.allTop10 = []
+
 _.each(basData.top10, person => {
   _.each(person.anime, series => {
+    basData.allTop10.push(series);
     if (fs.existsSync('series/'+series.picture+'.png')) {
       fs.copyFile('series/'+series.picture+'.png', '../dist/images/series/'+series.picture+'.png', (err) => {
         if (err) {

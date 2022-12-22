@@ -134,6 +134,11 @@ events:
     class: social
     venue: Dice Tower
     time: 6pm
+  - name: Suzume
+    date: 2023-04-14
+    class: cinema
+    # time: 
+    # venue: Vue Basingstoke
   - name: Board Games
     date: 2023-05-11
     class: social

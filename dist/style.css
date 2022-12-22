@@ -146,7 +146,7 @@ h1 {
 h2 {
   text-transform: uppercase;
   font-size: 20px;
-  margin-top: 1.5em; }
+  margin-top: 0.8em; }
   h2.underline {
     font-size: 26px;
     box-shadow: inset 0 -22px 0 rgba(20, 30, 60, 0.5);
@@ -596,6 +596,23 @@ p.series-ident {
   #coming-soon-more-switch button span {
     background: rgba(0, 0, 0, 0.5); }
 
+figure#recommendation {
+  margin: 0;
+  height: 360px;
+  padding: 0; }
+  figure#recommendation figcaption {
+    padding: 20px 270px 0 20px; }
+    figure#recommendation figcaption h3 {
+      font-size: 22px; }
+  figure#recommendation > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 252px;
+    height: 360px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
+
 .rating-hover {
   display: none;
   position: absolute;
@@ -775,7 +792,7 @@ article {
     border-radius: 5px; }
 
 #events-list {
-  margin-top: 1em;
+  margin-top: 0;
   padding: 2px 27px 5px 18px; }
 
 article.event {
@@ -1005,10 +1022,23 @@ header.top10pick {
     border: 1px solid #f8dda2;
     border-radius: 5px; }
 
+.top10-genre-intro {
+  margin-top: 1rem; }
+  .top10-genre-intro h3 {
+    margin: 0.7rem 0; }
+
 .top10-genres {
   line-height: 30px; }
   .top10-genres a {
     cursor: pointer; }
+  .top10-genres.top10-genres-big {
+    line-height: 42px; }
+    .top10-genres.top10-genres-big a {
+      font-size: 18px;
+      padding: 6px 16px;
+      border-radius: 20px; }
+      .top10-genres.top10-genres-big a.genre.genre-selected:before {
+        border-radius: 20px; }
 
 body.genre-filter #top10random, body.list-filter #top10random {
   display: none; }
@@ -1170,6 +1200,12 @@ body.genre-filter.genre-filter-war .anime.anime-genre-war {
 body.genre-filter.genre-filter-dark .anime.anime-genre-dark {
   display: block; }
 
+.genre.genre-first {
+  background: green; }
+
+body.genre-filter.genre-filter-first .anime.anime-genre-first {
+  display: block; }
+
 @media (min-width: 1470px) {
   a#home-link {
     font-size: 18px;
@@ -1258,67 +1294,67 @@ body.genre-filter.genre-filter-dark .anime.anime-genre-dark {
     grid-gap: 20px; } }
 
 @media (min-width: 801px) {
-  body.day-1 {
+  body[bg='day-1'] {
     background-image: url(images/day-1.jpg); }
-  body.day-2 {
+  body[bg='day-2'] {
     background-image: url(images/day-2.jpg); }
-  body.day-3 {
+  body[bg='day-3'] {
     background-image: url(images/day-3.jpg); }
-  body.day-4 {
+  body[bg='day-4'] {
     background-image: url(images/day-4.jpg); }
-  body.day-5 {
+  body[bg='day-5'] {
     background-image: url(images/day-5.jpg); }
-  body.day-6 {
+  body[bg='day-6'] {
     background-image: url(images/day-6.jpg); }
-  body.night-1 {
+  body[bg='night-1'] {
     background-image: url(images/night-1.jpg); }
-  body.night-2 {
+  body[bg='night-2'] {
     background-image: url(images/night-2.jpg); }
-  body.night-3 {
+  body[bg='night-3'] {
     background-image: url(images/night-3.jpg); }
-  body.night-4 {
+  body[bg='night-4'] {
     background-image: url(images/night-4.jpg); }
-  body.night-5 {
+  body[bg='night-5'] {
     background-image: url(images/night-5.jpg); }
-  body.night-6 {
+  body[bg='night-6'] {
     background-image: url(images/night-6.jpg); }
-  body.night-7 {
+  body[bg='night-7'] {
     background-image: url(images/night-7.jpg); }
-  body.night-8 {
+  body[bg='night-8'] {
     background-image: url(images/night-8.jpg); }
-  body.night-9 {
+  body[bg='night-9'] {
     background-image: url(images/night-9.jpg); } }
 
 @media (max-width: 800px) {
-  body.day-1 {
+  body[bg='day-1'] {
     background-image: url(images/sm-day-1.jpg); }
-  body.day-2 {
+  body[bg='day-2'] {
     background-image: url(images/sm-day-2.jpg); }
-  body.day-3 {
+  body[bg='day-3'] {
     background-image: url(images/sm-day-3.jpg); }
-  body.day-4 {
+  body[bg='day-4'] {
     background-image: url(images/sm-day-4.jpg); }
-  body.day-5 {
+  body[bg='day-5'] {
     background-image: url(images/sm-day-5.jpg); }
-  body.day-6 {
+  body[bg='day-6'] {
     background-image: url(images/sm-day-6.jpg); }
-  body.night-1 {
+  body[bg='night-1'] {
     background-image: url(images/sm-night-1.jpg); }
-  body.night-2 {
+  body[bg='night-2'] {
     background-image: url(images/sm-night-2.jpg); }
-  body.night-3 {
+  body[bg='night-3'] {
     background-image: url(images/sm-night-3.jpg); }
-  body.night-4 {
+  body[bg='night-4'] {
     background-image: url(images/sm-night-4.jpg); }
-  body.night-5 {
+  body[bg='night-5'] {
     background-image: url(images/sm-night-5.jpg); }
-  body.night-6 {
+  body[bg='night-6'] {
     background-image: url(images/sm-night-6.jpg); }
-  body.night-7 {
+  body[bg='night-7'] {
     background-image: url(images/sm-night-7.jpg); }
-  body.night-8 {
+  body[bg='night-8'] {
     background-image: url(images/sm-night-8.jpg); }
-  body.night-9 {
+  body[bg='night-9'] {
     background-image: url(images/sm-night-9.jpg); }
   #logo {
     display: none; }

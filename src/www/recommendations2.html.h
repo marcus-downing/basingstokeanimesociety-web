@@ -46,11 +46,11 @@
 		<header class="box top10pick">
 			<h2>Recommendations</h2>
 			<p>Need to find a new anime? Try one of our favourites.</p>
-			<!-- <a id='clear-genre'>Show All</a> -->
 		</header>
 
 		<div class="box top10pick">
-			<p class='top10-genres'>
+			<p class='top10-genres top10-genres-big'>
+				<a class='genre genre-first' data-genre='first'>New to anime</a>
 				<a class='genre genre-number1' data-genre='number1'>Our #1s</a>
 			</p>
 
@@ -79,6 +79,26 @@
 	</div>
 
 	<div id="top10results">
+		<section class='top10 pick-pane' id='pick-pane-first' data-show='first'>
+			<div class='box top10-genre-intro top10-genre-intro-first'>
+				<h3>New to anime?</h3>
+				<p>Try one of these great series first.</p>
+			</div>
+
+			<ul class='lre'>
+			{{#each top10first}}
+				<li class="box anime anime-genre-first">
+					<img src="images/series/{{picture}}.png" class="top10-pic">
+					<h4>{{name}}</h4>
+					<div class="top10-genres">
+					{{#each genre}}
+						<a class="genre genre-{{slug this}}" data-genre='{{slug this}}'>{{this}}</a>
+					{{/each}}
+					</div>
+				</li>
+			{{/each}}
+		</section>
+
 		{{#each top10}}
 		<section class='top10 pick-pane' id='pick-pane-{{slug name}}{{#if code}}-{{slug code}}{{/if}}' data-show='{{slug name}}{{#if code}}-{{slug code}}{{/if}}'>
 			<ul class='lre'>

@@ -10,6 +10,8 @@ var options = {{{json options}}};
 
 var ratingText = {"u": "Universal", "pg": "Parental Guidance", "12": "12 and older", "15": "15 and older"};
 
+var top10 = {{{json allTop10}}};
+
 // select a background image
 function selectBackground() {
     var DAY_LIMIT = 6;
@@ -18,9 +20,25 @@ function selectBackground() {
     var hour = new Date().getHours();
     var isDay = hour >= 6 && hour < 18;
     var bgNum = 1+Math.floor(Math.random() * (isDay ? DAY_LIMIT : NIGHT_LIMIT));
-    var bodyClass = (isDay ? "day day-" : "night night-")+bgNum;
+    var bg = (isDay ? "day-" : "night-")+bgNum;
 
-    document.getElementsByTagName("BODY")[0].className = bodyClass;
+    if (isDay) {
+      document.body.classList.add('day');
+      document.body.classList.remove('night');
+    } else {
+      document.body.classList.add('day');
+      document.body.classList.remove('night');
+    }
+
+    document.body.setAttribute('bg', bg);
+}
+
+function slugify(str) {
+  str = str.toLowerCase();
+  str = str.replace("'", "");
+  str = str.replace(/ \(.*\)/, '');
+  str = str.split(/[ _/-]+/).join('-');
+  return str;
 }
 
 function parseQuery(queryString) {
@@ -304,6 +322,23 @@ function setupHome() {
   } else {
     document.getElementById('section-next-social').remove();
   }
+
+  // pick a random recommendation
+  console.log('Top 10: '+top10.length+' items');
+  let index = Math.floor(Math.random() * top10.length);
+  console.log('Top 10: item '+index);
+  let top10pick = top10[index];
+  console.log('Top 10:', top10pick);
+
+  document.getElementById('recommendation__name').innerHTML = top10pick.name;
+  let url = 'images/series/'+top10pick.picture+'.png';
+  document.getElementById('recommendation__picture').setAttribute('src', url);
+
+  let genres = top10pick.genre.map((genre) => {
+    let slug = slugify(genre);
+    return `<span class="genre genre-${slug}" data-genre="${slug}">${genre}</span>`;
+  }).join(' ');
+  document.getElementById('recommendation__genre').innerHTML = genres;
 }
 
 function setupRecommendations() {

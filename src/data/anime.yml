@@ -96,6 +96,7 @@ slot1:
     rating: 15
 
   - from: 2023-01-10
+    displayFrom: 2022-12-22
     name: "Kabaneri of the Iron Fortress"
     picture: kabaneri
     rating: 15
@@ -309,6 +310,7 @@ slot3:
     rating: 15
 
   - from: 2023-01-10
+    displayFrom: 2022-12-22
     name: Snow White with the Red Hair
     picture: snow-white-red-hair
     rating: 12

@@ -1,5 +1,49 @@
 ---
 
+top10first:
+  - name: Little Witch Academia
+    picture: little-witch-academia
+    genre: [ "Adventure", "Mystery" ]
+  - name: Cowboy Bebop
+    picture: cowboy-bebop
+    genre: [ "Music", "Action", "Adventure" ]
+  - name: Spy x Family
+    picture: spy-x-family
+    genre: [ Comedy", "Action", "Adventure" ]
+  - name: My Hero Academia
+    picture: my-hero-academia
+    genre: [ "Action", "Adventure" ]
+  - name: Dr Stone
+    picture: dr-stone
+    genre: [ "Action", "Shounen" ]
+  - name: "Astra: Lost in Space"
+    picture: astra-lost-in-space
+    genre: [ "Adventure", "Sci fi", "Mystery", "Shounen" ]
+  - name: "B: The Beginning"
+    picture: b-the-beginning
+    genre: [ "Thriller", "Crime" ]
+  - name: Yuru Camp
+    picture: yuru-camp-s2
+    genre: [ "Slice of life" ]
+  - name: Ancient Magus Bride
+    picture: ancient-magus-bride
+    genre: [ "Adventure", "Drama", "Romance" ]
+  - name: Eden of the East
+    picture: eden-of-the-east
+    genre: [ "Thriller", "Mystery" ]
+  - name: One Punch Man
+    picture: one-punch-man
+    genre: [ "Action", "Comedy" ]
+  - name: Scrapped Princess
+    picture: scrapped-princess
+    genre: [ "Adventure", "War" ]
+  - name: Promised Neverland
+    picture: promised-neverland
+    genre: [ "Adventure", "Thriller", "Dark" ]
+  - name: Irresponsible Captain Tylor
+    picture: irresponsible-captain-tylor
+    genre: [ "Sci fi", "Action", "Comedy" ]
+
 top10genres:
   - Action
   - Adventure
@@ -298,7 +342,7 @@ top10:
       - name: "Eizouken ni wa Te wo Dasu na!"
         picture: eizouken
         genre: [ "Slice of life", "Comedy" ]
-      - name: The Irresponsible Captain Tyler
+      - name: The Irresponsible Captain Tylor
         picture: irresponsible-captain-tylor
         genre: [ "Comedy", "Sci fi", "Adventure" ]
       - name: Adolescense of Utena

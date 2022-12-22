@@ -52,12 +52,12 @@ twq('track','PageView');
 
 <header id="header">
 <div>
-  <section class='box'>
+  <!-- <section class='box'>
     <h3 class='big'>Showing anime in Basingstoke every Tuesday.</h3>
-  </section>
+  </section> -->
 
   <section id='section-next-meeting' class='box'>
-    <h2>Next Meeting</h2>
+    <h2>Next Weekly Meeting</h2>
 
     <article id="next-meeting-date" class="focus-date event-anime">
       <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
@@ -69,10 +69,10 @@ twq('track','PageView');
     <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA' style='top: -15px; right: 0'><i></i><span>Join our Discord</span></a>
     {{/if}} -->
 
-    <h3>Venue: <span id="next-meeting-venue">{{ nextMeetingVenue }}</span></h3>
+    <!-- <h3>Venue: <span id="next-meeting-venue">{{ nextMeetingVenue }}</span></h3> -->
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
     <div id='about'>
       <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Show Map</span></button>
@@ -88,9 +88,9 @@ twq('track','PageView');
 </div>
 
 <div>
-  <!-- <section class='box'>
+  <section class='box'>
     <h3 class='big'>Showing anime in Basingstoke every Tuesday.</h3>
-  </section> -->
+  </section>
 
   <section id='section-next-social' class='box'>
     <h2>Next Social Event</h2>
@@ -103,13 +103,13 @@ twq('track','PageView');
     <h3>Venue: <span id="next-social-venue">{{ nextSocialVenue }}</span></h3>
   </section>
 
-  <section id='section-discord' class='box'>
+  <!-- <section id='section-discord' class='box'>
     <h3>Social</h3>
     <p>Chat with us on Discord</p>
     <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join our Discord</span></a>
-  </section>
+  </section> -->
 
-  <section id='section-recommendations' class='box'>
+  <!-- <section id='section-recommendations' class='box'>
     <h3>Recommendations</h3>
     <p>Need a new anime to watch? Check out one of our favourites.</p>
     <a class='btn btn-recommendations' href='recommendations.html'><span>Recommendations</span></a>
@@ -121,7 +121,7 @@ twq('track','PageView');
       <a href='recommendations.html#genre=mystery' class='genre genre-mystery'>Mystery</a>
       ...
     </p>
-  </section>
+  </section> -->
 </div>
 </header>
 
@@ -197,6 +197,33 @@ twq('track','PageView');
 </section>
 
 <section id='news-feed'>
+  <h2 class='underline'>Recommendations</h2>
+
+  <figure class='box' id='recommendation'>
+    <figcaption>
+      <p class='series-ident'>You might enjoy...</p>
+
+      <h3 id='recommendation__name'></h3>
+      <p id='recommendation__genre'></p>
+
+      <hr>
+
+      <p>Or check out one of our favourites.</p>
+
+      <a class='btn btn-recommendations' href='recommendations.html'><span>Recommendations</span></a>
+      <p>
+        <a href='recommendations.html#genre=action' class='genre genre-action'>Action</a>
+        <a href='recommendations.html#genre=romance' class='genre genre-romance'>Romance</a>
+        <a href='recommendations.html#genre=slice-of-life' class='genre genre-slice-of-life'>Slice of life</a>
+        <a href='recommendations.html#genre=comedy' class='genre genre-comedy'>Comedy</a>
+        <a href='recommendations.html#genre=mystery' class='genre genre-mystery'>Mystery</a>
+        ...
+      </p>
+    </figcaption>
+
+    <img class='series-picture' id='recommendation__picture'>
+  </figure>
+
   <h2 class='underline'>News Feed</h2>
 
   {{#each freshNews}}
