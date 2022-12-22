@@ -1935,6 +1935,23 @@ body.genre-filter {
   }
 }
 
+@media (max-width: 600px) {
+
+  figure#recommendation {
+    display: grid;
+    grid-template-areas: "top" "bottom";
+    height: auto;
+
+    figcaption {
+      grid-area: bottom;
+    } 
+    img {
+      grid-area: top;
+      position: revert;
+    }
+  }
+}
+
 .slideshow {
   $w: 492px;
   $h: 277px;

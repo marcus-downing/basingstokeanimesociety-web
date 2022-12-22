@@ -102,34 +102,8 @@ twq('track','PageView');
 
     <h3>Venue: <span id="next-social-venue">{{ nextSocialVenue }}</span></h3>
   </section>
-
-  <!-- <section id='section-discord' class='box'>
-    <h3>Social</h3>
-    <p>Chat with us on Discord</p>
-    <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join our Discord</span></a>
-  </section> -->
-
-  <!-- <section id='section-recommendations' class='box'>
-    <h3>Recommendations</h3>
-    <p>Need a new anime to watch? Check out one of our favourites.</p>
-    <a class='btn btn-recommendations' href='recommendations.html'><span>Recommendations</span></a>
-    <p>
-      <a href='recommendations.html#genre=action' class='genre genre-action'>Action</a>
-      <a href='recommendations.html#genre=romance' class='genre genre-romance'>Romance</a>
-      <a href='recommendations.html#genre=slice-of-life' class='genre genre-slice-of-life'>Slice of life</a>
-      <a href='recommendations.html#genre=comedy' class='genre genre-comedy'>Comedy</a>
-      <a href='recommendations.html#genre=mystery' class='genre genre-mystery'>Mystery</a>
-      ...
-    </p>
-  </section> -->
 </div>
 </header>
-
-<!-- <section id='section-discord' class='box'>
-  <h3>Social</h3>
-  <p>Chat with us on Discord</p>
-  <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join our Discord</span></a>
-</section> -->
 
 <section id='section-now-showing' class='{{#if options.hiatus}}section-now-showing-hiatus{{/if}}'>
   <h2 class='underline'>Now Showing</h2>

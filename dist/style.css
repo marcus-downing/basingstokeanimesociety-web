@@ -1386,6 +1386,17 @@ body.genre-filter.genre-filter-first .anime.anime-genre-first {
         height: 180px;
         width: 126px; } }
 
+@media (max-width: 600px) {
+  figure#recommendation {
+    display: grid;
+    grid-template-areas: "top" "bottom";
+    height: auto; }
+    figure#recommendation figcaption {
+      grid-area: bottom; }
+    figure#recommendation img {
+      grid-area: top;
+      position: revert; } }
+
 .slideshow {
   margin-top: 2em;
   position: relative;
