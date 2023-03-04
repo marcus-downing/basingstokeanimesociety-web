@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Layer-1" serif:id="Layer 1">
+        <g opacity="0.7">
+            <g transform="matrix(1,0,0,1,27.0001,54.0003)">
+                <path d="M0,-54C-14.912,-54 -27,-41.912 -27,-27C-27,-12.088 -14.912,0 0,0C14.912,0 27,-12.088 27,-27C27,-41.912 14.912,-54 0,-54M0,-52C13.785,-52 25,-40.785 25,-27C25,-13.215 13.785,-2 0,-2C-13.785,-2 -25,-13.215 -25,-27C-25,-40.785 -13.785,-52 0,-52" style="fill:rgb(35,31,32);fill-rule:nonzero;"/>
+            </g>
+        </g>
+        <g opacity="0.7">
+            <g transform="matrix(1,0,0,1,27.0001,3.4532)">
+                <path d="M0,47.095C-12.984,47.095 -23.547,36.532 -23.547,23.547C-23.547,10.563 -12.984,0 0,0C12.984,0 23.548,10.563 23.548,23.547C23.548,36.532 12.984,47.095 0,47.095" style="fill-rule:nonzero;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,27.0001,51.9482)">
+            <path d="M0,-49.895C-13.756,-49.895 -24.947,-38.704 -24.947,-24.948C-24.947,-11.192 -13.756,0 0,0C13.756,0 24.947,-11.192 24.947,-24.948C24.947,-38.704 13.756,-49.895 0,-49.895M0,-47.095C12.231,-47.095 22.147,-37.18 22.147,-24.948C22.147,-12.716 12.231,-2.8 0,-2.8C-12.232,-2.8 -22.147,-12.716 -22.147,-24.948C-22.147,-37.18 -12.232,-47.095 0,-47.095" style="fill:rgb(220,10,10);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(2.11762,0,0,2.11762,74.2272,-28.4148)">
+            <g transform="matrix(12,0,0,12,-15.576,30.4917)">
+            </g>
+            <text x="-29.304px" y="30.492px" style="font-family:'NotoSans-Bold', 'Noto Sans', sans-serif;font-weight:700;font-size:12px;fill:white;">18</text>
+        </g>
+    </g>
+</svg>

@@ -195,6 +195,16 @@ slot2:
     picture: aquatope
     rating: pg
 
+  - from: 2023-06-20
+    name: "Appare-Ranman"
+    picture: appare-ranman
+    rating: 15
+
+  - from: 2023-08-08
+    name: "The Aquatope on White Sand pt2"
+    picture: aquatope
+    rating: pg
+
 slot3:
   - from: 2020-01-07
     name: Slow Start
@@ -324,6 +334,11 @@ slot3:
     name: "Slime Diaries"
     picture: tensura
     rating: pg
+
+  - from: 2023-07-11
+    name: "Taisho Otome Fairy Tale"
+    picture: taisho-otome
+    rating: 12
 
 movies:
   - name: "Konosuba - Legend of Crimson"

@@ -81,7 +81,7 @@ twq('track','PageView');
         <p><img class='icon' src='images/pin.svg'>Function room, upstairs at <a href='https://www.thewhitehartbasingstoke.com/'>The White Hart</a>, Basingstoke RG21 4AE</p>
         <p><span class='icon entry-fee'>£4</span>Club fee</p>
         <p><img class='icon' src='images/biohazard-white.svg'>Vaccination required</p>
-        <p><img class="rating-img rating-15 icon" src="images/rating/15.svg">Age requirement</p>
+        <p><img class="rating-img rating-18 icon" src="images/rating/18.svg">Age requirement</p>
       </div>
     </div>
   </section>
