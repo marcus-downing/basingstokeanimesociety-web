@@ -144,6 +144,11 @@ events:
     class: cinema
     # time: 
     # venue: Vue Basingstoke
+  - name: Magic the Gathering
+    date: 2023-04-19
+    class: social
+    venue: White Hart
+    time: 7pm
   - name: Board Games
     date: 2023-05-11
     class: social
