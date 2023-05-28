@@ -105,11 +105,35 @@ slot1:
     name: "Haibane Renmei"
     picture: haibane-renmei
     rating: 12
+    episodes:
+      - count: 13
+      - episode: 7
+        show: single
 
   - from: 2023-04-11
     name: "Eureka Seven"
     picture: eureka-seven
     rating: 12
+    episodes:
+      - end: 50
+      - episode: 13
+        show: single
+      - episode: 14
+        show: skip
+      - episode: 50
+        show: more
+      - episode: "50.1"
+        after: 50
+
+  - from: 2023-10-03
+    name: "Tenrou: Sirius the Jaeger"
+    picture: sirius-the-jaeger
+    rating: "15"
+
+  - from: 2023-11-14
+    name: "Irina: The Vampire Cosmonaut"
+    picture: tsuki-to-laika-to-nosferatu
+    rating: "15"
 
 slot2:
   - from: 2019-01-08
@@ -194,16 +218,36 @@ slot2:
     name: "The Aquatope on White Sand"
     picture: aquatope
     rating: pg
+    episodes:
+      - count: 12
 
   - from: 2023-06-20
     name: "Appare-Ranman"
     picture: appare-ranman
     rating: 15
+    episodes:
+      - count: 13
+      - episode: 9
+        show: single
 
   - from: 2023-08-08
     name: "The Aquatope on White Sand pt2"
     picture: aquatope
     rating: pg
+    episodes:
+      - start: 13
+      - count: 24
+
+  - from: 2023-09-19
+    name: "Mushi-Shi"
+    picture: mushishi
+    rating: "12"
+
+  - from: 2023-12-19
+    name: "Kaguya-sama, Love is War: The First Kiss Never Ends"
+    picture: kaguya-sama-movie
+    movie: true
+    rating: "12"
 
 slot3:
   - from: 2020-01-07
@@ -324,21 +368,44 @@ slot3:
     name: Snow White with the Red Hair
     picture: snow-white-red-hair
     rating: 12
+    episodes:
+      - episode: "OVA"
+        before: 13
+        show: single
+      - end: 24
 
   - from: 2023-04-11
     name: "Kaguya-sama, Love is War: Ultra Romantic"
     picture: kaguya-sama3
     rating: 12
+    episodes:
+      - episode: 5
+        show: single
+      - end: 13
 
   - from: 2023-05-30
     name: "Slime Diaries"
     picture: tensura
     rating: pg
+    episodes:
+      - end: 12
 
   - from: 2023-07-11
     name: "Taisho Otome Fairy Tale"
     picture: taisho-otome
     rating: 12
+    episodes:
+      - end: 12
+
+  - from: 2023-08-22
+    name: "Spy × Family"
+    picture: spy-x-family
+    rating: "15"
+
+  - from: 2023-11-21
+    name: "Restaurant to Another World"
+    picture: restaurant-to-another-world
+    rating: "15"
 
 movies:
   - name: "Konosuba - Legend of Crimson"

@@ -646,6 +646,60 @@ p.series-ident {
   }
 }
 
+figure.series--right {
+  position: relative;
+  background: rgba(40, 60, 120, 0.4);
+  background: linear-gradient(90deg, rgba(40,60,120,0.4), rgba(40,60,120,0.7));
+  border-radius: 2px;
+  margin: 0;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+  height: 180px;
+  padding-right: 126px;
+
+  body.night & {
+    background: rgba(20, 30, 60, 0.4);
+    background: linear-gradient(90deg, rgba(20,30,60,0.4), rgba(20,30,60,0.7));
+  }
+
+  figcaption {
+    padding: 1px 5px 1px 13px;
+    text-align: left;
+
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    text-shadow: 0 1px 1px black;
+    
+    h3 {
+      margin-top: 8px;
+
+      height: 56px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      /* white-space: nowrap; */
+      -webkit-box-orient: vertical;
+    }
+
+    .info-line {
+      position: absolute;
+      left: 13px;
+      bottom: 13px;
+
+      display: grid;
+      grid-template-columns: 54px 54px 54px;
+      grid-gap: 13px;
+
+      > * {
+        display: inline-block;
+        width: 54px;
+        height: 54px;
+      }
+    }
+  }
+}
+
 #coming-soon {
   display: grid;
 
@@ -675,56 +729,7 @@ p.series-ident {
       grid-area: eight;
     }
 
-    position: relative;
-    background: rgba(40, 60, 120, 0.4);
-    background: linear-gradient(90deg, rgba(40,60,120,0.4), rgba(40,60,120,0.7));
-    border-radius: 2px;
-    margin: 0;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.5);
-    height: 180px;
-    padding-right: 126px;
-
-    body.night & {
-      background: rgba(20, 30, 60, 0.4);
-      background: linear-gradient(90deg, rgba(20,30,60,0.4), rgba(20,30,60,0.7));
-    }
-
     figcaption {
-      padding: 1px 5px 1px 13px;
-      text-align: left;
-
-      color: white;
-      font-weight: bold;
-      font-size: 17px;
-      text-shadow: 0 1px 1px black;
-
-      h3 {
-        margin-top: 8px;
-
-        height: 56px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        /* white-space: nowrap; */
-        -webkit-box-orient: vertical;
-      }
-
-      .info-line {
-        position: absolute;
-        left: 13px;
-        bottom: 13px;
-
-        display: grid;
-        grid-template-columns: 54px 54px 54px;
-        grid-gap: 13px;
-
-        > * {
-          display: inline-block;
-          width: 54px;
-          height: 54px;
-        }
-      }
 
       time {
         background: linear-gradient(#faeed8, #f8dda2);
@@ -888,6 +893,18 @@ p.series-ident {
     span {
       background: rgba(0,0,0,0.5);
     }
+  }
+}
+
+.history-week {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+
+  figure {
+
   }
 }
 

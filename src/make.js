@@ -7,7 +7,8 @@ const sass = require('node-sass');
 const { exec } = require('child_process');
 const _ = require('lodash');
 
-const util = require('./util.js');
+const util = require('./make/util.js');
+const episodes = require('./make/episodes.js');
 
 Handlebars.registerHelper('eq', function(value1, value2, options) {
   return value1 == value2;
@@ -22,56 +23,40 @@ Handlebars.registerHelper('slug', function(value) {
   value = value.toLowerCase();
   value = value.replaceAll(/[^a-z0-9]+/g, '-');
   return value;
-})
+});
+Handlebars.registerHelper('times', function(n, block) {
+    var accum = '';
+    for(var i = 1; i <= n; ++i)
+        accum += block.fn(i);
+    return accum;
+});
 
 // read the data
 let basData = util.readData();
 let options = basData.options;
 
-function expandDate(target, date = null, time = null, leeway = 0) {
-  if (date === null) {
-    date = target.date;
-  }
-  if (time !== null) {
-    time = time.trim();
-    let pm = true;
-    if (time.match(/pm$/)) {
-      time = time.replace(/pm$/, '');
-    } else if (time.match(/am$/)) {
-      pm = false;
-      time = time.replace(/am$/, '');
-    }
-    time = parseInt(time) + leeway;
-    date.setHours(time + (pm ? 12 : 0));
-    target.date = date;
-  }
-
-  target.day = date.getDate();
-  target.month = util.formatShortMonth(date);
-  target.weekday = util.weekday(date);
-  return target;
-}
-
 // showing anime
-basData.slot1 = util.currentAndFuture(basData.slot1.map(series => expandDate(series, series.from, '7pm')), 'from');
+basData.slot1 = util.currentAndFuture(basData.slot1.map(series => util.expandDate(series, series.from, '7pm')), 'from');
 console.log("Slot 1:", basData.slot1.map(series => util.formatShortDate(series.from)).join(", "));
 basData.slot1back = util.backdate(basData.slot1);
 basData.series1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[0];
 basData.nextSeries1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[1];
 
-basData.slot2 = util.currentAndFuture(basData.slot2.map(series => expandDate(series, series.from, '8pm')), 'from');
+// episodes.flowEpisodes(basData.series1);
+
+basData.slot2 = util.currentAndFuture(basData.slot2.map(series => util.expandDate(series, series.from, '8pm')), 'from');
 console.log("Slot 2:", basData.slot2.map(series => util.formatShortDate(series.from)).join(", "));
 basData.slot2back = util.backdate(basData.slot2);
 basData.series2 = _.isEmpty(basData.slot2) ? { name: '', picture: '' } : basData.slot2[0];
 basData.nextSeries2 = _.isEmpty(basData.slot2) ? { name: '', picture: '' } : basData.slot2[1];
 
-basData.slot3 = util.currentAndFuture(basData.slot3.map(series => expandDate(series, series.from, '9pm')), 'from');
+basData.slot3 = util.currentAndFuture(basData.slot3.map(series => util.expandDate(series, series.from, '9pm')), 'from');
 console.log("Slot 3:", basData.slot3.map(series => util.formatShortDate(series.from)).join(", "));
 basData.slot3back = util.backdate(basData.slot3);
 basData.series3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[0];
 basData.nextSeries3 = _.isEmpty(basData.slot3) ? { name: '', picture: '' } : basData.slot3[1];
 
-basData.movies = util.futureN(basData.movies.map(movie => expandDate(movie, movie.date, movie.time, 1)), 10, 'date');
+basData.movies = util.futureN(basData.movies.map(movie => util.expandDate(movie, movie.date, movie.time, 1)), 10, 'date');
 _.each(basData.movies, movie => movie.movie = true);
 basData.listedMovies = util.futureN(basData.movies, 2, 'date');
 console.log("Movies:", basData.movies.map(movie => util.formatShortDate(movie.date)).join(", "));
@@ -381,6 +366,7 @@ sass.render({
     basData.scriptVersion = util.md5sum(scriptData);
     
     writeTemplate('www/index.html.h', 'index.html', basData);
+    writeTemplate('www/history.html.h', 'history.html', basData);
     // writeTemplate('www/bbq.html.h', 'bbq.html', basData);
     writeTemplate('www/recommendations2.html.h', 'recommendations.html', basData);
   });
@@ -412,11 +398,13 @@ _.each({slot1: basData.slot1, slot2: basData.slot2, slot3: basData.slot3}, (slot
     bookends[dateKey][slotName] = series;
   });
 });
-// console.log(bookends);
+console.log("All bookends I", bookends);
 
 let bookendDates = _.keys(bookends);
 bookendDates = bookendDates.sort();
 bookends = _.map(bookendDates, dateKey => bookends[dateKey]);
+
+console.log("All bookends II", bookends);
 
 // fill in the ongoing series from one date to the next
 let slot1 = null, slot2 = null, slot3 = null;
@@ -455,6 +443,7 @@ _.each(bookends, bookend => {
   }
 
   console.log("Bookend:", bookend.name);
+  console.log("Bookend date:", bookend.date);
   let series1picture = 'series/'+bookend.slot1.picture+'.png';
   let series2picture = 'series/'+bookend.slot2.picture+'.png';
   let series3picture = 'series/'+bookend.slot3.picture+'.png';
@@ -506,6 +495,7 @@ _.each(bookends, bookend => {
 
   // Also do the next date, unless there's a new series starting that day
   let nextDate = util.plus1week(bookend.date);
+  console.log("Next date:", nextDate);
   let nextDateKey = util.formatShortDate(nextDate);
 
   if (!bookendDates.includes(nextDateKey)) {

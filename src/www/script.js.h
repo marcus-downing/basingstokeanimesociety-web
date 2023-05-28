@@ -15,7 +15,7 @@ var top10 = {{{json allTop10}}};
 // select a background image
 function selectBackground() {
     var DAY_LIMIT = 6;
-    var NIGHT_LIMIT = 9;
+    var NIGHT_LIMIT = 7;
 
     var hour = new Date().getHours();
     var isDay = hour >= 6 && hour < 18;
@@ -186,7 +186,7 @@ function setupHome() {
 
   var comingSoonHTML = '';
   for (item of comingSoon) {
-    var html = `<figure${item.movie ? " class='movie'" : ""}><figcaption>`;
+    var html = `<figure class="series--right ${item.movie ? " movie" : ""}"><figcaption>`;
     if (item.movie) {
       html = html + "<p class='movie-ident'>Movie</p>";
     } else {

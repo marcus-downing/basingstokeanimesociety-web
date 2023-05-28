@@ -46,32 +46,62 @@ function formatDay(date) {
 
 let shortDateFormat = new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'numeric', day: 'numeric' });
 function formatShortDate(date) {
-  let parts = _.keyBy(shortDateFormat.formatToParts(date), 'type');
-  return parts.year.value+"-"+padNumber(parts.month.value, 2)+"-"+padNumber(parts.day.value, 2);
+  try {
+    let parts = _.keyBy(shortDateFormat.formatToParts(date), 'type');
+    return parts.year.value+"-"+padNumber(parts.month.value, 2)+"-"+padNumber(parts.day.value, 2);
+  } catch(err) {
+    console.error("Bad date", date);
+    console.error(err);
+    return "";
+  }
 }
 
 let mediumDateFormat = new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'short', day: 'numeric' });
 function formatMediumDate(date) {
-  let parts = _.keyBy(mediumDateFormat.formatToParts(date), 'type');
-  return parts.day.value+" "+parts.month.value+" "+parts.year.value;
+  try {
+    let parts = _.keyBy(mediumDateFormat.formatToParts(date), 'type');
+    return parts.day.value+" "+parts.month.value+" "+parts.year.value;
+  } catch(err) {
+    console.error("Bad date", date);
+    console.error(err);
+    return "";
+  }
 }
 
 let longDateFormat = new Intl.DateTimeFormat('en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 function formatLongDate(date) {
-  let parts = _.keyBy(longDateFormat.formatToParts(date), 'type');
-  return parts.weekday.value+", "+parts.day.value+" "+parts.month.value+" "+parts.year.value;
+  try {
+    let parts = _.keyBy(longDateFormat.formatToParts(date), 'type');
+    return parts.weekday.value+", "+parts.day.value+" "+parts.month.value+" "+parts.year.value;
+  } catch(err) {
+    console.error("Bad date", date);
+    console.error(err);
+    return "";
+  }
 }
 
 let weekdayFormat = new Intl.DateTimeFormat('en-GB', { weekday: 'long' });
 function weekday(date) {
-  let parts = _.keyBy(weekdayFormat.formatToParts(date), 'type');
-  return parts.weekday.value;
+  try {
+    let parts = _.keyBy(weekdayFormat.formatToParts(date), 'type');
+    return parts.weekday.value;
+  } catch(err) {
+    console.error("Bad date", date);
+    console.error(err);
+    return "";
+  }
 }
 
 let shortWeekdayFormat = new Intl.DateTimeFormat('en-GB', { weekday: 'short' });
 function shortWeekday(date) {
-  let parts = _.keyBy(shortWeekdayFormat.formatToParts(date), 'type');
-  return parts.weekday.value;
+  try {
+    let parts = _.keyBy(shortWeekdayFormat.formatToParts(date), 'type');
+    return parts.weekday.value;
+  } catch(err) {
+    console.error("Bad date", date);
+    console.error(err);
+    return "";
+  }
 }
 
 function formatShortTime(time) {
@@ -152,6 +182,30 @@ function backdate(items, key = 'from') {
   });
 }
 
+function expandDate(target, date = null, time = null, leeway = 0) {
+  if (date === null) {
+    date = target.date;
+  }
+  if (time !== null) {
+    time = time.trim();
+    let pm = true;
+    if (time.match(/pm$/)) {
+      time = time.replace(/pm$/, '');
+    } else if (time.match(/am$/)) {
+      pm = false;
+      time = time.replace(/am$/, '');
+    }
+    time = parseInt(time) + leeway;
+    date.setHours(time + (pm ? 12 : 0));
+    target.date = date;
+  }
+
+  target.day = date.getDate();
+  target.month = formatShortMonth(date);
+  target.weekday = weekday(date);
+  return target;
+}
+
 function md5sum(data, digits = 6) {
   let hash = crypto.createHash('md5').update(data).digest("hex");
   return hash.substr(0, digits);
@@ -174,5 +228,6 @@ module.exports = {
   yesterday,
   plus1week,
   backdate,
+  expandDate,
   md5sum,
 };
