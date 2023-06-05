@@ -1,3 +1,82 @@
+.tabs {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 3px solid rgba(20, 30, 60, 0.6);
+  justify-content: space-evenly;
+  margin: 20px 0; }
+  .tabs .tab {
+    text-transform: uppercase;
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 2px black;
+    cursor: pointer;
+    padding: 2px 16px;
+    text-shadow: 0 1px 2px black, 0 0 3px black, 0 0 2px black;
+    box-shadow: inset 0 -22px 0 rgba(20, 30, 60, 0.2); }
+    .tabs .tab.tab--show {
+      color: #ffe395;
+      box-shadow: inset 0 -22px 0 rgba(20, 30, 60, 0.6);
+      display: inline-block; }
+
+.tab-pane {
+  display: none;
+  min-height: 600px;
+  margin-bottom: 40px; }
+  .tab-pane.tab-pane--show {
+    display: block; }
+
+time {
+  background: white;
+  width: 54px;
+  height: 54px;
+  box-shadow: 0 1px 2px black;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: black;
+  text-shadow: none !important;
+  text-align: center; }
+  time .day {
+    line-height: 24px;
+    font-size: 26px;
+    font-weight: 600; }
+  time .month {
+    line-height: 13px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold; }
+  time .year {
+    line-height: 12px;
+    font-size: 12px;
+    font-weight: bold; }
+
+time.time--large,
+time.time--event, .event-anime time {
+  background: #a2d7f8; }
+
+time.time--movie, .event-movie time {
+  background: #9af3aa; }
+
+time.time--new-series, .event-new-series time, figure time {
+  background: #f8dda2; }
+
+time.time--online, .event-online time {
+  background: #97abf3; }
+
+time.time--cinema, .event-cinema time {
+  background: #f8b3a2; }
+
+time.time--convention, .event-convention time {
+  background: #f8a2ed; }
+
+time.time--news, .news time {
+  background: #a2f8ad; }
+
+time.time--social, .event-social time {
+  background: #a2f8ad; }
+
 @font-face {
   font-family: 'Open Sans';
   src: url(fonts/OpenSans-Regular.ttf); }
@@ -148,7 +227,7 @@ h2 {
   font-size: 20px;
   margin-top: 0.8em; }
   h2.underline {
-    font-size: 26px;
+    font-size: 28px;
     box-shadow: inset 0 -22px 0 rgba(20, 30, 60, 0.5);
     text-shadow: 0 1px 2px black, 0 0 3px black, 0 0 2px black;
     display: inline-block;
@@ -269,8 +348,7 @@ a#home-link {
     left: 0;
     top: 0;
     height: 82px;
-    width: 82px;
-    background: linear-gradient(#faeed8, #f8dda2); }
+    width: 82px; }
     .focus-date time .day {
       font-size: 46px;
       line-height: 46px; }
@@ -488,105 +566,111 @@ figure.series--right {
 
 #coming-soon {
   display: grid; }
-  #coming-soon figure:nth-child(1) {
-    grid-area: one; }
-  #coming-soon figure:nth-child(2) {
-    grid-area: two; }
-  #coming-soon figure:nth-child(3) {
-    grid-area: three; }
-  #coming-soon figure:nth-child(4) {
-    grid-area: four; }
-  #coming-soon figure:nth-child(5) {
-    grid-area: five; }
-  #coming-soon figure:nth-child(6) {
-    grid-area: six; }
-  #coming-soon figure:nth-child(7) {
-    grid-area: seven; }
-  #coming-soon figure:nth-child(8) {
-    grid-area: eight; }
-  #coming-soon figure figcaption time {
-    background: linear-gradient(#faeed8, #f8dda2); }
-  #coming-soon figure figcaption .movie-time {
-    display: none;
-    height: 54px; }
-    #coming-soon figure figcaption .movie-time .movie-weekday {
+  #coming-soon figure {
+    /*
+    &:nth-child(1) {
+      grid-area: one;
+    }
+    &:nth-child(2) {
+      grid-area: two;
+    }
+    &:nth-child(3) {
+      grid-area: three;
+    }
+    &:nth-child(4) {
+      grid-area: four;
+    }
+    &:nth-child(5) {
+      grid-area: five;
+    }
+    &:nth-child(6) {
+      grid-area: six;
+    }
+    &:nth-child(7) {
+      grid-area: seven;
+    }
+    &:nth-child(8) {
+      grid-area: eight;
+    }*/ }
+    #coming-soon figure figcaption .movie-time {
+      display: none;
+      height: 54px; }
+      #coming-soon figure figcaption .movie-time .movie-weekday {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0.1em 0 0 0;
+        color: #9af3aa; }
+      #coming-soon figure figcaption .movie-time .movie-start-time {
+        font-size: 22px;
+        color: white;
+        margin: 0; }
+    #coming-soon figure figcaption img.rating-img {
+      position: absolute;
+      bottom: 13px;
+      right: 136px;
+      width: 54px;
+      height: 54px; }
+    #coming-soon figure figcaption p.movie-ident {
       font-size: 14px;
       text-transform: uppercase;
-      margin: 0.1em 0 0 0;
+      margin: 0.5em 0 0 0;
       color: #9af3aa; }
-    #coming-soon figure figcaption .movie-time .movie-start-time {
-      font-size: 22px;
-      color: white;
-      margin: 0; }
-  #coming-soon figure figcaption img.rating-img {
-    position: absolute;
-    bottom: 13px;
-    right: 136px;
-    width: 54px;
-    height: 54px; }
-  #coming-soon figure figcaption p.movie-ident {
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 0.5em 0 0 0;
-    color: #9af3aa; }
-    #coming-soon figure figcaption p.movie-ident + h3 {
-      margin-top: 1px; }
-  #coming-soon figure figcaption p.series-ident {
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 0.5em 0 0 0; }
-    #coming-soon figure figcaption p.series-ident + h3 {
-      margin-top: 1px; }
-  #coming-soon figure figcaption p.starting {
-    position: absolute;
-    left: 13px;
-    bottom: 59px;
-    font-size: 14px;
-    text-transform: uppercase; }
-  #coming-soon figure > img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 126px;
-    height: 180px;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px; }
-  #coming-soon figure.movie {
-    background: rgba(20, 40, 100, 0.6);
-    background: linear-gradient(90deg, rgba(20, 40, 100, 0.6), #142864);
-    box-shadow: none; }
-    #coming-soon figure.movie:after {
-      content: "";
-      display: block;
+      #coming-soon figure figcaption p.movie-ident + h3 {
+        margin-top: 1px; }
+    #coming-soon figure figcaption p.series-ident {
+      font-size: 14px;
+      text-transform: uppercase;
+      margin: 0.5em 0 0 0; }
+      #coming-soon figure figcaption p.series-ident + h3 {
+        margin-top: 1px; }
+    #coming-soon figure figcaption p.starting {
       position: absolute;
-      top: -8px;
-      bottom: -8px;
-      left: -8px;
-      right: -8px;
-      border: 4px solid rgba(20, 40, 100, 0.7);
-      border-radius: 8px; }
-    body.night #coming-soon figure.movie {
-      background: rgba(5, 10, 40, 0.6);
-      background: linear-gradient(90deg, rgba(5, 10, 40, 0.6), #050a28); }
-    #coming-soon figure.movie figcaption h3 {
-      height: 80px;
-      -webkit-line-clamp: 3; }
-    #coming-soon figure.movie time {
-      background: linear-gradient(#d0f5d9, #9af3aa); }
-    #coming-soon figure.movie .movie-info {
+      left: 13px;
+      bottom: 59px;
+      font-size: 14px;
+      text-transform: uppercase; }
+    #coming-soon figure > img {
       position: absolute;
-      left: 80px;
-      bottom: 24px; }
-      #coming-soon figure.movie .movie-info p {
-        margin: 0.1em 0;
-        font-size: 22px; }
-    #coming-soon figure.movie:nth-child(1) .movie-time, #coming-soon figure.movie:nth-child(2) .movie-time {
-      display: inline-block; }
-  #coming-soon figure .rating-hover {
-    left: 20%;
-    right: auto; }
-    #coming-soon figure .rating-hover .rating__tag {
-      left: 78px; }
+      top: 0;
+      right: 0;
+      width: 126px;
+      height: 180px;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px; }
+    #coming-soon figure.movie {
+      background: rgba(20, 40, 100, 0.6);
+      background: linear-gradient(90deg, rgba(20, 40, 100, 0.6), #142864);
+      box-shadow: none; }
+      #coming-soon figure.movie:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -8px;
+        bottom: -8px;
+        left: -8px;
+        right: -8px;
+        border: 4px solid rgba(20, 40, 100, 0.7);
+        border-radius: 8px; }
+      body.night #coming-soon figure.movie {
+        background: rgba(5, 10, 40, 0.6);
+        background: linear-gradient(90deg, rgba(5, 10, 40, 0.6), #050a28); }
+      #coming-soon figure.movie figcaption h3 {
+        height: 80px;
+        -webkit-line-clamp: 3; }
+      #coming-soon figure.movie time {
+        background: linear-gradient(#d0f5d9, #9af3aa); }
+      #coming-soon figure.movie .movie-info {
+        position: absolute;
+        left: 80px;
+        bottom: 24px; }
+        #coming-soon figure.movie .movie-info p {
+          margin: 0.1em 0;
+          font-size: 22px; }
+    #coming-soon figure .rating-hover {
+      left: 20%;
+      right: auto; }
+      #coming-soon figure .rating-hover .rating__tag {
+        left: 78px; }
   #coming-soon.coming-soon--less figure:nth-child(3), #coming-soon.coming-soon--less figure:nth-child(4), #coming-soon.coming-soon--less figure:nth-child(5), #coming-soon.coming-soon--less figure:nth-child(6), #coming-soon.coming-soon--less figure:nth-child(7), #coming-soon.coming-soon--less figure:nth-child(8) {
     display: none; }
   #coming-soon.coming-soon--more + #coming-soon-more-switch {
@@ -662,7 +746,16 @@ figure#recommendation {
 .lr {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-gap: 20px; }
+  grid-gap: 40px; }
+  .lr > * {
+    margin-top: 0; }
+
+.rl {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 40px; }
+  .rl > * {
+    margin-top: 0; }
 
 .lre {
   display: grid;
@@ -697,29 +790,6 @@ figure#recommendation {
   display: none; }
   .pick-pane.pick-pane-show {
     display: block; }
-
-time {
-  background: white;
-  width: 54px;
-  height: 54px;
-  box-shadow: 0 1px 2px black;
-  border-radius: 2px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  color: black;
-  text-shadow: 0 1px 0 white, 0 -0.5px 0 rgba(0, 0, 0, 0.1); }
-  time .day {
-    line-height: 26px;
-    font-size: 26px;
-    text-align: center;
-    font-weight: 600; }
-  time .month {
-    line-height: 15px;
-    font-size: 15px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold; }
 
 a.trailer {
   background-image: url(images/play-button.svg);
@@ -760,34 +830,14 @@ article {
     text-shadow: 0 1px 1px black, 0 0 40px black; }
   article a {
     color: white; }
-  article.event-anime time {
-    background: linear-gradient(#d8edfa, #a2d7f8); }
   article.event-anime .event-detail h3 {
     color: #a2d7f8; }
-  article.event-movie time {
-    background: linear-gradient(#d0f5d9, #9af3aa); }
-  article.event-new-series time {
-    background: linear-gradient(#faeed8, #f8dda2); }
-  article.event-online time {
-    background: linear-gradient(#c9d2f8, #97abf3); }
-  article.event-esports time {
-    background: linear-gradient(#faeed8, #f8dda2); }
-  article.event-social time {
-    background: linear-gradient(#d8fadc, #a2f8ad); }
-    article.event-social time .time__special {
-      border-color: #a2f8ad; }
+  article.event-social time .time__special {
+    border-color: #a2f8ad; }
   article.event-social .event-detail h3 {
     color: #a2f8ad; }
-  article.event-cinema time {
-    background: linear-gradient(#faddd8, #f8b3a2); }
-    article.event-cinema time .time__special {
-      border-color: #f8b3a2; }
   article.event-cinema .event-detail h3 {
     color: #f8b3a2; }
-  article.event-convention time {
-    background: linear-gradient(#fad8f7, #f8a2ed); }
-  article.news time {
-    background: linear-gradient(#d8fadc, #a2f8ad); }
   article.event-skip time span {
     color: #b00; }
   article .time__special {
@@ -802,6 +852,8 @@ article {
 #events-list {
   margin-top: 0;
   padding: 2px 27px 5px 18px; }
+  #events-list article:nth-child(n+11) {
+    display: none; }
 
 article.event {
   margin: 1em 0 1.5em 0;
@@ -1227,36 +1279,58 @@ body.genre-filter.genre-filter-first .anime.anime-genre-first {
     height: 450px; }
   #coming-soon {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "one two";
-    grid-gap: 39px; }
-    #coming-soon.coming-soon--more {
+    grid-gap: 39px;
+    /* &.coming-soon--more {
       min-height: 600px;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 2fr 1fr 1fr;
-      grid-template-areas: "one one one two two two" "three three four four five five" "six six seven seven eight eight"; }
-      #coming-soon.coming-soon--more.coming-soon--short {
+      grid-template-areas:
+        "one one one two two two"
+        "three three four four five five"
+        "six six seven seven eight eight";
+
+      &.coming-soon--short {
         grid-template-rows: 2fr 1fr;
-        grid-template-areas: "one one one two two two" "three three four four five five";
-        min-height: 0; }
-      #coming-soon.coming-soon--more.coming-soon--very-short {
+        grid-template-areas:
+          "one one one two two two"
+          "three three four four five five";
+
+        min-height: 0;
+      }
+      &.coming-soon--very-short {
         grid-template-rows: 1fr;
-        grid-template-areas: "one one one two two two";
-        min-height: 0; }
-    #coming-soon figure:nth-child(1), #coming-soon figure:nth-child(2) {
-      height: 360px;
-      padding-right: 252px; }
-      #coming-soon figure:nth-child(1) figcaption h3, #coming-soon figure:nth-child(2) figcaption h3 {
-        font-size: 22px;
-        text-overflow: unset;
-        height: auto;
-        overflow: unset;
-        -webkit-line-clamp: unset; }
-      #coming-soon figure:nth-child(1) > img.series-picture, #coming-soon figure:nth-child(2) > img.series-picture {
-        width: 252px;
-        height: 360px; }
-      #coming-soon figure:nth-child(1) img.rating-img, #coming-soon figure:nth-child(2) img.rating-img {
-        right: 260px; }
+        grid-template-areas:
+          "one one one two two two";
+
+        min-height: 0;
+      }
+    } */
+    /*figure {
+      &:nth-child(1), &:nth-child(2) {
+        height: 360px;
+        padding-right: 252px;
+
+        figcaption {
+          h3 {
+            font-size: 22px;
+            // unset the two-line limit
+            text-overflow: unset;
+            height: auto;
+            overflow: unset;
+            -webkit-line-clamp: unset;
+          }
+        }
+
+        > img.series-picture {
+          width: 252px;
+          height: 360px;
+        }
+
+        img.rating-img {
+          right: 260px;
+        }
+      }
+    }*/ }
   header#header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1290,16 +1364,28 @@ body.genre-filter.genre-filter-first .anime.anime-genre-first {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 20px; }
-  #coming-soon.coming-soon--less {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: none;
-    grid-template-areas: "one two";
-    grid-gap: 20px; }
-  #coming-soon.coming-soon--more {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: none;
-    grid-template-areas: "one two" "three four" "five six" "seven eight";
-    grid-gap: 20px; } }
+  /*#coming-soon {
+    &.coming-soon--less {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: none;
+      grid-template-areas: "one two";
+      grid-gap: 20px;
+    }
+    &.coming-soon--more {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: none;
+      grid-template-areas:
+        "one two"
+        "three four"
+        "five six"
+        "seven eight";
+      grid-gap: 20px;
+
+      // figure {
+      //   grid-area: auto !important;
+      // }
+    }
+  }*/ }
 
 @media (min-width: 801px) {
   body[bg='day-1'] {

@@ -27,6 +27,12 @@ function readData() {
 
 
 // date formats
+
+let yearFormat = new Intl.DateTimeFormat('en-GB', { year: 'numeric' });
+function formatYear(date) {
+  return yearFormat.format(date);
+}
+
 let shortMonthFormat = new Intl.DateTimeFormat('en-GB', { month: 'short' });
 function formatShortMonth(date) {
   return shortMonthFormat.format(date);
@@ -203,6 +209,7 @@ function expandDate(target, date = null, time = null, leeway = 0) {
   target.day = date.getDate();
   target.month = formatShortMonth(date);
   target.weekday = weekday(date);
+  target.year = formatYear(date);
   return target;
 }
 
@@ -214,6 +221,7 @@ function md5sum(data, digits = 6) {
 module.exports = {
   readData,
   formatDay,
+  formatYear,
   formatShortMonth,
   formatShortDate,
   formatMediumDate,

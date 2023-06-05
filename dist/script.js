@@ -1,10 +1,10 @@
-var slot1 = [{"from":"2023-04-04T21:00:00.000Z","name":"Eureka Seven","picture":"eureka-seven","rating":12,"episodes":[{"end":50},{"episode":13,"show":"single"},{"episode":14,"show":"skip"},{"episode":50,"show":"more"},{"episode":"50.1","after":50}],"date":"2023-04-11T18:00:00.000Z","day":11,"month":"Apr","weekday":"Tuesday"},{"from":"2023-09-26T21:00:00.000Z","name":"Tenrou: Sirius the Jaeger","picture":"sirius-the-jaeger","rating":"15","date":"2023-10-03T18:00:00.000Z","day":3,"month":"Oct","weekday":"Tuesday"},{"from":"2023-11-07T22:00:00.000Z","name":"Irina: The Vampire Cosmonaut","picture":"tsuki-to-laika-to-nosferatu","rating":"15","date":"2023-11-14T19:00:00.000Z","day":14,"month":"Nov","weekday":"Tuesday"}];
-var slot2 = [{"from":"2023-05-02T21:00:00.000Z","name":"The Aquatope on White Sand","picture":"aquatope","rating":"pg","episodes":[{"count":12}],"date":"2023-05-09T19:00:00.000Z","day":9,"month":"May","weekday":"Tuesday"},{"from":"2023-06-13T21:00:00.000Z","name":"Appare-Ranman","picture":"appare-ranman","rating":15,"episodes":[{"count":13},{"episode":9,"show":"single"}],"date":"2023-06-20T19:00:00.000Z","day":20,"month":"Jun","weekday":"Tuesday"},{"from":"2023-08-01T21:00:00.000Z","name":"The Aquatope on White Sand pt2","picture":"aquatope","rating":"pg","episodes":[{"start":13},{"count":24}],"date":"2023-08-08T19:00:00.000Z","day":8,"month":"Aug","weekday":"Tuesday"},{"from":"2023-09-12T21:00:00.000Z","name":"Mushi-Shi","picture":"mushishi","rating":"12","date":"2023-09-19T19:00:00.000Z","day":19,"month":"Sept","weekday":"Tuesday"},{"from":"2023-12-12T22:00:00.000Z","name":"Kaguya-sama, Love is War: The First Kiss Never Ends","picture":"kaguya-sama-movie","movie":true,"rating":"12","date":"2023-12-19T20:00:00.000Z","day":19,"month":"Dec","weekday":"Tuesday"}];
-var slot3 = [{"from":"2023-04-04T21:00:00.000Z","name":"Kaguya-sama, Love is War: Ultra Romantic","picture":"kaguya-sama3","rating":12,"episodes":[{"episode":5,"show":"single"},{"end":13}],"date":"2023-04-11T20:00:00.000Z","day":11,"month":"Apr","weekday":"Tuesday"},{"from":"2023-05-23T21:00:00.000Z","name":"Slime Diaries","picture":"tensura","rating":"pg","episodes":[{"end":12}],"date":"2023-05-30T20:00:00.000Z","day":30,"month":"May","weekday":"Tuesday"},{"from":"2023-07-04T21:00:00.000Z","name":"Taisho Otome Fairy Tale","picture":"taisho-otome","rating":12,"episodes":[{"end":12}],"date":"2023-07-11T20:00:00.000Z","day":11,"month":"Jul","weekday":"Tuesday"},{"from":"2023-08-15T21:00:00.000Z","name":"Spy × Family","picture":"spy-x-family","rating":"15","date":"2023-08-22T20:00:00.000Z","day":22,"month":"Aug","weekday":"Tuesday"},{"from":"2023-11-14T22:00:00.000Z","name":"Restaurant to Another World","picture":"restaurant-to-another-world","rating":"15","date":"2023-11-21T21:00:00.000Z","day":21,"month":"Nov","weekday":"Tuesday"}];
+var slot1 = [{"from":"2023-04-04T21:00:00.000Z","name":"Eureka Seven","picture":"eureka-seven","rating":12,"episodes":[{"end":50},{"episode":13,"show":"single"},{"episode":14,"show":"skip"},{"episode":50,"show":"more"},{"episode":"50.1","after":50}],"date":"2023-04-11T18:00:00.000Z","day":11,"month":"Apr","weekday":"Tuesday","year":"2023"},{"from":"2023-09-26T21:00:00.000Z","name":"Tenrou: Sirius the Jaeger","picture":"sirius-the-jaeger","rating":"15","date":"2023-10-03T18:00:00.000Z","day":3,"month":"Oct","weekday":"Tuesday","year":"2023"},{"from":"2023-11-07T22:00:00.000Z","name":"Irina: The Vampire Cosmonaut","picture":"tsuki-to-laika-to-nosferatu","rating":"15","date":"2023-11-14T19:00:00.000Z","day":14,"month":"Nov","weekday":"Tuesday","year":"2023"}];
+var slot2 = [{"from":"2023-05-02T21:00:00.000Z","name":"The Aquatope on White Sand","picture":"aquatope","rating":"pg","episodes":[{"count":12}],"date":"2023-05-09T19:00:00.000Z","day":9,"month":"May","weekday":"Tuesday","year":"2023"},{"from":"2023-06-13T21:00:00.000Z","name":"Appare-Ranman","picture":"appare-ranman","rating":15,"episodes":[{"count":13},{"episode":9,"show":"single"}],"date":"2023-06-20T19:00:00.000Z","day":20,"month":"Jun","weekday":"Tuesday","year":"2023"},{"from":"2023-08-01T21:00:00.000Z","name":"The Aquatope on White Sand pt2","picture":"aquatope","rating":"pg","episodes":[{"start":13},{"count":24}],"date":"2023-08-08T19:00:00.000Z","day":8,"month":"Aug","weekday":"Tuesday","year":"2023"},{"from":"2023-09-12T21:00:00.000Z","name":"Mushi-Shi","picture":"mushishi","rating":"12","date":"2023-09-19T19:00:00.000Z","day":19,"month":"Sept","weekday":"Tuesday","year":"2023"},{"from":"2023-12-12T22:00:00.000Z","name":"Kaguya-sama, Love is War: The First Kiss Never Ends","picture":"kaguya-sama-movie","movie":true,"rating":"12","date":"2023-12-19T20:00:00.000Z","day":19,"month":"Dec","weekday":"Tuesday","year":"2023"}];
+var slot3 = [{"from":"2023-05-23T21:00:00.000Z","name":"Slime Diaries","picture":"tensura","rating":"pg","episodes":[{"end":12}],"date":"2023-05-30T20:00:00.000Z","day":30,"month":"May","weekday":"Tuesday","year":"2023"},{"from":"2023-07-04T21:00:00.000Z","name":"Taisho Otome Fairy Tale","picture":"taisho-otome","rating":12,"episodes":[{"end":12}],"date":"2023-07-11T20:00:00.000Z","day":11,"month":"Jul","weekday":"Tuesday","year":"2023"},{"from":"2023-08-15T21:00:00.000Z","name":"Spy × Family","picture":"spy-x-family","rating":"15","date":"2023-08-22T20:00:00.000Z","day":22,"month":"Aug","weekday":"Tuesday","year":"2023"},{"from":"2023-11-14T22:00:00.000Z","name":"Restaurant to Another World","picture":"restaurant-to-another-world","rating":"15","date":"2023-11-21T21:00:00.000Z","day":21,"month":"Nov","weekday":"Tuesday","year":"2023"}];
 // var movies = [];
-var comingSoon = [{"from":"2023-05-30T20:00:00.000Z","name":"Slime Diaries","picture":"tensura","rating":"pg","episodes":[{"end":12}],"date":"2023-05-30T20:00:00.000Z","day":30,"month":"May","weekday":"Tuesday"},{"from":"2023-06-20T19:00:00.000Z","name":"Appare-Ranman","picture":"appare-ranman","rating":15,"episodes":[{"count":13},{"episode":9,"show":"single"}],"date":"2023-06-20T19:00:00.000Z","day":20,"month":"Jun","weekday":"Tuesday"},{"from":"2023-07-11T20:00:00.000Z","name":"Taisho Otome Fairy Tale","picture":"taisho-otome","rating":12,"episodes":[{"end":12}],"date":"2023-07-11T20:00:00.000Z","day":11,"month":"Jul","weekday":"Tuesday"},{"from":"2023-08-08T19:00:00.000Z","name":"The Aquatope on White Sand pt2","picture":"aquatope","rating":"pg","episodes":[{"start":13},{"count":24}],"date":"2023-08-08T19:00:00.000Z","day":8,"month":"Aug","weekday":"Tuesday"},{"from":"2023-08-22T20:00:00.000Z","name":"Spy × Family","picture":"spy-x-family","rating":"15","date":"2023-08-22T20:00:00.000Z","day":22,"month":"Aug","weekday":"Tuesday"},{"from":"2023-09-19T19:00:00.000Z","name":"Mushi-Shi","picture":"mushishi","rating":"12","date":"2023-09-19T19:00:00.000Z","day":19,"month":"Sept","weekday":"Tuesday"},{"from":"2023-10-03T18:00:00.000Z","name":"Tenrou: Sirius the Jaeger","picture":"sirius-the-jaeger","rating":"15","date":"2023-10-03T18:00:00.000Z","day":3,"month":"Oct","weekday":"Tuesday"},{"from":"2023-11-14T19:00:00.000Z","name":"Irina: The Vampire Cosmonaut","picture":"tsuki-to-laika-to-nosferatu","rating":"15","date":"2023-11-14T19:00:00.000Z","day":14,"month":"Nov","weekday":"Tuesday"},{"from":"2023-11-21T21:00:00.000Z","name":"Restaurant to Another World","picture":"restaurant-to-another-world","rating":"15","date":"2023-11-21T21:00:00.000Z","day":21,"month":"Nov","weekday":"Tuesday"},{"from":"2023-12-19T20:00:00.000Z","name":"Kaguya-sama, Love is War: The First Kiss Never Ends","picture":"kaguya-sama-movie","movie":true,"rating":"12","date":"2023-12-19T20:00:00.000Z","day":19,"month":"Dec","weekday":"Tuesday"}];
+var comingSoon = [{"from":"2023-06-20T19:00:00.000Z","name":"Appare-Ranman","picture":"appare-ranman","rating":15,"episodes":[{"count":13},{"episode":9,"show":"single"}],"date":"2023-06-20T19:00:00.000Z","day":20,"month":"Jun","weekday":"Tuesday","year":"2023"},{"from":"2023-07-11T20:00:00.000Z","name":"Taisho Otome Fairy Tale","picture":"taisho-otome","rating":12,"episodes":[{"end":12}],"date":"2023-07-11T20:00:00.000Z","day":11,"month":"Jul","weekday":"Tuesday","year":"2023"},{"from":"2023-08-08T19:00:00.000Z","name":"The Aquatope on White Sand pt2","picture":"aquatope","rating":"pg","episodes":[{"start":13},{"count":24}],"date":"2023-08-08T19:00:00.000Z","day":8,"month":"Aug","weekday":"Tuesday","year":"2023"},{"from":"2023-08-22T20:00:00.000Z","name":"Spy × Family","picture":"spy-x-family","rating":"15","date":"2023-08-22T20:00:00.000Z","day":22,"month":"Aug","weekday":"Tuesday","year":"2023"},{"from":"2023-09-19T19:00:00.000Z","name":"Mushi-Shi","picture":"mushishi","rating":"12","date":"2023-09-19T19:00:00.000Z","day":19,"month":"Sept","weekday":"Tuesday","year":"2023"},{"from":"2023-10-03T18:00:00.000Z","name":"Tenrou: Sirius the Jaeger","picture":"sirius-the-jaeger","rating":"15","date":"2023-10-03T18:00:00.000Z","day":3,"month":"Oct","weekday":"Tuesday","year":"2023"},{"from":"2023-11-14T19:00:00.000Z","name":"Irina: The Vampire Cosmonaut","picture":"tsuki-to-laika-to-nosferatu","rating":"15","date":"2023-11-14T19:00:00.000Z","day":14,"month":"Nov","weekday":"Tuesday","year":"2023"},{"from":"2023-11-21T21:00:00.000Z","name":"Restaurant to Another World","picture":"restaurant-to-another-world","rating":"15","date":"2023-11-21T21:00:00.000Z","day":21,"month":"Nov","weekday":"Tuesday","year":"2023"},{"from":"2023-12-19T20:00:00.000Z","name":"Kaguya-sama, Love is War: The First Kiss Never Ends","picture":"kaguya-sama-movie","movie":true,"rating":"12","date":"2023-12-19T20:00:00.000Z","day":19,"month":"Dec","weekday":"Tuesday","year":"2023"}];
 
-var events = [{"date":"2023-05-30T18:00:00.000Z","shortDate":"2023-05-30","month":"May","day":30,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-05-30T18:00:00.000Z","dateLong":"Tuesday, 30 May 2023, 7pm","mediumDate":"30 May 2023","shortDate":"2023-05-30","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":30,"month":"May","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-05-30T20:05:00.000Z","dateLong":"Tuesday, 30 May 2023, 9pm","mediumDate":"30 May 2023","shortDate":"2023-05-30","weekday":"Tuesday","shortWeekday":"","time":"9pm","day":30,"month":"May","prename":"New series","name":"Slime Diaries","picture":"tensura","class":"new-series"}],"special":false},{"date":"2023-06-06T18:00:00.000Z","shortDate":"2023-06-06","month":"Jun","day":6,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-06-06T18:00:00.000Z","dateLong":"Tuesday, 6 June 2023, 7pm","mediumDate":"6 Jun 2023","shortDate":"2023-06-06","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":6,"month":"Jun","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-06-08T00:00:00.000Z","shortDate":"2023-06-08","month":"Jun","day":8,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-06-08T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 8 June 2023, 6pm","mediumDate":"8 Jun 2023","shortDate":"2023-06-08","day":8,"weekday":"Thursday","shortWeekday":"Thu","month":"Jun","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-06-13T18:00:00.000Z","shortDate":"2023-06-13","month":"Jun","day":13,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-06-13T18:00:00.000Z","dateLong":"Tuesday, 13 June 2023, 7pm","mediumDate":"13 Jun 2023","shortDate":"2023-06-13","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":13,"month":"Jun","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-06-20T18:00:00.000Z","shortDate":"2023-06-20","month":"Jun","day":20,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-06-20T18:00:00.000Z","dateLong":"Tuesday, 20 June 2023, 7pm","mediumDate":"20 Jun 2023","shortDate":"2023-06-20","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":20,"month":"Jun","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-06-20T19:05:00.000Z","dateLong":"Tuesday, 20 June 2023, 8pm","mediumDate":"20 Jun 2023","shortDate":"2023-06-20","weekday":"Tuesday","shortWeekday":"","time":"8pm","day":20,"month":"Jun","prename":"New series","name":"Appare-Ranman","picture":"appare-ranman","class":"new-series"}],"special":false},{"date":"2023-06-27T18:00:00.000Z","shortDate":"2023-06-27","month":"Jun","day":27,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-06-27T18:00:00.000Z","dateLong":"Tuesday, 27 June 2023, 7pm","mediumDate":"27 Jun 2023","shortDate":"2023-06-27","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":27,"month":"Jun","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-07-04T18:00:00.000Z","shortDate":"2023-07-04","month":"Jul","day":4,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-07-04T18:00:00.000Z","dateLong":"Tuesday, 4 July 2023, 7pm","mediumDate":"4 Jul 2023","shortDate":"2023-07-04","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":4,"month":"Jul","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-07-11T18:00:00.000Z","shortDate":"2023-07-11","month":"Jul","day":11,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-07-11T18:00:00.000Z","dateLong":"Tuesday, 11 July 2023, 7pm","mediumDate":"11 Jul 2023","shortDate":"2023-07-11","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":11,"month":"Jul","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-07-11T20:05:00.000Z","dateLong":"Tuesday, 11 July 2023, 9pm","mediumDate":"11 Jul 2023","shortDate":"2023-07-11","weekday":"Tuesday","shortWeekday":"","time":"9pm","day":11,"month":"Jul","prename":"New series","name":"Taisho Otome Fairy Tale","picture":"taisho-otome","class":"new-series"}],"special":false},{"date":"2023-07-13T00:00:00.000Z","shortDate":"2023-07-13","month":"Jul","day":13,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-07-13T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 13 July 2023, 6pm","mediumDate":"13 Jul 2023","shortDate":"2023-07-13","day":13,"weekday":"Thursday","shortWeekday":"Thu","month":"Jul","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-07-18T18:00:00.000Z","shortDate":"2023-07-18","month":"Jul","day":18,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-07-18T18:00:00.000Z","dateLong":"Tuesday, 18 July 2023, 7pm","mediumDate":"18 Jul 2023","shortDate":"2023-07-18","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":18,"month":"Jul","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-07-25T18:00:00.000Z","shortDate":"2023-07-25","month":"Jul","day":25,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-07-25T18:00:00.000Z","dateLong":"Tuesday, 25 July 2023, 7pm","mediumDate":"25 Jul 2023","shortDate":"2023-07-25","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":25,"month":"Jul","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-08-01T18:00:00.000Z","shortDate":"2023-08-01","month":"Aug","day":1,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-08-01T18:00:00.000Z","dateLong":"Tuesday, 1 August 2023, 7pm","mediumDate":"1 Aug 2023","shortDate":"2023-08-01","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":1,"month":"Aug","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-08-08T18:00:00.000Z","shortDate":"2023-08-08","month":"Aug","day":8,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-08-08T18:00:00.000Z","dateLong":"Tuesday, 8 August 2023, 7pm","mediumDate":"8 Aug 2023","shortDate":"2023-08-08","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":8,"month":"Aug","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-08-08T19:05:00.000Z","dateLong":"Tuesday, 8 August 2023, 8pm","mediumDate":"8 Aug 2023","shortDate":"2023-08-08","weekday":"Tuesday","shortWeekday":"","time":"8pm","day":8,"month":"Aug","prename":"New series","name":"The Aquatope on White Sand pt2","picture":"aquatope","class":"new-series"}],"special":false},{"date":"2023-08-10T00:00:00.000Z","shortDate":"2023-08-10","month":"Aug","day":10,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-08-10T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 10 August 2023, 6pm","mediumDate":"10 Aug 2023","shortDate":"2023-08-10","day":10,"weekday":"Thursday","shortWeekday":"Thu","month":"Aug","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-08-15T18:00:00.000Z","shortDate":"2023-08-15","month":"Aug","day":15,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-08-15T18:00:00.000Z","dateLong":"Tuesday, 15 August 2023, 7pm","mediumDate":"15 Aug 2023","shortDate":"2023-08-15","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":15,"month":"Aug","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-08-22T18:00:00.000Z","shortDate":"2023-08-22","month":"Aug","day":22,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-08-22T18:00:00.000Z","dateLong":"Tuesday, 22 August 2023, 7pm","mediumDate":"22 Aug 2023","shortDate":"2023-08-22","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":22,"month":"Aug","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-08-22T20:05:00.000Z","dateLong":"Tuesday, 22 August 2023, 9pm","mediumDate":"22 Aug 2023","shortDate":"2023-08-22","weekday":"Tuesday","shortWeekday":"","time":"9pm","day":22,"month":"Aug","prename":"New series","name":"Spy × Family","picture":"spy-x-family","class":"new-series"}],"special":false},{"date":"2023-08-29T18:00:00.000Z","shortDate":"2023-08-29","month":"Aug","day":29,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-08-29T18:00:00.000Z","dateLong":"Tuesday, 29 August 2023, 7pm","mediumDate":"29 Aug 2023","shortDate":"2023-08-29","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":29,"month":"Aug","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-09-05T18:00:00.000Z","shortDate":"2023-09-05","month":"Sept","day":5,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-09-05T18:00:00.000Z","dateLong":"Tuesday, 5 September 2023, 7pm","mediumDate":"5 Sept 2023","shortDate":"2023-09-05","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":5,"month":"Sept","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-09-12T18:00:00.000Z","shortDate":"2023-09-12","month":"Sept","day":12,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-09-12T18:00:00.000Z","dateLong":"Tuesday, 12 September 2023, 7pm","mediumDate":"12 Sept 2023","shortDate":"2023-09-12","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":12,"month":"Sept","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-09-14T00:00:00.000Z","shortDate":"2023-09-14","month":"Sept","day":14,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-09-14T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 14 September 2023, 6pm","mediumDate":"14 Sept 2023","shortDate":"2023-09-14","day":14,"weekday":"Thursday","shortWeekday":"Thu","month":"Sept","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-09-19T18:00:00.000Z","shortDate":"2023-09-19","month":"Sept","day":19,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-09-19T18:00:00.000Z","dateLong":"Tuesday, 19 September 2023, 7pm","mediumDate":"19 Sept 2023","shortDate":"2023-09-19","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":19,"month":"Sept","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-09-19T19:05:00.000Z","dateLong":"Tuesday, 19 September 2023, 8pm","mediumDate":"19 Sept 2023","shortDate":"2023-09-19","weekday":"Tuesday","shortWeekday":"","time":"8pm","day":19,"month":"Sept","prename":"New series","name":"Mushi-Shi","picture":"mushishi","class":"new-series"}],"special":false},{"date":"2023-09-26T18:00:00.000Z","shortDate":"2023-09-26","month":"Sept","day":26,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-09-26T18:00:00.000Z","dateLong":"Tuesday, 26 September 2023, 7pm","mediumDate":"26 Sept 2023","shortDate":"2023-09-26","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":26,"month":"Sept","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-10-03T18:00:00.000Z","shortDate":"2023-10-03","month":"Oct","day":3,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-10-03T18:00:00.000Z","dateLong":"Tuesday, 3 October 2023, 7pm","mediumDate":"3 Oct 2023","shortDate":"2023-10-03","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":3,"month":"Oct","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-10-03T18:05:00.000Z","dateLong":"Tuesday, 3 October 2023, 7pm","mediumDate":"3 Oct 2023","shortDate":"2023-10-03","weekday":"Tuesday","shortWeekday":"","time":"7pm","day":3,"month":"Oct","prename":"New series","name":"Tenrou: Sirius the Jaeger","picture":"sirius-the-jaeger","class":"new-series"}],"special":false},{"date":"2023-10-10T18:00:00.000Z","shortDate":"2023-10-10","month":"Oct","day":10,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-10-10T18:00:00.000Z","dateLong":"Tuesday, 10 October 2023, 7pm","mediumDate":"10 Oct 2023","shortDate":"2023-10-10","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":10,"month":"Oct","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-10-12T00:00:00.000Z","shortDate":"2023-10-12","month":"Oct","day":12,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-10-12T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 12 October 2023, 6pm","mediumDate":"12 Oct 2023","shortDate":"2023-10-12","day":12,"weekday":"Thursday","shortWeekday":"Thu","month":"Oct","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-10-17T18:00:00.000Z","shortDate":"2023-10-17","month":"Oct","day":17,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-10-17T18:00:00.000Z","dateLong":"Tuesday, 17 October 2023, 7pm","mediumDate":"17 Oct 2023","shortDate":"2023-10-17","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":17,"month":"Oct","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-10-24T18:00:00.000Z","shortDate":"2023-10-24","month":"Oct","day":24,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-10-24T18:00:00.000Z","dateLong":"Tuesday, 24 October 2023, 7pm","mediumDate":"24 Oct 2023","shortDate":"2023-10-24","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":24,"month":"Oct","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-10-31T19:00:00.000Z","shortDate":"2023-10-31","month":"Oct","day":31,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-10-31T19:00:00.000Z","dateLong":"Tuesday, 31 October 2023, 7pm","mediumDate":"31 Oct 2023","shortDate":"2023-10-31","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":31,"month":"Oct","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-11-07T19:00:00.000Z","shortDate":"2023-11-07","month":"Nov","day":7,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-11-07T19:00:00.000Z","dateLong":"Tuesday, 7 November 2023, 7pm","mediumDate":"7 Nov 2023","shortDate":"2023-11-07","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":7,"month":"Nov","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-11-09T00:00:00.000Z","shortDate":"2023-11-09","month":"Nov","day":9,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-11-09T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 9 November 2023, 6pm","mediumDate":"9 Nov 2023","shortDate":"2023-11-09","day":9,"weekday":"Thursday","shortWeekday":"Thu","month":"Nov","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-11-14T19:00:00.000Z","shortDate":"2023-11-14","month":"Nov","day":14,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-11-14T19:00:00.000Z","dateLong":"Tuesday, 14 November 2023, 7pm","mediumDate":"14 Nov 2023","shortDate":"2023-11-14","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":14,"month":"Nov","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-11-14T19:05:00.000Z","dateLong":"Tuesday, 14 November 2023, 7pm","mediumDate":"14 Nov 2023","shortDate":"2023-11-14","weekday":"Tuesday","shortWeekday":"","time":"7pm","day":14,"month":"Nov","prename":"New series","name":"Irina: The Vampire Cosmonaut","picture":"tsuki-to-laika-to-nosferatu","class":"new-series"}],"special":false},{"date":"2023-11-21T19:00:00.000Z","shortDate":"2023-11-21","month":"Nov","day":21,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-11-21T19:00:00.000Z","dateLong":"Tuesday, 21 November 2023, 7pm","mediumDate":"21 Nov 2023","shortDate":"2023-11-21","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":21,"month":"Nov","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-11-21T21:05:00.000Z","dateLong":"Tuesday, 21 November 2023, 9pm","mediumDate":"21 Nov 2023","shortDate":"2023-11-21","weekday":"Tuesday","shortWeekday":"","time":"9pm","day":21,"month":"Nov","prename":"New series","name":"Restaurant to Another World","picture":"restaurant-to-another-world","class":"new-series"}],"special":false},{"date":"2023-11-28T19:00:00.000Z","shortDate":"2023-11-28","month":"Nov","day":28,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-11-28T19:00:00.000Z","dateLong":"Tuesday, 28 November 2023, 7pm","mediumDate":"28 Nov 2023","shortDate":"2023-11-28","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":28,"month":"Nov","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-12-05T19:00:00.000Z","shortDate":"2023-12-05","month":"Dec","day":5,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-12-05T19:00:00.000Z","dateLong":"Tuesday, 5 December 2023, 7pm","mediumDate":"5 Dec 2023","shortDate":"2023-12-05","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":5,"month":"Dec","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-12-12T19:00:00.000Z","shortDate":"2023-12-12","month":"Dec","day":12,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-12-12T19:00:00.000Z","dateLong":"Tuesday, 12 December 2023, 7pm","mediumDate":"12 Dec 2023","shortDate":"2023-12-12","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":12,"month":"Dec","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-12-14T00:00:00.000Z","shortDate":"2023-12-14","month":"Dec","day":14,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-12-14T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 14 December 2023, 6pm","mediumDate":"14 Dec 2023","shortDate":"2023-12-14","day":14,"weekday":"Thursday","shortWeekday":"Thu","month":"Dec","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-12-19T19:00:00.000Z","shortDate":"2023-12-19","month":"Dec","day":19,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-12-19T19:00:00.000Z","dateLong":"Tuesday, 19 December 2023, 7pm","mediumDate":"19 Dec 2023","shortDate":"2023-12-19","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":19,"month":"Dec","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-12-19T20:05:00.000Z","dateLong":"Tuesday, 19 December 2023, 8pm","mediumDate":"19 Dec 2023","shortDate":"2023-12-19","weekday":"Tuesday","shortWeekday":"Tue","time":"8pm","day":19,"month":"Dec","prename":"Movie","name":"Kaguya-sama, Love is War: The First Kiss Never Ends","picture":"kaguya-sama-movie","class":"new-series"}],"special":false},{"date":"2023-12-26T00:00:00.000Z","shortDate":"2023-12-26","month":"Dec","day":26,"weekday":"Tuesday","class":"skip","events":[{"name":"No Meeting","date":"2023-12-26T00:00:00.000Z","class":"skip","time":"","dateLong":"Tuesday, 26 December 2023","mediumDate":"26 Dec 2023","shortDate":"2023-12-26","day":26,"weekday":"Tuesday","shortWeekday":"Tue","month":"Dec","special":false,"venue":"","address":""}],"special":false},{"date":"2024-01-02T00:00:00.000Z","shortDate":"2024-01-02","month":"Jan","day":2,"weekday":"Tuesday","class":"skip","events":[{"name":"No Meeting","date":"2024-01-02T00:00:00.000Z","class":"skip","time":"","dateLong":"Tuesday, 2 January 2024","mediumDate":"2 Jan 2024","shortDate":"2024-01-02","day":2,"weekday":"Tuesday","shortWeekday":"Tue","month":"Jan","special":false,"venue":"","address":""}],"special":false},{"date":"2024-12-24T00:00:00.000Z","shortDate":"2024-12-24","month":"Dec","day":24,"weekday":"Tuesday","class":"skip","events":[{"name":"No Meeting","date":"2024-12-24T00:00:00.000Z","class":"skip","time":"","dateLong":"Tuesday, 24 December 2024","mediumDate":"24 Dec 2024","shortDate":"2024-12-24","day":24,"weekday":"Tuesday","shortWeekday":"Tue","month":"Dec","special":false,"venue":"","address":""}],"special":false}];
+var events = [{"date":"2023-06-06T18:00:00.000Z","shortDate":"2023-06-06","month":"Jun","day":6,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-06-06T18:00:00.000Z","dateLong":"Tuesday, 6 June 2023, 7pm","mediumDate":"6 Jun 2023","shortDate":"2023-06-06","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":6,"month":"Jun","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-06-08T00:00:00.000Z","shortDate":"2023-06-08","month":"Jun","day":8,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-06-08T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 8 June 2023, 6pm","mediumDate":"8 Jun 2023","shortDate":"2023-06-08","day":8,"weekday":"Thursday","shortWeekday":"Thu","month":"Jun","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-06-13T18:00:00.000Z","shortDate":"2023-06-13","month":"Jun","day":13,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-06-13T18:00:00.000Z","dateLong":"Tuesday, 13 June 2023, 7pm","mediumDate":"13 Jun 2023","shortDate":"2023-06-13","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":13,"month":"Jun","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-06-20T18:00:00.000Z","shortDate":"2023-06-20","month":"Jun","day":20,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-06-20T18:00:00.000Z","dateLong":"Tuesday, 20 June 2023, 7pm","mediumDate":"20 Jun 2023","shortDate":"2023-06-20","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":20,"month":"Jun","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-06-20T19:05:00.000Z","dateLong":"Tuesday, 20 June 2023, 8pm","mediumDate":"20 Jun 2023","shortDate":"2023-06-20","weekday":"Tuesday","shortWeekday":"","time":"8pm","day":20,"month":"Jun","prename":"New series","name":"Appare-Ranman","picture":"appare-ranman","class":"new-series"}],"special":false},{"date":"2023-06-27T18:00:00.000Z","shortDate":"2023-06-27","month":"Jun","day":27,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-06-27T18:00:00.000Z","dateLong":"Tuesday, 27 June 2023, 7pm","mediumDate":"27 Jun 2023","shortDate":"2023-06-27","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":27,"month":"Jun","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-07-04T18:00:00.000Z","shortDate":"2023-07-04","month":"Jul","day":4,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-07-04T18:00:00.000Z","dateLong":"Tuesday, 4 July 2023, 7pm","mediumDate":"4 Jul 2023","shortDate":"2023-07-04","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":4,"month":"Jul","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-07-11T18:00:00.000Z","shortDate":"2023-07-11","month":"Jul","day":11,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-07-11T18:00:00.000Z","dateLong":"Tuesday, 11 July 2023, 7pm","mediumDate":"11 Jul 2023","shortDate":"2023-07-11","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":11,"month":"Jul","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-07-11T20:05:00.000Z","dateLong":"Tuesday, 11 July 2023, 9pm","mediumDate":"11 Jul 2023","shortDate":"2023-07-11","weekday":"Tuesday","shortWeekday":"","time":"9pm","day":11,"month":"Jul","prename":"New series","name":"Taisho Otome Fairy Tale","picture":"taisho-otome","class":"new-series"}],"special":false},{"date":"2023-07-13T00:00:00.000Z","shortDate":"2023-07-13","month":"Jul","day":13,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-07-13T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 13 July 2023, 6pm","mediumDate":"13 Jul 2023","shortDate":"2023-07-13","day":13,"weekday":"Thursday","shortWeekday":"Thu","month":"Jul","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-07-18T18:00:00.000Z","shortDate":"2023-07-18","month":"Jul","day":18,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-07-18T18:00:00.000Z","dateLong":"Tuesday, 18 July 2023, 7pm","mediumDate":"18 Jul 2023","shortDate":"2023-07-18","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":18,"month":"Jul","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-07-25T18:00:00.000Z","shortDate":"2023-07-25","month":"Jul","day":25,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-07-25T18:00:00.000Z","dateLong":"Tuesday, 25 July 2023, 7pm","mediumDate":"25 Jul 2023","shortDate":"2023-07-25","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":25,"month":"Jul","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-08-01T18:00:00.000Z","shortDate":"2023-08-01","month":"Aug","day":1,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-08-01T18:00:00.000Z","dateLong":"Tuesday, 1 August 2023, 7pm","mediumDate":"1 Aug 2023","shortDate":"2023-08-01","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":1,"month":"Aug","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-08-08T18:00:00.000Z","shortDate":"2023-08-08","month":"Aug","day":8,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-08-08T18:00:00.000Z","dateLong":"Tuesday, 8 August 2023, 7pm","mediumDate":"8 Aug 2023","shortDate":"2023-08-08","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":8,"month":"Aug","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-08-08T19:05:00.000Z","dateLong":"Tuesday, 8 August 2023, 8pm","mediumDate":"8 Aug 2023","shortDate":"2023-08-08","weekday":"Tuesday","shortWeekday":"","time":"8pm","day":8,"month":"Aug","prename":"New series","name":"The Aquatope on White Sand pt2","picture":"aquatope","class":"new-series"}],"special":false},{"date":"2023-08-10T00:00:00.000Z","shortDate":"2023-08-10","month":"Aug","day":10,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-08-10T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 10 August 2023, 6pm","mediumDate":"10 Aug 2023","shortDate":"2023-08-10","day":10,"weekday":"Thursday","shortWeekday":"Thu","month":"Aug","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-08-15T18:00:00.000Z","shortDate":"2023-08-15","month":"Aug","day":15,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-08-15T18:00:00.000Z","dateLong":"Tuesday, 15 August 2023, 7pm","mediumDate":"15 Aug 2023","shortDate":"2023-08-15","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":15,"month":"Aug","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-08-22T18:00:00.000Z","shortDate":"2023-08-22","month":"Aug","day":22,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-08-22T18:00:00.000Z","dateLong":"Tuesday, 22 August 2023, 7pm","mediumDate":"22 Aug 2023","shortDate":"2023-08-22","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":22,"month":"Aug","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-08-22T20:05:00.000Z","dateLong":"Tuesday, 22 August 2023, 9pm","mediumDate":"22 Aug 2023","shortDate":"2023-08-22","weekday":"Tuesday","shortWeekday":"","time":"9pm","day":22,"month":"Aug","prename":"New series","name":"Spy × Family","picture":"spy-x-family","class":"new-series"}],"special":false},{"date":"2023-08-29T18:00:00.000Z","shortDate":"2023-08-29","month":"Aug","day":29,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-08-29T18:00:00.000Z","dateLong":"Tuesday, 29 August 2023, 7pm","mediumDate":"29 Aug 2023","shortDate":"2023-08-29","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":29,"month":"Aug","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-09-05T18:00:00.000Z","shortDate":"2023-09-05","month":"Sept","day":5,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-09-05T18:00:00.000Z","dateLong":"Tuesday, 5 September 2023, 7pm","mediumDate":"5 Sept 2023","shortDate":"2023-09-05","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":5,"month":"Sept","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-09-12T18:00:00.000Z","shortDate":"2023-09-12","month":"Sept","day":12,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-09-12T18:00:00.000Z","dateLong":"Tuesday, 12 September 2023, 7pm","mediumDate":"12 Sept 2023","shortDate":"2023-09-12","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":12,"month":"Sept","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-09-14T00:00:00.000Z","shortDate":"2023-09-14","month":"Sept","day":14,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-09-14T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 14 September 2023, 6pm","mediumDate":"14 Sept 2023","shortDate":"2023-09-14","day":14,"weekday":"Thursday","shortWeekday":"Thu","month":"Sept","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-09-19T18:00:00.000Z","shortDate":"2023-09-19","month":"Sept","day":19,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-09-19T18:00:00.000Z","dateLong":"Tuesday, 19 September 2023, 7pm","mediumDate":"19 Sept 2023","shortDate":"2023-09-19","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":19,"month":"Sept","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-09-19T19:05:00.000Z","dateLong":"Tuesday, 19 September 2023, 8pm","mediumDate":"19 Sept 2023","shortDate":"2023-09-19","weekday":"Tuesday","shortWeekday":"","time":"8pm","day":19,"month":"Sept","prename":"New series","name":"Mushi-Shi","picture":"mushishi","class":"new-series"}],"special":false},{"date":"2023-09-26T18:00:00.000Z","shortDate":"2023-09-26","month":"Sept","day":26,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-09-26T18:00:00.000Z","dateLong":"Tuesday, 26 September 2023, 7pm","mediumDate":"26 Sept 2023","shortDate":"2023-09-26","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":26,"month":"Sept","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-10-03T18:00:00.000Z","shortDate":"2023-10-03","month":"Oct","day":3,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-10-03T18:00:00.000Z","dateLong":"Tuesday, 3 October 2023, 7pm","mediumDate":"3 Oct 2023","shortDate":"2023-10-03","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":3,"month":"Oct","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-10-03T18:05:00.000Z","dateLong":"Tuesday, 3 October 2023, 7pm","mediumDate":"3 Oct 2023","shortDate":"2023-10-03","weekday":"Tuesday","shortWeekday":"","time":"7pm","day":3,"month":"Oct","prename":"New series","name":"Tenrou: Sirius the Jaeger","picture":"sirius-the-jaeger","class":"new-series"}],"special":false},{"date":"2023-10-10T18:00:00.000Z","shortDate":"2023-10-10","month":"Oct","day":10,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-10-10T18:00:00.000Z","dateLong":"Tuesday, 10 October 2023, 7pm","mediumDate":"10 Oct 2023","shortDate":"2023-10-10","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":10,"month":"Oct","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-10-12T00:00:00.000Z","shortDate":"2023-10-12","month":"Oct","day":12,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-10-12T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 12 October 2023, 6pm","mediumDate":"12 Oct 2023","shortDate":"2023-10-12","day":12,"weekday":"Thursday","shortWeekday":"Thu","month":"Oct","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-10-17T18:00:00.000Z","shortDate":"2023-10-17","month":"Oct","day":17,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-10-17T18:00:00.000Z","dateLong":"Tuesday, 17 October 2023, 7pm","mediumDate":"17 Oct 2023","shortDate":"2023-10-17","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":17,"month":"Oct","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-10-24T18:00:00.000Z","shortDate":"2023-10-24","month":"Oct","day":24,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-10-24T18:00:00.000Z","dateLong":"Tuesday, 24 October 2023, 7pm","mediumDate":"24 Oct 2023","shortDate":"2023-10-24","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":24,"month":"Oct","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-10-31T19:00:00.000Z","shortDate":"2023-10-31","month":"Oct","day":31,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-10-31T19:00:00.000Z","dateLong":"Tuesday, 31 October 2023, 7pm","mediumDate":"31 Oct 2023","shortDate":"2023-10-31","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":31,"month":"Oct","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-11-07T19:00:00.000Z","shortDate":"2023-11-07","month":"Nov","day":7,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-11-07T19:00:00.000Z","dateLong":"Tuesday, 7 November 2023, 7pm","mediumDate":"7 Nov 2023","shortDate":"2023-11-07","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":7,"month":"Nov","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-11-09T00:00:00.000Z","shortDate":"2023-11-09","month":"Nov","day":9,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-11-09T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 9 November 2023, 6pm","mediumDate":"9 Nov 2023","shortDate":"2023-11-09","day":9,"weekday":"Thursday","shortWeekday":"Thu","month":"Nov","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-11-14T19:00:00.000Z","shortDate":"2023-11-14","month":"Nov","day":14,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-11-14T19:00:00.000Z","dateLong":"Tuesday, 14 November 2023, 7pm","mediumDate":"14 Nov 2023","shortDate":"2023-11-14","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":14,"month":"Nov","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-11-14T19:05:00.000Z","dateLong":"Tuesday, 14 November 2023, 7pm","mediumDate":"14 Nov 2023","shortDate":"2023-11-14","weekday":"Tuesday","shortWeekday":"","time":"7pm","day":14,"month":"Nov","prename":"New series","name":"Irina: The Vampire Cosmonaut","picture":"tsuki-to-laika-to-nosferatu","class":"new-series"}],"special":false},{"date":"2023-11-21T19:00:00.000Z","shortDate":"2023-11-21","month":"Nov","day":21,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-11-21T19:00:00.000Z","dateLong":"Tuesday, 21 November 2023, 7pm","mediumDate":"21 Nov 2023","shortDate":"2023-11-21","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":21,"month":"Nov","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-11-21T21:05:00.000Z","dateLong":"Tuesday, 21 November 2023, 9pm","mediumDate":"21 Nov 2023","shortDate":"2023-11-21","weekday":"Tuesday","shortWeekday":"","time":"9pm","day":21,"month":"Nov","prename":"New series","name":"Restaurant to Another World","picture":"restaurant-to-another-world","class":"new-series"}],"special":false},{"date":"2023-11-28T19:00:00.000Z","shortDate":"2023-11-28","month":"Nov","day":28,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-11-28T19:00:00.000Z","dateLong":"Tuesday, 28 November 2023, 7pm","mediumDate":"28 Nov 2023","shortDate":"2023-11-28","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":28,"month":"Nov","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-12-05T19:00:00.000Z","shortDate":"2023-12-05","month":"Dec","day":5,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-12-05T19:00:00.000Z","dateLong":"Tuesday, 5 December 2023, 7pm","mediumDate":"5 Dec 2023","shortDate":"2023-12-05","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":5,"month":"Dec","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-12-12T19:00:00.000Z","shortDate":"2023-12-12","month":"Dec","day":12,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-12-12T19:00:00.000Z","dateLong":"Tuesday, 12 December 2023, 7pm","mediumDate":"12 Dec 2023","shortDate":"2023-12-12","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":12,"month":"Dec","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-12-14T00:00:00.000Z","shortDate":"2023-12-14","month":"Dec","day":14,"weekday":"Thursday","class":"social","events":[{"name":"Board Games","date":"2023-12-14T00:00:00.000Z","class":"social","venue":"Dice Tower","time":"6pm","dateLong":"Thursday, 14 December 2023, 6pm","mediumDate":"14 Dec 2023","shortDate":"2023-12-14","day":14,"weekday":"Thursday","shortWeekday":"Thu","month":"Dec","special":false,"address":"London Road, Basingstoke RG21 4AE"}],"special":false},{"date":"2023-12-19T19:00:00.000Z","shortDate":"2023-12-19","month":"Dec","day":19,"weekday":"Tuesday","class":"anime","events":[{"date":"2023-12-19T19:00:00.000Z","dateLong":"Tuesday, 19 December 2023, 7pm","mediumDate":"19 Dec 2023","shortDate":"2023-12-19","time":"7pm","weekday":"Tuesday","shortWeekday":"Tue","day":19,"month":"Dec","name":"Anime Society Meeting","class":"anime","price":"&pound;4","venue":"The White Hart","address":"London Road, Basingstoke RG21 4AE"},{"date":"2023-12-19T20:05:00.000Z","dateLong":"Tuesday, 19 December 2023, 8pm","mediumDate":"19 Dec 2023","shortDate":"2023-12-19","weekday":"Tuesday","shortWeekday":"Tue","time":"8pm","day":19,"month":"Dec","prename":"Movie","name":"Kaguya-sama, Love is War: The First Kiss Never Ends","picture":"kaguya-sama-movie","class":"new-series"}],"special":false},{"date":"2023-12-26T00:00:00.000Z","shortDate":"2023-12-26","month":"Dec","day":26,"weekday":"Tuesday","class":"skip","events":[{"name":"No Meeting","date":"2023-12-26T00:00:00.000Z","class":"skip","time":"","dateLong":"Tuesday, 26 December 2023","mediumDate":"26 Dec 2023","shortDate":"2023-12-26","day":26,"weekday":"Tuesday","shortWeekday":"Tue","month":"Dec","special":false,"venue":"","address":""}],"special":false},{"date":"2024-01-02T00:00:00.000Z","shortDate":"2024-01-02","month":"Jan","day":2,"weekday":"Tuesday","class":"skip","events":[{"name":"No Meeting","date":"2024-01-02T00:00:00.000Z","class":"skip","time":"","dateLong":"Tuesday, 2 January 2024","mediumDate":"2 Jan 2024","shortDate":"2024-01-02","day":2,"weekday":"Tuesday","shortWeekday":"Tue","month":"Jan","special":false,"venue":"","address":""}],"special":false},{"date":"2024-12-24T00:00:00.000Z","shortDate":"2024-12-24","month":"Dec","day":24,"weekday":"Tuesday","class":"skip","events":[{"name":"No Meeting","date":"2024-12-24T00:00:00.000Z","class":"skip","time":"","dateLong":"Tuesday, 24 December 2024","mediumDate":"24 Dec 2024","shortDate":"2024-12-24","day":24,"weekday":"Tuesday","shortWeekday":"Tue","month":"Dec","special":false,"venue":"","address":""}],"special":false},{"date":"2024-12-31T00:00:00.000Z","shortDate":"2024-12-31","month":"Dec","day":31,"weekday":"Tuesday","class":"skip","events":[{"name":"No Meeting","date":"2024-12-31T00:00:00.000Z","class":"skip","time":"","dateLong":"Tuesday, 31 December 2024","mediumDate":"31 Dec 2024","shortDate":"2024-12-31","day":31,"weekday":"Tuesday","shortWeekday":"Tue","month":"Dec","special":false,"venue":"","address":""}],"special":false}];
 
 var options = {"online":false,"hiatus":false,"hiatusMessage":"","comingSoonRows":3,"newsCutoff":0};
 
@@ -12,26 +12,7 @@ var ratingText = {"u": "Universal", "pg": "Parental Guidance", "12": "12 and old
 
 var top10 = [{"name":"Terror in Resonance","picture":"terror-in-resonance","genre":["Thriller","Crime"]},{"name":"Erased","picture":"erased","genre":["Crime","Mystery"]},{"name":"Eden of the East","picture":"eden-of-the-east","genre":["Thriller","Mystery"]},{"name":"B: The Beginning","picture":"b-the-beginning","genre":["Thriller","Crime"]},{"name":"Death Note","picture":"death-note","genre":["Thriller","Shounen","Dark"]},{"name":"Astra: Lost in Space","picture":"astra-lost-in-space","genre":["Adventure","Sci fi","Mystery","Shounen"]},{"name":"Magatsu Wahrheit: ZUERST","picture":"magatsu-wahrheit-zuerst","genre":["War","Action","Mystery"]},{"name":"Everything Becomes F: The Perfect Insider","picture":"everything-becomes-f","genre":["Mystery","Crime","Thriller"]},{"name":"Code Geass","picture":"code-geass","genre":["Action","Adventure","War","Shounen"]},{"name":"Charlotte","picture":"charlotte","genre":["Action","Drama"]},{"name":"Working!","picture":"working","genre":["Comedy","Slice of life"]},{"name":"The Great Passage","picture":"great-passage","genre":["Slice of life","Drama"]},{"name":"Welcome to the NHK!","picture":"welcome-to-the-nhk","genre":["Slice of life","Comedy"]},{"name":"K-ON!","picture":"k-on","genre":["Comedy","Slice of life","Music"]},{"name":"Blue Spring Ride","picture":"blue-spring-ride","genre":["Romance","Slice of life"]},{"name":"Teasing Master Takagi","picture":"takagi-san","genre":["Romance","Slice of life","Comedy"]},{"name":"Non Non Biyori","picture":"non-non-biyori-non-stop","genre":["Comedy","Slice of life"]},{"name":"Hinamatsuri","picture":"hinamatsuri","genre":["Comedy","Slice of life"]},{"name":"Nichijou","picture":"nichijou","genre":["Comedy","Slice of life"]},{"name":"Sing Yesterday For Me","picture":"sing-yesterday","genre":["Drama","Romance","Slife of life"]},{"name":"Haibane Renmei","picture":"haibane-renmei","genre":["Drama","Slice of life","Mystery"]},{"name":"Violet Evergarden","picture":"violet-evergarden","genre":["Drama","War"]},{"name":"Crest of the Stars","picture":"crest-of-the-stars","genre":["Sci fi","Action","Romance","War"]},{"name":"Fullmetal Alchemist","picture":"fullmetal-alchemist","genre":["Action","Adventure","War","Shounen"]},{"name":"Higurashi: When They Cry","picture":"higurashi","genre":["Mystery","Crime","Drama","Dark"]},{"name":"Baccano!","picture":"baccano","genre":["Crime","Action","Mystery"]},{"name":"Bamboo Blade","picture":"bamboo-blade","genre":["Comedy","Slice of life","Sports"]},{"name":"Steins;Gate","picture":"steins-gate","genre":["Sci fi","Drama","Mystery"]},{"name":"Your Name","picture":"your-name","genre":["Romance","Mystery"]},{"name":"Monthly Girls' Nozaki-kun","picture":"nozaki-kun","genre":["Comedy","Romance"]},{"name":"Eureka Seven","picture":"eureka-seven","genre":["Action","Adventure","Mystery","Mecha","Sci fi"]},{"name":"Last Exile","picture":"last-exile","genre":["Action","Adventure","Mystery","War"]},{"name":"Alderamin on the Sky","picture":"alderamin-on-the-sky","genre":["War","Action"]},{"name":"Hinamatsuri","picture":"hinamatsuri","genre":["Comedy","Slice of life"]},{"name":"My Love Story!","picture":"oremonogatari","genre":["Romance","Comedy","Slice of life"]},{"name":"Miss Kobayashi's Dragon Maid","picture":"kobayashi-dragon-maid","genre":["Comedy","Romance","Slice of life"]},{"name":"Bunny Drop","picture":"bunny-drop","genre":["Slice of life","Drama"]},{"name":"Oban Star Racers","picture":"oban-star-racers","genre":["Action","Adventure","Sci fi","Shounen"]},{"name":"From The New World","picture":"shinsekai-yori","genre":["Mystery","Drama","Dark"]},{"name":"Carole & Tuesday","picture":"carole-and-tuesday","genre":["Music","Drama","Sci fi"]},{"name":"BOFURI","picture":"bofuri","genre":["Comedy","Slice of life"]},{"name":"The Third","picture":"the-third","genre":["Sci fi","Action"]},{"name":"The Ancient Magus' Bride","picture":"ancient-magus-bride","genre":["Adventure","Drama","Romance"]},{"name":"Golden Kamuy","picture":"golden-kamuy","genre":["Adventure","Shounen"]},{"name":"Konosuba","picture":"konosuba-legend-of-crimson","genre":["Comedy","Isekai"]},{"name":"Death Parade","picture":"death-parade","genre":["Mystery","Drama","Dark"]},{"name":"Free!","picture":"free","genre":["Slice of life","Sports"]},{"name":"No Game No Life","picture":"no-game-no-life","genre":["Comedy","Isekai","Adventure"]},{"name":"Stellvia of the Universe","picture":"stellvia","genre":["Sci fi","Adventure"]},{"name":"Black Butler","picture":"black-butler","genre":["Adventure","Dark"]},{"name":"Made In Abyss","picture":"made-in-abyss","genre":["Adventure","Drama","Mystery","Dark"]},{"name":"Log Horizon","picture":"log-horizon","genre":["Isekai","Action","Adventure","Drama","Shounen"]},{"name":"MegaloBox","picture":"megalobox","genre":["Sports","Drama"]},{"name":"Kids on the Slope","picture":"kids-on-the-slope","genre":["Music","Slice of life","Romance"]},{"name":"Dragonball","picture":"dragonball","genre":["Action","Shounen"]},{"name":"Tamako Market","picture":"tamako-market","genre":["Slice of life","Romance"]},{"name":"The Promised Neverland","picture":"promised-neverland","genre":["Adventure","Thriller","Dark"]},{"name":"Howl's Moving Castle","picture":"howls-moving-castle","genre":["Adventure","Romance"]},{"name":"Silver Spoon","picture":"silver-spoon","genre":["Slice of life"]},{"name":"No.6","picture":"no6","genre":["Thriller","Adventure","Sci fi"]},{"name":"Yuru Camp","picture":"yuru-camp-s2","genre":["Slice of life"]},{"name":"Eizouken ni wa Te wo Dasu na!","picture":"eizouken","genre":["Slice of life","Comedy"]},{"name":"The Irresponsible Captain Tylor","picture":"irresponsible-captain-tylor","genre":["Comedy","Sci fi","Adventure"]},{"name":"Adolescense of Utena","picture":"utena","genre":["Drama"]},{"name":"Fantastic Children","picture":"fantastic-children","genre":["Adventure","Mystery"]},{"name":"Re:Creators","picture":"re-creators","genre":["Isekai","Action","Shounen","Mecha"]},{"name":"Laputa: Castle In The Sky","picture":"laputa","genre":["Adventure"]},{"name":"Bloom Into You","picture":"bloom-into-you","genre":["Romance","Drama"]},{"name":"Ghost Hound","picture":"ghost-hound","genre":["Mystery"]},{"name":"Simoun","picture":"simoun","genre":["Mystery","Romance","Sci fi"]},{"name":"Doughnuts Under A Crescent Moon","picture":"doughnuts-under-a-crescent-moon-manga","genre":["Romance","Slice of life"]},{"name":"Maria is watching us","picture":"mari-mite","genre":["Romance","Drama"]},{"name":"After Hours","picture":"after-hours-manga","genre":["Romance"]},{"name":"R.O.D the TV","picture":"rod","genre":["Action","Adventure","Comedy"]},{"name":"Catch These Hands!","picture":"catch-these-hands-manga","genre":["Comedy","Romance","Slice of life"]},{"name":"Canaan","picture":"canaan","genre":["Action","Adventure","Romance"]},{"name":"Hayate X Blade","picture":"hayate-x-blade-manga","genre":["Action","Comedy"]},{"name":"Whispered Words","picture":"whispered-words-manga","genre":["Comedy","Drama","Romance"]},{"name":"New Game!","picture":"new-game","genre":["Comedy"]},{"name":"School Zone","picture":"school-zone","genre":["Comedy","Romance"]}];
 
-// select a background image
-function selectBackground() {
-    var DAY_LIMIT = 6;
-    var NIGHT_LIMIT = 7;
-
-    var hour = new Date().getHours();
-    var isDay = hour >= 6 && hour < 18;
-    var bgNum = 1+Math.floor(Math.random() * (isDay ? DAY_LIMIT : NIGHT_LIMIT));
-    var bg = (isDay ? "day-" : "night-")+bgNum;
-
-    if (isDay) {
-      document.body.classList.add('day');
-      document.body.classList.remove('night');
-    } else {
-      document.body.classList.add('day');
-      document.body.classList.remove('night');
-    }
-
-    document.body.setAttribute('bg', bg);
-}
+// var episodesList = ;
 
 function slugify(str) {
   str = str.toLowerCase();
@@ -41,72 +22,114 @@ function slugify(str) {
   return str;
 }
 
-function parseQuery(queryString) {
-    var query = {};
-    var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
-    for (var i = 0; i < pairs.length; i++) {
-        var pair = pairs[i].split('=');
-        query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
-    }
-    return query;
-}
+function setupTabs() {
+  for (let tab of document.getElementsByClassName('tab')) {
+    let code = tab.dataset.tab;
+    ((code) => {
+      tab.addEventListener('click', (evt) => {
+        for (let tab of document.getElementsByClassName('tab')) {
+          if (tab.dataset.tab == code) {
+            tab.classList.add('tab--show');
+          } else {
+            tab.classList.remove('tab--show');
+          }
+        }
 
-window.onload = function () {
-  if (isHome) {
-    setupHome();
-  }
-
-  if (isRecommendations) {
-    setupRecommendations();
-  }
-
-  setupSlideshow();
-
-  // add hover on all the rating symbols
-  function addRatingHover(item) {
-    var img = item.getElementsByClassName("rating-img")[0];
-    var hover = item.getElementsByClassName("rating-hover")[0];
-    var tag = item.getElementsByClassName("rating__tag")[0];
-
-    if (img === undefined) {
-      return;
-    }
-
-    img.addEventListener("mouseover", function(event) {
-      hover.classList.add("rating-hover--show");
-
-      var imgbox = img.getBoundingClientRect();
-      var hoverbox = hover.getBoundingClientRect();
-
-      var left = imgbox.left - hoverbox.left + 17;
-      tag.style.left = left+"px";
-    });
-    img.addEventListener("mouseout", function(event) {
-      hover.classList.remove("rating-hover--show");
-    });
-  }
-
-  var ratingElements = document.getElementsByClassName('rating');
-  for (var item of ratingElements) {
-    addRatingHover(item);
-  }
-
-  selectBackground();
-};
-setInterval(selectBackground, 300000); // 5 minutes
-
-function expandComingSoon() {
-  let elem = document.getElementById('coming-soon');
-  if (elem !== null) {
-    elem.classList.remove('coming-soon--less');
-    elem.classList.add('coming-soon--more');
+        for (let pane of document.getElementsByClassName('tab-pane')) {
+          if (pane.dataset.tab == code) {
+            pane.classList.add('tab-pane--show');
+          } else {
+            pane.classList.remove('tab-pane--show');
+          }
+        }
+      });
+    })(code);
   }
 }
+var now = new Date(Date.now());
+var currentSlot1, currentSlot2, currentSlot3;
 
 function setupHome() {
-  var now = new Date(Date.now());
-  var yesterday = new Date(now);
+  var yesterday = new Date(Date.now());
   yesterday.setDate(yesterday.getDate() - 1);
+
+  // adjust the events list
+  let futureEvents = events.filter(function (event) {
+    return Date.parse(event.date) >= yesterday;
+  }).slice(0, 24);
+
+  setupHomeNextMeeting(futureEvents);
+  setupHomeNowShowing();
+  setupHomeComingSoon();
+  // setupHomeEventsList(futureEvents);
+  setupHomeRecommendations();
+}
+
+function setupHomeNextMeeting(events) {
+  var meetings = [];
+  var social = [];
+  for (var event of events) {
+    for (ev of event.events) {
+      switch (ev.class) {
+        case 'anime':
+        case 'online':
+          meetings.push(ev);
+          break;
+
+        case 'social':
+          social.push(ev);
+          break;
+      }
+    }
+  }
+
+  // next main meeting
+  var nextMeeting = meetings[0];
+  
+  document.getElementById('next-meeting-date').innerHTML = 
+    `<time datetime='${nextMeeting.date}'>
+      <span class='day'>${nextMeeting.day}</span>
+      <span class='month'>${nextMeeting.month}</span>
+      <span class='year'>${nextMeeting.year}</span>
+    </time>
+    <div class='next-meeting-side focus-date-side'>
+      ${nextMeeting.weekday}<br>${nextMeeting.time}
+    </div>`;
+  // document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);
+  if (document.getElementById('next-meeting-venue')) {
+    document.getElementById('next-meeting-venue').innerHTML = nextMeeting.venue;
+  }
+  if (document.getElementById('next-meeting-address')) {
+    document.getElementById('next-meeting-address').innerHTML = nextMeeting.address;
+  }
+
+  // next social
+  if (social.length > 0) {
+    var nextSocial = social[0];
+
+    document.getElementById('next-social-date').innerHTML = 
+      `<time datetime='${nextSocial.date}'>
+        <span class='day'>${nextSocial.day}</span>
+        <span class='month'>${nextSocial.month}</span>
+        <span class='year'>${nextSocial.year}</span>
+      </time>
+      <div class='next-social-side focus-date-side'>
+        <span class='next-social-title'>${nextSocial.name}</span>
+        <br>${nextSocial.weekday} ${nextSocial.time}
+      </div>`;
+    // document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);
+    if (document.getElementById('next-social-venue')) {
+      document.getElementById('next-social-venue').innerHTML = nextSocial.venue;
+    }
+    if (document.getElementById('next-social-address')) {
+      document.getElementById('next-social-address').innerHTML = nextSocial.address;
+    }
+  } else {
+    document.getElementById('section-next-social').remove();
+  }
+}
+
+function setupHomeNowShowing() {
 
   // adjust the showing anime
   function showingAnime(slot) {
@@ -117,9 +140,9 @@ function setupHome() {
     return before[before.length - 1];
   }
 
-  var currentSlot1 = showingAnime(slot1);
-  var currentSlot2 = showingAnime(slot2);
-  var currentSlot3 = showingAnime(slot3);
+  currentSlot1 = showingAnime(slot1);
+  currentSlot2 = showingAnime(slot2);
+  currentSlot3 = showingAnime(slot3);
 
   function editSlot(id, series) {
     if (series.name == "") {
@@ -150,25 +173,26 @@ function setupHome() {
   editSlot('slot1', currentSlot1);
   editSlot('slot2', currentSlot2);
   editSlot('slot3', currentSlot3);
+}
 
+// adjust the coming soon list
+function futureN(items, number) {
+  var after = items.filter(function(item) {
+    return Date.parse(item.date) >= now;
+  });
+  return after.slice(0, number);
+}
 
-  // adjust the coming soon list
-  function futureN(items, number) {
-    var after = items.filter(function(item) {
-      return Date.parse(item.date) >= now;
-    });
-    return after.slice(0, number);
-  }
+function excludeSeries(items, exclude) {
+  excludeNames = exclude.map(function (item) {
+    return item.name;
+  });
+  return items.filter(function (item) {
+    return !excludeNames.includes(item.name);
+  });
+}
 
-  function excludeSeries(items, exclude) {
-    excludeNames = exclude.map(function (item) {
-      return item.name;
-    });
-    return items.filter(function (item) {
-      return !excludeNames.includes(item.name);
-    });
-  }
-
+function setupHomeComingSoon() {
   var rowCutoffs = {1: 2, 2: 5, 3: 8, 4: 11};
   function findCutoff(items, maxRow) {
     for (var row = maxRow; row > 1; row--) {
@@ -196,7 +220,14 @@ function setupHome() {
     if (!item.movie) {
       html = html + "<div class='series-info'><p class='starting'>Starting</p></div>";
     }
-    html = html + `<div class='info-line'><div><time datetime="${item.date}"><span class='day'>${item.day}</span><span class='month'>${item.month}</span></time></div>`;
+    html = html + 
+      `<div class='info-line'><div>
+        <time datetime="${item.date}">
+          <span class='day'>${item.day}</span>
+          <span class='month'>${item.month}</span>
+          <span class='year'>${item.year}</span>
+        </time>
+      </div>`;
     if (item.trailer) {
       html = html + `<a class='trailer' href='${trailer}' target='_blank'>Trailer</a>`;
     }
@@ -205,10 +236,14 @@ function setupHome() {
     }
     html = html + "</div>";
     if (item.rating) {
-      html = html + "<div class='rating'>";
-      html = html + `<img class='rating-img rating-${item.rating}' src='images/rating/${item.rating}.svg'>`;
-      html = html + `<div class='rating-hover rating-hover-${item.rating}'><span>Age rating: ${ratingText[item.rating]}</span><div class='rating__tag'></div></div>`;
-      html = html + "</div>";
+      html = html + 
+        `<div class='rating'>
+          <img class='rating-img rating-${item.rating}' src='images/rating/${item.rating}.svg'>
+          <div class='rating-hover rating-hover-${item.rating}'>
+            <span>Age rating: ${ratingText[item.rating]}</span>
+            <div class='rating__tag'></div>
+          </div>
+        </div>`;
     }
     html = html + `</figcaption><img class='series-picture' src='images/series/${item.picture}.png'></figure>`;
     comingSoonHTML = comingSoonHTML + html;
@@ -220,20 +255,19 @@ function setupHome() {
   } else if (comingSoon.length <= 5) {
     document.getElementById('coming-soon').classList.add('coming-soon--short');
   }
+}
 
-
-  // adjust the events list
-  events = events.filter(function (event) {
-    return Date.parse(event.date) >= yesterday;
-  });
-  events = events.slice(0, 24);
-  // var nextEvent = events[0].events[0];
-
+function setupHomeEventsList() {
   var eventsHTML = '';
   var event;
   for (event of events) {
-    var html = "<article id='upcoming-"+event.date+"' class='event event-"+event.class+"'>\n"+
-      "<time datetime='"+event.date+"'><span class='day'>"+event.day+"</span><span class='month'>"+event.month+"</span>"+(event.special ? "<span class='time__special'></span>" : "")+"</time>\n";
+    var html = 
+      `<article id='upcoming-${event.date}' class='event event-${event.class}'>
+        <time datetime='${event.date}'>
+          <span class='day'>${event.day}</span>
+          <span class='month'>${event.month}</span>
+          ${event.special ? "<span class='time__special'></span>" : ""}
+        </time>\n`;
     for (ev of event.events) {
       var time = false;
       var a = "";
@@ -257,7 +291,7 @@ function setupHome() {
           if (ev.hasOwnProperty("time")) {
             html = html + ", ";
             if (ev.hasOwnProperty("shortWeekday")) html = html + ev.shortWeekday + " ";
-            html = html + ev.time
+            html = html + ev.time;
           }
         } else {
           if (ev.hasOwnProperty("shortWeekday")) html = html + ev.shortWeekday + " ";
@@ -275,54 +309,9 @@ function setupHome() {
     eventsHTML = eventsHTML + html;
   }
   document.getElementById('events-list').innerHTML = eventsHTML;
+}
 
-  var meetings = [];
-  var social = [];
-  for (var event of events) {
-    for (ev of event.events) {
-      switch (ev.class) {
-        case 'anime':
-        case 'online':
-          meetings.push(ev);
-          break;
-
-        case 'social':
-          social.push(ev);
-          break;
-      }
-    }
-  }
-
-  // next main meeting
-  var nextMeeting = meetings[0];
-  
-  document.getElementById('next-meeting-date').innerHTML = "<time datetime='"+nextMeeting.date+"'><span class='day'>"+nextMeeting.day+"</span><span class='month'>"+nextMeeting.month+"</span></time>"+
-    "<div class='next-meeting-side focus-date-side'>"+nextMeeting.weekday+"<br>"+nextMeeting.time+"</div>";
-  // document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);
-  if (document.getElementById('next-meeting-venue')) {
-    document.getElementById('next-meeting-venue').innerHTML = nextMeeting.venue;
-  }
-  if (document.getElementById('next-meeting-address')) {
-    document.getElementById('next-meeting-address').innerHTML = nextMeeting.address;
-  }
-
-  // next social
-  if (social.length > 0) {
-    var nextSocial = social[0];
-
-    document.getElementById('next-social-date').innerHTML = "<time datetime='"+nextSocial.date+"'><span class='day'>"+nextSocial.day+"</span><span class='month'>"+nextSocial.month+"</span></time>"+
-      "<div class='next-social-side focus-date-side'><span class='next-social-title'>"+nextSocial.name+"</span><br>"+nextSocial.weekday+" "+nextSocial.time+"</div>";
-    // document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);
-    if (document.getElementById('next-social-venue')) {
-      document.getElementById('next-social-venue').innerHTML = nextSocial.venue;
-    }
-    if (document.getElementById('next-social-address')) {
-      document.getElementById('next-social-address').innerHTML = nextSocial.address;
-    }
-  } else {
-    document.getElementById('section-next-social').remove();
-  }
-
+function setupHomeRecommendations() {
   // pick a random recommendation
   console.log('Top 10: '+top10.length+' items');
   let index = Math.floor(Math.random() * top10.length);
@@ -341,6 +330,9 @@ function setupHome() {
   document.getElementById('recommendation__genre').innerHTML = genres;
 }
 
+function setupHomeEpisodeHistory() {
+  
+}
 function setupRecommendations() {
   // clear genre and list selection
   function clearPick (event) {
@@ -426,6 +418,89 @@ function setupRecommendations() {
       }
     }
   });
+}
+
+// select a background image
+function selectBackground() {
+    var DAY_LIMIT = 6;
+    var NIGHT_LIMIT = 7;
+
+    var hour = new Date().getHours();
+    var isDay = hour >= 6 && hour < 18;
+    var bgNum = 1+Math.floor(Math.random() * (isDay ? DAY_LIMIT : NIGHT_LIMIT));
+    var bg = (isDay ? "day-" : "night-")+bgNum;
+
+    if (isDay) {
+      document.body.classList.add('day');
+      document.body.classList.remove('night');
+    } else {
+      document.body.classList.add('day');
+      document.body.classList.remove('night');
+    }
+
+    document.body.setAttribute('bg', bg);
+}
+function parseQuery(queryString) {
+    var query = {};
+    var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
+    for (var i = 0; i < pairs.length; i++) {
+        var pair = pairs[i].split('=');
+        query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+    }
+    return query;
+}
+
+window.onload = function () {
+  if (isHome) {
+    setupHome();
+  }
+
+  if (isRecommendations) {
+    setupRecommendations();
+  }
+
+  setupSlideshow();
+  setupTabs();
+
+  // add hover on all the rating symbols
+  function addRatingHover(item) {
+    var img = item.getElementsByClassName("rating-img")[0];
+    var hover = item.getElementsByClassName("rating-hover")[0];
+    var tag = item.getElementsByClassName("rating__tag")[0];
+
+    if (img === undefined) {
+      return;
+    }
+
+    img.addEventListener("mouseover", function(event) {
+      hover.classList.add("rating-hover--show");
+
+      var imgbox = img.getBoundingClientRect();
+      var hoverbox = hover.getBoundingClientRect();
+
+      var left = imgbox.left - hoverbox.left + 17;
+      tag.style.left = left+"px";
+    });
+    img.addEventListener("mouseout", function(event) {
+      hover.classList.remove("rating-hover--show");
+    });
+  }
+
+  var ratingElements = document.getElementsByClassName('rating');
+  for (var item of ratingElements) {
+    addRatingHover(item);
+  }
+
+  selectBackground();
+};
+setInterval(selectBackground, 300000); // 5 minutes
+
+function expandComingSoon() {
+  let elem = document.getElementById('coming-soon');
+  if (elem !== null) {
+    elem.classList.remove('coming-soon--less');
+    elem.classList.add('coming-soon--more');
+  }
 }
 
 function setupSlideshow() {
