@@ -1165,7 +1165,7 @@ article {
     }
   }
 
-  &.event-cinema {
+  &.event-cinema, &.event-matinee {
     time {
       background: linear-gradient(#faddd8, #f8b3a2);
       .time__special {

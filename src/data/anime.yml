@@ -465,3 +465,10 @@ movies:
   #   venue: "Discord"
   #   picture: your-name
   #   rating: 12
+
+  # - name: Summer Wars
+  #   date: 2023-06-17
+  #   time: 1pm
+  #   venue: "The White Hart"
+  #   picture: summer-wars
+  #   rating: 12

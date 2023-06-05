@@ -778,11 +778,11 @@ article {
       border-color: #a2f8ad; }
   article.event-social .event-detail h3 {
     color: #a2f8ad; }
-  article.event-cinema time {
+  article.event-cinema time, article.event-matinee time {
     background: linear-gradient(#faddd8, #f8b3a2); }
-    article.event-cinema time .time__special {
+    article.event-cinema time .time__special, article.event-matinee time .time__special {
       border-color: #f8b3a2; }
-  article.event-cinema .event-detail h3 {
+  article.event-cinema .event-detail h3, article.event-matinee .event-detail h3 {
     color: #f8b3a2; }
   article.event-convention time {
     background: linear-gradient(#fad8f7, #f8a2ed); }

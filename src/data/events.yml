@@ -114,6 +114,14 @@ events:
     class: social
     venue: Dice Tower
     time: 6pm
+
+  - name: No Meeting
+    date: 2022-12-27
+    class: skip
+  - name: No Meeting
+    date: 2023-01-03
+    class: skip
+
   - name: Board Games
     date: 2023-01-12
     class: social
@@ -190,13 +198,14 @@ events:
     venue: Dice Tower
     time: 6pm
 
-
-  - name: No Meeting
-    date: 2022-12-27
-    class: skip
-  - name: No Meeting
-    date: 2023-01-03
-    class: skip
+  - name: "Matinee: Summer Wars"
+    date: 2023-06-17
+    class: matinee
+    price: "£2"
+    time: 1pm
+    venue: "The White Hart"
+    picture: summer-wars
+    # rating: 12
 
   - name: No Meeting
     date: 2023-12-26
