@@ -206,6 +206,12 @@ events:
     venue: "The White Hart"
     picture: summer-wars
     # rating: 12
+  - name: 17th Anniversary BBQ
+    date: 2023-09-16
+    class: social
+    venue: Swarraton Village Hall, SO24 9TQ
+    time: 11am
+    special: true
 
   - name: No Meeting
     date: 2023-12-26
@@ -213,6 +219,67 @@ events:
   - name: No Meeting
     date: 2024-01-02
     class: skip
+
+  - name: Board Games
+    date: 2024-01-11
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2024-02-08
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2024-03-14
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2024-04-11
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2024-05-09
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2024-06-13
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2024-07-11
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2024-08-08
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2024-09-12
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2024-10-10
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2024-11-14
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2024-12-14
+    class: social
+    venue: Dice Tower
+    time: 6pm
 
   - name: No Meeting
     date: 2024-12-24
