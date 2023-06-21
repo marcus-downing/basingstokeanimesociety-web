@@ -4,11 +4,55 @@ const Handlebars = require('handlebars');
 const yaml = require('js-yaml');
 const sass = require('node-sass');
 // const ffmpeg = require('ffmpeg');
-const { exec } = require('child_process');
+// const { exec } = require('child_process');
 const _ = require('lodash');
 
 const util = require('./make/util.js');
+const video = require('./make/video.js');
 const episodes = require('./make/episodes.js');
+
+// partials
+fs.readdir('./www/js', {encoding: 'utf8'}, (err, files) => {
+  if (err) {
+    console.log("Error reading partials dir:", err);
+    return;
+  }
+  // console.log("JS partials", files);
+
+  for (let file of files) {
+    fs.readFile('./www/js/'+file, 'utf8', (err, data) => {
+      if (err) {
+        console.log("Error reading partial "+file+":", err);
+        return;
+      }
+
+      let name = file.replace('.js.h', '_js');
+      // console.log("Registering partial", name);
+      Handlebars.registerPartial(name, data);
+    });
+  }
+});
+
+fs.readdir('./www/partials', {encoding: 'utf8'}, (err, files) => {
+  if (err) {
+    console.log("Error reading partials dir:", err);
+    return;
+  }
+  // console.log("Partials", files);
+
+  for (let file of files) {
+    fs.readFile('./www/partials/'+file, 'utf8', (err, data) => {
+      if (err) {
+        console.log("Error reading partial "+file+":", err);
+        return;
+      }
+
+      let name = file.replace('.html.h', '').replace(/-/g, '_');
+      // console.log("Registering partial", name);
+      Handlebars.registerPartial(name, data);
+    });
+  }
+});
 
 Handlebars.registerHelper('eq', function(value1, value2, options) {
   return value1 == value2;
@@ -35,14 +79,34 @@ Handlebars.registerHelper('times', function(n, block) {
 let basData = util.readData();
 let options = basData.options;
 
+// combine the full list of past and future shows
+let all_anime = [
+  // ...basData.past_anime,
+  ...basData.slot1,
+  ...basData.slot2,
+  ...basData.slot3,
+].map(series => util.expandDate(series, series.from, '7pm'));
+all_anime = all_anime.sort((a, b) => a.date - b.date);
+basData.all_anime = all_anime;
+
+// put together the list of episodes for recent-and-future shows
+let skipWeeks = basData.events.filter((event) => event.class == 'skip').map((event) => util.formatShortDate(event.date));
+console.log("Skip weeks:", skipWeeks);
+basData.schedule = episodes.makeEpisodeList(basData.slot1, basData.slot2, basData.slot3, skipWeeks);
+
+basData.historyYears = [];
+let currentYear = util.formatYear(new Date());
+for (let year = currentYear; year >= 2020; year--) {
+  basData.historyYears.push(""+year);
+}
+
+
 // showing anime
 basData.slot1 = util.currentAndFuture(basData.slot1.map(series => util.expandDate(series, series.from, '7pm')), 'from');
 console.log("Slot 1:", basData.slot1.map(series => util.formatShortDate(series.from)).join(", "));
 basData.slot1back = util.backdate(basData.slot1);
 basData.series1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[0];
 basData.nextSeries1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[1];
-
-// episodes.flowEpisodes(basData.series1);
 
 basData.slot2 = util.currentAndFuture(basData.slot2.map(series => util.expandDate(series, series.from, '8pm')), 'from');
 console.log("Slot 2:", basData.slot2.map(series => util.formatShortDate(series.from)).join(", "));
@@ -61,10 +125,6 @@ _.each(basData.movies, movie => movie.movie = true);
 basData.listedMovies = util.futureN(basData.movies, 2, 'date');
 console.log("Movies:", basData.movies.map(movie => util.formatShortDate(movie.date)).join(", "));
 
-let pastAnime = [
-  ...basData.past_anime,
-
-];
 
 let comingSoon = [
   ...util.future(basData.slot1, 'from'),
@@ -93,6 +153,7 @@ _.each([basData.slot1, basData.slot2, basData.slot3, basData.movies], slot => {
 _.each(basData.news, article => {
   article.day = article.date.getDate();
   article.month = util.formatShortMonth(article.date);
+  article.year = util.formatYear(article.date);
 });
 basData.news = _.sortBy(basData.news, 'date').reverse();
 basData.freshNews = _.take(basData.news, basData.options.newsCutoff);
@@ -121,6 +182,7 @@ events = _.map(events, event => {
     shortDate: util.formatShortDate(event.date),
     day: event.date.getDate(),
     weekday: util.weekday(event.date),
+    year: util.formatYear(event.date),
     shortWeekday: util.shortWeekday(event.date),
     month: util.formatShortMonth(event.date),
     special: event.class == 'cinema',
@@ -168,6 +230,7 @@ _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
           time: hour+"pm",
           day: date.getDate(),
           month: util.formatShortMonth(date),
+          year: util.formatYear(date),
           prename: (movie ? 'Movie' : 'New series'),
           name: series.name,
           picture: series.picture,
@@ -194,6 +257,7 @@ _.each(basData.movies, movie => {
         weekday: util.weekday(date),
         day: date.getDate(),
         month: util.formatShortMonth(date),
+        year: util.formatYear(date),
         name: 'Movie: '+movie.name,
         class: 'movie',
         venue: movie.venue
@@ -233,6 +297,7 @@ for (var i = 0; i < 30; i++) {
     shortWeekday: util.shortWeekday(date),
     day: date.getDate(),
     month: util.formatShortMonth(date),
+    year: util.formatYear(date),
     name: online ? 'Online Meeting' : 'Anime Society Meeting',
     class: online ? 'online' : 'anime',
     price: online ? null : "&pound;4",
@@ -276,6 +341,7 @@ basData.eventsByDate = _(events).groupBy(e => util.formatShortDate(e.date)).map(
     month: evs[0].month,
     day: evs[0].day,
     weekday: evs[0].weekday,
+    year: evs[0].year,
     class: cls,
     events: evs,
     special: special
@@ -319,6 +385,7 @@ if (socialEvents.length > 0) {
   basData.nextSocialDay = util.formatDay(nextSocial.date);
   basData.nextSocialMonth = util.formatShortMonth(nextSocial.date);
   basData.nextSocialWeekday = util.weekday(nextSocial.date);
+  basData.nextSocialYear = util.formatYear(nextSocial.date);
   basData.nextSocialTime = nextSocial.time;
   basData.nextSocialVenue = nextSocial.venue;
 }
@@ -361,11 +428,11 @@ sass.render({
   basData.stylesheetVersion = util.md5sum(result.css);
   fs.writeFile('../dist/style.css', result.css, 'utf-8', err => {});
 
-  writeTemplate('www/script.js.h', 'script.js', basData, (err) => {
+  writeTemplate('www/js/script.js.h', 'script.js', basData, (err) => {
     let scriptData = fs.readFileSync('../dist/script.js');
     basData.scriptVersion = util.md5sum(scriptData);
     
-    writeTemplate('www/index.html.h', 'index.html', basData);
+    writeTemplate('www/index2.html.h', 'index.html', basData);
     writeTemplate('www/history.html.h', 'history.html', basData);
     // writeTemplate('www/bbq.html.h', 'bbq.html', basData);
     writeTemplate('www/recommendations2.html.h', 'recommendations.html', basData);
@@ -373,283 +440,4 @@ sass.render({
 });
 
 
-// bookends
-
-// collect the dates on which series change
-let bookends = {};
-
-_.each({slot1: basData.slot1, slot2: basData.slot2, slot3: basData.slot3}, (slot, slotName) => {
-  _.each(slot, series => {
-    var dateKey = util.formatShortDate(series.from);
-    bookends[dateKey] = {
-      date: series.from,
-      name: dateKey,
-      slot1: null,
-      slot2: null,
-      slot3: null
-    };
-  });
-});
-
-_.each({slot1: basData.slot1, slot2: basData.slot2, slot3: basData.slot3}, (slot, slotName) => {
-  _.each(slot, series => {
-    var dateKey = util.formatShortDate(series.from);
-    // console.log(`On ${dateKey} slot ${slotName} begin ${series.name}`);
-    bookends[dateKey][slotName] = series;
-  });
-});
-console.log("All bookends I", bookends);
-
-let bookendDates = _.keys(bookends);
-bookendDates = bookendDates.sort();
-bookends = _.map(bookendDates, dateKey => bookends[dateKey]);
-
-console.log("All bookends II", bookends);
-
-// fill in the ongoing series from one date to the next
-let slot1 = null, slot2 = null, slot3 = null;
-_.each(bookends, bookend => {
-  if (bookend.slot1 !== null) {
-    slot1 = bookend.slot1;
-  } else {
-    bookend.slot1 = slot1;
-  }
-  if (bookend.slot2 !== null) {
-    slot2 = bookend.slot2;
-  } else {
-    bookend.slot2 = slot2;
-  }
-  if (bookend.slot3 !== null) {
-    slot3 = bookend.slot3;
-  } else {
-    bookend.slot3 = slot3;
-  }
-});
-
-bookends = util.currentAndFuture(bookends);
-// console.log(bookends);
-
-
-// Generate bookends
-_.each(bookends, bookend => {
-  if (bookend.slot1 === null || bookend.slot1.picture === null || bookend.slot1.picture == "") {
-    console.log("Skipping bookend:", bookend.name, "due to missing slot 1");
-  }
-  if (bookend.slot2 === null || bookend.slot2.picture === null || bookend.slot2.picture == "") {
-    console.log("Skipping bookend:", bookend.name, "due to missing slot 2");
-  }
-  if (bookend.slot3 === null || bookend.slot3.picture === null || bookend.slot3.picture == "") {
-    console.log("Skipping bookend:", bookend.name, "due to missing slot 3");
-  }
-
-  console.log("Bookend:", bookend.name);
-  console.log("Bookend date:", bookend.date);
-  let series1picture = 'series/'+bookend.slot1.picture+'.png';
-  let series2picture = 'series/'+bookend.slot2.picture+'.png';
-  let series3picture = 'series/'+bookend.slot3.picture+'.png';
-
-  // console.log("Comparing dates:", util.formatShortDate(bookend.slot1.from));
-  let series1new = util.formatShortDate(bookend.slot1.from) == bookend.name;
-  let series2new = util.formatShortDate(bookend.slot2.from) == bookend.name;
-  let series3new = util.formatShortDate(bookend.slot3.from) == bookend.name;
-
-  let shadow255 = "video/shadow255.png";
-  let shadow315 = "video/shadow315.png";
-
-
-  // Discord promo banner
-  if (fs.existsSync(`../bookends/banner-${bookend.name}.png`)) {
-    console.log("Skipping banner:", bookend.name);
-  } else {
-    let banner_cmd = `magick video/banner-night-9.png -size 800x320`+
-      // logo
-      ` -draw 'image SrcOver 10,0 72,320 video/logo.png'`+
-
-      // series pic shadows
-        // ` -draw 'image SrcOver 86,9 219,310 video/shadow255.png'`+
-        // ` -draw 'image SrcOver 321,9 219,310 video/shadow255.png'`+
-        // ` -draw 'image SrcOver 556,9 219,310 video/shadow255.png'`+
-        ` -draw 'image SrcOver 86,14 212,300 video/shadow255.png'`+
-        ` -draw 'image SrcOver 321,14 212,300 video/shadow255.png'`+
-        ` -draw 'image SrcOver 556,14 212,300 video/shadow255.png'`+
-
-      // series pics
-      ` -draw 'image SrcOver 90,15 203,290 ${series1picture}'`+
-      (series1new ? ` -draw 'image SrcOver 90,15 100,100 video/new-series-ribbon.png'` : '')+
-      ` -draw 'image SrcOver 325,15 203,290 ${series2picture}'`+
-      (series2new ? ` -draw 'image SrcOver 325,15 100,100 video/new-series-ribbon.png'` : '')+
-      ` -draw 'image SrcOver 560,15 203,290 ${series3picture}'`+
-      (series3new ? ` -draw 'image SrcOver 560,15 100,100 video/new-series-ribbon.png'`: '')+
-      ` ../bookends/banner-${bookend.name}.png`;
-
-    // console.log(banner_cmd);
-
-    exec(banner_cmd, (err, stdout, stderr) => {
-      if (err) {
-        //some err occurred
-        console.error(err);
-      } else {
-      }
-    });
-  }
-
-  // Also do the next date, unless there's a new series starting that day
-  let nextDate = util.plus1week(bookend.date);
-  console.log("Next date:", nextDate);
-  let nextDateKey = util.formatShortDate(nextDate);
-
-  if (!bookendDates.includes(nextDateKey)) {
-    console.log("Next date:", nextDateKey);
-
-    if (!fs.existsSync(`../bookends/banner-${nextDateKey}.png`)) {
-      let banner2_cmd = `magick video/banner-night-9.png -size 800x320`+
-        // logo
-        ` -draw 'image SrcOver 10,0 72,320 video/logo.png'`+
-
-        // series pic shadows
-        // ` -draw 'image SrcOver 86,9 219,310 video/shadow255.png'`+
-        // ` -draw 'image SrcOver 321,9 219,310 video/shadow255.png'`+
-        // ` -draw 'image SrcOver 556,9 219,310 video/shadow255.png'`+
-        ` -draw 'image SrcOver 86,14 212,300 video/shadow255.png'`+
-        ` -draw 'image SrcOver 321,14 212,300 video/shadow255.png'`+
-        ` -draw 'image SrcOver 556,14 212,300 video/shadow255.png'`+
-
-        // series pics
-        // ` -draw 'image SrcOver 90,10 210,300 ${series1picture}'`+
-        // ` -draw 'image SrcOver 325,10 210,300 ${series2picture}'`+
-        // ` -draw 'image SrcOver 560,10 210,300 ${series3picture}'`+
-      ` -draw 'image SrcOver 90,15 203,290 ${series1picture}'`+
-      ` -draw 'image SrcOver 325,15 203,290 ${series2picture}'`+
-      ` -draw 'image SrcOver 560,15 203,290 ${series3picture}'`+
-        ` ../bookends/banner-${nextDateKey}.png`;
-
-      // console.log(banner2_cmd);
-
-      exec(banner2_cmd, (err, stdout, stderr) => {
-        if (err) {
-          //some err occurred
-          console.error(err);
-        } else {
-        }
-      });
-    }
-  }
-
-
-
-  // End of night bookend
-  if (fs.existsSync(`../bookends/bookend-${bookend.name}.mp4`)) {
-    console.log("Skipping bookend:", bookend.name);
-  } else {
-    let frameRate = 29.976;
-    let bookendDur = 15;
-
-    // let plateDur = 35;
-    let plateOffset = 0.5;
-    let plateFade = 1.5;
-    // let plateEndBuf = 3;
-    let plateStart = 2;
-
-    let cmd = `ffmpeg -y -i video/bookend-base.mkv -loop 1 -i ${series1picture} -loop 1 -i ${series2picture} -loop 1 -i ${series3picture} -loop 1 -i ${shadow315} -an `+
-      `-filter_complex "`+
-
-      `[1:v] fps=fps=${frameRate},fade=in:st=${plateStart-plateOffset*2}:d=${plateFade}:alpha=1 [s1];`+
-      `[2:v] fps=fps=${frameRate},fade=in:st=${plateStart-plateOffset}:d=${plateFade}:alpha=1 [s2];`+
-      `[3:v] fps=fps=${frameRate},fade=in:st=${plateStart}:d=${plateFade}:alpha=1 [s3];`+
-      `[4:v] fps=fps=${frameRate},fade=in:st=${plateStart-plateOffset*2}:d=${plateFade}:alpha=1 [sh1];` +
-      `[4:v] fps=fps=${frameRate},fade=in:st=${plateStart-plateOffset}:d=${plateFade}:alpha=1 [sh2];` +
-      `[4:v] fps=fps=${frameRate},fade=in:st=${plateStart}:d=${plateFade}:alpha=1 [sh3];` +
-
-      `[0:v][s1] overlay=205:135 [in1]; `+
-      `[in1][s2] overlay=555:135 [in2]; `+
-      `[in2][s3] overlay=905:135 [in3]; `+
-
-      `[in3][sh1] overlay=200:135 [in4]; `+
-      `[in4][sh2] overlay=550:135 [in5]; `+
-      `[in5][sh3] overlay=900:135 [in6]; `+
-
-      `[in6] fade=in:st=0:d=1 [in7]; `+
-      `[in7] fade=out:st=14:d=1" `+
-      `-t 00:00:15 ../bookends/bookend-${bookend.name}.mp4`;
-
-    console.log(cmd);
-
-    exec(cmd, (err, stdout, stderr) => {
-      if (err) {
-        //some err occurred
-        console.error(err)
-      } else {
-        let cmd2 = `ffmpeg -y -i ../bookends/bookend-${bookend.name}.mp4 -ss 7 -vframes 1 -f image2 ../bookends/preview-${bookend.name}.png`;
-
-        console.log(cmd2);
-
-        exec(cmd2, (err, stdout, stderr) => {
-          if (err) {
-            //some err occurred
-            console.error(err);
-          } else {
-          }
-        });
-      }
-    });
-  }
-
-
-  // Interval video
-  if (fs.existsSync(`../bookends/interval-${bookend.name}.mkv`)) {
-    console.log("Skipping interval:", bookend.name);
-  } else {
-    let frameRate = 29.976;
-    let intervalDur = 20 * 60;
-    let fade = 2;
-    let fadeStart = intervalDur - fade;
-
-    let plateDur = 35;
-    let plateOffset = 0.5;
-    let plateFade = 1.5;
-    let plateEndBuf = 3;
-    let plateStart = intervalDur - plateEndBuf - plateDur;
-    let plateEnd = intervalDur - plateEndBuf;
-
-    // console.log(`  Interval dur = ${intervalDur}`);
-    // console.log(`  Fade start = ${fadeStart}`);
-    // console.log(`  Fade dur = ${fade}`);
-
-    // console.log(`  Plate dur = ${plateDur}`);
-    // console.log(`  Plate fade dur = ${plateFade}`);
-    // console.log(`  Plate start = ${plateStart}`);
-    // console.log(`  Plate end = ${plateEnd}`);
-
-    let cmd = `ffmpeg -y -i video/interval-base5.mkv -loop 1 -i ${series1picture} -loop 1 -i ${series2picture} -loop 1 -i ${series3picture} -loop 1 -i ${shadow255} -c:a copy -filter_complex "`+
-
-      `[1:v] fps=fps=${frameRate},scale=255x366,fade=in:st=${plateStart-plateOffset*2}:d=${plateFade}:alpha=1 [s1];`+
-      `[2:v] fps=fps=${frameRate},scale=255x366,fade=in:st=${plateStart-plateOffset}:d=${plateFade}:alpha=1 [s2];`+
-      `[3:v] fps=fps=${frameRate},scale=255x366,fade=in:st=${plateStart}:d=${plateFade}:alpha=1 [s3];`+
-      `[4:v] fps=fps=${frameRate},scale=265x376,fade=in:st=${plateStart-plateOffset*2}:d=${plateFade}:alpha=1 [sh1];` +
-      `[4:v] fps=fps=${frameRate},scale=265x376,fade=in:st=${plateStart-plateOffset}:d=${plateFade}:alpha=1 [sh2];` +
-      `[4:v] fps=fps=${frameRate},scale=265x376,fade=in:st=${plateStart}:d=${plateFade}:alpha=1 [sh3];` +
-
-      `[0:v][s1] overlay=425:327 [in1]; `+
-      `[in1][s2] overlay=710:327 [in2]; `+
-      `[in2][s3] overlay=995:327 [in3]; `+
-
-      `[in3][sh1] overlay=420:327 [in4]; `+
-      `[in4][sh2] overlay=705:327 [in5]; `+
-      `[in5][sh3] overlay=990:327 [in6]; `+
-
-      `[in6] fade=out:st=${fadeStart}:d=${fade}" `+
-      // `[in3] fade=in:0:60 [in4]; `+
-      // `[in3] fade=out:35911:60" `+
-      `-t 00:20:00 ../bookends/interval-${bookend.name}.mkv`;
-
-    console.log(cmd);
-
-    exec(cmd, (err, stdout, stderr) => {
-      if (err) {
-        //some err occurred
-        console.error(err)
-      } else {
-      }
-    });
-  }
-});
+video.makeVideos(basData);

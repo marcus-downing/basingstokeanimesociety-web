@@ -1,0 +1,32 @@
+$large: 1280px;
+$medium: 640px;
+
+@mixin large {
+    @media screen and (min-width: $large) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media screen and (min-width: $medium) and (max-width: ($large - 1px)) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media screen and (max-width: ($medium - 1px)) {
+        @content;
+    }
+}
+
+@mixin medium-large {
+    @media screen and (min-width: $medium) {
+        @content;
+    }
+}
+
+@mixin small-medium {
+    @media screen and (max-width: ($large - 1px)) {
+        @content;
+    }
+}

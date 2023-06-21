@@ -11,25 +11,14 @@
   </script>
 
   <title>Basingstoke Anime Society</title>
-  <link rel="stylesheet" media="all" href="style.css?ver=8ace67" />
+  <link rel="stylesheet" media="all" href="style.css?ver=2b9d15" />
 
   <meta name="description" content="Showing anime in Basingstoke every Tuesday" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Twitter universal website tag code -->
-<script>
-!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
-a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-// Insert Twitter Pixel ID and Standard Event data below
-twq('init','o898i');
-twq('track','PageView');
-</script>
-<!-- End Twitter universal website tag code -->
-
 <script>
   var isHome = true;
   var isRecommendations = false;
+  var isHistory = false;
 </script>
 
 </head>
@@ -41,7 +30,7 @@ twq('track','PageView');
 
 <nav id='section-social'>
 <a class='btn btn-mail' href='mailto:marcus@basingstokeanimesociety.com'><i></i><span>Mail</span></a>
-<a class='btn btn-twitter' href='https://twitter.com/BasingAnime' target="_blank"><i></i><span>Twitter</span></a>
+<!-- <a class='btn btn-twitter' href='https://twitter.com/BasingAnime' target="_blank"><i></i><span>Twitter</span></a> -->
 <a class='btn btn-fb' href='https://www.facebook.com/groups/basingstokeanimesociety/' target="_blank"><i></i><span>Facebook</span></a>
 <a class='btn btn-discord' href='https://discord.gg/sypjyaA' target="_blank"><i></i><span>Discord</span></a>
 </nav>
@@ -65,30 +54,23 @@ twq('track','PageView');
     </article>
 
     <div style='position: relative'>
-    <!--  -->
-
-    <!-- <h3>Venue: <span id="next-meeting-venue">The White Hart</span></h3> -->
-    </div>
-
-    <!-- <hr> -->
 
     <div id='about'>
       <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Show Map</span></button>
 
       <div class='content'>
-        <p><img class='icon' src='images/pin.svg'>Function room, upstairs at <a href='https://www.thewhitehartbasingstoke.com/'>The White Hart</a>, Basingstoke RG21 4AE</p>
-        <p><span class='icon entry-fee'>£4</span>Club fee</p>
-        <!-- <p><img class='icon' src='images/biohazard-white.svg'>Vaccination required</p> -->
-        <p><img class="rating-img rating-18 icon" src="images/rating/18.svg">Age requirement</p>
+        <p>Function room, upstairs at <a href='https://www.thewhitehartbasingstoke.com/'>The White Hart</a>, Basingstoke RG21 4AE</p>
+        <p class='p--icon'><span class='icon entry-fee'>£4</span>Club fee</p>
+        <p class='p--icon'><img class="rating-img rating-18 icon" src="images/rating/18.svg">Age requirement</p>
       </div>
     </div>
   </section>
 </div>
 
 <div>
-  <section class='box'>
+  <!-- <section class='box'>
     <h3 class='big'>Showing anime in Basingstoke every Tuesday.</h3>
-  </section>
+  </section> -->
 
   <section id='section-next-social' class='box'>
     <h2>Next Social Event</h2>
@@ -99,6 +81,12 @@ twq('track','PageView');
     </article>
 
     <h3>Venue: <span id="next-social-venue">Dice Tower</span></h3>
+  </section>
+
+  <section class="box box--button" id="section-discord">
+    <h2>Community</h2>
+    <p>Find us on Discord</p>
+    <a class='btn btn-discord' href='https://discord.gg/sypjyaA' target="_blank"><i></i><span>Discord</span></a>
   </section>
 </div>
 </header>
@@ -125,716 +113,978 @@ twq('track','PageView');
       <div class='rating' id='slot3rating'></div>
     </figure>
   </div>
-
-  <h2 class='underline'>Coming Soon</h2>
-
-  <div id='coming-soon' class='coming-soon--less'>
-  </div>
-
-  <div id='coming-soon-more-switch'>
-    <button class='btn btn-coming-soon-more' onclick="expandComingSoon()"><span>Show More</span></button>
-  </div>
-
 </section>
 
+<nav class='tabs'>
+<a class='tab tab--show' data-tab='coming-soon'>Coming Soon</a>
+<a class='tab' data-tab='news'>News</a>
+<a class='tab' data-tab='recommendations'>Recommendations</a>
+<a class='tab' data-tab='history'>History</a>
+</nav>
+
+<div class='tab-panes'>
+<section class='tab-pane tab-pane--show' data-tab='coming-soon'>
 <div class='lr'>
-<section id='section-upcoming'>
-  <h2 class='underline'>Upcoming Events</h2>
-
-  <div id='events-list' class='box'>
-  <article id='upcoming-2023-06-06' class='event event-anime'>
-    <time datetime="Tue Jun 06 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>6</span><span class='month'>Jun</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-06-08' class='event event-social'>
-    <time datetime="Thu Jun 08 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>8</span><span class='month'>Jun</span></time>
-    <div class='event-detail event-detail-social'>
-      
-      
-      <h3>Board Games</h3>
-      <p>
-        
-        Dice Tower, Thu 6pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-06-13' class='event event-anime'>
-    <time datetime="Tue Jun 13 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>13</span><span class='month'>Jun</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-06-17' class='event event-matinee'>
-    <time datetime="Sat Jun 17 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>17</span><span class='month'>Jun</span></time>
-    <div class='event-detail event-detail-matinee'>
-      <img src="images/series/summer-wars.png">
-      
-      <h3>Matinee: Summer Wars</h3>
-      <p>
-        
-        The White Hart, Sat 1pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-06-20' class='event event-anime'>
-    <time datetime="Tue Jun 20 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>20</span><span class='month'>Jun</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-    <div class='event-detail event-detail-new-series'>
-      <img src="images/series/appare-ranman.png">
-      <p class="series-ident">New series</p>
-      <h3>Appare-Ranman</h3>
-      <p>
-        
-         8pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-06-27' class='event event-anime'>
-    <time datetime="Tue Jun 27 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>27</span><span class='month'>Jun</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-07-04' class='event event-anime'>
-    <time datetime="Tue Jul 04 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>4</span><span class='month'>Jul</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-07-11' class='event event-anime'>
-    <time datetime="Tue Jul 11 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>11</span><span class='month'>Jul</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-    <div class='event-detail event-detail-new-series'>
-      <img src="images/series/taisho-otome.png">
-      <p class="series-ident">New series</p>
-      <h3>Taisho Otome Fairy Tale</h3>
-      <p>
-        
-         9pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-07-13' class='event event-social'>
-    <time datetime="Thu Jul 13 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>13</span><span class='month'>Jul</span></time>
-    <div class='event-detail event-detail-social'>
-      
-      
-      <h3>Board Games</h3>
-      <p>
-        
-        Dice Tower, Thu 6pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-07-18' class='event event-anime'>
-    <time datetime="Tue Jul 18 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>18</span><span class='month'>Jul</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-07-25' class='event event-anime'>
-    <time datetime="Tue Jul 25 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>25</span><span class='month'>Jul</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-08-01' class='event event-anime'>
-    <time datetime="Tue Aug 01 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>1</span><span class='month'>Aug</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-08-08' class='event event-anime'>
-    <time datetime="Tue Aug 08 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>8</span><span class='month'>Aug</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-    <div class='event-detail event-detail-new-series'>
-      <img src="images/series/aquatope.png">
-      <p class="series-ident">New series</p>
-      <h3>The Aquatope on White Sand pt2</h3>
-      <p>
-        
-         8pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-08-10' class='event event-social'>
-    <time datetime="Thu Aug 10 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>10</span><span class='month'>Aug</span></time>
-    <div class='event-detail event-detail-social'>
-      
-      
-      <h3>Board Games</h3>
-      <p>
-        
-        Dice Tower, Thu 6pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-08-15' class='event event-anime'>
-    <time datetime="Tue Aug 15 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>15</span><span class='month'>Aug</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-08-22' class='event event-anime'>
-    <time datetime="Tue Aug 22 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>22</span><span class='month'>Aug</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-    <div class='event-detail event-detail-new-series'>
-      <img src="images/series/spy-x-family.png">
-      <p class="series-ident">New series</p>
-      <h3>Spy × Family</h3>
-      <p>
-        
-         9pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-08-29' class='event event-anime'>
-    <time datetime="Tue Aug 29 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>29</span><span class='month'>Aug</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-09-05' class='event event-anime'>
-    <time datetime="Tue Sep 05 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>5</span><span class='month'>Sept</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-09-12' class='event event-anime'>
-    <time datetime="Tue Sep 12 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>12</span><span class='month'>Sept</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-09-14' class='event event-social'>
-    <time datetime="Thu Sep 14 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>14</span><span class='month'>Sept</span></time>
-    <div class='event-detail event-detail-social'>
-      
-      
-      <h3>Board Games</h3>
-      <p>
-        
-        Dice Tower, Thu 6pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-09-16' class='event event-social'>
-    <time datetime="Sat Sep 16 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>16</span><span class='month'>Sept</span><span class='time__special'></span></time>
-    <div class='event-detail event-detail-social'>
-      
-      
-      <h3>17th Anniversary BBQ</h3>
-      <p>
-        
-        Swarraton Village Hall, SO24 9TQ, Sat 11am
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-09-19' class='event event-anime'>
-    <time datetime="Tue Sep 19 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>19</span><span class='month'>Sept</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-    <div class='event-detail event-detail-new-series'>
-      <img src="images/series/mushishi.png">
-      <p class="series-ident">New series</p>
-      <h3>Mushi-Shi</h3>
-      <p>
-        
-         8pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-09-26' class='event event-anime'>
-    <time datetime="Tue Sep 26 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>26</span><span class='month'>Sept</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-10-03' class='event event-anime'>
-    <time datetime="Tue Oct 03 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>3</span><span class='month'>Oct</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-    <div class='event-detail event-detail-new-series'>
-      <img src="images/series/sirius-the-jaeger.png">
-      <p class="series-ident">New series</p>
-      <h3>Tenrou: Sirius the Jaeger</h3>
-      <p>
-        
-         7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-10-10' class='event event-anime'>
-    <time datetime="Tue Oct 10 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>10</span><span class='month'>Oct</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-10-12' class='event event-social'>
-    <time datetime="Thu Oct 12 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>12</span><span class='month'>Oct</span></time>
-    <div class='event-detail event-detail-social'>
-      
-      
-      <h3>Board Games</h3>
-      <p>
-        
-        Dice Tower, Thu 6pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-10-17' class='event event-anime'>
-    <time datetime="Tue Oct 17 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>17</span><span class='month'>Oct</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-10-24' class='event event-anime'>
-    <time datetime="Tue Oct 24 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>24</span><span class='month'>Oct</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-10-31' class='event event-anime'>
-    <time datetime="Tue Oct 31 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>31</span><span class='month'>Oct</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-11-07' class='event event-anime'>
-    <time datetime="Tue Nov 07 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>7</span><span class='month'>Nov</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-11-09' class='event event-social'>
-    <time datetime="Thu Nov 09 2023 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>9</span><span class='month'>Nov</span></time>
-    <div class='event-detail event-detail-social'>
-      
-      
-      <h3>Board Games</h3>
-      <p>
-        
-        Dice Tower, Thu 6pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-11-14' class='event event-anime'>
-    <time datetime="Tue Nov 14 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>14</span><span class='month'>Nov</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-    <div class='event-detail event-detail-new-series'>
-      <img src="images/series/tsuki-to-laika-to-nosferatu.png">
-      <p class="series-ident">New series</p>
-      <h3>Irina: The Vampire Cosmonaut</h3>
-      <p>
-        
-         7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-11-21' class='event event-anime'>
-    <time datetime="Tue Nov 21 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>21</span><span class='month'>Nov</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-    <div class='event-detail event-detail-new-series'>
-      <img src="images/series/restaurant-to-another-world.png">
-      <p class="series-ident">New series</p>
-      <h3>Restaurant to Another World</h3>
-      <p>
-        
-         9pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-11-28' class='event event-anime'>
-    <time datetime="Tue Nov 28 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>28</span><span class='month'>Nov</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-12-05' class='event event-anime'>
-    <time datetime="Tue Dec 05 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>5</span><span class='month'>Dec</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-12-12' class='event event-anime'>
-    <time datetime="Tue Dec 12 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>12</span><span class='month'>Dec</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-12-14' class='event event-social'>
-    <time datetime="Thu Dec 14 2023 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>14</span><span class='month'>Dec</span></time>
-    <div class='event-detail event-detail-social'>
-      
-      
-      <h3>Board Games</h3>
-      <p>
-        
-        Dice Tower, Thu 6pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-12-19' class='event event-anime'>
-    <time datetime="Tue Dec 19 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>19</span><span class='month'>Dec</span></time>
-    <div class='event-detail event-detail-anime'>
-      
-      
-      <h3>Anime Society Meeting</h3>
-      <p>
-        
-        The White Hart, Tue 7pm
-        
-      </p>
-    </div>
-    <div class='event-detail event-detail-new-series'>
-      <img src="images/series/kaguya-sama-movie.png">
-      <p class="series-ident">Movie</p>
-      <h3>Kaguya-sama, Love is War: The First Kiss Never Ends</h3>
-      <p>
-        
-        Tue 8pm
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2023-12-26' class='event event-skip'>
-    <time datetime="Tue Dec 26 2023 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>26</span><span class='month'>Dec</span></time>
-    <div class='event-detail event-detail-skip'>
-      
-      
-      <h3>No Meeting</h3>
-      <p>
-        
-        
-        
-      </p>
-    </div>
-  </article>
-  <article id='upcoming-2024-01-02' class='event event-skip'>
-    <time datetime="Tue Jan 02 2024 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>2</span><span class='month'>Jan</span></time>
-    <div class='event-detail event-detail-skip'>
-      
-      
-      <h3>No Meeting</h3>
-      <p>
-        
-        
-        
-      </p>
-    </div>
-  </article>
+  <div>
+    <section id='events-list' class='box'>
+      <article id='upcoming-2023-06-27' class='event event-anime'>
+        <time datetime="Tue Jun 27 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>27</span>
+          <span class='month'>Jun</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-07-04' class='event event-anime'>
+        <time datetime="Tue Jul 04 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>4</span>
+          <span class='month'>Jul</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-07-11' class='event event-anime'>
+        <time datetime="Tue Jul 11 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>11</span>
+          <span class='month'>Jul</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+        <div class='event-detail event-detail-new-series'>
+          <img src="images/series/taisho-otome.png">
+          <p class="series-ident">New series</p>
+          <h3>Taisho Otome Fairy Tale</h3>
+          <p>
+            
+             9pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-07-13' class='event event-social'>
+        <time datetime="Thu Jul 13 2023 01:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>13</span>
+          <span class='month'>Jul</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-social'>
+          
+          
+          <h3>Board Games</h3>
+          <p>
+            
+            Dice Tower, Thu 6pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-07-18' class='event event-anime'>
+        <time datetime="Tue Jul 18 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>18</span>
+          <span class='month'>Jul</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-07-25' class='event event-anime'>
+        <time datetime="Tue Jul 25 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>25</span>
+          <span class='month'>Jul</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-08-01' class='event event-anime'>
+        <time datetime="Tue Aug 01 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>1</span>
+          <span class='month'>Aug</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-08-08' class='event event-anime'>
+        <time datetime="Tue Aug 08 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>8</span>
+          <span class='month'>Aug</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+        <div class='event-detail event-detail-new-series'>
+          <img src="images/series/aquatope.png">
+          <p class="series-ident">New series</p>
+          <h3>The Aquatope on White Sand pt2</h3>
+          <p>
+            
+             8pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-08-10' class='event event-social'>
+        <time datetime="Thu Aug 10 2023 01:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>10</span>
+          <span class='month'>Aug</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-social'>
+          
+          
+          <h3>Board Games</h3>
+          <p>
+            
+            Dice Tower, Thu 6pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-08-15' class='event event-anime'>
+        <time datetime="Tue Aug 15 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>15</span>
+          <span class='month'>Aug</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-08-22' class='event event-anime'>
+        <time datetime="Tue Aug 22 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>22</span>
+          <span class='month'>Aug</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+        <div class='event-detail event-detail-new-series'>
+          <img src="images/series/spy-x-family.png">
+          <p class="series-ident">New series</p>
+          <h3>Spy × Family</h3>
+          <p>
+            
+             9pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-08-29' class='event event-anime'>
+        <time datetime="Tue Aug 29 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>29</span>
+          <span class='month'>Aug</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-09-05' class='event event-anime'>
+        <time datetime="Tue Sep 05 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>5</span>
+          <span class='month'>Sept</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-09-12' class='event event-anime'>
+        <time datetime="Tue Sep 12 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>12</span>
+          <span class='month'>Sept</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-09-14' class='event event-social'>
+        <time datetime="Thu Sep 14 2023 01:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>14</span>
+          <span class='month'>Sept</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-social'>
+          
+          
+          <h3>Board Games</h3>
+          <p>
+            
+            Dice Tower, Thu 6pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-09-16' class='event event-social'>
+        <time datetime="Sat Sep 16 2023 01:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>16</span>
+          <span class='month'>Sept</span>
+          <span class='year'>2023</span>
+          <span class='time__special'></span>
+        </time>
+        <div class='event-detail event-detail-social'>
+          
+          
+          <h3>17th Anniversary BBQ</h3>
+          <p>
+            
+            Swarraton Village Hall, SO24 9TQ, Sat 11am
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-09-19' class='event event-anime'>
+        <time datetime="Tue Sep 19 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>19</span>
+          <span class='month'>Sept</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+        <div class='event-detail event-detail-new-series'>
+          <img src="images/series/mushishi.png">
+          <p class="series-ident">New series</p>
+          <h3>Mushi-Shi</h3>
+          <p>
+            
+             8pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-09-26' class='event event-anime'>
+        <time datetime="Tue Sep 26 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>26</span>
+          <span class='month'>Sept</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-10-03' class='event event-anime'>
+        <time datetime="Tue Oct 03 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>3</span>
+          <span class='month'>Oct</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+        <div class='event-detail event-detail-new-series'>
+          <img src="images/series/sirius-the-jaeger.png">
+          <p class="series-ident">New series</p>
+          <h3>Tenrou: Sirius the Jaeger</h3>
+          <p>
+            
+             7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-10-10' class='event event-anime'>
+        <time datetime="Tue Oct 10 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>10</span>
+          <span class='month'>Oct</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-10-12' class='event event-social'>
+        <time datetime="Thu Oct 12 2023 01:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>12</span>
+          <span class='month'>Oct</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-social'>
+          
+          
+          <h3>Board Games</h3>
+          <p>
+            
+            Dice Tower, Thu 6pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-10-17' class='event event-anime'>
+        <time datetime="Tue Oct 17 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>17</span>
+          <span class='month'>Oct</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-10-24' class='event event-anime'>
+        <time datetime="Tue Oct 24 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>24</span>
+          <span class='month'>Oct</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-10-31' class='event event-anime'>
+        <time datetime="Tue Oct 31 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>31</span>
+          <span class='month'>Oct</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-11-07' class='event event-anime'>
+        <time datetime="Tue Nov 07 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>7</span>
+          <span class='month'>Nov</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-11-09' class='event event-social'>
+        <time datetime="Thu Nov 09 2023 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>9</span>
+          <span class='month'>Nov</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-social'>
+          
+          
+          <h3>Board Games</h3>
+          <p>
+            
+            Dice Tower, Thu 6pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-11-14' class='event event-anime'>
+        <time datetime="Tue Nov 14 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>14</span>
+          <span class='month'>Nov</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+        <div class='event-detail event-detail-new-series'>
+          <img src="images/series/tsuki-to-laika-to-nosferatu.png">
+          <p class="series-ident">New series</p>
+          <h3>Irina: The Vampire Cosmonaut</h3>
+          <p>
+            
+             7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-11-21' class='event event-anime'>
+        <time datetime="Tue Nov 21 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>21</span>
+          <span class='month'>Nov</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+        <div class='event-detail event-detail-new-series'>
+          <img src="images/series/restaurant-to-another-world.png">
+          <p class="series-ident">New series</p>
+          <h3>Restaurant to Another World</h3>
+          <p>
+            
+             9pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-11-28' class='event event-anime'>
+        <time datetime="Tue Nov 28 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>28</span>
+          <span class='month'>Nov</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-12-05' class='event event-anime'>
+        <time datetime="Tue Dec 05 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>5</span>
+          <span class='month'>Dec</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-12-12' class='event event-anime'>
+        <time datetime="Tue Dec 12 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>12</span>
+          <span class='month'>Dec</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-12-14' class='event event-social'>
+        <time datetime="Thu Dec 14 2023 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>14</span>
+          <span class='month'>Dec</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-social'>
+          
+          
+          <h3>Board Games</h3>
+          <p>
+            
+            Dice Tower, Thu 6pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-12-19' class='event event-anime'>
+        <time datetime="Tue Dec 19 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>19</span>
+          <span class='month'>Dec</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+        <div class='event-detail event-detail-new-series'>
+          <img src="images/series/kaguya-sama-movie.png">
+          <p class="series-ident">Movie</p>
+          <h3>Kaguya-sama, Love is War: The First Kiss Never Ends</h3>
+          <p>
+            
+            Tue 8pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2023-12-26' class='event event-skip'>
+        <time datetime="Tue Dec 26 2023 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>26</span>
+          <span class='month'>Dec</span>
+          <span class='year'>2023</span>
+          
+        </time>
+        <div class='event-detail event-detail-skip'>
+          
+          
+          <h3>No Meeting</h3>
+          <p>
+            
+            
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2024-01-02' class='event event-skip'>
+        <time datetime="Tue Jan 02 2024 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>2</span>
+          <span class='month'>Jan</span>
+          <span class='year'>2024</span>
+          
+        </time>
+        <div class='event-detail event-detail-skip'>
+          
+          
+          <h3>No Meeting</h3>
+          <p>
+            
+            
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2024-01-09' class='event event-anime'>
+        <time datetime="Tue Jan 09 2024 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>9</span>
+          <span class='month'>Jan</span>
+          <span class='year'>2024</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2024-01-11' class='event event-social'>
+        <time datetime="Thu Jan 11 2024 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>11</span>
+          <span class='month'>Jan</span>
+          <span class='year'>2024</span>
+          
+        </time>
+        <div class='event-detail event-detail-social'>
+          
+          
+          <h3>Board Games</h3>
+          <p>
+            
+            Dice Tower, Thu 6pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2024-01-16' class='event event-anime'>
+        <time datetime="Tue Jan 16 2024 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>16</span>
+          <span class='month'>Jan</span>
+          <span class='year'>2024</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2024-02-08' class='event event-social'>
+        <time datetime="Thu Feb 08 2024 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>8</span>
+          <span class='month'>Feb</span>
+          <span class='year'>2024</span>
+          
+        </time>
+        <div class='event-detail event-detail-social'>
+          
+          
+          <h3>Board Games</h3>
+          <p>
+            
+            Dice Tower, Thu 6pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2024-03-14' class='event event-social'>
+        <time datetime="Thu Mar 14 2024 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>14</span>
+          <span class='month'>Mar</span>
+          <span class='year'>2024</span>
+          
+        </time>
+        <div class='event-detail event-detail-social'>
+          
+          
+          <h3>Board Games</h3>
+          <p>
+            
+            Dice Tower, Thu 6pm
+            
+          </p>
+        </div>
+      </article>
+    </section>
   </div>
 
+  <div>
+    <div id='coming-soon' class='series-grid'></div>
+  </div>
+</div>
 </section>
 
-<section id='news-feed'>
-  <h2 class='underline'>Recommendations</h2>
+<section class='tab-pane' data-tab='news'>
+<div class="one">
 
-  <figure class='box' id='recommendation'>
-    <figcaption>
-      <p class='series-ident'>You might enjoy...</p>
+<div>
 
-      <h3 id='recommendation__name'></h3>
-      <p id='recommendation__genre'></p>
+<div class="box box--button">
+  <h2>Community</h2>
+  <p>You can find more information about our events on our Discord server.</p>
+  <a class='btn btn-discord' href='https://discord.gg/sypjyaA' target="_blank"><i></i><span>Discord</span></a>
+</div>
 
-      <hr>
-
-      <p>Or check out one of our favourites.</p>
-
-      <a class='btn btn-recommendations' href='recommendations.html'><span>Recommendations</span></a>
-      <p>
-        <a href='recommendations.html#genre=action' class='genre genre-action'>Action</a>
-        <a href='recommendations.html#genre=romance' class='genre genre-romance'>Romance</a>
-        <a href='recommendations.html#genre=slice-of-life' class='genre genre-slice-of-life'>Slice of life</a>
-        <a href='recommendations.html#genre=comedy' class='genre genre-comedy'>Comedy</a>
-        <a href='recommendations.html#genre=mystery' class='genre genre-mystery'>Mystery</a>
-        ...
-      </p>
-    </figcaption>
-
-    <img class='series-picture' id='recommendation__picture'>
-  </figure>
-
-  <h2 class='underline'>News Feed</h2>
-
-
-  <!-- <div id='news-more-switch'>
-    <button class='btn btn-news-more' onclick="showNews()"><span>Show More News</span></button>
-  </div> -->
-
-  <div id='news-more'>
-    <article class='news box'>
-    <time datetime="Sun Nov 22 2020 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>22</span><span class='month'>Nov</span></time>
-    <h3>Movies</h3>
-    <p>Instead of taking a break over Christmas and new year like we normally would, we&#x27;ve got a whole load of movies happening over the next few weeks. Check out the schedule above for details.
+<!-- START NEWS -->
+<article class='news box'>
+<time datetime="Tue Apr 11 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>11</span><span class='month'>Apr</span><span class='year'>2023</span></time>
+<h3>Suzume</h3>
+<p>This Friday at 7:30pm we will be seeing SUZUME at the Vue cinema.
+Come and join us!
 </p>
-    </article>
-    <article class='news box'>
-    <time datetime="Sun Apr 12 2020 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>12</span><span class='month'>Apr</span></time>
-    <h3>Schedule resumes on 28 April</h3>
-    <p>The online meetings have been going well, so we&#x27;re going to resume the shows we were watching from Tuesday 28 April.
+</article>
+<article class='news box'>
+<time datetime="Sun Dec 25 2022 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>25</span><span class='month'>Dec</span><span class='year'>2022</span></time>
+<h3>Merry Christmas</h3>
+<p>The anime society returns on the 10th of January
+</p>
+</article>
+<article class='news box'>
+<time datetime="Tue Dec 20 2022 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>20</span><span class='month'>Dec</span><span class='year'>2022</span></time>
+<h3>Final week</h3>
+<p>For the final week of BAS this year we have Mulled Cider and Mulled Wine
+</p>
+<p>It’s been a really good year and we have watched great anime together 
+</p>
+<p>We will be kicking off the new year with new shows, stay tuned 
+</p>
+</article>
+<article class='news box'>
+<time datetime="Sat Sep 17 2022 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>17</span><span class='month'>Sept</span><span class='year'>2022</span></time>
+<h3>BBQ</h3>
+<p>Today we are hosting a club BBQ in Swarraton
+</p>
+</article>
+<article class='news box'>
+<time datetime="Mon Aug 29 2022 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>29</span><span class='month'>Aug</span><span class='year'>2022</span></time>
+<h3>Recommendations</h3>
+<p>We launched a recommendations page! Featuring our members top 10 anime!
+</p>
+</article>
+<article class='news box'>
+<time datetime="Sun Nov 22 2020 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>22</span><span class='month'>Nov</span><span class='year'>2020</span></time>
+<h3>Movies</h3>
+<p>Instead of taking a break over Christmas and new year like we normally would, we&#x27;ve got a whole load of movies happening over the next few weeks. Check out the schedule above for details.
+</p>
+</article>
+<article class='news box'>
+<time datetime="Sun Apr 12 2020 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>12</span><span class='month'>Apr</span><span class='year'>2020</span></time>
+<h3>Schedule resumes on 28 April</h3>
+<p>The online meetings have been going well, so we&#x27;re going to resume the shows we were watching from Tuesday 28 April.
 Until then we&#x27;ll continue with the irregulars we&#x27;ve been showing. Join us on Discord every Tuesday evening.
 </p>
-    <p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
-    </article>
-    <article class='news box'>
-    <time datetime="Fri Mar 20 2020 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>20</span><span class='month'>Mar</span></time>
-    <h3>Twitter down</h3>
-    <p>Our Twitter feed is currently locked due to a silly mistake. Please hold on while we get it fixed.</p>
-    </article>
-    <article class='news box'>
-    <time datetime="Wed Mar 18 2020 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>18</span><span class='month'>Mar</span></time>
-    <h3>Basingstoke Anime Society is moving online</h3>
-    <p>Sadly, due to the coronavirus, our meetings in the White Hart are suspended from next Tuesday
+<p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
+</article>
+<article class='news box'>
+<time datetime="Fri Mar 20 2020 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>20</span><span class='month'>Mar</span><span class='year'>2020</span></time>
+<h3>Twitter down</h3>
+<p>Our Twitter feed is currently locked due to a silly mistake. Please hold on while we get it fixed.</p>
+</article>
+<article class='news box'>
+<time datetime="Wed Mar 18 2020 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>18</span><span class='month'>Mar</span><span class='year'>2020</span></time>
+<h3>Basingstoke Anime Society is moving online</h3>
+<p>Sadly, due to the coronavirus, our meetings in the White Hart are suspended from next Tuesday
 and so our regular anime schedule is on hiatus.
 </p>
-    <p>Instead we&#x27;ll be meeting online every Tuesday evening from 7:00 to watch anime together and chat.
+<p>Instead we&#x27;ll be meeting online every Tuesday evening from 7:00 to watch anime together and chat.
 Click the button above to join our Discord server.
 </p>
-    <p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
-    </article>
-  </div>
+<p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
+</article>
+<!-- END NEWS -->
 
-  <div id='twitter-box'>
-  <a class="twitter-timeline" data-lang="en"
-    data-width="670" data-height="700"
-    href="https://twitter.com/BasingAnime?ref_src=twsrc%5Etfw"
-    data-chrome="noheader nofooter transparent"
-
-    data-tweet-limit="10"
-    ></a>
-  </div>
-</section>
 </div>
+</div>
+</section>
+
+<section class='tab-pane' data-tab='recommendations'>
+<div class='rl'>
+  <div>
+    <div class='series-grid series-grid--large-first' id='home-recommendations'>
+
+    </div>
+  </div>
+
+  <div>
+    <div class='box'>
+      <p>Check out one of our favourites.</p>
+
+      <a class='btn btn-recommendations' href='recommendations.html'><span>Recommendations</span></a>
+
+      <p class='top10-genres top10-genres-big'>
+        <a class='genre genre-first' href='recommendations.html#genre=first'>New to anime</a>
+        <a class='genre genre-number1' href='recommendations.html#genre=number1'>Our #1s</a>
+      </p>
+
+      <p class='top10-genres'>
+        <a href='recommendations.html#genre=action' class='genre genre-action'>Action</a>
+        <a href='recommendations.html#genre=adventure' class='genre genre-adventure'>Adventure</a>
+        <a href='recommendations.html#genre=comedy' class='genre genre-comedy'>Comedy</a>
+        <a href='recommendations.html#genre=crime' class='genre genre-crime'>Crime</a>
+        <a href='recommendations.html#genre=dark' class='genre genre-dark'>Dark</a>
+        <a href='recommendations.html#genre=drama' class='genre genre-drama'>Drama</a>
+        <a href='recommendations.html#genre=isekai' class='genre genre-isekai'>Isekai</a>
+        <a href='recommendations.html#genre=mecha' class='genre genre-mecha'>Mecha</a>
+        <a href='recommendations.html#genre=music' class='genre genre-music'>Music</a>
+        <a href='recommendations.html#genre=mystery' class='genre genre-mystery'>Mystery</a>
+        <a href='recommendations.html#genre=romance' class='genre genre-romance'>Romance</a>
+        <a href='recommendations.html#genre=sci-fi' class='genre genre-sci-fi'>Sci fi</a>
+        <a href='recommendations.html#genre=shounen' class='genre genre-shounen'>Shounen</a>
+        <a href='recommendations.html#genre=slice-of-life' class='genre genre-slice-of-life'>Slice of life</a>
+        <a href='recommendations.html#genre=sports' class='genre genre-sports'>Sports</a>
+        <a href='recommendations.html#genre=thriller' class='genre genre-thriller'>Thriller</a>
+        <a href='recommendations.html#genre=war' class='genre genre-war'>War</a>
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class='tab-pane' data-tab='history'>
+<div class="rl">
+<div>
+	<div id='history' class='series-grid'></div>
+</div>
+<div>
+	<div class='box'>
+
+	<h3>History</h3>
+	<p>We've shown a lot of good anime since 2006.</p>
+
+  <p><a class='btn btn-recommendations' href='history.html'><span>History</span></a></p>
+
+  <hr>
+
+  <h3>Missed a week?</h3>
+  <p><a class='btn btn-recommendations' href='history.html#tab=episodes'><span>Episodes</span></a></p>
+
+	</div>
+</div>
+</div>
+</section>
+</div> 
 
 </main>
 
@@ -849,6 +1099,6 @@ Click the button above to join our Discord server.
   </div>
 </aside>
 
-<script src="script.js?ver=0bc682"></script>
+<script src="script.js?ver=e6ecc4"></script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>

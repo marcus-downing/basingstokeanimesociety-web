@@ -42,61 +42,51 @@
 <a id='home-link' href='/'><img src='images/back.png'> Home</a>
 
 
-<div class='lr'>
-	<div>
-		<header class="box top10pick">
-			<h2>History</h2>
-			<p>We've shown some great shows over the years.</p>
-		</header>
 
-		<div class="box historyPick">
-			<p>
-				<a class='pick' data-show='recent'>Recent weeks</a>
-			</p>
 
-			<hr>
+<nav class='tabs'>
+<a class='tab tab--show' data-tab='history'>History</a>
+<a class='tab' data-tab='episodes'>Episodes</a>
+</nav>
 
-			<p>2023</p>
-			<p>2022</p>
-			<p>2021</p>
-			<p>2020</p>
-		</div>
-	</div>
+<div class='tab-panes'>
+<section class='tab-pane tab-pane--show' data-tab='history'>
 
-	<div id="history-results">
-		{{#times 5}}
-		<div class="history-week" id='history-week-{{this}}'>
-			<div>
-				<h2 class='week-date'>{{this}}</h2>
-			</div>
-		    <figure class='series series--right series1'>
-		      <figcaption class='series-name'>
-		      	<h3>Series 1</h3>
-		      	<p class='info-line'></p>
-		      </figcaption>
-		      <img class='series-picture' src=''>
-		      <div class='rating'></div>
-		    </figure>
-		    <figure class='series series--right series2'>
-		      <figcaption class='series-name'>
-		      	<h3>Series 2</h3>
-		      	<p class='info-line'></p>
-		      </figcaption>
-		      <img class='series-picture' src=''>
-		      <div class='rating'></div>
-		    </figure>
-		    <figure class='series series--right series3'>
-		      <figcaption class='series-name'>
-		      	<h3>Series 3</h3>
-		      	<p class='info-line'></p>
-		      </figcaption>
-		      <img class='series-picture' src=''>
-		      <div class='rating'></div>
-		    </figure>
-		</div>
-		{{/times}}
-	</div>
-</div>
+  <div class='lr'>
+  	<div>
+  		<header class="box">
+  			<h2>History</h2>
+        <p>Basingstoke Anime Society started on Tuesday 12th September 2006, and has run almost every Tuesday since.</p>
+  			<p>We've shown some great anime over the years.</p>
+  		</header>
+
+  		<div class="box historyPick">
+  			<p>
+  				<a class='pick pick--show' data-pane-set='history' data-show='recent'>Recent</a>
+  			</p>
+
+  			<hr>
+
+        {{#each historyYears}}
+        <p><a class='pick' data-pane-set='history' data-show='{{this}}'>{{this}}</a></p>
+        {{/each}}
+  		</div>
+  	</div>
+
+  	<div id="history-results" class="pane-set" data-pane-set='history'></div>
+  </div>
+</section>
+
+<section class='tab-pane' data-tab='episodes'>
+  <div class="rl">
+    <header class='box'>
+      <h2>Episodes</h2>
+      <p>If you missed a week, here are the episodes we showed.</p>
+    </header>
+  </div>
+
+  <div id='history-episode-list'></div>
+</section>
 
 </main>
 

@@ -27,6 +27,12 @@ function readData() {
 
 
 // date formats
+
+let yearFormat = new Intl.DateTimeFormat('en-GB', { year: 'numeric' });
+function formatYear(date) {
+  return yearFormat.format(date);
+}
+
 let shortMonthFormat = new Intl.DateTimeFormat('en-GB', { month: 'short' });
 function formatShortMonth(date) {
   return shortMonthFormat.format(date);
@@ -127,6 +133,21 @@ function currentAndFuture(items, key = 'date', requireName = true) {
   return after;
 }
 
+function recentAndFuture(items, key = 'date', requireName = true) {
+  items = _.sortBy(items, key);
+  if (requireName) {
+    items = _.filter(items, item => _.has(item, "name"));
+  }
+
+  let cutoff = recentDateCutoff;
+  let [before, after] = _.partition(items, item => item[key] < cutoff);
+  let current = before[before.length - 1];
+  if (current !== undefined) {
+    after.unshift(current);
+  }
+  return after;
+}
+
 function futureN(items, number, key = 'date', requireName = true) {
   items = _.sortBy(items, key);
   if (requireName) {
@@ -160,6 +181,19 @@ function yesterday() {
 function plus1week(from) {
   let date = new Date(from);
   date.setDate(date.getDate() + 7);
+  return date;
+}
+
+function recentDateCutoff() {
+  let date = new Date();
+  date.setDate(date.getDate() - 30);
+  return date;
+}
+
+function firstTuesdayFrom(date) {
+  while (date.getDay() != 2) {
+    date.setDate(date.getDate() + 1);
+  }
   return date;
 }
 
@@ -203,6 +237,7 @@ function expandDate(target, date = null, time = null, leeway = 0) {
   target.day = date.getDate();
   target.month = formatShortMonth(date);
   target.weekday = weekday(date);
+  target.year = formatYear(date);
   return target;
 }
 
@@ -214,6 +249,7 @@ function md5sum(data, digits = 6) {
 module.exports = {
   readData,
   formatDay,
+  formatYear,
   formatShortMonth,
   formatShortDate,
   formatMediumDate,
@@ -222,11 +258,14 @@ module.exports = {
   weekday,
   shortWeekday,
   currentAndFuture,
+  recentAndFuture,
   futureN,
   future,
   tomorrow,
   yesterday,
   plus1week,
+  recentDateCutoff,
+  firstTuesdayFrom,
   backdate,
   expandDate,
   md5sum,

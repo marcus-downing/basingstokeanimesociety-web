@@ -27,3 +27,40 @@ news:
     body:
       - |
         Instead of taking a break over Christmas and new year like we normally would, we've got a whole load of movies happening over the next few weeks. Check out the schedule above for details.
+
+  
+  - title: Recommendations
+    date: 2022-08-29
+    body:
+      - |
+        We launched a recommendations page! Featuring our members top 10 anime!
+    link: https://basingstokeanimesociety.com/recommendations.html
+
+  - title: BBQ
+    date: 2022-09-17
+    body:
+      - |
+        Today we are hosting a club BBQ in Swarraton
+  - title: Final week
+    date: 2022-12-20
+    body:
+      - |
+        For the final week of BAS this year we have Mulled Cider and Mulled Wine
+      - |
+        It’s been a really good year and we have watched great anime together 
+      - |
+        We will be kicking off the new year with new shows, stay tuned 
+
+  - title: Merry Christmas
+    date: 2022-12-25
+    body:
+      - |
+        The anime society returns on the 10th of January
+
+  - title: Suzume
+    date: 2023-04-11
+    body:
+      - |
+        This Friday at 7:30pm we will be seeing SUZUME at the Vue cinema.
+        Come and join us!
+    link: https://t.co/8CcoOY237c

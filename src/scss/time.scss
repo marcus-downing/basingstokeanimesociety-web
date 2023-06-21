@@ -1,0 +1,69 @@
+time {
+  background: white;
+  width: 54px;
+  height: 54px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  border-radius: 2px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: black;
+  text-shadow: none !important;
+
+  text-align: center;
+
+  .day {
+    line-height: 24px;
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  .month {
+    line-height: 13px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .year {
+  	line-height: 12px;
+  	font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+time.time--large, 
+
+// colours
+time.time--event, .event-anime time {
+  background: #a2d7f8;
+}
+
+time.time--movie, .event-movie time {
+  background: #9af3aa;
+}
+
+time.time--new-series, .event-new-series time, figure time {
+  background: #f8dda2;
+}
+
+time.time--online, .event-online time {
+  background: #97abf3;
+}
+
+time.time--cinema, .event-cinema time {
+  background: #f8b3a2;
+}
+
+time.time--convention, .event-convention time {
+  background: #f8a2ed;
+}
+
+time.time--news, .news time {
+  background: #a2f8ad;
+}
+
+time.time--social, .event-social time {
+  background: #a2f8ad;
+}
