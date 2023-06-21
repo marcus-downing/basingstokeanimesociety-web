@@ -11,10 +11,12 @@ news:
         Instead we'll be meeting online every Tuesday evening from 7:00 to watch anime together and chat.
         Click the button above to join our Discord server.
     discordLink: true
+
   - title: Twitter down
     date: 2020-03-20
     body:
       - Our Twitter feed is currently locked due to a silly mistake. Please hold on while we get it fixed.
+
   - title: Schedule resumes on 28 April
     date: 2020-04-12
     body:
@@ -22,12 +24,30 @@ news:
         The online meetings have been going well, so we're going to resume the shows we were watching from Tuesday 28 April.
         Until then we'll continue with the irregulars we've been showing. Join us on Discord every Tuesday evening.
     discordLink: true
+
   - title: Movies
     date: 2020-11-22
     body:
       - |
         Instead of taking a break over Christmas and new year like we normally would, we've got a whole load of movies happening over the next few weeks. Check out the schedule above for details.
 
+  - title: Dice Tower
+    date: 2022-07-14
+    body:
+      - |
+        We'll be playing some board games at the Dice Tower tonight. You're free to join us.
+
+  - title: Food
+    date: 2022-07-19
+    body:
+      - |
+        Due to the heat, the White Hart's kitchen will be closed today. We're still there though, and doing everything we can to make it habitable.
+
+  - title: Change of Plans
+    date: 2022-08-16
+    body:
+      - |
+        Change of Plans tonight, due to technical issues at our regular venue we will instead host at the Red Lion Hotel, Wellington Hall, Basingstoke today 7PM
   
   - title: Recommendations
     date: 2022-08-29
@@ -57,6 +77,13 @@ news:
       - |
         The anime society returns on the 10th of January
 
+  - title: "One Piece: Red"
+    date: 2022-11-04
+    body:
+      - |
+        See One Piece: Red at the Vue tonight!
+        There are showings over the weekend
+
   - title: Suzume
     date: 2023-04-11
     body:
@@ -64,3 +91,9 @@ news:
         This Friday at 7:30pm we will be seeing SUZUME at the Vue cinema.
         Come and join us!
     link: https://t.co/8CcoOY237c
+
+  - title: "Matinee: Summer Wars"
+    date: 2023-06-05
+    body:
+      - |
+        Hello everyone, we're watching a movie (Summer Wars) and chilling in the beer garden at the White Hart Pub on the 17th June 12:30am come and join us.
