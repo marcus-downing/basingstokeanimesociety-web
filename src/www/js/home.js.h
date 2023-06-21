@@ -252,7 +252,7 @@ function setupHomeRecommendations() {
   let html = rec_anime.map((series) => {
     return template_series(series, {
       prefix: "You may enjoy...",
-      large: (first--) > 0,
+      // large: (first--) > 0,
       showGenres: true,
     });
   }).join("");

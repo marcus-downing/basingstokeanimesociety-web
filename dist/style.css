@@ -173,7 +173,15 @@ time.time--social, .event-social time {
       grid-auto-rows: 1fr;
       grid-template-areas: "one one"; }
       .series-grid.series-grid--large-first figure:first-child {
-        grid-area: one; } }
+        grid-area: one;
+        height: 360px;
+        padding-right: 252px; }
+        .series-grid.series-grid--large-first figure:first-child, .series-grid.series-grid--large-first figure:first-child img.series-picture {
+          height: 360px; }
+        .series-grid.series-grid--large-first figure:first-child figcaption {
+          padding: 20px; }
+          .series-grid.series-grid--large-first figure:first-child figcaption h3 {
+            font-size: 26px; } }
 
 figure.series--right {
   position: relative;

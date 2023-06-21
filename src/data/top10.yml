@@ -156,7 +156,7 @@ top10:
         genre: [ "Comedy", "Slice of life" ]
       - name: Sing Yesterday For Me
         picture: sing-yesterday
-        genre: [ "Drama", "Romance", "Slife of life" ]
+        genre: [ "Drama", "Romance", "Slice of life" ]
 
   - name: Shrink Laureate
     picture: shrink-laureate
@@ -252,7 +252,7 @@ top10:
     anime:
       - name: BOFURI
         picture: bofuri
-        genre: [ "Comedy", "Slice of life" ]
+        genre: [ "Comedy", "Slice of life", "Isekai" ]
       - name: The Third
         picture: the-third
         genre: [ "Sci fi", "Action" ]
