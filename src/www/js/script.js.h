@@ -1,7 +1,9 @@
 {{> data_js }}
 {{> util_js }}
+{{> template_js }}
 {{> home_js }}
 {{> recommendations_js }}
+{{> history_js }}
 
 // select a background image
 function selectBackground() {
@@ -23,6 +25,7 @@ function selectBackground() {
 
     document.body.setAttribute('bg', bg);
 }
+
 function parseQuery(queryString) {
     var query = {};
     var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
@@ -42,8 +45,12 @@ window.onload = function () {
     setupRecommendations();
   }
 
+  if (isHistory) {
+    setupHistory();
+  }
+
   setupSlideshow();
-  setupTabs();
+  setupTabs(true);
 
   // add hover on all the rating symbols
   function addRatingHover(item) {

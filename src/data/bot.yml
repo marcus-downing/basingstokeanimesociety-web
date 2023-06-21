@@ -1,0 +1,4 @@
+bot:
+  application-id: 1113985189027262515
+  public-key: 7de867e718a86b98cc2e8f194f6cf25bd02a8af2f9980b0ae96e85a1076ad424
+  url: "https://discord.com/api/oauth2/authorize?client_id=1113985189027262515&permissions=1024&scope=bot"

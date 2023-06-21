@@ -16,6 +16,7 @@ function setupHome() {
   setupHomeComingSoon();
   // setupHomeEventsList(futureEvents);
   setupHomeRecommendations();
+  setupHomeEpisodeHistory();
 }
 
 function setupHomeNextMeeting(events) {
@@ -156,49 +157,17 @@ function setupHomeComingSoon() {
     return rowCutoffs[1];
   }
 
-  // var comingSoonCutoff = findCutoff(comingSoon.length, options.comingSoonRows);
   comingSoon = futureN(comingSoon, 12);
   comingSoon = excludeSeries(comingSoon, [currentSlot1, currentSlot2, currentSlot3]);
   comingSoon = futureN(comingSoon, 8);
 
   var comingSoonHTML = '';
   for (item of comingSoon) {
-    var html = `<figure class="series--right ${item.movie ? " movie" : ""}"><figcaption>`;
-    if (item.movie) {
-      html = html + "<p class='movie-ident'>Movie</p>";
-    } else {
-      html = html + "<p class='series-ident'>New series</p>";
-    }
-    html = html + `<h3>${item.name}</h3>`;
-    if (!item.movie) {
-      html = html + "<div class='series-info'><p class='starting'>Starting</p></div>";
-    }
-    html = html + 
-      `<div class='info-line'><div>
-        <time datetime="${item.date}">
-          <span class='day'>${item.day}</span>
-          <span class='month'>${item.month}</span>
-          <span class='year'>${item.year}</span>
-        </time>
-      </div>`;
-    if (item.trailer) {
-      html = html + `<a class='trailer' href='${trailer}' target='_blank'>Trailer</a>`;
-    }
-    if (item.movie && item.time) {
-      html = html + `<div class='movie-time'><p class='movie-weekday'>${item.weekday}</p><p class='movie-start-time'>${item.time}</p></div>`;
-    }
-    html = html + "</div>";
-    if (item.rating) {
-      html = html + 
-        `<div class='rating'>
-          <img class='rating-img rating-${item.rating}' src='images/rating/${item.rating}.svg'>
-          <div class='rating-hover rating-hover-${item.rating}'>
-            <span>Age rating: ${ratingText[item.rating]}</span>
-            <div class='rating__tag'></div>
-          </div>
-        </div>`;
-    }
-    html = html + `</figcaption><img class='series-picture' src='images/series/${item.picture}.png'></figure>`;
+    var html = template_series(item, {
+      isNew: true,
+      showDate: true,
+      showRating: true
+    });
     comingSoonHTML = comingSoonHTML + html;
   }
   document.getElementById('coming-soon').innerHTML = comingSoonHTML;
@@ -266,23 +235,55 @@ function setupHomeEventsList() {
 
 function setupHomeRecommendations() {
   // pick a random recommendation
-  console.log('Top 10: '+top10.length+' items');
-  let index = Math.floor(Math.random() * top10.length);
-  console.log('Top 10: item '+index);
-  let top10pick = top10[index];
-  console.log('Top 10:', top10pick);
+  console.log('Recommendations: '+top10.length+' items');
+  // let index = Math.floor(Math.random() * top10.length);
+  let rec_names = [];
+  let rec_anime = [];
+  for (let i = 0; i < 10 && rec_anime.length < 3; i++) {
+    let series = top10[Math.floor(Math.random() * top10.length)];
+    if (rec_names.includes(series.name))
+      continue;
+    rec_anime.push(series);
+    rec_names.push(series.name);
+  }
+  console.log('Recommendations:', rec_anime);
 
-  document.getElementById('recommendation__name').innerHTML = top10pick.name;
-  let url = 'images/series/'+top10pick.picture+'.png';
-  document.getElementById('recommendation__picture').setAttribute('src', url);
+  let first = 1;
+  let html = rec_anime.map((series) => {
+    return template_series(series, {
+      prefix: "You may enjoy...",
+      large: (first--) > 0,
+      showGenres: true,
+    });
+  }).join("");
 
-  let genres = top10pick.genre.map((genre) => {
-    let slug = slugify(genre);
-    return `<span class="genre genre-${slug}" data-genre="${slug}">${genre}</span>`;
-  }).join(' ');
-  document.getElementById('recommendation__genre').innerHTML = genres;
+  document.getElementById('home-recommendations').innerHTML = html;
 }
 
 function setupHomeEpisodeHistory() {
-  
+  console.log('All anime:', allAnime.length, 'shows');
+  let pastAnime = allAnime.filter((series) => {
+    let date = new Date(series.from);
+    return date <= now &&
+      series.name != currentSlot1.name &&
+      series.name != currentSlot2.name &&
+      series.name != currentSlot3.name;
+  });
+
+  console.log('Past anime:', pastAnime.length, 'shows');
+  let recentAnime = pastAnime.slice(pastAnime.length - 8);
+  recentAnime.reverse();
+  console.log('Recent anime', recentAnime);
+
+  let historyHtml = '';
+  for (let series of recentAnime) {
+    var html = template_series(series, {
+      prefix: "We recently watched...",
+      showGenres: true,
+      info: series.month,
+    });
+    historyHtml = historyHtml + html;
+  }
+
+  document.getElementById('history').innerHTML = historyHtml;
 }

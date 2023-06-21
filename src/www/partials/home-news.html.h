@@ -1,17 +1,14 @@
-<widgetbot
-    server="513039529284861973"
-    channel="513039529284861979"
-    width="100%"
-    height="600"
-></widgetbot>
-<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+<div class="one">
 
-<!--<div class="lr">
 <div>
 
+<div class="box box--button">
+  <h2>Community</h2>
+  <p>You can find more information about our events on our Discord server.</p>
+  <a class='btn btn-discord' href='https://discord.gg/sypjyaA' target="_blank"><i></i><span>Discord</span></a>
 </div>
 
-<div>
+<!-- START NEWS -->
 {{#each news}}
 <article class='news box'>
 <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span><span class='year'>{{ year }}</span></time>
@@ -24,6 +21,7 @@
 {{/if}}
 </article>
 {{/each}}
+<!-- END NEWS -->
 
 </div>
-</div>-->
+</div>

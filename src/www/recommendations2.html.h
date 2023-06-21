@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157883376-1"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q59HDZX5HY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'UA-157883376-1');
+
+    gtag('config', 'G-Q59HDZX5HY');
   </script>
 
   <title>Recommendations - Basingstoke Anime Society</title>
@@ -19,6 +20,7 @@
 <script>
   var isHome = false;
   var isRecommendations = true;
+  var isHistory = false;
 </script>
 </head>
 <body class="day recommendations-page">
@@ -79,7 +81,7 @@
 	</div>
 
 	<div id="top10results">
-		<section class='top10 pick-pane' id='pick-pane-first' data-show='first'>
+		<section class='top10 pick-pane pane' id='pick-pane-first' data-show='first'>
 			<div class='box top10-genre-intro top10-genre-intro-first'>
 				<h3>New to anime?</h3>
 				<p>Try one of these great series first.</p>

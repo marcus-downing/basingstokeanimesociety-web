@@ -3,7 +3,12 @@
     <section id='events-list' class='box'>
     {{#each eventsByDate}}
       <article id='upcoming-{{ shortDate }}' class='event event-{{ class }}'>
-        <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span>{{#if special}}<span class='time__special'></span>{{/if}}</time>
+        <time datetime="{{ date }}">
+          <span class='day'>{{ day }}</span>
+          <span class='month'>{{ month }}</span>
+          <span class='year'>{{ year }}</span>
+          {{#if special}}<span class='time__special'></span>{{/if}}
+        </time>
         {{#each events}}
         <div class='event-detail event-detail-{{ class }}'>
           {{#if picture}}<img src="images/series/{{picture}}.png">{{/if}}
@@ -22,6 +27,6 @@
   </div>
 
   <div>
-    <div id='coming-soon'></div>
+    <div id='coming-soon' class='series-grid'></div>
   </div>
 </div>

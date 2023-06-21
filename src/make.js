@@ -79,14 +79,34 @@ Handlebars.registerHelper('times', function(n, block) {
 let basData = util.readData();
 let options = basData.options;
 
+// combine the full list of past and future shows
+let all_anime = [
+  // ...basData.past_anime,
+  ...basData.slot1,
+  ...basData.slot2,
+  ...basData.slot3,
+].map(series => util.expandDate(series, series.from, '7pm'));
+all_anime = all_anime.sort((a, b) => a.date - b.date);
+basData.all_anime = all_anime;
+
+// put together the list of episodes for recent-and-future shows
+let skipWeeks = basData.events.filter((event) => event.class == 'skip').map((event) => util.formatShortDate(event.date));
+console.log("Skip weeks:", skipWeeks);
+basData.schedule = episodes.makeEpisodeList(basData.slot1, basData.slot2, basData.slot3, skipWeeks);
+
+basData.historyYears = [];
+let currentYear = util.formatYear(new Date());
+for (let year = currentYear; year >= 2020; year--) {
+  basData.historyYears.push(""+year);
+}
+
+
 // showing anime
 basData.slot1 = util.currentAndFuture(basData.slot1.map(series => util.expandDate(series, series.from, '7pm')), 'from');
 console.log("Slot 1:", basData.slot1.map(series => util.formatShortDate(series.from)).join(", "));
 basData.slot1back = util.backdate(basData.slot1);
 basData.series1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[0];
 basData.nextSeries1 = _.isEmpty(basData.slot1) ? { name: '', picture: '' } : basData.slot1[1];
-
-// episodes.flowEpisodes(basData.series1);
 
 basData.slot2 = util.currentAndFuture(basData.slot2.map(series => util.expandDate(series, series.from, '8pm')), 'from');
 console.log("Slot 2:", basData.slot2.map(series => util.formatShortDate(series.from)).join(", "));
@@ -105,10 +125,6 @@ _.each(basData.movies, movie => movie.movie = true);
 basData.listedMovies = util.futureN(basData.movies, 2, 'date');
 console.log("Movies:", basData.movies.map(movie => util.formatShortDate(movie.date)).join(", "));
 
-let pastAnime = [
-  ...basData.past_anime,
-
-];
 
 let comingSoon = [
   ...util.future(basData.slot1, 'from'),
@@ -166,6 +182,7 @@ events = _.map(events, event => {
     shortDate: util.formatShortDate(event.date),
     day: event.date.getDate(),
     weekday: util.weekday(event.date),
+    year: util.formatYear(event.date),
     shortWeekday: util.shortWeekday(event.date),
     month: util.formatShortMonth(event.date),
     special: event.class == 'cinema',
@@ -213,6 +230,7 @@ _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
           time: hour+"pm",
           day: date.getDate(),
           month: util.formatShortMonth(date),
+          year: util.formatYear(date),
           prename: (movie ? 'Movie' : 'New series'),
           name: series.name,
           picture: series.picture,
@@ -239,6 +257,7 @@ _.each(basData.movies, movie => {
         weekday: util.weekday(date),
         day: date.getDate(),
         month: util.formatShortMonth(date),
+        year: util.formatYear(date),
         name: 'Movie: '+movie.name,
         class: 'movie',
         venue: movie.venue
@@ -278,6 +297,7 @@ for (var i = 0; i < 30; i++) {
     shortWeekday: util.shortWeekday(date),
     day: date.getDate(),
     month: util.formatShortMonth(date),
+    year: util.formatYear(date),
     name: online ? 'Online Meeting' : 'Anime Society Meeting',
     class: online ? 'online' : 'anime',
     price: online ? null : "&pound;4",
@@ -321,6 +341,7 @@ basData.eventsByDate = _(events).groupBy(e => util.formatShortDate(e.date)).map(
     month: evs[0].month,
     day: evs[0].day,
     weekday: evs[0].weekday,
+    year: evs[0].year,
     class: cls,
     events: evs,
     special: special
@@ -364,6 +385,7 @@ if (socialEvents.length > 0) {
   basData.nextSocialDay = util.formatDay(nextSocial.date);
   basData.nextSocialMonth = util.formatShortMonth(nextSocial.date);
   basData.nextSocialWeekday = util.weekday(nextSocial.date);
+  basData.nextSocialYear = util.formatYear(nextSocial.date);
   basData.nextSocialTime = nextSocial.time;
   basData.nextSocialVenue = nextSocial.venue;
 }

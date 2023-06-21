@@ -18,6 +18,7 @@
 <script>
   var isHome = true;
   var isRecommendations = false;
+  var isHistory = false;
 </script>
 
 </head>
@@ -29,7 +30,7 @@
 
 <nav id='section-social'>
 <a class='btn btn-mail' href='mailto:marcus@basingstokeanimesociety.com'><i></i><span>Mail</span></a>
-<a class='btn btn-twitter' href='https://twitter.com/BasingAnime' target="_blank"><i></i><span>Twitter</span></a>
+<!-- <a class='btn btn-twitter' href='https://twitter.com/BasingAnime' target="_blank"><i></i><span>Twitter</span></a> -->
 <a class='btn btn-fb' href='https://www.facebook.com/groups/basingstokeanimesociety/' target="_blank"><i></i><span>Facebook</span></a>
 <a class='btn btn-discord' href='https://discord.gg/sypjyaA' target="_blank"><i></i><span>Discord</span></a>
 </nav>
@@ -53,32 +54,23 @@
     </article>
 
     <div style='position: relative'>
-    <!-- {{#if (eq nextMeetingVenue 'Discord')}}
-    <a class='float-right btn btn-discord' href='https://discord.gg/sypjyaA' style='top: -15px; right: 0'><i></i><span>Join our Discord</span></a>
-    {{/if}} -->
-
-    <!-- <h3>Venue: <span id="next-meeting-venue">{{ nextMeetingVenue }}</span></h3> -->
-    </div>
-
-    <!-- <hr> -->
 
     <div id='about'>
       <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Show Map</span></button>
 
       <div class='content'>
-        <p><img class='icon' src='images/pin.svg'>Function room, upstairs at <a href='https://www.thewhitehartbasingstoke.com/'>The White Hart</a>, Basingstoke RG21 4AE</p>
-        <p><span class='icon entry-fee'>£4</span>Club fee</p>
-        <!-- <p><img class='icon' src='images/biohazard-white.svg'>Vaccination required</p> -->
-        <p><img class="rating-img rating-18 icon" src="images/rating/18.svg">Age requirement</p>
+        <p>Function room, upstairs at <a href='https://www.thewhitehartbasingstoke.com/'>The White Hart</a>, Basingstoke RG21 4AE</p>
+        <p class='p--icon'><span class='icon entry-fee'>£4</span>Club fee</p>
+        <p class='p--icon'><img class="rating-img rating-18 icon" src="images/rating/18.svg">Age requirement</p>
       </div>
     </div>
   </section>
 </div>
 
 <div>
-  <section class='box'>
+  <!-- <section class='box'>
     <h3 class='big'>Showing anime in Basingstoke every Tuesday.</h3>
-  </section>
+  </section> -->
 
   <section id='section-next-social' class='box'>
     <h2>Next Social Event</h2>
@@ -89,6 +81,12 @@
     </article>
 
     <h3>Venue: <span id="next-social-venue">{{ nextSocialVenue }}</span></h3>
+  </section>
+
+  <section class="box box--button" id="section-discord">
+    <h2>Community</h2>
+    <p>Find us on Discord</p>
+    <a class='btn btn-discord' href='https://discord.gg/sypjyaA' target="_blank"><i></i><span>Discord</span></a>
   </section>
 </div>
 </header>

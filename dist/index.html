@@ -11,13 +11,14 @@
   </script>
 
   <title>Basingstoke Anime Society</title>
-  <link rel="stylesheet" media="all" href="style.css?ver=56d373" />
+  <link rel="stylesheet" media="all" href="style.css?ver=7a695f" />
 
   <meta name="description" content="Showing anime in Basingstoke every Tuesday" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>
   var isHome = true;
   var isRecommendations = false;
+  var isHistory = false;
 </script>
 
 </head>
@@ -29,7 +30,7 @@
 
 <nav id='section-social'>
 <a class='btn btn-mail' href='mailto:marcus@basingstokeanimesociety.com'><i></i><span>Mail</span></a>
-<a class='btn btn-twitter' href='https://twitter.com/BasingAnime' target="_blank"><i></i><span>Twitter</span></a>
+<!-- <a class='btn btn-twitter' href='https://twitter.com/BasingAnime' target="_blank"><i></i><span>Twitter</span></a> -->
 <a class='btn btn-fb' href='https://www.facebook.com/groups/basingstokeanimesociety/' target="_blank"><i></i><span>Facebook</span></a>
 <a class='btn btn-discord' href='https://discord.gg/sypjyaA' target="_blank"><i></i><span>Discord</span></a>
 </nav>
@@ -53,30 +54,23 @@
     </article>
 
     <div style='position: relative'>
-    <!--  -->
-
-    <!-- <h3>Venue: <span id="next-meeting-venue">The White Hart</span></h3> -->
-    </div>
-
-    <!-- <hr> -->
 
     <div id='about'>
       <button class='btn btn-where-when' onclick="showMap()"><i></i><span>Show Map</span></button>
 
       <div class='content'>
-        <p><img class='icon' src='images/pin.svg'>Function room, upstairs at <a href='https://www.thewhitehartbasingstoke.com/'>The White Hart</a>, Basingstoke RG21 4AE</p>
-        <p><span class='icon entry-fee'>£4</span>Club fee</p>
-        <!-- <p><img class='icon' src='images/biohazard-white.svg'>Vaccination required</p> -->
-        <p><img class="rating-img rating-18 icon" src="images/rating/18.svg">Age requirement</p>
+        <p>Function room, upstairs at <a href='https://www.thewhitehartbasingstoke.com/'>The White Hart</a>, Basingstoke RG21 4AE</p>
+        <p class='p--icon'><span class='icon entry-fee'>£4</span>Club fee</p>
+        <p class='p--icon'><img class="rating-img rating-18 icon" src="images/rating/18.svg">Age requirement</p>
       </div>
     </div>
   </section>
 </div>
 
 <div>
-  <section class='box'>
+  <!-- <section class='box'>
     <h3 class='big'>Showing anime in Basingstoke every Tuesday.</h3>
-  </section>
+  </section> -->
 
   <section id='section-next-social' class='box'>
     <h2>Next Social Event</h2>
@@ -87,6 +81,12 @@
     </article>
 
     <h3>Venue: <span id="next-social-venue">Dice Tower</span></h3>
+  </section>
+
+  <section class="box box--button" id="section-discord">
+    <h2>Community</h2>
+    <p>Find us on Discord</p>
+    <a class='btn btn-discord' href='https://discord.gg/sypjyaA' target="_blank"><i></i><span>Discord</span></a>
   </section>
 </div>
 </header>
@@ -127,70 +127,13 @@
 <div class='lr'>
   <div>
     <section id='events-list' class='box'>
-      <article id='upcoming-2023-06-06' class='event event-anime'>
-        <time datetime="Tue Jun 06 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>6</span><span class='month'>Jun</span></time>
-        <div class='event-detail event-detail-anime'>
-          
-          
-          <h3>Anime Society Meeting</h3>
-          <p>
-            
-            The White Hart, Tue 7pm
-            
-          </p>
-        </div>
-      </article>
-      <article id='upcoming-2023-06-08' class='event event-social'>
-        <time datetime="Thu Jun 08 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>8</span><span class='month'>Jun</span></time>
-        <div class='event-detail event-detail-social'>
-          
-          
-          <h3>Board Games</h3>
-          <p>
-            
-            Dice Tower, Thu 6pm
-            
-          </p>
-        </div>
-      </article>
-      <article id='upcoming-2023-06-13' class='event event-anime'>
-        <time datetime="Tue Jun 13 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>13</span><span class='month'>Jun</span></time>
-        <div class='event-detail event-detail-anime'>
-          
-          
-          <h3>Anime Society Meeting</h3>
-          <p>
-            
-            The White Hart, Tue 7pm
-            
-          </p>
-        </div>
-      </article>
-      <article id='upcoming-2023-06-20' class='event event-anime'>
-        <time datetime="Tue Jun 20 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>20</span><span class='month'>Jun</span></time>
-        <div class='event-detail event-detail-anime'>
-          
-          
-          <h3>Anime Society Meeting</h3>
-          <p>
-            
-            The White Hart, Tue 7pm
-            
-          </p>
-        </div>
-        <div class='event-detail event-detail-new-series'>
-          <img src="images/series/appare-ranman.png">
-          <p class="series-ident">New series</p>
-          <h3>Appare-Ranman</h3>
-          <p>
-            
-             8pm
-            
-          </p>
-        </div>
-      </article>
       <article id='upcoming-2023-06-27' class='event event-anime'>
-        <time datetime="Tue Jun 27 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>27</span><span class='month'>Jun</span></time>
+        <time datetime="Tue Jun 27 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>27</span>
+          <span class='month'>Jun</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -203,7 +146,12 @@
         </div>
       </article>
       <article id='upcoming-2023-07-04' class='event event-anime'>
-        <time datetime="Tue Jul 04 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>4</span><span class='month'>Jul</span></time>
+        <time datetime="Tue Jul 04 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>4</span>
+          <span class='month'>Jul</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -216,7 +164,12 @@
         </div>
       </article>
       <article id='upcoming-2023-07-11' class='event event-anime'>
-        <time datetime="Tue Jul 11 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>11</span><span class='month'>Jul</span></time>
+        <time datetime="Tue Jul 11 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>11</span>
+          <span class='month'>Jul</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -239,7 +192,12 @@
         </div>
       </article>
       <article id='upcoming-2023-07-13' class='event event-social'>
-        <time datetime="Thu Jul 13 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>13</span><span class='month'>Jul</span></time>
+        <time datetime="Thu Jul 13 2023 01:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>13</span>
+          <span class='month'>Jul</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-social'>
           
           
@@ -252,7 +210,12 @@
         </div>
       </article>
       <article id='upcoming-2023-07-18' class='event event-anime'>
-        <time datetime="Tue Jul 18 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>18</span><span class='month'>Jul</span></time>
+        <time datetime="Tue Jul 18 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>18</span>
+          <span class='month'>Jul</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -265,7 +228,12 @@
         </div>
       </article>
       <article id='upcoming-2023-07-25' class='event event-anime'>
-        <time datetime="Tue Jul 25 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>25</span><span class='month'>Jul</span></time>
+        <time datetime="Tue Jul 25 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>25</span>
+          <span class='month'>Jul</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -278,7 +246,12 @@
         </div>
       </article>
       <article id='upcoming-2023-08-01' class='event event-anime'>
-        <time datetime="Tue Aug 01 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>1</span><span class='month'>Aug</span></time>
+        <time datetime="Tue Aug 01 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>1</span>
+          <span class='month'>Aug</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -291,7 +264,12 @@
         </div>
       </article>
       <article id='upcoming-2023-08-08' class='event event-anime'>
-        <time datetime="Tue Aug 08 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>8</span><span class='month'>Aug</span></time>
+        <time datetime="Tue Aug 08 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>8</span>
+          <span class='month'>Aug</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -314,7 +292,12 @@
         </div>
       </article>
       <article id='upcoming-2023-08-10' class='event event-social'>
-        <time datetime="Thu Aug 10 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>10</span><span class='month'>Aug</span></time>
+        <time datetime="Thu Aug 10 2023 01:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>10</span>
+          <span class='month'>Aug</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-social'>
           
           
@@ -327,7 +310,12 @@
         </div>
       </article>
       <article id='upcoming-2023-08-15' class='event event-anime'>
-        <time datetime="Tue Aug 15 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>15</span><span class='month'>Aug</span></time>
+        <time datetime="Tue Aug 15 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>15</span>
+          <span class='month'>Aug</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -340,7 +328,12 @@
         </div>
       </article>
       <article id='upcoming-2023-08-22' class='event event-anime'>
-        <time datetime="Tue Aug 22 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>22</span><span class='month'>Aug</span></time>
+        <time datetime="Tue Aug 22 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>22</span>
+          <span class='month'>Aug</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -363,7 +356,12 @@
         </div>
       </article>
       <article id='upcoming-2023-08-29' class='event event-anime'>
-        <time datetime="Tue Aug 29 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>29</span><span class='month'>Aug</span></time>
+        <time datetime="Tue Aug 29 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>29</span>
+          <span class='month'>Aug</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -376,7 +374,12 @@
         </div>
       </article>
       <article id='upcoming-2023-09-05' class='event event-anime'>
-        <time datetime="Tue Sep 05 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>5</span><span class='month'>Sept</span></time>
+        <time datetime="Tue Sep 05 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>5</span>
+          <span class='month'>Sept</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -389,7 +392,12 @@
         </div>
       </article>
       <article id='upcoming-2023-09-12' class='event event-anime'>
-        <time datetime="Tue Sep 12 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>12</span><span class='month'>Sept</span></time>
+        <time datetime="Tue Sep 12 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>12</span>
+          <span class='month'>Sept</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -402,7 +410,12 @@
         </div>
       </article>
       <article id='upcoming-2023-09-14' class='event event-social'>
-        <time datetime="Thu Sep 14 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>14</span><span class='month'>Sept</span></time>
+        <time datetime="Thu Sep 14 2023 01:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>14</span>
+          <span class='month'>Sept</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-social'>
           
           
@@ -415,7 +428,12 @@
         </div>
       </article>
       <article id='upcoming-2023-09-19' class='event event-anime'>
-        <time datetime="Tue Sep 19 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>19</span><span class='month'>Sept</span></time>
+        <time datetime="Tue Sep 19 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>19</span>
+          <span class='month'>Sept</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -438,7 +456,12 @@
         </div>
       </article>
       <article id='upcoming-2023-09-26' class='event event-anime'>
-        <time datetime="Tue Sep 26 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>26</span><span class='month'>Sept</span></time>
+        <time datetime="Tue Sep 26 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>26</span>
+          <span class='month'>Sept</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -451,7 +474,12 @@
         </div>
       </article>
       <article id='upcoming-2023-10-03' class='event event-anime'>
-        <time datetime="Tue Oct 03 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>3</span><span class='month'>Oct</span></time>
+        <time datetime="Tue Oct 03 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>3</span>
+          <span class='month'>Oct</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -474,7 +502,12 @@
         </div>
       </article>
       <article id='upcoming-2023-10-10' class='event event-anime'>
-        <time datetime="Tue Oct 10 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>10</span><span class='month'>Oct</span></time>
+        <time datetime="Tue Oct 10 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>10</span>
+          <span class='month'>Oct</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -487,7 +520,12 @@
         </div>
       </article>
       <article id='upcoming-2023-10-12' class='event event-social'>
-        <time datetime="Thu Oct 12 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>12</span><span class='month'>Oct</span></time>
+        <time datetime="Thu Oct 12 2023 01:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>12</span>
+          <span class='month'>Oct</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-social'>
           
           
@@ -500,7 +538,12 @@
         </div>
       </article>
       <article id='upcoming-2023-10-17' class='event event-anime'>
-        <time datetime="Tue Oct 17 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>17</span><span class='month'>Oct</span></time>
+        <time datetime="Tue Oct 17 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>17</span>
+          <span class='month'>Oct</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -513,7 +556,12 @@
         </div>
       </article>
       <article id='upcoming-2023-10-24' class='event event-anime'>
-        <time datetime="Tue Oct 24 2023 19:00:00 GMT+0100 (British Summer Time)"><span class='day'>24</span><span class='month'>Oct</span></time>
+        <time datetime="Tue Oct 24 2023 19:00:00 GMT+0100 (British Summer Time)">
+          <span class='day'>24</span>
+          <span class='month'>Oct</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -526,7 +574,12 @@
         </div>
       </article>
       <article id='upcoming-2023-10-31' class='event event-anime'>
-        <time datetime="Tue Oct 31 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>31</span><span class='month'>Oct</span></time>
+        <time datetime="Tue Oct 31 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>31</span>
+          <span class='month'>Oct</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -539,7 +592,12 @@
         </div>
       </article>
       <article id='upcoming-2023-11-07' class='event event-anime'>
-        <time datetime="Tue Nov 07 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>7</span><span class='month'>Nov</span></time>
+        <time datetime="Tue Nov 07 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>7</span>
+          <span class='month'>Nov</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -552,7 +610,12 @@
         </div>
       </article>
       <article id='upcoming-2023-11-09' class='event event-social'>
-        <time datetime="Thu Nov 09 2023 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>9</span><span class='month'>Nov</span></time>
+        <time datetime="Thu Nov 09 2023 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>9</span>
+          <span class='month'>Nov</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-social'>
           
           
@@ -565,7 +628,12 @@
         </div>
       </article>
       <article id='upcoming-2023-11-14' class='event event-anime'>
-        <time datetime="Tue Nov 14 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>14</span><span class='month'>Nov</span></time>
+        <time datetime="Tue Nov 14 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>14</span>
+          <span class='month'>Nov</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -588,7 +656,12 @@
         </div>
       </article>
       <article id='upcoming-2023-11-21' class='event event-anime'>
-        <time datetime="Tue Nov 21 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>21</span><span class='month'>Nov</span></time>
+        <time datetime="Tue Nov 21 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>21</span>
+          <span class='month'>Nov</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -611,7 +684,12 @@
         </div>
       </article>
       <article id='upcoming-2023-11-28' class='event event-anime'>
-        <time datetime="Tue Nov 28 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>28</span><span class='month'>Nov</span></time>
+        <time datetime="Tue Nov 28 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>28</span>
+          <span class='month'>Nov</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -624,7 +702,12 @@
         </div>
       </article>
       <article id='upcoming-2023-12-05' class='event event-anime'>
-        <time datetime="Tue Dec 05 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>5</span><span class='month'>Dec</span></time>
+        <time datetime="Tue Dec 05 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>5</span>
+          <span class='month'>Dec</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -637,7 +720,12 @@
         </div>
       </article>
       <article id='upcoming-2023-12-12' class='event event-anime'>
-        <time datetime="Tue Dec 12 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>12</span><span class='month'>Dec</span></time>
+        <time datetime="Tue Dec 12 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>12</span>
+          <span class='month'>Dec</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -650,7 +738,12 @@
         </div>
       </article>
       <article id='upcoming-2023-12-14' class='event event-social'>
-        <time datetime="Thu Dec 14 2023 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>14</span><span class='month'>Dec</span></time>
+        <time datetime="Thu Dec 14 2023 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>14</span>
+          <span class='month'>Dec</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-social'>
           
           
@@ -663,7 +756,12 @@
         </div>
       </article>
       <article id='upcoming-2023-12-19' class='event event-anime'>
-        <time datetime="Tue Dec 19 2023 19:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>19</span><span class='month'>Dec</span></time>
+        <time datetime="Tue Dec 19 2023 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>19</span>
+          <span class='month'>Dec</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-anime'>
           
           
@@ -686,7 +784,12 @@
         </div>
       </article>
       <article id='upcoming-2023-12-26' class='event event-skip'>
-        <time datetime="Tue Dec 26 2023 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>26</span><span class='month'>Dec</span></time>
+        <time datetime="Tue Dec 26 2023 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>26</span>
+          <span class='month'>Dec</span>
+          <span class='year'>2023</span>
+          
+        </time>
         <div class='event-detail event-detail-skip'>
           
           
@@ -699,7 +802,12 @@
         </div>
       </article>
       <article id='upcoming-2024-01-02' class='event event-skip'>
-        <time datetime="Tue Jan 02 2024 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>2</span><span class='month'>Jan</span></time>
+        <time datetime="Tue Jan 02 2024 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>2</span>
+          <span class='month'>Jan</span>
+          <span class='year'>2024</span>
+          
+        </time>
         <div class='event-detail event-detail-skip'>
           
           
@@ -711,8 +819,49 @@
           </p>
         </div>
       </article>
+      <article id='upcoming-2024-01-09' class='event event-anime'>
+        <time datetime="Tue Jan 09 2024 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>9</span>
+          <span class='month'>Jan</span>
+          <span class='year'>2024</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
+      <article id='upcoming-2024-01-16' class='event event-anime'>
+        <time datetime="Tue Jan 16 2024 19:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>16</span>
+          <span class='month'>Jan</span>
+          <span class='year'>2024</span>
+          
+        </time>
+        <div class='event-detail event-detail-anime'>
+          
+          
+          <h3>Anime Society Meeting</h3>
+          <p>
+            
+            The White Hart, Tue 7pm
+            
+          </p>
+        </div>
+      </article>
       <article id='upcoming-2024-12-24' class='event event-skip'>
-        <time datetime="Tue Dec 24 2024 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>24</span><span class='month'>Dec</span></time>
+        <time datetime="Tue Dec 24 2024 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>24</span>
+          <span class='month'>Dec</span>
+          <span class='year'>2024</span>
+          
+        </time>
         <div class='event-detail event-detail-skip'>
           
           
@@ -725,7 +874,12 @@
         </div>
       </article>
       <article id='upcoming-2024-12-31' class='event event-skip'>
-        <time datetime="Tue Dec 31 2024 00:00:00 GMT+0000 (Greenwich Mean Time)"><span class='day'>31</span><span class='month'>Dec</span></time>
+        <time datetime="Tue Dec 31 2024 00:00:00 GMT+0000 (Greenwich Mean Time)">
+          <span class='day'>31</span>
+          <span class='month'>Dec</span>
+          <span class='year'>2024</span>
+          
+        </time>
         <div class='event-detail event-detail-skip'>
           
           
@@ -741,25 +895,23 @@
   </div>
 
   <div>
-    <div id='coming-soon'></div>
+    <div id='coming-soon' class='series-grid'></div>
   </div>
-</div></section>
+</div>
+</section>
 
 <section class='tab-pane' data-tab='news'>
-<widgetbot
-    server="513039529284861973"
-    channel="513039529284861979"
-    width="100%"
-    height="600"
-></widgetbot>
-<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+<div class="one">
 
-<!--<div class="lr">
 <div>
 
+<div class="box box--button">
+  <h2>Community</h2>
+  <p>You can find more information about our events on our Discord server.</p>
+  <a class='btn btn-discord' href='https://discord.gg/sypjyaA' target="_blank"><i></i><span>Discord</span></a>
 </div>
 
-<div>
+<!-- START NEWS -->
 <article class='news box'>
 <time datetime="Tue Apr 11 2023 01:00:00 GMT+0100 (British Summer Time)"><span class='day'>11</span><span class='month'>Apr</span><span class='year'>2023</span></time>
 <h3>Suzume</h3>
@@ -825,56 +977,76 @@ Click the button above to join our Discord server.
 </p>
 <p><a class='btn btn-discord' href='https://discord.gg/sypjyaA'><i></i><span>Join the Discord</span></a></p>
 </article>
+<!-- END NEWS -->
 
 </div>
-</div>--></section>
+</div>
+</section>
 
 <section class='tab-pane' data-tab='recommendations'>
 <div class='rl'>
-  <figure class='box' id='recommendation'>
-    <figcaption>
-      <p class='series-ident'>You might enjoy...</p>
+  <div>
+    <div class='series-grid series-grid--large-first' id='home-recommendations'>
 
-      <h3 id='recommendation__name'></h3>
-      <p id='recommendation__genre'></p>
-    </figcaption>
-
-    <img class='series-picture' id='recommendation__picture'>
-  </figure>
-
-  <div class='box'>
-    <p>Check out one of our favourites.</p>
-
-    <a class='btn btn-recommendations' href='recommendations.html'><span>Recommendations</span></a>
-
-    <p class='top10-genres top10-genres-big'>
-      <a class='genre genre-first' data-genre='first'>New to anime</a>
-      <a class='genre genre-number1' data-genre='number1'>Our #1s</a>
-    </p>
-
-    <p class='top10-genres'>
-      <a href='recommendations.html#genre=action' class='genre genre-action'>Action</a>
-      <a href='recommendations.html#genre=adventure' class='genre genre-adventure'>Adventure</a>
-      <a href='recommendations.html#genre=comedy' class='genre genre-comedy'>Comedy</a>
-      <a href='recommendations.html#genre=crime' class='genre genre-crime'>Crime</a>
-      <a href='recommendations.html#genre=dark' class='genre genre-dark'>Dark</a>
-      <a href='recommendations.html#genre=drama' class='genre genre-drama'>Drama</a>
-      <a href='recommendations.html#genre=isekai' class='genre genre-isekai'>Isekai</a>
-      <a href='recommendations.html#genre=mecha' class='genre genre-mecha'>Mecha</a>
-      <a href='recommendations.html#genre=music' class='genre genre-music'>Music</a>
-      <a href='recommendations.html#genre=mystery' class='genre genre-mystery'>Mystery</a>
-      <a href='recommendations.html#genre=romance' class='genre genre-romance'>Romance</a>
-      <a href='recommendations.html#genre=sci-fi' class='genre genre-sci-fi'>Sci fi</a>
-      <a href='recommendations.html#genre=shounen' class='genre genre-shounen'>Shounen</a>
-      <a href='recommendations.html#genre=slice-of-life' class='genre genre-slice-of-life'>Slice of life</a>
-      <a href='recommendations.html#genre=sports' class='genre genre-sports'>Sports</a>
-      <a href='recommendations.html#genre=thriller' class='genre genre-thriller'>Thriller</a>
-      <a href='recommendations.html#genre=war' class='genre genre-war'>War</a>
-    </p>
+    </div>
   </div>
-</div></section>
+
+  <div>
+    <div class='box'>
+      <p>Check out one of our favourites.</p>
+
+      <a class='btn btn-recommendations' href='recommendations.html'><span>Recommendations</span></a>
+
+      <p class='top10-genres top10-genres-big'>
+        <a class='genre genre-first' href='recommendations.html#genre=first'>New to anime</a>
+        <a class='genre genre-number1' href='recommendations.html#genre=number1'>Our #1s</a>
+      </p>
+
+      <p class='top10-genres'>
+        <a href='recommendations.html#genre=action' class='genre genre-action'>Action</a>
+        <a href='recommendations.html#genre=adventure' class='genre genre-adventure'>Adventure</a>
+        <a href='recommendations.html#genre=comedy' class='genre genre-comedy'>Comedy</a>
+        <a href='recommendations.html#genre=crime' class='genre genre-crime'>Crime</a>
+        <a href='recommendations.html#genre=dark' class='genre genre-dark'>Dark</a>
+        <a href='recommendations.html#genre=drama' class='genre genre-drama'>Drama</a>
+        <a href='recommendations.html#genre=isekai' class='genre genre-isekai'>Isekai</a>
+        <a href='recommendations.html#genre=mecha' class='genre genre-mecha'>Mecha</a>
+        <a href='recommendations.html#genre=music' class='genre genre-music'>Music</a>
+        <a href='recommendations.html#genre=mystery' class='genre genre-mystery'>Mystery</a>
+        <a href='recommendations.html#genre=romance' class='genre genre-romance'>Romance</a>
+        <a href='recommendations.html#genre=sci-fi' class='genre genre-sci-fi'>Sci fi</a>
+        <a href='recommendations.html#genre=shounen' class='genre genre-shounen'>Shounen</a>
+        <a href='recommendations.html#genre=slice-of-life' class='genre genre-slice-of-life'>Slice of life</a>
+        <a href='recommendations.html#genre=sports' class='genre genre-sports'>Sports</a>
+        <a href='recommendations.html#genre=thriller' class='genre genre-thriller'>Thriller</a>
+        <a href='recommendations.html#genre=war' class='genre genre-war'>War</a>
+      </p>
+    </div>
+  </div>
+</div>
+</section>
 
 <section class='tab-pane' data-tab='history'>
+<div class="rl">
+<div>
+	<div id='history' class='series-grid'></div>
+</div>
+<div>
+	<div class='box'>
+
+	<h3>History</h3>
+	<p>We've shown a lot of good anime since 2006.</p>
+
+  <p><a class='btn btn-recommendations' href='history.html'><span>History</span></a></p>
+
+  <hr>
+
+  <h3>Missed a week?</h3>
+  <p><a class='btn btn-recommendations' href='history.html#tab=episodes'><span>Episodes</span></a></p>
+
+	</div>
+</div>
+</div>
 </section>
 </div> 
 
@@ -891,6 +1063,6 @@ Click the button above to join our Discord server.
   </div>
 </aside>
 
-<script src="script.js?ver=3be8cf"></script>
+<script src="script.js?ver=dc2cc2"></script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>

@@ -1,7 +1,6 @@
 var slot1 = {{{json slot1back}}};
 var slot2 = {{{json slot2back}}};
 var slot3 = {{{json slot3back}}};
-// var movies = {{{json movies}}};
 var comingSoon = {{{json comingSoon}}};
 
 var events = {{{json eventsByDate}}};
@@ -12,5 +11,7 @@ var ratingText = {"u": "Universal", "pg": "Parental Guidance", "12": "12 and old
 
 var top10 = {{{json allTop10}}};
 
-// var episodesList = {{{json episodeList}}};
+var historyYears = {{{json historyYears}}};
+var allAnime = {{{json all_anime}}};
+var schedule = {{{json schedule}}};
 
