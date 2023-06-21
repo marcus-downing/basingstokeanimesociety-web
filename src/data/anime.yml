@@ -260,9 +260,9 @@ slot2:
     rating: "12"
 
 slot3:
-  - from: 2020-01-07
-    name: Slow Start
-    picture: slow-start
+  # - from: 2020-01-07
+  #   name: Slow Start
+  #   picture: slow-start
 
   - from: 2020-02-18
     name: Kaguya-sama, Love is War

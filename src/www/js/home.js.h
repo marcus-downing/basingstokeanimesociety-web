@@ -280,7 +280,7 @@ function setupHomeEpisodeHistory() {
     var html = template_series(series, {
       prefix: "We recently watched...",
       showGenres: true,
-      info: series.month,
+      // info: series.month,
     });
     historyHtml = historyHtml + html;
   }
