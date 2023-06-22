@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q59HDZX5HY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZYQSZM09J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-Q59HDZX5HY');
-  </script>
+  gtag('config', 'G-5ZYQSZM09J');
+</script>
 
   <title>Recommendations - Basingstoke Anime Society</title>
   <link rel="stylesheet" media="all" href="style.css?ver={{stylesheetVersion}}" />
