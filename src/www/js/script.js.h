@@ -7,7 +7,7 @@
 
 // select a background image
 function selectBackground() {
-    var DAY_LIMIT = 6;
+    var DAY_LIMIT = 5;
     var NIGHT_LIMIT = 7;
 
     var hour = new Date().getHours();
