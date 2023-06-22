@@ -39,12 +39,37 @@
     .tabs {
       display: block; } }
 
+.tab-panes {
+  position: relative; }
+
 .tab-pane {
   display: none;
   min-height: 600px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  opacity: 0;
+  padding-top: 1px;
+  transition: opacity 0.3s linear, transform 0.3s linear;
+  transform: translateX(0px); }
   .tab-pane.tab-pane--show {
-    display: block; }
+    display: block;
+    opacity: 1;
+    transition: opacity 0 ease; }
+  .tab-pane.tab-pane--shift-left {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(-100px);
+    pointer-events: none; }
+  .tab-pane.tab-pane--shift-right {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(100px);
+    pointer-events: none; }
 
 a.pick {
   cursor: pointer;

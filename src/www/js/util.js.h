@@ -8,6 +8,22 @@ function slugify(str) {
 }
 
 function pickTab(code) {
+  let leftcode = {
+    "coming-soon": ["history"],
+    "news": ["coming-soon"],
+    "recommendations": ["coming-soon", "news"],
+    "history": ["news", "recommendations"],
+    "episodes": ["history"]
+  }[code];
+
+  let rightcode = {
+    "coming-soon": ["news", "recommendations"],
+    "news": ["recommendations", "history"],
+    "recommendations": ["history"],
+    "history": ["coming-soon", "episodes"],
+    "episodes": []
+  }[code];
+
   // switch tabs
   for (let tab of document.getElementsByClassName('tab')) {
     if (tab.dataset.tab == code) {
@@ -23,6 +39,18 @@ function pickTab(code) {
       pane.classList.add('tab-pane--show');
     } else {
       pane.classList.remove('tab-pane--show');
+    }
+
+    if (leftcode.includes(pane.dataset.tab)) {
+      pane.classList.add('tab-pane--shift-left');
+    } else {
+      pane.classList.remove('tab-pane--shift-left');
+    }
+
+    if (rightcode.includes(pane.dataset.tab)) {
+      pane.classList.add('tab-pane--shift-right');
+    } else {
+      pane.classList.remove('tab-pane--shift-right');
     }
   }
 }
