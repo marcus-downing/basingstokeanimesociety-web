@@ -115,10 +115,11 @@ slot1:
     picture: eureka-seven
     rating: 12
     genre: [ "Adventure", "Action", "Shounen" ]
+    count: 50
     episodes:
-      - end: 50
-      - episode: 13
-        show: single
+      # - end: 50
+      # - episode: 13
+      #   show: single
       # - episode: 14
       #   show: skip
       - episode: 50
