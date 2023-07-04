@@ -155,6 +155,15 @@ $recommendations_color: #047848;
 .btn-twitter {
   @include btn($twitter_color, 'images/tw_icon.png');
 }
+.btn-twitter-broken {
+  @include btn($twitter_color, 'images/tw_icon_broken.png');
+  position: fixed;
+  bottom: 10px;
+  i {
+    height: 40px;
+    border-radius: 30px / 20px;
+  }
+}
 .btn-fb {
   @include btn($fb_color, 'images/fb_icon.png');
 }

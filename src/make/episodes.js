@@ -86,7 +86,7 @@ function flowEpisodes(series, skipWeeks) {
     }
 
     series.weeks = weeks;
-    console.log(series.name, "Weeks:", JSON.stringify(weeks, null, 2));
+    // console.log(series.name, "Weeks:", JSON.stringify(weeks, null, 2));
   }
 
   return series;
@@ -115,11 +115,6 @@ function makeEpisodeList(slot1, slot2, slot3, skipWeeks) {
   console.log("Slot 2 series", slot2);
   console.log("Slot 3 series", slot3);
 
-  // find the farthest future date to bother scheduling
-  function seriesLastDate(series) {
-    return new Date(series.episodes[series.episodes.length - 1]);
-  }
-
   let slot1weeks = {};
   let slot2weeks = {};
   let slot3weeks = {};
@@ -127,40 +122,41 @@ function makeEpisodeList(slot1, slot2, slot3, skipWeeks) {
   let lastDate = new Date(Date.now());
 
   for (let series of slot1) {
-    let endDate = seriesLastDate(series);
-    if (endDate > lastDate) {
-      lastDate = endDate;
-    }
     if (series.weeks) {
       for (let week of series.weeks) {
         slot1weeks[week.week] = {series: simplifySeries(series), episodes: episodeList2str(week.episodes)};
+        let date = new Date(week.week);
+        if (date > lastDate) {
+          lastDate = date;
+        }
       }
     }
   }
 
   for (let series of slot2) {
-    let endDate = seriesLastDate(series);
-    if (endDate > lastDate) {
-      lastDate = endDate;
-    }
     if (series.weeks) {
       for (let week of series.weeks) {
         slot2weeks[week.week] = {series: simplifySeries(series), episodes: episodeList2str(week.episodes)};
+        let date = new Date(week.week);
+        if (date > lastDate) {
+          lastDate = date;
+        }
       }
     }
   }
 
   for (let series of slot3) {
-    let endDate = seriesLastDate(series);
-    if (endDate > lastDate) {
-      lastDate = endDate;
-    }
     if (series.weeks) {
       for (let week of series.weeks) {
         slot3weeks[week.week] = {series: simplifySeries(series), episodes: episodeList2str(week.episodes)};
+        let date = new Date(week.week);
+        if (date > lastDate) {
+          lastDate = date;
+        }
       }
     }
   }
+  console.log("Last date:", lastDate);
 
   console.log("Slot 1 weeks", slot1weeks);
   console.log("Slot 2 weeks", slot2weeks);

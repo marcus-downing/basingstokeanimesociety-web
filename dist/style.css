@@ -434,6 +434,16 @@ body {
   background-color: #1da1f2;
   background-image: url("images/tw_icon.png"); }
 
+.btn-twitter-broken {
+  position: fixed;
+  bottom: 10px; }
+  .btn-twitter-broken i {
+    background-color: #1da1f2;
+    background-image: url("images/tw_icon_broken.png"); }
+  .btn-twitter-broken i {
+    height: 40px;
+    border-radius: 30px / 20px; }
+
 .btn-fb i {
   background-color: #4267b2;
   background-image: url("images/fb_icon.png"); }
