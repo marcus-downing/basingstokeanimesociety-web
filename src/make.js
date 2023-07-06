@@ -244,10 +244,11 @@ _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
 
 _.each(basData.movies, movie => {
   if (_.has(movie, "name")) {
+    let hide = _.has(movie, "hide") ? movie.hide : false;
     let date = new Date(movie.date);
     let time = _.has(movie, "time") ? movie.time : "7pm";
 
-    if (date > now) {
+    if (date > now && !hide) {
       let event = {
         date: date,
         dateLong: util.formatLongDate(date) + ", "+time,

@@ -482,6 +482,14 @@ movies:
     picture: empire-of-corpses
     rating: 15
 
+  - name: "A Silent Voice"
+    date: 2023-07-22
+    time: 1pm
+    venue: "The White Hart"
+    picture: silent-voice
+    rating: pg
+    hide: true
+
   # - name: Your Name
   #   date: 2021-12-14
   #   time: 7pm
