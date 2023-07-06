@@ -200,12 +200,20 @@ events:
 
   - name: "Matinee: Summer Wars"
     date: 2023-06-17
-    class: matinee
+    class: cinema
     price: "£2"
     time: 1pm
     venue: "The White Hart"
     picture: summer-wars
     # rating: 12
+  - name: "Matinee: A Silent Voice"
+    date: 2023-07-22
+    class: cinema
+    price: "£2"
+    time: 1pm
+    venue: "The White Hart"
+    picture: silent-voice
+
   - name: 17th Anniversary BBQ
     date: 2023-09-16
     class: social

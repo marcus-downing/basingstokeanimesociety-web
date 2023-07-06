@@ -31,9 +31,19 @@ time {
   	font-size: 12px;
     font-weight: bold;
   }
+
+  .time__special {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #a2f8ad;
+    border-radius: 5px;
+  }
 }
 
-time.time--large, 
+// time.time--large,
 
 // colours
 time.time--event, .event-anime time {
@@ -54,6 +64,9 @@ time.time--online, .event-online time {
 
 time.time--cinema, .event-cinema time {
   background: #f8b3a2;
+  .time__special {
+    border-color: #f8b3a2;
+  }
 }
 
 time.time--convention, .event-convention time {
