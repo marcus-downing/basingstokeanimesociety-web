@@ -8,7 +8,8 @@
   <a class='btn btn-discord' href='https://discord.gg/sypjyaA' target="_blank"><i></i><span>Discord</span></a>
 </div>
 
-<!-- START NEWS -->
+<div id="news-area"></div>
+
 {{#each news}}
 <article class='news box'>
 <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span><span class='year'>{{ year }}</span></time>
@@ -21,7 +22,6 @@
 {{/if}}
 </article>
 {{/each}}
-<!-- END NEWS -->
 
 </div>
 </div>

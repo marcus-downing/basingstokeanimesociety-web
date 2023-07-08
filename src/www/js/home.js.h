@@ -15,6 +15,7 @@ function setupHome() {
   setupHomeNowShowing();
   setupHomeComingSoon();
   // setupHomeEventsList(futureEvents);
+  setupHomeNews();
   setupHomeRecommendations();
   setupHomeEpisodeHistory();
 }
@@ -231,6 +232,14 @@ function setupHomeEventsList() {
     eventsHTML = eventsHTML + html;
   }
   document.getElementById('events-list').innerHTML = eventsHTML;
+}
+
+function setupHomeNews() {
+  fetch("/news.html").then((response) => {
+    return response.text();
+  }).then((html) => {
+    document.getElementById('news-area').innerHTML = html;
+  });
 }
 
 function setupHomeRecommendations() {
