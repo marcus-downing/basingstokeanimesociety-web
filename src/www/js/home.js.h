@@ -14,7 +14,7 @@ function setupHome() {
   setupHomeNextMeeting(futureEvents);
   setupHomeNowShowing();
   setupHomeComingSoon();
-  // setupHomeEventsList(futureEvents);
+  setupHomeEventsList(futureEvents);
   setupHomeNews();
   setupHomeRecommendations();
   setupHomeEpisodeHistory();
@@ -180,10 +180,9 @@ function setupHomeComingSoon() {
   }
 }
 
-function setupHomeEventsList() {
+function setupHomeEventsList(futureEvents) {
   var eventsHTML = '';
-  var event;
-  for (event of events) {
+  for (var event of futureEvents) {
     var html = 
       `<article id='upcoming-${event.date}' class='event event-${event.class}'>
         <time datetime='${event.date}'>
@@ -235,11 +234,15 @@ function setupHomeEventsList() {
 }
 
 function setupHomeNews() {
-  fetch("/news.html").then((response) => {
-    return response.text();
-  }).then((html) => {
-    document.getElementById('news-area').innerHTML = html;
-  });
+  try {
+    fetch("/news.html").then((response) => {
+      return response.text();
+    }).then((html) => {
+      document.getElementById('news-area').innerHTML = html;
+    });
+  } catch (e) {
+    console.error("Error fetching news:", e);
+  }
 }
 
 function setupHomeRecommendations() {
