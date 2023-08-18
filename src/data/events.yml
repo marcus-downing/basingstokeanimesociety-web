@@ -177,11 +177,16 @@ events:
     class: social
     venue: Dice Tower
     time: 6pm
-  - name: Board Games
-    date: 2023-09-14
+  # - name: Board Games
+  #   date: 2023-09-14
+  #   class: social
+  #   venue: Dice Tower
+  #   time: 6pm
+  - name: Blobberu's Birthday Bash
+    date: 2023-09-09
     class: social
     venue: Dice Tower
-    time: 6pm
+    time: 5pm
   - name: Board Games
     date: 2023-10-12
     class: social

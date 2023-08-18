@@ -8,7 +8,7 @@ function setupHome() {
 
   // adjust the events list
   let futureEvents = events.filter(function (event) {
-    return Date.parse(event.date) >= yesterday;
+    return Date.parse(event.date) > yesterday;
   }).slice(0, {{ maxEvents }});
 
   setupHomeNextMeeting(futureEvents);
