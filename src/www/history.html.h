@@ -89,6 +89,17 @@
   <div id='history-episode-list'></div>
 </section>
 
+<section class='tab-pane' data-tab='future'>
+  <div class="rl">
+    <header class='box'>
+      <h2>Future</h2>
+      <p>Sneaky preview!</p>
+    </header>
+  </div>
+
+  <div id='history-future-list'></div>
+</section>
+
 </main>
 
 <div id='blanket'></div>

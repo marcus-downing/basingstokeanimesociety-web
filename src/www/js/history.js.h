@@ -83,6 +83,12 @@ function setupHistory() {
     return date;
   }
 
+  function plus1week(from) {
+    let date = new Date(from)
+    date.setDate(date.getDate() + 7);
+    return date;
+  }
+
   let episodeHtml = [];
   for (let date = tuesday; date > threshold; date = minus1week(date)) {
     let shortdate = formatShortDate(date);
@@ -112,4 +118,34 @@ function setupHistory() {
 
   document.getElementById('history-episode-list').innerHTML = episodeHtml.join("");
 
+  let futureHtml = []
+  for (let date = tuesday; true; date = plus1week(date)) {
+    let shortdate = formatShortDate(date);
+    let longdate = formatLongDate(date);
+
+    if (!schedule.hasOwnProperty(shortdate)) {
+      break;
+    }
+
+    let slots = schedule[shortdate];
+
+    futureHtml.push(`
+      <h2 class='underline'>${longdate}</h2>
+
+      <div class='c3e'>
+        ${slots.slot1 ? template_series(slots.slot1.series, {
+          info: "Episodes: "+slots.slot1.episodes
+        }) : ''}
+
+        ${slots.slot2 ? template_series(slots.slot2.series, {
+          info: "Episodes: "+slots.slot2.episodes
+        }) : ''}
+
+        ${slots.slot3 ? template_series(slots.slot3.series, {
+          info: "Episodes: "+slots.slot3.episodes
+        }) : ''}
+      </div>`);
+  }
+
+  document.getElementById('history-future-list').innerHTML = futureHtml.join("");
 }

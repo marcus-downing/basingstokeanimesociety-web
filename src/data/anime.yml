@@ -131,15 +131,29 @@ slot1:
     name: "Tenrou: Sirius the Jaeger"
     picture: sirius-the-jaeger
     rating: "15"
-    episodes:
-      - count: 12
+    count: 12
 
   - from: 2023-11-14
     name: "Irina: The Vampire Cosmonaut"
     picture: tsuki-to-laika-to-nosferatu
     rating: "15"
+    count: 12
+
+  - from: 2024-01-09
+    name: Magatsu Wahrheit Zuerst
+    picture: magatsu-wahrheit-zuerst
+    rating: "15"
+    count: 12
+
+  - from: 2024-02-20
+    name: "ODDTAXI"
+    picture: oddtaxi
+    rating: 12
+    count: 13
     episodes:
-      - count: 12
+      - episode: 5
+        show: single
+
 
 slot2:
   - from: 2019-01-08
@@ -251,20 +265,38 @@ slot2:
     name: "Mushi-Shi"
     picture: mushishi
     rating: "12"
-    episodes:
-      - end: 26
+    count: 26
 
   - from: 2023-12-19
     name: "Kaguya-sama, Love is War: The First Kiss Never Ends"
     picture: kaguya-sama-movie
     movie: true
     rating: "12"
+    count: 4
+    episodes:
+      - episode: 2
+        show: more
+      - episode: 3
+        show: more
+      - episode: 4
+        show: more
+
+  - from: 2024-01-09
+    name: "That Time I Got Reincarnated As A Slime II"
+    picture: tensura
+    rating: 15
+    count: 24
+    episodes:
+      - episode: 0
+        before: 1
+      - episode: "OVA 3"
+        before: 1
+      - episode: "OVA 4"
+        before: 1
+      - episode: "OVA 5"
+        before: 1
 
 slot3:
-  # - from: 2020-01-07
-  #   name: Slow Start
-  #   picture: slow-start
-
   - from: 2020-02-18
     name: Kaguya-sama, Love is War
     picture: kaguya-sama
@@ -413,7 +445,7 @@ slot3:
       - end: 12
 
   - from: 2023-08-22
-    name: "Spy × Family"
+    name: "Spy &times; Family"
     picture: spy-x-family
     rating: "15"
     episodes:
@@ -429,6 +461,22 @@ slot3:
       - end: 12
       - episode: 9
         delayto: 2024-01-09
+
+  - from: 2024-01-23
+    name: "Horimiya"
+    picture: horimiya
+    rating: 12
+    count: 13
+    episodes:
+      - episode: 7
+        show: single
+
+  - from: 2024-03-12
+    name: Arte
+    picture: arte
+    rating: 12
+    count: 12
+
 
 movies:
   - name: "Konosuba - Legend of Crimson"

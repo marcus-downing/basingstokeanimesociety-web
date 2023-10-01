@@ -13,7 +13,8 @@ function pickTab(code) {
     "news": ["coming-soon"],
     "recommendations": ["coming-soon", "news"],
     "history": ["news", "recommendations"],
-    "episodes": ["history"]
+    "episodes": ["history"],
+    "future": []
   }[code];
 
   let rightcode = {
@@ -21,7 +22,8 @@ function pickTab(code) {
     "news": ["recommendations", "history"],
     "recommendations": ["history"],
     "history": ["coming-soon", "episodes"],
-    "episodes": []
+    "episodes": [],
+    "future": []
   }[code];
 
   // switch tabs

@@ -66,6 +66,20 @@ function flowEpisodes(series, skipWeeks) {
       if (episode.show == 'skip') {
         continue;
       }
+
+      if (_.has(episode, "delayto")) {
+        let delayto = new Date(episode.delayto);
+        console.log(series.name, episode.episode, "delay to", delayto);
+        if (delayto > weekDate) {
+          // console.log(series.name, episode.episode, "delay: set week to", delayto);
+          weekDate = delayto;
+          currentWeek = {week: weekDate, episodes: []};
+          weeks.push(currentWeek);
+          weekFull = false;
+          // console.log(series.name, episode.episode, "delay: new week", currentWeek);
+        }
+      }
+
       if (weekFull) {
         weekDate = util.plus1week(weekDate);
         while (skipWeeks.includes(weekDate)) {
@@ -81,12 +95,13 @@ function flowEpisodes(series, skipWeeks) {
       }
     }
 
+    // console.log(series.name, "Weeks DATES???:", JSON.stringify(weeks, null, 2));
     for (let week of weeks) {
       week.week = util.formatShortDate(week.week);
     }
 
     series.weeks = weeks;
-    // console.log(series.name, "Weeks:", JSON.stringify(weeks, null, 2));
+    console.log(series.name, "Weeks:", JSON.stringify(weeks, null, 2));
   }
 
   return series;
