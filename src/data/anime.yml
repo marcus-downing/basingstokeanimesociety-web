@@ -448,9 +448,9 @@ slot3:
     name: "Spy &times; Family"
     picture: spy-x-family
     rating: "15"
+    count: 25
     episodes:
-      - end: 25
-      - episode: 13
+      - episode: 15
         show: single
 
   - from: 2023-11-21
