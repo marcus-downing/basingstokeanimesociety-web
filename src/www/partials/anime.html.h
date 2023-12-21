@@ -1,7 +1,8 @@
-<figure class='box anime{{if movie}} anime--movie{{/if}}'>
+<figure class='series--right{{#if movie}} anime--movie{{/if}}'>
 	<figcaption>
-	  <h3 id='recommendation__name'>{{name}}</h3>
+	  <h3>{{name}}</h3>
+    {{#if from}}<p class='info-line'>{{ from }}</p>{{/if}}
 	</figcaption>
 
-	<img class='series-picture' id='recommendation__picture'>
+	<img class='series-picture' src='images/series/{{picture}}.png'>
 </figure>

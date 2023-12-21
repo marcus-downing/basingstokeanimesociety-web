@@ -12,6 +12,7 @@ var ratingText = {"u": "Universal", "pg": "Parental Guidance", "12": "12 and old
 var top10 = {{{json allTop10}}};
 
 var historyYears = {{{json historyYears}}};
+var ancientHistory = {{{json ancient_history}}};
 var allAnime = {{{json all_anime}}};
 var schedule = {{{json schedule}}};
 

@@ -246,6 +246,14 @@ function md5sum(data, digits = 6) {
   return hash.substr(0, digits);
 }
 
+function slugify(value) {
+  value = value.toLowerCase();
+  value = value.replaceAll(/[^a-z0-9]+/g, '-');
+  value = value.replace(/-$/, '');
+  value = value.replace(/^-/, '');
+  return value;
+}
+
 module.exports = {
   readData,
   formatDay,
@@ -269,4 +277,5 @@ module.exports = {
   backdate,
   expandDate,
   md5sum,
+  slugify,
 };

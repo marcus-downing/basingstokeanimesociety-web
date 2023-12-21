@@ -131,24 +131,29 @@ slot1:
     name: "Tenrou: Sirius the Jaeger"
     picture: sirius-the-jaeger
     rating: "15"
+    genre: [ "Action", "Mystery" ]
     count: 12
 
   - from: 2023-11-14
     name: "Irina: The Vampire Cosmonaut"
     picture: tsuki-to-laika-to-nosferatu
     rating: "15"
+    genre: [ "Sci fi", "Slice of life" ]
     count: 12
 
   - from: 2024-01-09
+    displayFrom: 2023-12-20
     name: Magatsu Wahrheit Zuerst
     picture: magatsu-wahrheit-zuerst
     rating: "15"
+    genre: [ "War", "Drama" ]
     count: 12
 
   - from: 2024-02-20
     name: "ODDTAXI"
     picture: oddtaxi
     rating: 12
+    genre: [ "Mystery", "Crime", "Drama" ]
     count: 13
     episodes:
       - episode: 5
@@ -257,6 +262,7 @@ slot2:
     name: "The Aquatope on White Sand pt2"
     picture: aquatope
     rating: pg
+    genre: [ "Slice of life", "Drama" ]
     episodes:
       - start: 13
       - end: 24
@@ -265,6 +271,7 @@ slot2:
     name: "Mushi-Shi"
     picture: mushishi
     rating: "12"
+    genre: [ "Slice of life", "Mystery" ]
     count: 26
 
   - from: 2023-12-19
@@ -272,6 +279,7 @@ slot2:
     picture: kaguya-sama-movie
     movie: true
     rating: "12"
+    genre: [ "Romance", "Comedy" ]
     count: 4
     episodes:
       - episode: 2
@@ -282,9 +290,11 @@ slot2:
         show: more
 
   - from: 2024-01-09
+    displayFrom: 2023-12-20
     name: "That Time I Got Reincarnated As A Slime II"
     picture: tensura
     rating: 15
+    genre: [ "Isekai", "Adventure" ]
     count: 24
     episodes:
       - episode: 0
@@ -440,6 +450,7 @@ slot3:
   - from: 2023-07-11
     name: "Taisho Otome Fairy Tale"
     picture: taisho-otome
+    genre: [ "Romance", "Drama" ]
     rating: 12
     episodes:
       - end: 12
@@ -448,6 +459,7 @@ slot3:
     name: "Spy &times; Family"
     picture: spy-x-family
     rating: "15"
+    genre: [ "Comedy", "Action", "Adventure" ]
     count: 25
     episodes:
       - episode: 15
@@ -457,6 +469,7 @@ slot3:
     name: "Restaurant to Another World"
     picture: restaurant-to-another-world
     rating: "15"
+    genre: [ "Slice of life" ]
     episodes:
       - end: 12
       - episode: 9
@@ -466,6 +479,7 @@ slot3:
     name: "Horimiya"
     picture: horimiya
     rating: 12
+    genre: [ "Romance", "Drama" ]
     count: 13
     episodes:
       - episode: 7
@@ -475,6 +489,7 @@ slot3:
     name: Arte
     picture: arte
     rating: 12
+    genre: [ "Drama" ]
     count: 12
 
 

@@ -65,7 +65,8 @@ function setupHistory() {
         </div>
       </div>`);
   }
-  document.getElementById('history-results').innerHTML = historyHtml.join("");
+  let historyResultsPane = document.getElementById('history-results');
+  historyResultsPane.innerHTML = historyResultsPane.innerHTML + historyHtml.join("");
 
   // episodes
   let tuesday = new Date(Date.now());

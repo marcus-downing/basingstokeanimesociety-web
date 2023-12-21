@@ -1,5 +1,74 @@
 ---
 
+ancient_history:
+
+  - name: 2015-2019
+    anime:
+      - name: Terror in Resonance
+      - name: Amagi Brilliant Park
+      - name: No Game No Life
+      - name: Parasyte The Maxim
+      - name: GATE
+      - name: One Punch Man
+      - name: Erased
+      - name: "The Perfect Insider: Everything Becomes F"
+      - name: Konosuba
+      - name: Tamako Market
+      - name: "Re:Zero"
+      - name: Megalo Box
+        picture: megalobox
+      - name: Banana Fish
+      - name: Coffin Princess Chaika
+      - name: Shirobako
+      - name: Death Parade
+      - name: Alderamin on the Sky
+      - name: Akatsuki no Yona
+      - name: Barakamon
+      - name: Little Witch Academia
+      - name: Made In Abyss
+      - name: Re_Creators
+      - name: Princess Principal
+      - name: Violet Evergarden
+      - name: Wotakoi
+
+  - name: 2010-2014
+    anime:
+      - name: Tales of the Abyss
+      - name: A Certain Magical Index
+      - name: A Certain Scientific Railgun
+      - name: Kimi ni Todoke
+      - name: Working!
+      - name: Level E
+      - name: Steins;Gate
+      - name: Gosick
+      - name: Hyouka
+      - name: Psycho-Pass
+      - name: Servant x Service
+      - name: Bakuman
+      - name: Kokoro Connect
+      - name: Log Horizon
+      - name: Lucky Star
+      - name: K-ON!
+      - name: Nichijou
+      - name: Future Diary
+      - name: Yuru Yuri
+      - name: Daily Lives of High School Boys
+      - name: Silver Spoon
+      - name: Non Non Biyori
+      - name: Eccentric Family
+
+  - name: 2006-2009
+    anime:
+      - name: Death Note
+      - name: Baccano!
+      - name: The Third
+      - name: Ghost Hound
+      - name: Bamboo Blade
+      - name: Eden of the East
+      - name: Rideback
+      - name: Genshiken
+      - name: Record of Lodoss War
+
 past_anime:
   - from: 2006-09-19
     name: Paradise Kiss

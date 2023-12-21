@@ -64,9 +64,7 @@ Handlebars.registerHelper('inc', function(value, options) {
   return parseInt(value) + 1;
 });
 Handlebars.registerHelper('slug', function(value) {
-  value = value.toLowerCase();
-  value = value.replaceAll(/[^a-z0-9]+/g, '-');
-  return value;
+  return util.slugify(value);
 });
 Handlebars.registerHelper('times', function(n, block) {
     var accum = '';
@@ -98,6 +96,13 @@ basData.historyYears = [];
 let currentYear = util.formatYear(new Date());
 for (let year = currentYear; year >= 2020; year--) {
   basData.historyYears.push(""+year);
+}
+for (let group of basData.ancient_history) {
+  for (let anime of group.anime) {
+    if (!anime.hasOwnProperty('picture')) {
+      anime.picture = util.slugify(anime.name);
+    }
+  }
 }
 
 

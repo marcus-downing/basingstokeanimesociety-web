@@ -71,10 +71,23 @@
         {{#each historyYears}}
         <p><a class='pick' data-pane-set='history' data-show='{{this}}'>{{this}}</a></p>
         {{/each}}
+        {{#each ancient_history}}
+        <p><a class='pick' data-pane-set='history' data-show='{{name}}'>{{name}}</a></p>
+        {{/each}}
   		</div>
   	</div>
 
-  	<div id="history-results" class="pane-set" data-pane-set='history'></div>
+  	<div id="history-results" class="pane-set" data-pane-set='history'>
+      {{#each ancient_history}}
+      <div class='history-tab-pane pane' data-pane='{{name}}'>
+        <div class="series-grid">
+          {{#each anime}}
+            {{> anime this}}
+          {{/each}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
   </div>
 </section>
 
