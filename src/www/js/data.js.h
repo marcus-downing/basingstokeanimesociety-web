@@ -7,7 +7,7 @@ var events = {{{json eventsByDate}}};
 
 var options = {{{json options}}};
 
-var ratingText = {"u": "Universal", "pg": "Parental Guidance", "12": "12 and older", "15": "15 and older"};
+var ratingText = {"u": "Universal", "U": "Universal", "pg": "Parental Guidance", "PG": "Parental Guidance", "12": "12 and older", "15": "15 and older"};
 
 var top10 = {{{json allTop10}}};
 

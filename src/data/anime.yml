@@ -159,6 +159,15 @@ slot1:
       - episode: 5
         show: single
 
+  - from: 2024-04-09
+    name: "Megalobox 2: NOMAD"
+    picture: nomad
+    rating: PG
+    genre: [ "Drama" ]
+    count: 13
+    episodes:
+      - episode: 7
+        show: single
 
 slot2:
   - from: 2019-01-08
@@ -305,6 +314,16 @@ slot2:
         before: 1
       - episode: "OVA 5"
         before: 1
+
+  - from: 2024-04-16
+    name: "Hibike! Euphonium"
+    picture: hibike-euphonium
+    rating: PG
+    genre: [ "Romance", "Slice of life" ]
+    count: 13
+    episodes:
+      - episode: 9
+        show: single
 
 slot3:
   - from: 2020-02-18
@@ -492,6 +511,12 @@ slot3:
     genre: [ "Drama" ]
     count: 12
 
+  - from: 2024-04-23
+    name: "Spy &times; Family S2"
+    picture: spy-x-family
+    rating: 15
+    genre: [ "Comedy", "Action", "Adventure" ]
+    count: 12
 
 movies:
   - name: "Konosuba - Legend of Crimson"
