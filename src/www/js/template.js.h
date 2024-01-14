@@ -46,7 +46,7 @@ function template_series(series, opts = {}) {
         </div>` : ''}
 
         ${(opts.showRating && series.rating) ? `<div class='rating'>
-          <img class='rating-img rating-${series.rating}' src='images/rating/${series.rating}.svg'>
+          <img class='rating-img rating-${series.rating}' src='images/rating/${(""+series.rating).toLowerCase()}.svg'>
           <div class='rating-hover rating-hover-${series.rating}'>
             <span>Age rating: ${ratingText[series.rating]}</span>
             <div class='rating__tag'></div>
