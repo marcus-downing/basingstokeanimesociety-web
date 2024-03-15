@@ -169,6 +169,22 @@ slot1:
       - episode: 7
         show: single
 
+  - from: 2024-05-28
+    name: "Vinland Saga"
+    picture: vinland-saga
+    rating: 15
+    count: 24
+
+  # - from: 2024-08-20
+  #   name: ?
+  #   count: 12
+
+  # - from: 2024-10-01
+  #   name: "Vinland Saga S2"
+  #   picture: vinland-saga
+  #   rating: 15
+  #   count: 24
+
 slot2:
   - from: 2019-01-08
     name: Hunter &times; Hunter
@@ -324,6 +340,13 @@ slot2:
     episodes:
       - episode: 9
         show: single
+
+  - from: 2024-06-04
+    name: Cannon Busters
+    picture: cannon-busters
+    rating: 12
+    genre: [ "Action", "Adventure" ]
+    count: 12
 
 slot3:
   - from: 2020-02-18
@@ -498,7 +521,7 @@ slot3:
     name: "Horimiya"
     picture: horimiya
     rating: 12
-    genre: [ "Romance", "Drama" ]
+    genre: [ "Romance", "Drama", "Comedy" ]
     count: 13
     episodes:
       - episode: 7
@@ -517,6 +540,16 @@ slot3:
     rating: 15
     genre: [ "Comedy", "Action", "Adventure" ]
     count: 12
+
+  - from: 2024-06-04
+    name: "Horimiya: Piece"
+    picture: horimiya
+    rating: 15
+    genre: [ "Romance", "Drama", "Comedy" ]
+    count: 13
+    episodes:
+      - episode: 7
+        show: single
 
 movies:
   - name: "Konosuba - Legend of Crimson"
