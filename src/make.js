@@ -440,8 +440,12 @@ sass.render({
     
     writeTemplate('www/index2.html.h', 'index.html', basData);
     writeTemplate('www/history.html.h', 'history.html', basData);
-    // writeTemplate('www/bbq.html.h', 'bbq.html', basData);
     writeTemplate('www/recommendations2.html.h', 'recommendations.html', basData);
+
+    basData['noindex'] = true
+    writeTemplate('www/index2.html.h', 'noindex/index.html', basData);
+    writeTemplate('www/history.html.h', 'noindex/history.html', basData);
+    writeTemplate('www/recommendations2.html.h', 'noindex/recommendations.html', basData);
   });
 });
 

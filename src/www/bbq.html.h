@@ -15,6 +15,7 @@
 
   <meta name="description" content="Showing anime in Basingstoke every Tuesday" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{#if noindex}}<meta name="robots" content="noindex">{{/if}}
 
 <!-- Twitter universal website tag code -->
 <script>
