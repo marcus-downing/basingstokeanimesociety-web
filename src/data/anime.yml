@@ -162,7 +162,7 @@ slot1:
   - from: 2024-04-09
     name: "Megalobox 2: NOMAD"
     picture: nomad
-    rating: PG
+    rating: pg
     genre: [ "Drama" ]
     count: 13
     episodes:
