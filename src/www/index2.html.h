@@ -44,16 +44,20 @@
 
 <header id="header">
 <div>
-  <!-- <section class='box'>
+  <section class='box'>
     <h3 class='big'>Showing anime in Basingstoke every Tuesday.</h3>
-  </section> -->
+  </section>
 
   <section id='section-next-meeting' class='box'>
     <h2>Next Weekly Meeting</h2>
 
     <article id="next-meeting-date" class="focus-date event-anime">
-      <time datetime="{{ date }}"><span class='day'>{{ day }}</span><span class='month'>{{ month }}</span></time>
-      <div class="next-meeting-side focus-date-side">Tuesday<br>7pm</div>
+      <time datetime="{{ nextMainEvent.date }}">
+        <span class='day'>{{ nextMainEvent.day }}</span>
+        <span class='month'>{{ nextMainEvent.month }}</span>
+        <span class='year'>{{ nextMainEvent.year }}</span>
+      </time>
+      <div class="next-meeting-side focus-date-side">{{ nextMainEvent.weekday }}<br>{{ nextMainEvent.time }}</div>
     </article>
 
     <div style='position: relative'>
@@ -79,16 +83,34 @@
     <h2>Next Social Event</h2>
 
     <article id="next-social-date" class="focus-date event-social">
-      <time datetime="{{ nextSocial.date }}"><span class='day'></span><span class='month'></span></time>
-      <div class="next-social-side focus-date-side"><br></div>
+      <time datetime="{{ nextSocial.date }}">
+        <span class='day'>{{ nextSocial.day }}</span>
+        <span class='month'>{{ nextSocial.month }}</span>
+        <span class='year'>{{ nextSocial.year }}</span>
+      </time>
+      <div class="next-social-side focus-date-side">{{ nextSocial.name }}<br></div>
     </article>
 
-    <h3>Venue: <span id="next-social-venue">{{ nextSocialVenue }}</span></h3>
+    <h3>Venue: <span id="next-social-venue">{{ nextSocial.venue }}</span></h3>
   </section>
 
-  <section class="box box--button" id="section-discord">
-    <h2>Community</h2>
-    <p>Find us on Discord</p>
+  <section id='section-next-online' class='box'>
+    <h2>Next Online Event</h2>
+    <article id="next-online-date" class="focus-date event-online">
+      <time datetime="{{ nextOnline.date }}">
+        <span class='day'>{{ nextOnline.day }}</span>
+        <span class='month'>{{ nextOnline.month }}</span>
+        <span class='year'>{{ nextOnline.year }}</span>
+      </time>
+      <div class="next-online-side focus-date-side">{{ nextOnline.name }}<br>{{ nextOnline.time }}</div>
+    </article>
+
+    <!-- <h3>Venue: <span id="next-online-event">{{ nextOnline.venue }}</span></h3> -->
+  <!-- </section>
+
+  <section class="box box--button" id="section-discord"> -->
+    <!-- <h2>Community</h2>
+    <p>Find us on Discord</p> -->
     <a class='btn btn-discord' href='https://discord.gg/sypjyaA' target="_blank"><i></i><span>Discord</span></a>
   </section>
 </div>

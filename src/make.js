@@ -3,13 +3,12 @@ const fs = require('fs');
 const Handlebars = require('handlebars');
 const yaml = require('js-yaml');
 const sass = require('node-sass');
-// const ffmpeg = require('ffmpeg');
-// const { exec } = require('child_process');
 const _ = require('lodash');
 
 const util = require('./make/util.js');
 const video = require('./make/video.js');
 const episodes = require('./make/episodes.js');
+const _events = require('./make/events.js');
 
 // partials
 fs.readdir('./www/js', {encoding: 'utf8'}, (err, files) => {
@@ -165,12 +164,6 @@ basData.freshNews = _.take(basData.news, basData.options.newsCutoff);
 basData.staleNews = basData.news.slice(basData.options.newsCutoff, 20);
 
 // future events
-let venueAddress = {
-  '': '',
-  'The White Hart': 'London Road, Basingstoke RG21 4AE',
-  'The Tea Bar': '9 London Rd, Basingstoke RG21 7NT',
-};
-
 let now = new Date(Date.now());
 console.log("Today:           ", util.formatShortDate(now));
 console.log("Yesterday:       ", util.formatShortDate(util.yesterday()));
@@ -182,14 +175,7 @@ events = _.map(events, event => {
   });
   event = _.defaults(event, {
     class: 'social',
-    dateLong: util.formatLongDate(event.date) + (event.time != '' ? ', '+util.formatShortTime(event.time) : ''),
-    mediumDate: util.formatMediumDate(event.date),
-    shortDate: util.formatShortDate(event.date),
-    day: event.date.getDate(),
-    weekday: util.weekday(event.date),
-    year: util.formatYear(event.date),
-    shortWeekday: util.shortWeekday(event.date),
-    month: util.formatShortMonth(event.date),
+    ..._events.expandEventDate(event.date),
     special: event.class == 'cinema',
   });
   let venue = "";
@@ -206,7 +192,7 @@ events = _.map(events, event => {
   }
   return _.defaults(event, {
     venue: venue,
-    address: venueAddress[venue],
+    address: _events.venueAddress[venue],
   })
 });
 console.log("Skip dates:", skipDates);
@@ -226,16 +212,7 @@ _.each([basData.slot1, basData.slot2, basData.slot3], (slot, i) => {
         let movie = _.has(series, "movie") ? series.movie : false;
 
         let event = {
-          date: date,
-          dateLong: util.formatLongDate(date) + ", "+hour+"pm",
-          mediumDate: util.formatMediumDate(date),
-          shortDate: util.formatShortDate(date),
-          weekday: util.weekday(date),
-          shortWeekday: (movie ? util.shortWeekday(date) : ''),
-          time: hour+"pm",
-          day: date.getDate(),
-          month: util.formatShortMonth(date),
-          year: util.formatYear(date),
+          ..._events.expandEventDate(date, hour+"pm"),
           prename: (movie ? 'Movie' : 'New series'),
           name: series.name,
           picture: series.picture,
@@ -255,15 +232,7 @@ _.each(basData.movies, movie => {
 
     if (date > now && !hide) {
       let event = {
-        date: date,
-        dateLong: util.formatLongDate(date) + ", "+time,
-        mediumDate: util.formatMediumDate(date),
-        shortDate: util.formatShortDate(date),
-        time: time,
-        weekday: util.weekday(date),
-        day: date.getDate(),
-        month: util.formatShortMonth(date),
-        year: util.formatYear(date),
+        ..._events.expandEventDate(date, time),
         name: 'Movie: '+movie.name,
         class: 'movie',
         venue: movie.venue
@@ -273,49 +242,14 @@ _.each(basData.movies, movie => {
   }
 });
 
-// add in the tuesday events
-let tuesday = new Date(Date.now());
-let dow = 2 - tuesday.getDay();
-if (dow < 0) dow += 7;
-tuesday.setDate(tuesday.getDate() + dow);
-tuesday.setHours(19);
-tuesday.setMinutes(0);
-tuesday.setSeconds(0);
-tuesday.setMilliseconds(0);
+// add in the regular events
+events = [
+  ...events,
+  ..._events.tuesdayEvents(skipDates),
+  ..._events.nostalgiaMondayEvents(skipDates),
+];
 
-const greatReturn = new Date('April 5, 2022 00:00:00');
-basData.onlineDates = basData.onlineDates.map((date) => util.formatShortDate(date))
-
-for (var i = 0; i < 30; i++) {
-  let date = new Date(tuesday);
-  date.setDate(date.getDate() + i*7);
-
-  let online = date < greatReturn || basData.onlineDates.includes(util.formatShortDate(date));
-  // console.log("Comparing dates: ", date.getDate(), greatReturn.getDate());
-
-  let event = {
-    date: date,
-    dateLong: util.formatLongDate(date) + ", 7pm",
-    mediumDate: util.formatMediumDate(date),
-    shortDate: util.formatShortDate(date),
-    time: "7pm",
-    weekday: "Tuesday",
-    shortWeekday: util.shortWeekday(date),
-    day: date.getDate(),
-    month: util.formatShortMonth(date),
-    year: util.formatYear(date),
-    name: online ? 'Online Meeting' : 'Anime Society Meeting',
-    class: online ? 'online' : 'anime',
-    price: online ? null : "&pound;4",
-    venue: online ? 'Discord' : 'The White Hart',
-    address: online ? '' : venueAddress['The White Hart']
-  }
-  if (_.has(skipDates, event.shortDate)) {
-    console.log("Skipping event:", event.shortDate);
-    continue;
-  }
-  events.push(event);
-}
+// sort the events by date and cut to the forseeable window
 events = _.sortBy(events, 'date');
 
 basData.events = events.slice(0, basData.windowEvents);
@@ -323,9 +257,14 @@ basData.allEvents = events;
 
 // group the events by date, summarising class
 basData.eventsByDate = _(events).groupBy(e => util.formatShortDate(e.date)).map((evs, grp) => {
+  // evs = evs.filter((evt) => !evt.hide);
+  // if (evs.length == 0) {
+  //   return null;
+  // }
+
   let cls = evs[0].class;
   // switch colours on days with new series
-  // if (cls == 'online' || cls == 'anime') {
+  // if (cls == 'anime') {
   //   for (let ev of evs) {
   //     if (ev.hasOwnProperty('class') && ev.cls != "") {
   //       if (ev.class != 'online' && ev.class != 'anime') {
@@ -335,9 +274,13 @@ basData.eventsByDate = _(events).groupBy(e => util.formatShortDate(e.date)).map(
   //   }
   // }
   let special = false;
+  let hide = true;
   for (let ev of evs) {
     if (ev.special) {
       special = true;
+    }
+    if (!ev.hide) {
+      hide = false;
     }
   }
   
@@ -350,50 +293,24 @@ basData.eventsByDate = _(events).groupBy(e => util.formatShortDate(e.date)).map(
     year: evs[0].year,
     class: cls,
     events: evs,
-    special: special
+    special: special,
+    hide: hide
   };
 }).values().sortBy('shortDate').value().slice(0, basData.windowEvents);
 // console.log(JSON.stringify(basData.eventsByDate, null, 2));
 
-// put the 'next event' at the top
-let mainEvents = _.filter(events, event => {
-  switch (event.class) {
-    case 'esports':
-    case 'cinema':
-    case 'skip':
-    case 'new-series':
-      return false;
+// put upcoming events at the top
+let mainEvents = _.filter(events, (event) => event.class == 'anime')
+basData.nextMainEvent = mainEvents[0];
 
-    default:
-      return true;
-  }
-});
-let nextEvent = mainEvents[0];
-// console.log("Next event:", nextEvent);
-basData.nextMeeting = util.formatLongDate(nextEvent.date);
-basData.nextMeetingVenue = nextEvent.venue;
-basData.nextMeetingAddress = venueAddress[nextEvent.venue];
-
-let socialEvents = _.filter(events, event => {
-  switch(event.class) {
-    case 'social':
-    case 'cinema':
-      return true;
-
-    default:
-      return false;
-  }
-})
-
+let socialEvents = _.filter(events, event => ['social', 'cinema'].includes(event.class));
 if (socialEvents.length > 0) {
-  let nextSocial = socialEvents[0];
-  basData.nextSocialTitle = nextSocial.name;
-  basData.nextSocialDay = util.formatDay(nextSocial.date);
-  basData.nextSocialMonth = util.formatShortMonth(nextSocial.date);
-  basData.nextSocialWeekday = util.weekday(nextSocial.date);
-  basData.nextSocialYear = util.formatYear(nextSocial.date);
-  basData.nextSocialTime = nextSocial.time;
-  basData.nextSocialVenue = nextSocial.venue;
+  basData.nextSocial = socialEvents[0];
+}
+
+let onlineEvents = _.filter(events, (event) => event.class == 'online');
+if (onlineEvents.length > 0) {
+  basData.nextOnline = onlineEvents[0];
 }
 
 // Recommendations

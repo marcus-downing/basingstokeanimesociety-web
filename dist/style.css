@@ -540,7 +540,9 @@ a#home-link {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     font-weight: 600; }
   .box h2:first-child {
-    margin-top: 0.6em; }
+    margin-top: 0.6em;
+    margin-bottom: 3px;
+    color: #f8dda2; }
 
 #section-announce {
   background: white;
@@ -601,10 +603,6 @@ a#home-link {
 
 #section-next-meeting, #section-next-social {
   position: relative; }
-  #section-next-meeting h2, #section-next-social h2 {
-    margin-top: 0.6em;
-    margin-bottom: 3px;
-    color: #f8dda2; }
   #section-next-meeting h3, #section-next-social h3 {
     margin-top: 1em; }
   #section-next-meeting .next-social-title, #section-next-social .next-social-title {

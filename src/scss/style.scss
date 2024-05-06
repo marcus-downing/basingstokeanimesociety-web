@@ -271,6 +271,8 @@ a#home-link {
 
   h2:first-child {
     margin-top: 0.6em;
+    margin-bottom: 3px;
+    color: #f8dda2;
   }
 }
 
@@ -359,11 +361,11 @@ a#home-link {
 #section-next-meeting, #section-next-social {
   position: relative;
 
-  h2 {
-    margin-top: 0.6em;
-    margin-bottom: 3px;
-    color: #f8dda2;
-  }
+  // h2 {
+  //   margin-top: 0.6em;
+  //   margin-bottom: 3px;
+  //   color: #f8dda2;
+  // }
 
   h3 {
     margin-top: 1em;

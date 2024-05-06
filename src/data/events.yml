@@ -122,6 +122,7 @@ events:
     date: 2023-01-03
     class: skip
 
+  # 2023
   - name: Board Games
     date: 2023-01-12
     class: social
@@ -233,6 +234,7 @@ events:
     date: 2024-01-02
     class: skip
 
+  # 2024
   - name: Board Games
     date: 2024-01-11
     class: social
@@ -289,7 +291,7 @@ events:
     venue: Dice Tower
     time: 6pm
   - name: Board Games
-    date: 2024-12-14
+    date: 2024-12-12
     class: social
     venue: Dice Tower
     time: 6pm
@@ -301,3 +303,64 @@ events:
     date: 2024-12-31
     class: skip
     
+  # 2025
+  - name: Board Games
+    date: 2025-01-09
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2025-02-13
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2025-03-13
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2025-04-10
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2025-05-08
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2025-06-12
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2025-07-10
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2025-08-14
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2025-09-11
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2025-10-09
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2025-11-13
+    class: social
+    venue: Dice Tower
+    time: 6pm
+  - name: Board Games
+    date: 2025-12-11
+    class: social
+    venue: Dice Tower
+    time: 6pm

@@ -174,16 +174,20 @@ slot1:
     picture: vinland-saga
     rating: 15
     count: 24
+    genre: [ "Action", "Adventure", "Drama" ]
 
-  # - from: 2024-08-20
-  #   name: ?
-  #   count: 12
+  - from: 2024-08-20
+    name: "Sing Yesterday For Me"
+    picture: sing-yesterday
+    rating: 12
+    count: 12
+    genre: [ "Drama", "Romance" ]
 
-  # - from: 2024-10-01
-  #   name: "Vinland Saga S2"
-  #   picture: vinland-saga
-  #   rating: 15
-  #   count: 24
+  - from: 2024-10-01
+    name: "Vinland Saga S2"
+    picture: vinland-saga
+    rating: 15
+    count: 24
 
 slot2:
   - from: 2019-01-08
@@ -334,7 +338,7 @@ slot2:
   - from: 2024-04-16
     name: "Hibike! Euphonium"
     picture: hibike-euphonium
-    rating: PG
+    rating: pg
     genre: [ "Romance", "Slice of life" ]
     count: 13
     episodes:
@@ -347,6 +351,18 @@ slot2:
     rating: 12
     genre: [ "Action", "Adventure" ]
     count: 12
+
+  - from: 2024-07-16
+    name: "Dr Stone: New World"
+    picture: dr-stone
+    rating: 12
+    genre: [ "Action", "Adventure" ]
+    count: 23
+    episodes:
+      - episode: "Ryusui"
+        before: 1
+      - episode: 4
+        show: single
 
 slot3:
   - from: 2020-02-18
@@ -550,6 +566,12 @@ slot3:
     episodes:
       - episode: 7
         show: single
+
+  - from: 2024-07-23
+    name: "Ya Boy Kongming!"
+    picture: ya-boy-kongming
+    rating: 15
+    genre: [ "Music", "Isekai" ]
 
 movies:
   - name: "Konosuba - Legend of Crimson"

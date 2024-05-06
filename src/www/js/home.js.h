@@ -20,19 +20,35 @@ function setupHome() {
   setupHomeEpisodeHistory();
 }
 
+function formatEventDateTime(event, name, tagline) {
+  return `<time datetime='${event.date}'>
+    <span class='day'>${event.day}</span>
+    <span class='month'>${event.month}</span>
+    <span class='year'>${event.year}</span>
+  </time>
+  <div class='focus-date-side'>
+    <span class='next-social-title'>${name}</span>
+    <br>${tagline}
+  </div>`;
+}
+
 function setupHomeNextMeeting(events) {
   var meetings = [];
   var social = [];
+  var online = [];
   for (var event of events) {
     for (ev of event.events) {
       switch (ev.class) {
         case 'anime':
-        case 'online':
           meetings.push(ev);
           break;
 
         case 'social':
           social.push(ev);
+          break;
+
+        case 'online':
+          online.push(ev);
           break;
       }
     }
@@ -62,17 +78,7 @@ function setupHomeNextMeeting(events) {
   if (social.length > 0) {
     var nextSocial = social[0];
 
-    document.getElementById('next-social-date').innerHTML = 
-      `<time datetime='${nextSocial.date}'>
-        <span class='day'>${nextSocial.day}</span>
-        <span class='month'>${nextSocial.month}</span>
-        <span class='year'>${nextSocial.year}</span>
-      </time>
-      <div class='next-social-side focus-date-side'>
-        <span class='next-social-title'>${nextSocial.name}</span>
-        <br>${nextSocial.weekday} ${nextSocial.time}
-      </div>`;
-    // document.getElementById('next-meeting-title').innerHTML = (nextEvent.name == 'Anime Society Meeting' ? '' : nextEvent.name);
+    document.getElementById('next-social-date').innerHTML = formatEventDateTime(nextSocial, nextSocial.name, nextSocial.weekday + " " + nextSocial.time);
     if (document.getElementById('next-social-venue')) {
       document.getElementById('next-social-venue').innerHTML = nextSocial.venue;
     }
@@ -81,6 +87,15 @@ function setupHomeNextMeeting(events) {
     }
   } else {
     document.getElementById('section-next-social').remove();
+  }
+
+  // next online
+  if (online.length > 0) {
+    var nextOnline = online[0];
+
+    document.getElementById('next-online-date').innerHTML = formatEventDateTime(nextOnline, nextOnline.name, nextOnline.time);
+  } else {
+    document.getElementById('section-next-online').remove();
   }
 }
 
@@ -164,6 +179,8 @@ function setupHomeComingSoon() {
 
   var comingSoonHTML = '';
   for (item of comingSoon) {
+    if (item.noCalendar)
+      continue;
     var html = template_series(item, {
       isNew: true,
       showDate: true,
@@ -183,6 +200,11 @@ function setupHomeComingSoon() {
 function setupHomeEventsList(futureEvents) {
   var eventsHTML = '';
   for (var event of futureEvents) {
+    let partEvents = event.events.filter((evt) => !evt.hide);
+    if (partEvents.length == 0) {
+      continue;
+    }
+
     var html = 
       `<article id='upcoming-${event.date}' class='event event-${event.class}'>
         <time datetime='${event.date}'>
@@ -190,7 +212,7 @@ function setupHomeEventsList(futureEvents) {
           <span class='month'>${event.month}</span>
           ${event.special ? "<span class='time__special'></span>" : ""}
         </time>\n`;
-    for (ev of event.events) {
+    for (ev of partEvents) {
       var time = false;
       var a = "";
       var _a = "";
