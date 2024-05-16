@@ -361,7 +361,6 @@ slot2:
     episodes:
       - episode: "Ryusui"
         before: 1
-      - episode: 4
         show: single
 
 slot3:
