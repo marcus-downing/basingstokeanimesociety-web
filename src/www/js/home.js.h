@@ -44,6 +44,7 @@ function setupHomeNextMeeting(events) {
           break;
 
         case 'social':
+        case 'cinema':
           social.push(ev);
           break;
 

@@ -632,6 +632,15 @@ movies:
     rating: pg
     hide: true
 
+  - name: "Josee, the Tiger and the Fish"
+    date: 2024-06-01
+    time: 1pm
+    venue: "The White Hart"
+    picture: josee
+    rating: pg
+    hide: true
+
+
   # - name: Your Name
   #   date: 2021-12-14
   #   time: 7pm
