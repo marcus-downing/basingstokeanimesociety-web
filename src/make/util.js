@@ -47,14 +47,14 @@ function padNumber(num, digits) {
 let dayFormat = new Intl.DateTimeFormat('en-GB', { day: 'numeric' });
 function formatDay(date) {
   let parts = _.keyBy(dayFormat.formatToParts(date), 'type');
-  return parts.day.value;
+  return ""+parts.day.value;
 }
 
 let shortDateFormat = new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'numeric', day: 'numeric' });
 function formatShortDate(date) {
   try {
     let parts = _.keyBy(shortDateFormat.formatToParts(date), 'type');
-    return parts.year.value+"-"+padNumber(parts.month.value, 2)+"-"+padNumber(parts.day.value, 2);
+    return ""+parts.year.value+"-"+padNumber(parts.month.value, 2)+"-"+padNumber(parts.day.value, 2);
   } catch(err) {
     console.error("Bad date", date);
     console.error(err);
@@ -66,7 +66,7 @@ let mediumDateFormat = new Intl.DateTimeFormat('en-GB', { year: 'numeric', month
 function formatMediumDate(date) {
   try {
     let parts = _.keyBy(mediumDateFormat.formatToParts(date), 'type');
-    return parts.day.value+" "+parts.month.value+" "+parts.year.value;
+    return ""+parts.day.value+" "+parts.month.value+" "+parts.year.value;
   } catch(err) {
     console.error("Bad date", date);
     console.error(err);
@@ -78,7 +78,21 @@ let longDateFormat = new Intl.DateTimeFormat('en-GB', { weekday: 'long', year: '
 function formatLongDate(date) {
   try {
     let parts = _.keyBy(longDateFormat.formatToParts(date), 'type');
-    return parts.weekday.value+", "+parts.day.value+" "+parts.month.value+" "+parts.year.value;
+    return ""+parts.weekday.value+", "+parts.day.value+" "+parts.month.value+" "+parts.year.value;
+  } catch(err) {
+    console.error("Bad date", date);
+    console.error(err);
+    return "";
+  }
+}
+
+let lastModifiedFormat = new Intl.DateTimeFormat('en-GB', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' });
+function formatLastModified(date) {
+  try {
+    // Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
+    let parts = _.keyBy(lastModifiedFormat.formatToParts(date), 'type');
+    return ""+parts.weekday.value+", "+parts.day.value+" "+parts.month.value+" "+parts.year.value
+      +" "+padNumber(parts.hour.value, 2)+":"+padNumber(parts.minute.value, 2)+":00 GMT";
   } catch(err) {
     console.error("Bad date", date);
     console.error(err);
@@ -263,6 +277,7 @@ module.exports = {
   formatMediumDate,
   formatLongDate,
   formatShortTime,
+  formatLastModified,
   weekday,
   shortWeekday,
   currentAndFuture,

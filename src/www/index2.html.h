@@ -16,6 +16,7 @@
 
   <meta name="description" content="Showing anime in Basingstoke every Tuesday" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="last-modified" content="{{lastModified}}">
   {{#if noindex}}<meta name="robots" content="noindex">{{/if}}
 
 <script>

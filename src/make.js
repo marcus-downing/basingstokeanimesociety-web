@@ -75,6 +75,7 @@ Handlebars.registerHelper('times', function(n, block) {
 // read the data
 let basData = util.readData();
 let options = basData.options;
+basData.lastModified = util.formatLastModified(new Date());
 
 // combine the full list of past and future shows
 let all_anime = [
