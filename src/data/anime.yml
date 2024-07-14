@@ -363,6 +363,19 @@ slot2:
         before: 1
         show: single
 
+  - from: 2024-10-08
+    name: "Buddy Daddies"
+    picture: buddy-daddies
+    rating: 15
+    genre: [ "Action", "Comedy" ]
+    count: 12
+
+  - from: 2024-11-19
+    name: Planetes
+    picture: planetes
+    rating: 12
+    count: 26
+
 slot3:
   - from: 2020-02-18
     name: Kaguya-sama, Love is War
@@ -571,6 +584,28 @@ slot3:
     picture: ya-boy-kongming
     rating: 15
     genre: [ "Music", "Isekai" ]
+    count: 12
+
+  - from: 2024-09-03
+    name: "Aharen is Indecipherable"
+    picture: aharen-san
+    rating: 12
+    genre: [ "Comedy" ]
+    count: 12
+
+  - from: 2024-10-15
+    name: "Tonikawa: Over The Moon For You S2"
+    picture: tonikawa
+    rating: 12
+    genre: [ "Romance", "Comedy" ]
+    count: 12
+
+  - from: 2024-11-26
+    name: "Himouto! Umaru-chan"
+    picture: himouto
+    genre: [ "Comedy" ]
+    count: 12
+
 
 movies:
   - name: "Konosuba - Legend of Crimson"
@@ -639,6 +674,15 @@ movies:
     picture: josee
     rating: pg
     hide: true
+
+  - name: "Laputa, Castle in the Sky"
+    date: 2024-08-03
+    time: 1pm
+    venue: "The White Hart"
+    picture: laputa
+    rating: pg
+    hide: true
+
 
 
   # - name: Your Name

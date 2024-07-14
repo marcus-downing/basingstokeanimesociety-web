@@ -305,6 +305,15 @@ events:
     picture: josee
     rating: pg
 
+  - name: "Matinee: Laputa, Castle in the Sky"
+    date: 2024-08-03
+    class: cinema
+    price: "£2"
+    time: 1pm
+    venue: "The White Hart"
+    picture: laputa
+    rating: pg
+
   - name: No Meeting
     date: 2024-12-24
     class: skip
