@@ -605,6 +605,7 @@ slot3:
     picture: himouto
     genre: [ "Comedy" ]
     count: 12
+    rating: 12
 
 
 movies:

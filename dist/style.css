@@ -34,7 +34,9 @@
     .tabs .tab.tab--show {
       color: #ffe395;
       box-shadow: inset 0 -22px 0 rgba(20, 30, 60, 0.6);
-      display: inline-block; }
+      display: inline-block;
+      border-bottom: 3px solid #ffe395;
+      margin-bottom: -3px; }
   @media screen and (max-width: 1279px) {
     .tabs {
       display: block; } }

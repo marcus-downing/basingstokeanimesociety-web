@@ -314,6 +314,21 @@ events:
     picture: laputa
     rating: pg
 
+  - name: DAN DA DAN
+    date: 2024-09-13
+    class: cinema
+    venue: "Vue Basingstoke"
+    picture: dandadan
+    time: 6:15pm
+
+  - name: 18th Anniversary BBQ
+    date: 2024-09-14
+    class: social
+    # venue: Swarraton Village Hall, SO24 9TQ
+    venue: false
+    time: Midday
+    special: true
+
   - name: No Meeting
     date: 2024-12-24
     class: skip
