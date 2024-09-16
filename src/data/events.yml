@@ -329,6 +329,13 @@ events:
     time: Midday
     special: true
 
+  - name: Shrink Laureate's Birthday Board Games
+    date: 2024-10-19
+    class: social
+    venue: "Dice Tower"
+    time: Midday
+    special: true
+
   - name: No Meeting
     date: 2024-12-24
     class: skip
