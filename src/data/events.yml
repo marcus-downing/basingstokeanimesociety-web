@@ -336,6 +336,13 @@ events:
     time: Midday
     special: true
 
+  - name: Look Back
+    date: 2024-10-25
+    class: cinema
+    venue: "Vue Basingstoke"
+    picture: look-back
+    time: 12:10pm
+
   - name: No Meeting
     date: 2024-12-24
     class: skip

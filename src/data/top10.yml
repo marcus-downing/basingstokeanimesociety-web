@@ -7,7 +7,7 @@ top10first:
   - name: Cowboy Bebop
     picture: cowboy-bebop
     genre: [ "Music", "Action", "Adventure" ]
-  - name: Spy x Family
+  - name: "Spy &times; Family"
     picture: spy-x-family
     genre: [ Comedy", "Action", "Adventure" ]
   - name: My Hero Academia
@@ -200,6 +200,43 @@ top10:
       - name: Monthly Girls' Nozaki-kun
         picture: nozaki-kun
         genre: [ "Comedy", "Romance" ]
+
+  - name: Shrink Laureate
+    code: shrink-laureate-recent
+    picture: shrink-laureate
+    title: "Shrink Laureate's top 10 recent anime"
+    anime:
+      - name: "Frieren: Beyond Journey's End"
+        picture: frieren
+        genre: [ "Romance", "Drama", "Adventure" ]
+      - name: "Apothecary Diaries"
+        picture: apothecary-diaries
+        genre: [ "Mystery", "Drama", ]
+      - name: "Delicious in Dungeon"
+        picture: delicious-in-dungeon
+        genre: [ "Adventure", "Drama", "Comedy" ]
+      - name: "Great Pretender"
+        picture: great-pretender
+        genre: [ "Mystery", "Adventure" ]
+      - name: "Oshi no Ko"
+        picture: oshi-no-ko
+        genre: [ "Mystery", "Drama", "Slice of life" ]
+      - name: "Mushoku Tensei: Jobless Reincarnation"
+        picture: mushoku-tensei
+        genre: [ "Isekai", "Adventure", "Drama" ]
+      - name: "Lycoris Recoil"
+        picture: lycoris-recoil
+        genre: [ "Action", "Mystery" ]
+      - name: "Spy × Family"
+        picture: spy-x-family
+        genre: [ "Comedy", "Action", "Adventure" ]
+      - name: "Insomniacs After School"
+        picture: insomnia
+        genre: [ "Slice of life", "Romance" ]
+      - name: "Girls Band Cry"
+        picture: girls-band-cry
+        genre: [ "Music", "Drama" ]
+
 
   - name: NoviceOtaku
     picture: novice-otaku
