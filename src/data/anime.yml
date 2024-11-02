@@ -189,6 +189,22 @@ slot1:
     rating: 15
     count: 24
 
+  - from: 2025-01-07
+    name: "Great Pretender"
+    picture: great-pretender
+    rating: 15
+    count: 23
+    genre: [ "Adventure", "Crime" ]
+    episodes:
+      - episode: 3
+        show: single
+
+  # - from: 2025-04-01
+  #   name: "?"
+  #   picture: question
+  #   count: 1
+  #   preview: false
+
 slot2:
   - from: 2019-01-08
     name: Hunter &times; Hunter
@@ -375,6 +391,16 @@ slot2:
     picture: planetes
     rating: 12
     count: 26
+
+  - from: 2025-03-04
+    name: Bloom Into You
+    picture: bloom-into-you
+    count: 13
+    rating: pg
+    genre: [ "Romance", "Drama" ]
+    episodes:
+      - episode: 9
+        show: single
 
 slot3:
   - from: 2020-02-18
@@ -604,6 +630,20 @@ slot3:
     name: "Himouto! Umaru-chan"
     picture: himouto
     genre: [ "Comedy" ]
+    count: 12
+    rating: 12
+
+  - from: 2025-01-21
+    name: "BOFURI S2"
+    picture: bofuri
+    genre: [ "Comedy", "Isekai" ]
+    count: 12
+    rating: 12
+
+  - from: 2025-03-04
+    name: Science Fell in Love, So I Tried to Prove It
+    picture: science-fell-in-love
+    genre: [ "Romance", "Comedy" ]
     count: 12
     rating: 12
 
