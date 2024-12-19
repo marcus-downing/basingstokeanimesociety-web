@@ -943,7 +943,7 @@ article {
     color: #b00; }
   article img.landscape {
     max-width: 600px;
-    margin: 0 -27px -20px -85px;
+    margin: 0 -27px -10px -85px;
     border-radius: 0 0 2px 2px; }
   article.portrait {
     position: relative;
