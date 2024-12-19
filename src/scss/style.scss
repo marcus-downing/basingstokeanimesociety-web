@@ -859,26 +859,28 @@ article {
     }
   }
 
+  // News images
   &.landscape {
-    img.landscape {
-      max-width: 600px;
-      margin: 0 -27px -20px -85px;
-      border-radius: 0 0 2px 2px;
-    }
+  }
+
+  img.landscape {
+    max-width: 600px;
+    margin: 0 -27px -20px -85px;
+    border-radius: 0 0 2px 2px;
   }
 
   &.portrait {
     position: relative;
     padding-right: 300px;
     min-height: 280px;
+  }
 
-    img.portrait {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 300px;
-      border-radius: 0 2px 2px 0;
-    }
+  img.portrait {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 300px;
+    border-radius: 0 2px 2px 0;
   }
 }
 

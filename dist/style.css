@@ -941,7 +941,7 @@ article {
     color: #f8b3a2; }
   article.event-skip time span {
     color: #b00; }
-  article.landscape img.landscape {
+  article img.landscape {
     max-width: 600px;
     margin: 0 -27px -20px -85px;
     border-radius: 0 0 2px 2px; }
@@ -949,12 +949,12 @@ article {
     position: relative;
     padding-right: 300px;
     min-height: 280px; }
-    article.portrait img.portrait {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 300px;
-      border-radius: 0 2px 2px 0; }
+  article img.portrait {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 300px;
+    border-radius: 0 2px 2px 0; }
 
 #events-list {
   margin-top: 0;
